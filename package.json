@@ -1,0 +1,44 @@
+{
+  "name": "spiral_printer",
+  "version": "1.0.1",
+  "description": "Visualiser for LivePrinter spirals",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/vislib.umb.cjs",
+  "module": "./dist/vislib.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/vislib.js",
+      "require": "./dist/vislib.umd.cjs"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixelpusher/spiral_printer.git"
+  },
+  "keywords": [
+    "3dprinting",
+    "generative"
+  ],
+  "author": "Evan Raskob",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pixelpusher/spiral_printer/issues"
+  },
+  "homepage": "https://github.com/pixelpusher/spiral_printer#readme",
+  "devDependencies": {
+    "@thi.ng/grid-iterators": "^4.0.73",
+    "@thi.ng/iterators": "^6.1.49",
+    "@types/three": "^0.162.0",
+    "liveprinter-core": "github:pixelpusher/liveprinter-core",
+    "three": "^0.152.2",
+    "vite": "^4.3.9"
+  }
+}
