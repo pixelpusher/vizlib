@@ -22,7 +22,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pixelpusher/vizlib.git"
-    "url": "git+https://github.com/pixelpusher/vizlib.git"
   },
   "keywords": [
     "3dprinting",
@@ -32,9 +31,7 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pixelpusher/vizlib/issues"
-    "url": "https://github.com/pixelpusher/vizlib/issues"
   },
-  "homepage": "https://github.com/pixelpusher/vizlib#readme",
   "homepage": "https://github.com/pixelpusher/vizlib#readme",
   "devDependencies": {
     "@thi.ng/grid-iterators": "^4.0.73",
