@@ -27,8 +27,14 @@ async function main() {
   const lp = new LivePrinter();
 
   // do the main thing we came here for
-  const visualiser = makeVisualiser(lp, "c", { title: "LivePrinter", delay:true, debug:true });
+  const visualiser = makeVisualiser(lp, "c", { title: "LivePrinter", delay:true, debug:false });
   
+  // download
+  document.getElementById('download').addEventListener('click', (e)=>{
+    console.log('click');
+    visualiser.downloadGCode();
+  });
+
   // position on paper
   const offsetx = lp.maxx / 2;
   const offsety = lp.maxy / 2;
@@ -94,9 +100,13 @@ async function main() {
       await lp.draw();
     }
     await lp.up(layerHeight);
+    visualiser.closeFactor(1 + Math.random()*12);
+
   }
 
-  
+
+  visualiser.closeFactor(20);
+
   await lp.moveto({x:lp.cx, y:lp.cy, z:minz});
 
   layers = totalLayers;
@@ -133,9 +143,6 @@ async function main() {
   window.bail = true;
   lp.tsp(50);
   await lp.up(30); // | fan fansp | thick newthick
-
-  // download
-  visualiser.downloadGCode();
 }
 
 
