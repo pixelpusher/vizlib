@@ -29,6 +29,8 @@ async function main() {
   // do the main thing we came here for
   const visualiser = makeVisualiser(lp, "c", { title: "LivePrinter", delay:true, debug:false });
   
+  globalThis.visualiser = visualiser;
+
   // download
   document.getElementById('download').addEventListener('click', (e)=>{
     console.log('click');
@@ -68,6 +70,7 @@ async function main() {
 
   window.bail = false; // bail out (stop) if true
 
+  visualiser.closeFactor(50);
 
   let _time = performance.now();
   console.info(`start of move time: ${_time}`);
@@ -100,12 +103,11 @@ async function main() {
       await lp.draw();
     }
     await lp.up(layerHeight);
-    visualiser.closeFactor(1 + Math.random()*12);
 
   }
 
 
-  visualiser.closeFactor(20);
+  visualiser.closeFactor(30);
 
   await lp.moveto({x:lp.cx, y:lp.cy, z:minz});
 
