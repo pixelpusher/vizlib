@@ -15288,46 +15288,59 @@ async function em(i) {
   return i > 0 && await new Promise((e) => setTimeout(e, Math.round(i))), 0;
 }
 function tm({ x: i, y: e, z: t, delay: n, debug: r } = { delay: !1, debug: !1 }) {
+  let s = n, o = r;
   return {
+    set delay(a) {
+      s = a;
+    },
+    get delay() {
+      return s;
+    },
+    set debug(a) {
+      o = a;
+    },
+    get debug() {
+      return o;
+    },
     printEvent: async ({
-      type: s,
-      newPosition: o,
-      oldPosition: a,
-      speed: c,
-      moveTime: l,
-      totalMoveTime: h,
-      layerHeight: d,
-      length: f
+      type: a,
+      newPosition: c,
+      oldPosition: l,
+      speed: h,
+      moveTime: d,
+      totalMoveTime: f,
+      layerHeight: p,
+      length: _
     }) => {
-      switch (r && console.log(
-        `PRINT EVENT: ${s},
-          old: ${JSON.stringify(a)},
-          new: ${JSON.stringify(o)},
-          speed: ${c},
-          moveTime: ${l},
-          totalMoveTime: ${h},
-          layerHeight: ${d},
-          length: ${f}`
-      ), s) {
+      switch (o && console.log(
+        `PRINT EVENT: ${a},
+          old: ${JSON.stringify(l)},
+          new: ${JSON.stringify(c)},
+          speed: ${h},
+          moveTime: ${d},
+          totalMoveTime: ${f},
+          layerHeight: ${p},
+          length: ${_}`
+      ), a) {
         case "extrude":
           {
             if (!Ot)
               return;
-            const p = Ot.attributes.position;
-            p.setXYZ(
+            const g = Ot.attributes.position;
+            g.setXYZ(
               Qi++,
-              i(a.x),
-              e(a.y),
-              t(a.z)
-            ), p.setXYZ(
+              i(l.x),
+              e(l.y),
+              t(l.z)
+            ), g.setXYZ(
               Qi++,
-              i(o.x),
-              e(o.y),
-              t(o.z)
-            ), Ot.setDrawRange(0, Qi - 1), p.needsUpdate = !0, Ot.computeBoundingSphere(), os.position.set(
-              i(o.x),
-              e(o.y),
-              t(o.z)
+              i(c.x),
+              e(c.y),
+              t(c.z)
+            ), Ot.setDrawRange(0, Qi - 1), g.needsUpdate = !0, Ot.computeBoundingSphere(), os.position.set(
+              i(c.x),
+              e(c.y),
+              t(c.z)
             );
           }
           break;
@@ -15335,32 +15348,32 @@ function tm({ x: i, y: e, z: t, delay: n, debug: r } = { delay: !1, debug: !1 })
           {
             if (!Bt)
               return;
-            const p = Bt.attributes.position;
-            p.setXYZ(
+            const g = Bt.attributes.position;
+            g.setXYZ(
               $i++,
-              i(a.x),
-              e(a.y),
-              t(a.z)
-            ), p.setXYZ(
+              i(l.x),
+              e(l.y),
+              t(l.z)
+            ), g.setXYZ(
               $i++,
-              i(o.x),
-              e(o.y),
-              t(o.z)
-            ), Bt.setDrawRange(0, $i - 1), p.needsUpdate = !0, Bt.computeBoundingSphere();
+              i(c.x),
+              e(c.y),
+              t(c.z)
+            ), Bt.setDrawRange(0, $i - 1), g.needsUpdate = !0, Bt.computeBoundingSphere();
           }
           break;
         case "retract":
-          console.log("RETRACT!");
+          o && console.log("RETRACT!");
           break;
         case "unretract":
-          console.log("RETRACT!");
+          o && console.log("UNRETRACT!");
           break;
       }
-      n && await em(l);
+      s && await em(d);
     },
-    errorEvent: (s) => console.error(`LivePrinter Error Event: ${s}`),
-    gcodeEvent: async (s) => {
-      Yo.push(s);
+    errorEvent: (a) => console.error(`LivePrinter Error Event: ${a}`),
+    gcodeEvent: async (a) => {
+      Yo.push(a);
     }
     // wait 20 ms
   };
@@ -15918,7 +15931,7 @@ function j0(i, e, t = { title: "LivePrinter", debug: !1, delay: !0 }) {
     delay: t.delay,
     debug: t.debug
   });
-  n.eventHandler = K, i.addPrintListener(K), i.addErrorListener(K), i.addGCodeListener(K);
+  n.vizevents = K, i.addPrintListener(K), i.addErrorListener(K), i.addGCodeListener(K);
   const le = {
     printEvent: async ({
       type: ve,
