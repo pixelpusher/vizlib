@@ -15308,9 +15308,10 @@ function tm({ x: i, y: e, z: t, delay: n, debug: r } = { delay: !1, debug: !1 })
       oldPosition: l,
       speed: h,
       moveTime: d,
-      totalMoveTime: f,
-      layerHeight: p,
-      length: _
+      time: f,
+      totalMoveTime: p,
+      layerHeight: _,
+      length: g
     }) => {
       switch (o && console.log(
         `PRINT EVENT: ${a},
@@ -15318,26 +15319,26 @@ function tm({ x: i, y: e, z: t, delay: n, debug: r } = { delay: !1, debug: !1 })
           new: ${JSON.stringify(c)},
           speed: ${h},
           moveTime: ${d},
-          totalMoveTime: ${f},
-          layerHeight: ${p},
-          length: ${_}`
+          totalMoveTime: ${p},
+          layerHeight: ${_},
+          length: ${g}`
       ), a) {
         case "extrude":
           {
             if (!Ot)
               return;
-            const g = Ot.attributes.position;
-            g.setXYZ(
+            const m = Ot.attributes.position;
+            m.setXYZ(
               Qi++,
               i(l.x),
               e(l.y),
               t(l.z)
-            ), g.setXYZ(
+            ), m.setXYZ(
               Qi++,
               i(c.x),
               e(c.y),
               t(c.z)
-            ), Ot.setDrawRange(0, Qi - 1), g.needsUpdate = !0, Ot.computeBoundingSphere(), os.position.set(
+            ), Ot.setDrawRange(0, Qi - 1), m.needsUpdate = !0, Ot.computeBoundingSphere(), os.position.set(
               i(c.x),
               e(c.y),
               t(c.z)
@@ -15348,18 +15349,18 @@ function tm({ x: i, y: e, z: t, delay: n, debug: r } = { delay: !1, debug: !1 })
           {
             if (!Bt)
               return;
-            const g = Bt.attributes.position;
-            g.setXYZ(
+            const m = Bt.attributes.position;
+            m.setXYZ(
               $i++,
               i(l.x),
               e(l.y),
               t(l.z)
-            ), g.setXYZ(
+            ), m.setXYZ(
               $i++,
               i(c.x),
               e(c.y),
               t(c.z)
-            ), Bt.setDrawRange(0, $i - 1), g.needsUpdate = !0, Bt.computeBoundingSphere();
+            ), Bt.setDrawRange(0, $i - 1), m.needsUpdate = !0, Bt.computeBoundingSphere();
           }
           break;
         case "retract":
@@ -15369,7 +15370,7 @@ function tm({ x: i, y: e, z: t, delay: n, debug: r } = { delay: !1, debug: !1 })
           o && console.log("UNRETRACT!");
           break;
       }
-      s && await em(d);
+      s && await em(d || f);
     },
     errorEvent: (a) => console.error(`LivePrinter Error Event: ${a}`),
     gcodeEvent: async (a) => {
