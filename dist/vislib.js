@@ -3,7 +3,7 @@
  * Copyright 2010-2023 Three.js Authors
  * SPDX-License-Identifier: MIT
  */
-const cs = "152", Rn = { LEFT: 0, MIDDLE: 1, RIGHT: 2, ROTATE: 0, DOLLY: 1, PAN: 2 }, Cn = { ROTATE: 0, PAN: 1, DOLLY_PAN: 2, DOLLY_ROTATE: 3 }, el = 0, Ts = 1, tl = 2, co = 1, nl = 2, Jt = 3, on = 0, mt = 1, zt = 2, an = 0, Kn = 1, bs = 2, As = 3, ws = 4, il = 5, Yn = 100, rl = 101, sl = 102, Ps = 103, Rs = 104, al = 200, ol = 201, ll = 202, cl = 203, ho = 204, uo = 205, hl = 206, ul = 207, dl = 208, fl = 209, pl = 210, ml = 0, _l = 1, gl = 2, Zr = 3, xl = 4, vl = 5, Ml = 6, Sl = 7, hs = 0, El = 1, yl = 2, $t = 0, Tl = 1, bl = 2, Al = 3, wl = 4, Pl = 5, fo = 300, ei = 301, ti = 302, Kr = 303, Jr = 304, tr = 306, $r = 1e3, Dt = 1001, Qr = 1002, pt = 1003, Cs = 1004, ur = 1005, Tt = 1006, Rl = 1007, xi = 1008, En = 1009, Cl = 1010, Ll = 1011, po = 1012, ql = 1013, gn = 1014, xn = 1015, vi = 1016, Dl = 1017, Ul = 1018, Jn = 1020, Il = 1021, Ut = 1023, Nl = 1024, Fl = 1025, vn = 1026, ni = 1027, Ol = 1028, Bl = 1029, zl = 1030, Gl = 1031, Hl = 1033, dr = 33776, fr = 33777, pr = 33778, mr = 33779, Ls = 35840, qs = 35841, Ds = 35842, Us = 35843, Vl = 36196, Is = 37492, Ns = 37496, Fs = 37808, Os = 37809, Bs = 37810, zs = 37811, Gs = 37812, Hs = 37813, Vs = 37814, ks = 37815, Ws = 37816, Xs = 37817, Ys = 37818, js = 37819, Zs = 37820, Ks = 37821, _r = 36492, kl = 36283, Js = 36284, $s = 36285, Qs = 36286, mo = 3e3, Mn = 3001, Wl = 3200, Xl = 3201, _o = 0, Yl = 1, Sn = "", Ie = "srgb", Ht = "srgb-linear", go = "display-p3", gr = 7680, jl = 519, ea = 35044, xo = 35048, ta = "300 es", es = 1035;
+const cs = "152", Rn = { LEFT: 0, MIDDLE: 1, RIGHT: 2, ROTATE: 0, DOLLY: 1, PAN: 2 }, Cn = { ROTATE: 0, PAN: 1, DOLLY_PAN: 2, DOLLY_ROTATE: 3 }, tl = 0, Ts = 1, nl = 2, ho = 1, il = 2, Jt = 3, on = 0, mt = 1, zt = 2, an = 0, Kn = 1, bs = 2, As = 3, ws = 4, rl = 5, Yn = 100, sl = 101, al = 102, Ps = 103, Rs = 104, ol = 200, ll = 201, cl = 202, hl = 203, uo = 204, fo = 205, ul = 206, dl = 207, fl = 208, pl = 209, ml = 210, _l = 0, gl = 1, xl = 2, Zr = 3, vl = 4, Ml = 5, Sl = 6, El = 7, hs = 0, yl = 1, Tl = 2, $t = 0, bl = 1, Al = 2, wl = 3, Pl = 4, Rl = 5, po = 300, ei = 301, ti = 302, Kr = 303, Jr = 304, tr = 306, $r = 1e3, Dt = 1001, Qr = 1002, pt = 1003, Cs = 1004, ur = 1005, Tt = 1006, Cl = 1007, xi = 1008, En = 1009, Ll = 1010, ql = 1011, mo = 1012, Dl = 1013, gn = 1014, xn = 1015, vi = 1016, Ul = 1017, Il = 1018, Jn = 1020, Nl = 1021, Ut = 1023, Fl = 1024, Ol = 1025, vn = 1026, ni = 1027, Bl = 1028, zl = 1029, Gl = 1030, Hl = 1031, Vl = 1033, dr = 33776, fr = 33777, pr = 33778, mr = 33779, Ls = 35840, qs = 35841, Ds = 35842, Us = 35843, kl = 36196, Is = 37492, Ns = 37496, Fs = 37808, Os = 37809, Bs = 37810, zs = 37811, Gs = 37812, Hs = 37813, Vs = 37814, ks = 37815, Ws = 37816, Xs = 37817, Ys = 37818, js = 37819, Zs = 37820, Ks = 37821, _r = 36492, Wl = 36283, Js = 36284, $s = 36285, Qs = 36286, _o = 3e3, Mn = 3001, Xl = 3200, Yl = 3201, go = 0, jl = 1, Sn = "", Ie = "srgb", Ht = "srgb-linear", xo = "display-p3", gr = 7680, Zl = 519, ea = 35044, vo = 35048, ta = "300 es", es = 1035;
 class Pn {
   addEventListener(e, t) {
     this._listeners === void 0 && (this._listeners = {});
@@ -46,7 +46,7 @@ function ri() {
 function at(i, e, t) {
   return Math.max(e, Math.min(t, i));
 }
-function Zl(i, e) {
+function Kl(i, e) {
   return (i % e + e) % e;
 }
 function vr(i, e, t) {
@@ -55,7 +55,7 @@ function vr(i, e, t) {
 function na(i) {
   return (i & i - 1) === 0 && i !== 0;
 }
-function Kl(i) {
+function Jl(i) {
   return Math.pow(2, Math.floor(Math.log(i) / Math.LN2));
 }
 function bi(i, e) {
@@ -461,7 +461,7 @@ class He {
   }
 }
 const Mr = /* @__PURE__ */ new He();
-function vo(i) {
+function Mo(i) {
   for (let e = i.length - 1; e >= 0; --e)
     if (i[e] >= 65535)
       return !0;
@@ -480,7 +480,7 @@ function $n(i) {
 function Sr(i) {
   return i < 31308e-7 ? i * 12.92 : 1.055 * Math.pow(i, 0.41666) - 0.055;
 }
-const Jl = /* @__PURE__ */ new He().fromArray([
+const $l = /* @__PURE__ */ new He().fromArray([
   0.8224621,
   0.0331941,
   0.0170827,
@@ -490,7 +490,7 @@ const Jl = /* @__PURE__ */ new He().fromArray([
   -1e-7,
   1e-7,
   0.9105199
-]), $l = /* @__PURE__ */ new He().fromArray([
+]), Ql = /* @__PURE__ */ new He().fromArray([
   1.2249401,
   -0.0420569,
   -0.0196376,
@@ -501,20 +501,20 @@ const Jl = /* @__PURE__ */ new He().fromArray([
   0,
   1.0982735
 ]);
-function Ql(i) {
-  return i.convertSRGBToLinear().applyMatrix3($l);
-}
 function ec(i) {
-  return i.applyMatrix3(Jl).convertLinearToSRGB();
+  return i.convertSRGBToLinear().applyMatrix3(Ql);
 }
-const tc = {
+function tc(i) {
+  return i.applyMatrix3($l).convertLinearToSRGB();
+}
+const nc = {
   [Ht]: (i) => i,
   [Ie]: (i) => i.convertSRGBToLinear(),
-  [go]: Ql
-}, nc = {
+  [xo]: ec
+}, ic = {
   [Ht]: (i) => i,
   [Ie]: (i) => i.convertLinearToSRGB(),
-  [go]: ec
+  [xo]: tc
 }, Pt = {
   enabled: !0,
   get legacyMode() {
@@ -532,7 +532,7 @@ const tc = {
   convert: function(i, e, t) {
     if (this.enabled === !1 || e === t || !e || !t)
       return i;
-    const n = tc[e], r = nc[t];
+    const n = nc[e], r = ic[t];
     if (n === void 0 || r === void 0)
       throw new Error(`Unsupported color space conversion, "${e}" to "${t}".`);
     return r(n(i));
@@ -545,7 +545,7 @@ const tc = {
   }
 };
 let Ln;
-class Mo {
+class So {
   static getDataURL(e) {
     if (/^data:/i.test(e.src) || typeof HTMLCanvasElement > "u")
       return e.src;
@@ -582,7 +582,7 @@ class Mo {
       return console.warn("THREE.ImageUtils.sRGBToLinear(): Unsupported image type. No color space conversion applied."), e;
   }
 }
-class So {
+class Eo {
   constructor(e = null) {
     this.isSource = !0, this.uuid = ri(), this.data = e, this.version = 0;
   }
@@ -611,17 +611,17 @@ class So {
   }
 }
 function Er(i) {
-  return typeof HTMLImageElement < "u" && i instanceof HTMLImageElement || typeof HTMLCanvasElement < "u" && i instanceof HTMLCanvasElement || typeof ImageBitmap < "u" && i instanceof ImageBitmap ? Mo.getDataURL(i) : i.data ? {
+  return typeof HTMLImageElement < "u" && i instanceof HTMLImageElement || typeof HTMLCanvasElement < "u" && i instanceof HTMLCanvasElement || typeof ImageBitmap < "u" && i instanceof ImageBitmap ? So.getDataURL(i) : i.data ? {
     data: Array.from(i.data),
     width: i.width,
     height: i.height,
     type: i.data.constructor.name
   } : (console.warn("THREE.Texture: Unable to serialize Texture."), {});
 }
-let ic = 0;
+let rc = 0;
 class Mt extends Pn {
   constructor(e = Mt.DEFAULT_IMAGE, t = Mt.DEFAULT_MAPPING, n = Dt, r = Dt, s = Tt, o = xi, a = Ut, c = En, l = Mt.DEFAULT_ANISOTROPY, h = Sn) {
-    super(), this.isTexture = !0, Object.defineProperty(this, "id", { value: ic++ }), this.uuid = ri(), this.name = "", this.source = new So(e), this.mipmaps = [], this.mapping = t, this.channel = 0, this.wrapS = n, this.wrapT = r, this.magFilter = s, this.minFilter = o, this.anisotropy = l, this.format = a, this.internalFormat = null, this.type = c, this.offset = new he(0, 0), this.repeat = new he(1, 1), this.center = new he(0, 0), this.rotation = 0, this.matrixAutoUpdate = !0, this.matrix = new He(), this.generateMipmaps = !0, this.premultiplyAlpha = !1, this.flipY = !0, this.unpackAlignment = 4, typeof h == "string" ? this.colorSpace = h : (mi("THREE.Texture: Property .encoding has been replaced by .colorSpace."), this.colorSpace = h === Mn ? Ie : Sn), this.userData = {}, this.version = 0, this.onUpdate = null, this.isRenderTargetTexture = !1, this.needsPMREMUpdate = !1;
+    super(), this.isTexture = !0, Object.defineProperty(this, "id", { value: rc++ }), this.uuid = ri(), this.name = "", this.source = new Eo(e), this.mipmaps = [], this.mapping = t, this.channel = 0, this.wrapS = n, this.wrapT = r, this.magFilter = s, this.minFilter = o, this.anisotropy = l, this.format = a, this.internalFormat = null, this.type = c, this.offset = new he(0, 0), this.repeat = new he(1, 1), this.center = new he(0, 0), this.rotation = 0, this.matrixAutoUpdate = !0, this.matrix = new He(), this.generateMipmaps = !0, this.premultiplyAlpha = !1, this.flipY = !0, this.unpackAlignment = 4, typeof h == "string" ? this.colorSpace = h : (mi("THREE.Texture: Property .encoding has been replaced by .colorSpace."), this.colorSpace = h === Mn ? Ie : Sn), this.userData = {}, this.version = 0, this.onUpdate = null, this.isRenderTargetTexture = !1, this.needsPMREMUpdate = !1;
   }
   get image() {
     return this.source.data;
@@ -676,7 +676,7 @@ class Mt extends Pn {
     this.dispatchEvent({ type: "dispose" });
   }
   transformUv(e) {
-    if (this.mapping !== fo)
+    if (this.mapping !== po)
       return e;
     if (e.applyMatrix3(this.matrix), e.x < 0 || e.x > 1)
       switch (this.wrapS) {
@@ -708,14 +708,14 @@ class Mt extends Pn {
     e === !0 && (this.version++, this.source.needsUpdate = !0);
   }
   get encoding() {
-    return mi("THREE.Texture: Property .encoding has been replaced by .colorSpace."), this.colorSpace === Ie ? Mn : mo;
+    return mi("THREE.Texture: Property .encoding has been replaced by .colorSpace."), this.colorSpace === Ie ? Mn : _o;
   }
   set encoding(e) {
     mi("THREE.Texture: Property .encoding has been replaced by .colorSpace."), this.colorSpace = e === Mn ? Ie : Sn;
   }
 }
 Mt.DEFAULT_IMAGE = null;
-Mt.DEFAULT_MAPPING = fo;
+Mt.DEFAULT_MAPPING = po;
 Mt.DEFAULT_ANISOTROPY = 1;
 class je {
   constructor(e = 0, t = 0, n = 0, r = 1) {
@@ -931,18 +931,18 @@ class yn extends Pn {
   copy(e) {
     this.width = e.width, this.height = e.height, this.depth = e.depth, this.scissor.copy(e.scissor), this.scissorTest = e.scissorTest, this.viewport.copy(e.viewport), this.texture = e.texture.clone(), this.texture.isRenderTargetTexture = !0;
     const t = Object.assign({}, e.texture.image);
-    return this.texture.source = new So(t), this.depthBuffer = e.depthBuffer, this.stencilBuffer = e.stencilBuffer, e.depthTexture !== null && (this.depthTexture = e.depthTexture.clone()), this.samples = e.samples, this;
+    return this.texture.source = new Eo(t), this.depthBuffer = e.depthBuffer, this.stencilBuffer = e.stencilBuffer, e.depthTexture !== null && (this.depthTexture = e.depthTexture.clone()), this.samples = e.samples, this;
   }
   dispose() {
     this.dispatchEvent({ type: "dispose" });
   }
 }
-class Eo extends Mt {
+class yo extends Mt {
   constructor(e = null, t = 1, n = 1, r = 1) {
     super(null), this.isDataArrayTexture = !0, this.image = { data: e, width: t, height: n, depth: r }, this.magFilter = pt, this.minFilter = pt, this.wrapR = Dt, this.generateMipmaps = !1, this.flipY = !1, this.unpackAlignment = 1;
   }
 }
-class rc extends Mt {
+class sc extends Mt {
   constructor(e = null, t = 1, n = 1, r = 1) {
     super(null), this.isData3DTexture = !0, this.image = { data: e, width: t, height: n, depth: r }, this.magFilter = pt, this.minFilter = pt, this.wrapR = Dt, this.generateMipmaps = !1, this.flipY = !1, this.unpackAlignment = 1;
   }
@@ -1609,7 +1609,7 @@ function Tr(i, e, t, n, r) {
   }
   return !0;
 }
-const sc = /* @__PURE__ */ new yi(), ci = /* @__PURE__ */ new R(), br = /* @__PURE__ */ new R();
+const ac = /* @__PURE__ */ new yi(), ci = /* @__PURE__ */ new R(), br = /* @__PURE__ */ new R();
 class nr {
   constructor(e = new R(), t = -1) {
     this.center = e, this.radius = t;
@@ -1619,7 +1619,7 @@ class nr {
   }
   setFromPoints(e, t) {
     const n = this.center;
-    t !== void 0 ? n.copy(t) : sc.setFromPoints(e).getCenter(n);
+    t !== void 0 ? n.copy(t) : ac.setFromPoints(e).getCenter(n);
     let r = 0;
     for (let s = 0, o = e.length; s < o; s++)
       r = Math.max(r, n.distanceToSquared(e[s]));
@@ -1685,7 +1685,7 @@ class nr {
   }
 }
 const Xt = /* @__PURE__ */ new R(), Ar = /* @__PURE__ */ new R(), Pi = /* @__PURE__ */ new R(), nn = /* @__PURE__ */ new R(), wr = /* @__PURE__ */ new R(), Ri = /* @__PURE__ */ new R(), Pr = /* @__PURE__ */ new R();
-class yo {
+class To {
   constructor(e = new R(), t = new R(0, 0, -1)) {
     this.origin = e, this.direction = t;
   }
@@ -1929,7 +1929,7 @@ class Ke {
     return t[3] = 0, t[7] = 0, t[11] = 0, t[12] = 0, t[13] = 0, t[14] = 0, t[15] = 1, this;
   }
   makeRotationFromQuaternion(e) {
-    return this.compose(ac, e, oc);
+    return this.compose(oc, e, lc);
   }
   lookAt(e, t, n) {
     const r = this.elements;
@@ -2158,7 +2158,7 @@ class Ke {
     return e[t] = n[0], e[t + 1] = n[1], e[t + 2] = n[2], e[t + 3] = n[3], e[t + 4] = n[4], e[t + 5] = n[5], e[t + 6] = n[6], e[t + 7] = n[7], e[t + 8] = n[8], e[t + 9] = n[9], e[t + 10] = n[10], e[t + 11] = n[11], e[t + 12] = n[12], e[t + 13] = n[13], e[t + 14] = n[14], e[t + 15] = n[15], e;
   }
 }
-const Nn = /* @__PURE__ */ new R(), Rt = /* @__PURE__ */ new Ke(), ac = /* @__PURE__ */ new R(0, 0, 0), oc = /* @__PURE__ */ new R(1, 1, 1), rn = /* @__PURE__ */ new R(), Ci = /* @__PURE__ */ new R(), xt = /* @__PURE__ */ new R(), sa = /* @__PURE__ */ new Ke(), aa = /* @__PURE__ */ new Tn();
+const Nn = /* @__PURE__ */ new R(), Rt = /* @__PURE__ */ new Ke(), oc = /* @__PURE__ */ new R(0, 0, 0), lc = /* @__PURE__ */ new R(1, 1, 1), rn = /* @__PURE__ */ new R(), Ci = /* @__PURE__ */ new R(), xt = /* @__PURE__ */ new R(), sa = /* @__PURE__ */ new Ke(), aa = /* @__PURE__ */ new Tn();
 class ir {
   constructor(e = 0, t = 0, n = 0, r = ir.DEFAULT_ORDER) {
     this.isEuler = !0, this._x = e, this._y = t, this._z = n, this._order = r;
@@ -2250,7 +2250,7 @@ class ir {
   }
 }
 ir.DEFAULT_ORDER = "XYZ";
-class To {
+class bo {
   constructor() {
     this.mask = 1;
   }
@@ -2279,11 +2279,11 @@ class To {
     return (this.mask & (1 << e | 0)) !== 0;
   }
 }
-let lc = 0;
-const oa = /* @__PURE__ */ new R(), Fn = /* @__PURE__ */ new Tn(), Yt = /* @__PURE__ */ new Ke(), Li = /* @__PURE__ */ new R(), hi = /* @__PURE__ */ new R(), cc = /* @__PURE__ */ new R(), hc = /* @__PURE__ */ new Tn(), la = /* @__PURE__ */ new R(1, 0, 0), ca = /* @__PURE__ */ new R(0, 1, 0), ha = /* @__PURE__ */ new R(0, 0, 1), uc = { type: "added" }, ua = { type: "removed" };
+let cc = 0;
+const oa = /* @__PURE__ */ new R(), Fn = /* @__PURE__ */ new Tn(), Yt = /* @__PURE__ */ new Ke(), Li = /* @__PURE__ */ new R(), hi = /* @__PURE__ */ new R(), hc = /* @__PURE__ */ new R(), uc = /* @__PURE__ */ new Tn(), la = /* @__PURE__ */ new R(1, 0, 0), ca = /* @__PURE__ */ new R(0, 1, 0), ha = /* @__PURE__ */ new R(0, 0, 1), dc = { type: "added" }, ua = { type: "removed" };
 class ot extends Pn {
   constructor() {
-    super(), this.isObject3D = !0, Object.defineProperty(this, "id", { value: lc++ }), this.uuid = ri(), this.name = "", this.type = "Object3D", this.parent = null, this.children = [], this.up = ot.DEFAULT_UP.clone();
+    super(), this.isObject3D = !0, Object.defineProperty(this, "id", { value: cc++ }), this.uuid = ri(), this.name = "", this.type = "Object3D", this.parent = null, this.children = [], this.up = ot.DEFAULT_UP.clone();
     const e = new R(), t = new ir(), n = new Tn(), r = new R(1, 1, 1);
     function s() {
       n.setFromEuler(t, !1);
@@ -2318,7 +2318,7 @@ class ot extends Pn {
       normalMatrix: {
         value: new He()
       }
-    }), this.matrix = new Ke(), this.matrixWorld = new Ke(), this.matrixAutoUpdate = ot.DEFAULT_MATRIX_AUTO_UPDATE, this.matrixWorldNeedsUpdate = !1, this.matrixWorldAutoUpdate = ot.DEFAULT_MATRIX_WORLD_AUTO_UPDATE, this.layers = new To(), this.visible = !0, this.castShadow = !1, this.receiveShadow = !1, this.frustumCulled = !0, this.renderOrder = 0, this.animations = [], this.userData = {};
+    }), this.matrix = new Ke(), this.matrixWorld = new Ke(), this.matrixAutoUpdate = ot.DEFAULT_MATRIX_AUTO_UPDATE, this.matrixWorldNeedsUpdate = !1, this.matrixWorldAutoUpdate = ot.DEFAULT_MATRIX_WORLD_AUTO_UPDATE, this.layers = new bo(), this.visible = !0, this.castShadow = !1, this.receiveShadow = !1, this.frustumCulled = !0, this.renderOrder = 0, this.animations = [], this.userData = {};
   }
   onBeforeRender() {
   }
@@ -2386,7 +2386,7 @@ class ot extends Pn {
         this.add(arguments[t]);
       return this;
     }
-    return e === this ? (console.error("THREE.Object3D.add: object can't be added as a child of itself.", e), this) : (e && e.isObject3D ? (e.parent !== null && e.parent.remove(e), e.parent = this, this.children.push(e), e.dispatchEvent(uc)) : console.error("THREE.Object3D.add: object not an instance of THREE.Object3D.", e), this);
+    return e === this ? (console.error("THREE.Object3D.add: object can't be added as a child of itself.", e), this) : (e && e.isObject3D ? (e.parent !== null && e.parent.remove(e), e.parent = this, this.children.push(e), e.dispatchEvent(dc)) : console.error("THREE.Object3D.add: object not an instance of THREE.Object3D.", e), this);
   }
   remove(e) {
     if (arguments.length > 1) {
@@ -2439,10 +2439,10 @@ class ot extends Pn {
     return this.updateWorldMatrix(!0, !1), e.setFromMatrixPosition(this.matrixWorld);
   }
   getWorldQuaternion(e) {
-    return this.updateWorldMatrix(!0, !1), this.matrixWorld.decompose(hi, e, cc), e;
+    return this.updateWorldMatrix(!0, !1), this.matrixWorld.decompose(hi, e, hc), e;
   }
   getWorldScale(e) {
-    return this.updateWorldMatrix(!0, !1), this.matrixWorld.decompose(hi, hc, e), e;
+    return this.updateWorldMatrix(!0, !1), this.matrixWorld.decompose(hi, uc, e), e;
   }
   getWorldDirection(e) {
     this.updateWorldMatrix(!0, !1);
@@ -2685,10 +2685,10 @@ class qt {
     return e.a.equals(this.a) && e.b.equals(this.b) && e.c.equals(this.c);
   }
 }
-let dc = 0;
+let fc = 0;
 class si extends Pn {
   constructor() {
-    super(), this.isMaterial = !0, Object.defineProperty(this, "id", { value: dc++ }), this.uuid = ri(), this.name = "", this.type = "Material", this.blending = Kn, this.side = on, this.vertexColors = !1, this.opacity = 1, this.transparent = !1, this.blendSrc = ho, this.blendDst = uo, this.blendEquation = Yn, this.blendSrcAlpha = null, this.blendDstAlpha = null, this.blendEquationAlpha = null, this.depthFunc = Zr, this.depthTest = !0, this.depthWrite = !0, this.stencilWriteMask = 255, this.stencilFunc = jl, this.stencilRef = 0, this.stencilFuncMask = 255, this.stencilFail = gr, this.stencilZFail = gr, this.stencilZPass = gr, this.stencilWrite = !1, this.clippingPlanes = null, this.clipIntersection = !1, this.clipShadows = !1, this.shadowSide = null, this.colorWrite = !0, this.precision = null, this.polygonOffset = !1, this.polygonOffsetFactor = 0, this.polygonOffsetUnits = 0, this.dithering = !1, this.alphaToCoverage = !1, this.premultipliedAlpha = !1, this.forceSinglePass = !1, this.visible = !0, this.toneMapped = !0, this.userData = {}, this.version = 0, this._alphaTest = 0;
+    super(), this.isMaterial = !0, Object.defineProperty(this, "id", { value: fc++ }), this.uuid = ri(), this.name = "", this.type = "Material", this.blending = Kn, this.side = on, this.vertexColors = !1, this.opacity = 1, this.transparent = !1, this.blendSrc = uo, this.blendDst = fo, this.blendEquation = Yn, this.blendSrcAlpha = null, this.blendDstAlpha = null, this.blendEquationAlpha = null, this.depthFunc = Zr, this.depthTest = !0, this.depthWrite = !0, this.stencilWriteMask = 255, this.stencilFunc = Zl, this.stencilRef = 0, this.stencilFuncMask = 255, this.stencilFail = gr, this.stencilZFail = gr, this.stencilZPass = gr, this.stencilWrite = !1, this.clippingPlanes = null, this.clipIntersection = !1, this.clipShadows = !1, this.shadowSide = null, this.colorWrite = !0, this.precision = null, this.polygonOffset = !1, this.polygonOffsetFactor = 0, this.polygonOffsetUnits = 0, this.dithering = !1, this.alphaToCoverage = !1, this.premultipliedAlpha = !1, this.forceSinglePass = !1, this.visible = !0, this.toneMapped = !0, this.userData = {}, this.version = 0, this._alphaTest = 0;
   }
   get alphaTest() {
     return this._alphaTest;
@@ -2771,7 +2771,7 @@ class si extends Pn {
     e === !0 && this.version++;
   }
 }
-const bo = {
+const Ao = {
   aliceblue: 15792383,
   antiquewhite: 16444375,
   aqua: 65535,
@@ -2941,7 +2941,7 @@ class Ve {
     return this.r = e, this.g = t, this.b = n, Pt.toWorkingColorSpace(this, r), this;
   }
   setHSL(e, t, n, r = Pt.workingColorSpace) {
-    if (e = Zl(e, 1), t = at(t, 0, 1), n = at(n, 0, 1), t === 0)
+    if (e = Kl(e, 1), t = at(t, 0, 1), n = at(n, 0, 1), t === 0)
       this.r = this.g = this.b = n;
     else {
       const s = n <= 0.5 ? n * (1 + t) : n + t - n * t, o = 2 * n - s;
@@ -3005,7 +3005,7 @@ class Ve {
     return this;
   }
   setColorName(e, t = Ie) {
-    const n = bo[e.toLowerCase()];
+    const n = Ao[e.toLowerCase()];
     return n !== void 0 ? this.setHex(n, t) : console.warn("THREE.Color: Unknown color " + e), this;
   }
   clone() {
@@ -3123,7 +3123,7 @@ class Ve {
   }
 }
 const ht = /* @__PURE__ */ new Ve();
-Ve.NAMES = bo;
+Ve.NAMES = Ao;
 class us extends si {
   constructor(e) {
     super(), this.isMeshBasicMaterial = !0, this.type = "MeshBasicMaterial", this.color = new Ve(16777215), this.map = null, this.lightMap = null, this.lightMapIntensity = 1, this.aoMap = null, this.aoMapIntensity = 1, this.specularMap = null, this.alphaMap = null, this.envMap = null, this.combine = hs, this.reflectivity = 1, this.refractionRatio = 0.98, this.wireframe = !1, this.wireframeLinewidth = 1, this.wireframeLinecap = "round", this.wireframeLinejoin = "round", this.fog = !0, this.setValues(e);
@@ -3251,12 +3251,12 @@ class Gt {
     console.error("THREE.BufferAttribute: copyVector4sArray() was removed in r144.");
   }
 }
-class Ao extends Gt {
+class wo extends Gt {
   constructor(e, t, n) {
     super(new Uint16Array(e), t, n);
   }
 }
-class wo extends Gt {
+class Po extends Gt {
   constructor(e, t, n) {
     super(new Uint32Array(e), t, n);
   }
@@ -3266,17 +3266,17 @@ class st extends Gt {
     super(new Float32Array(e), t, n);
   }
 }
-let fc = 0;
+let pc = 0;
 const yt = /* @__PURE__ */ new Ke(), Ur = /* @__PURE__ */ new ot(), zn = /* @__PURE__ */ new R(), vt = /* @__PURE__ */ new yi(), ui = /* @__PURE__ */ new yi(), rt = /* @__PURE__ */ new R();
 class St extends Pn {
   constructor() {
-    super(), this.isBufferGeometry = !0, Object.defineProperty(this, "id", { value: fc++ }), this.uuid = ri(), this.name = "", this.type = "BufferGeometry", this.index = null, this.attributes = {}, this.morphAttributes = {}, this.morphTargetsRelative = !1, this.groups = [], this.boundingBox = null, this.boundingSphere = null, this.drawRange = { start: 0, count: 1 / 0 }, this.userData = {};
+    super(), this.isBufferGeometry = !0, Object.defineProperty(this, "id", { value: pc++ }), this.uuid = ri(), this.name = "", this.type = "BufferGeometry", this.index = null, this.attributes = {}, this.morphAttributes = {}, this.morphTargetsRelative = !1, this.groups = [], this.boundingBox = null, this.boundingSphere = null, this.drawRange = { start: 0, count: 1 / 0 }, this.userData = {};
   }
   getIndex() {
     return this.index;
   }
   setIndex(e) {
-    return Array.isArray(e) ? this.index = new (vo(e) ? wo : Ao)(e, 1) : this.index = e, this;
+    return Array.isArray(e) ? this.index = new (Mo(e) ? Po : wo)(e, 1) : this.index = e, this;
   }
   getAttribute(e) {
     return this.attributes[e];
@@ -3582,7 +3582,7 @@ class St extends Pn {
     this.dispatchEvent({ type: "dispose" });
   }
 }
-const fa = /* @__PURE__ */ new Ke(), Nt = /* @__PURE__ */ new yo(), Ii = /* @__PURE__ */ new nr(), pa = /* @__PURE__ */ new R(), Gn = /* @__PURE__ */ new R(), Hn = /* @__PURE__ */ new R(), Vn = /* @__PURE__ */ new R(), Ir = /* @__PURE__ */ new R(), Ni = /* @__PURE__ */ new R(), Fi = /* @__PURE__ */ new he(), Oi = /* @__PURE__ */ new he(), Bi = /* @__PURE__ */ new he(), ma = /* @__PURE__ */ new R(), _a = /* @__PURE__ */ new R(), ga = /* @__PURE__ */ new R(), zi = /* @__PURE__ */ new R(), Gi = /* @__PURE__ */ new R();
+const fa = /* @__PURE__ */ new Ke(), Nt = /* @__PURE__ */ new To(), Ii = /* @__PURE__ */ new nr(), pa = /* @__PURE__ */ new R(), Gn = /* @__PURE__ */ new R(), Hn = /* @__PURE__ */ new R(), Vn = /* @__PURE__ */ new R(), Ir = /* @__PURE__ */ new R(), Ni = /* @__PURE__ */ new R(), Fi = /* @__PURE__ */ new he(), Oi = /* @__PURE__ */ new he(), Bi = /* @__PURE__ */ new he(), ma = /* @__PURE__ */ new R(), _a = /* @__PURE__ */ new R(), ga = /* @__PURE__ */ new R(), zi = /* @__PURE__ */ new R(), Gi = /* @__PURE__ */ new R();
 class At extends ot {
   constructor(e = new St(), t = new us()) {
     super(), this.isMesh = !0, this.type = "Mesh", this.geometry = e, this.material = t, this.updateMorphTargets();
@@ -3658,7 +3658,7 @@ class At extends ot {
       }
   }
 }
-function pc(i, e, t, n, r, s, o, a) {
+function mc(i, e, t, n, r, s, o, a) {
   let c;
   if (e.side === mt ? c = n.intersectTriangle(o, s, r, !0, a) : c = n.intersectTriangle(r, s, o, e.side === on, a), c === null)
     return null;
@@ -3672,7 +3672,7 @@ function pc(i, e, t, n, r, s, o, a) {
 }
 function Hi(i, e, t, n, r, s, o, a, c, l) {
   i.getVertexPosition(a, Gn), i.getVertexPosition(c, Hn), i.getVertexPosition(l, Vn);
-  const h = pc(i, e, t, n, Gn, Hn, Vn, zi);
+  const h = mc(i, e, t, n, Gn, Hn, Vn, zi);
   if (h) {
     r && (Fi.fromBufferAttribute(r, a), Oi.fromBufferAttribute(r, c), Bi.fromBufferAttribute(r, l), h.uv = qt.getInterpolation(zi, Gn, Hn, Vn, Fi, Oi, Bi, new he())), s && (Fi.fromBufferAttribute(s, a), Oi.fromBufferAttribute(s, c), Bi.fromBufferAttribute(s, l), h.uv1 = qt.getInterpolation(zi, Gn, Hn, Vn, Fi, Oi, Bi, new he()), h.uv2 = h.uv1), o && (ma.fromBufferAttribute(o, a), _a.fromBufferAttribute(o, c), ga.fromBufferAttribute(o, l), h.normal = qt.getInterpolation(zi, Gn, Hn, Vn, ma, _a, ga, new R()), h.normal.dot(n.direction) > 0 && h.normal.multiplyScalar(-1));
     const d = {
@@ -3747,24 +3747,24 @@ function ft(i) {
   }
   return e;
 }
-function mc(i) {
+function _c(i) {
   const e = [];
   for (let t = 0; t < i.length; t++)
     e.push(i[t].clone());
   return e;
 }
-function Po(i) {
+function Ro(i) {
   return i.getRenderTarget() === null ? i.outputColorSpace : Ht;
 }
-const _c = { clone: ii, merge: ft };
-var gc = `void main() {
+const gc = { clone: ii, merge: ft };
+var xc = `void main() {
 	gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
-}`, xc = `void main() {
+}`, vc = `void main() {
 	gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );
 }`;
 class An extends si {
   constructor(e) {
-    super(), this.isShaderMaterial = !0, this.type = "ShaderMaterial", this.defines = {}, this.uniforms = {}, this.uniformsGroups = [], this.vertexShader = gc, this.fragmentShader = xc, this.linewidth = 1, this.wireframe = !1, this.wireframeLinewidth = 1, this.fog = !1, this.lights = !1, this.clipping = !1, this.forceSinglePass = !0, this.extensions = {
+    super(), this.isShaderMaterial = !0, this.type = "ShaderMaterial", this.defines = {}, this.uniforms = {}, this.uniformsGroups = [], this.vertexShader = xc, this.fragmentShader = vc, this.linewidth = 1, this.wireframe = !1, this.wireframeLinewidth = 1, this.fog = !1, this.lights = !1, this.clipping = !1, this.forceSinglePass = !0, this.extensions = {
       derivatives: !1,
       // set to use derivatives
       fragDepth: !1,
@@ -3780,7 +3780,7 @@ class An extends si {
     }, this.index0AttributeName = void 0, this.uniformsNeedUpdate = !1, this.glslVersion = null, e !== void 0 && this.setValues(e);
   }
   copy(e) {
-    return super.copy(e), this.fragmentShader = e.fragmentShader, this.vertexShader = e.vertexShader, this.uniforms = ii(e.uniforms), this.uniformsGroups = mc(e.uniformsGroups), this.defines = Object.assign({}, e.defines), this.wireframe = e.wireframe, this.wireframeLinewidth = e.wireframeLinewidth, this.fog = e.fog, this.lights = e.lights, this.clipping = e.clipping, this.extensions = Object.assign({}, e.extensions), this.glslVersion = e.glslVersion, this;
+    return super.copy(e), this.fragmentShader = e.fragmentShader, this.vertexShader = e.vertexShader, this.uniforms = ii(e.uniforms), this.uniformsGroups = _c(e.uniformsGroups), this.defines = Object.assign({}, e.defines), this.wireframe = e.wireframe, this.wireframeLinewidth = e.wireframeLinewidth, this.fog = e.fog, this.lights = e.lights, this.clipping = e.clipping, this.extensions = Object.assign({}, e.extensions), this.glslVersion = e.glslVersion, this;
   }
   toJSON(e) {
     const t = super.toJSON(e);
@@ -3819,7 +3819,7 @@ class An extends si {
     return Object.keys(n).length > 0 && (t.extensions = n), t;
   }
 }
-class Ro extends ot {
+class Co extends ot {
   constructor() {
     super(), this.isCamera = !0, this.type = "Camera", this.matrixWorldInverse = new Ke(), this.projectionMatrix = new Ke(), this.projectionMatrixInverse = new Ke();
   }
@@ -3841,7 +3841,7 @@ class Ro extends ot {
     return new this.constructor().copy(this);
   }
 }
-class bt extends Ro {
+class bt extends Co {
   constructor(e = 50, t = 1, n = 0.1, r = 2e3) {
     super(), this.isPerspectiveCamera = !0, this.type = "PerspectiveCamera", this.fov = e, this.zoom = 1, this.near = n, this.far = r, this.focus = 10, this.aspect = t, this.view = null, this.filmGauge = 35, this.filmOffset = 0, this.updateProjectionMatrix();
   }
@@ -3944,7 +3944,7 @@ class bt extends Ro {
   }
 }
 const kn = -90, Wn = 1;
-class vc extends ot {
+class Mc extends ot {
   constructor(e, t, n) {
     super(), this.type = "CubeCamera", this.renderTarget = n;
     const r = new bt(kn, Wn, e, t);
@@ -3968,7 +3968,7 @@ class vc extends ot {
     n.texture.generateMipmaps = !1, e.setRenderTarget(n, 0), e.render(t, r), e.setRenderTarget(n, 1), e.render(t, s), e.setRenderTarget(n, 2), e.render(t, o), e.setRenderTarget(n, 3), e.render(t, a), e.setRenderTarget(n, 4), e.render(t, c), n.texture.generateMipmaps = p, e.setRenderTarget(n, 5), e.render(t, l), e.setRenderTarget(h), e.toneMapping = d, e.xr.enabled = f, n.texture.needsPMREMUpdate = !0;
   }
 }
-class Co extends Mt {
+class Lo extends Mt {
   constructor(e, t, n, r, s, o, a, c, l, h) {
     e = e !== void 0 ? e : [], t = t !== void 0 ? t : ei, super(e, t, n, r, s, o, a, c, l, h), this.isCubeTexture = !0, this.flipY = !1;
   }
@@ -3979,11 +3979,11 @@ class Co extends Mt {
     this.image = e;
   }
 }
-class Mc extends yn {
+class Sc extends yn {
   constructor(e = 1, t = {}) {
     super(e, e, t), this.isWebGLCubeRenderTarget = !0;
     const n = { width: e, height: e, depth: 1 }, r = [n, n, n, n, n, n];
-    t.encoding !== void 0 && (mi("THREE.WebGLCubeRenderTarget: option.encoding has been replaced by option.colorSpace."), t.colorSpace = t.encoding === Mn ? Ie : Sn), this.texture = new Co(r, t.mapping, t.wrapS, t.wrapT, t.magFilter, t.minFilter, t.format, t.type, t.anisotropy, t.colorSpace), this.texture.isRenderTargetTexture = !0, this.texture.generateMipmaps = t.generateMipmaps !== void 0 ? t.generateMipmaps : !1, this.texture.minFilter = t.minFilter !== void 0 ? t.minFilter : Tt;
+    t.encoding !== void 0 && (mi("THREE.WebGLCubeRenderTarget: option.encoding has been replaced by option.colorSpace."), t.colorSpace = t.encoding === Mn ? Ie : Sn), this.texture = new Lo(r, t.mapping, t.wrapS, t.wrapT, t.magFilter, t.minFilter, t.format, t.type, t.anisotropy, t.colorSpace), this.texture.isRenderTargetTexture = !0, this.texture.generateMipmaps = t.generateMipmaps !== void 0 ? t.generateMipmaps : !1, this.texture.minFilter = t.minFilter !== void 0 ? t.minFilter : Tt;
   }
   fromEquirectangularTexture(e, t) {
     this.texture.type = t.type, this.texture.colorSpace = t.colorSpace, this.texture.generateMipmaps = t.generateMipmaps, this.texture.minFilter = t.minFilter, this.texture.magFilter = t.magFilter;
@@ -4044,7 +4044,7 @@ class Mc extends yn {
     });
     s.uniforms.tEquirect.value = t;
     const o = new At(r, s), a = t.minFilter;
-    return t.minFilter === xi && (t.minFilter = Tt), new vc(1, 10, this).update(e, o), t.minFilter = a, o.geometry.dispose(), o.material.dispose(), this;
+    return t.minFilter === xi && (t.minFilter = Tt), new Mc(1, 10, this).update(e, o), t.minFilter = a, o.geometry.dispose(), o.material.dispose(), this;
   }
   clear(e, t, n, r) {
     const s = e.getRenderTarget();
@@ -4053,7 +4053,7 @@ class Mc extends yn {
     e.setRenderTarget(s);
   }
 }
-const Nr = /* @__PURE__ */ new R(), Sc = /* @__PURE__ */ new R(), Ec = /* @__PURE__ */ new He();
+const Nr = /* @__PURE__ */ new R(), Ec = /* @__PURE__ */ new R(), yc = /* @__PURE__ */ new He();
 class pn {
   constructor(e = new R(1, 0, 0), t = 0) {
     this.isPlane = !0, this.normal = e, this.constant = t;
@@ -4068,7 +4068,7 @@ class pn {
     return this.normal.copy(e), this.constant = -t.dot(this.normal), this;
   }
   setFromCoplanarPoints(e, t, n) {
-    const r = Nr.subVectors(n, t).cross(Sc.subVectors(e, t)).normalize();
+    const r = Nr.subVectors(n, t).cross(Ec.subVectors(e, t)).normalize();
     return this.setFromNormalAndCoplanarPoint(r, e), this;
   }
   copy(e) {
@@ -4111,7 +4111,7 @@ class pn {
     return e.copy(this.normal).multiplyScalar(-this.constant);
   }
   applyMatrix4(e, t) {
-    const n = t || Ec.getNormalMatrix(e), r = this.coplanarPoint(Nr).applyMatrix4(e), s = this.normal.applyMatrix3(n).normalize();
+    const n = t || yc.getNormalMatrix(e), r = this.coplanarPoint(Nr).applyMatrix4(e), s = this.normal.applyMatrix3(n).normalize();
     return this.constant = -r.dot(s), this;
   }
   translate(e) {
@@ -4182,7 +4182,7 @@ class ds {
     return new this.constructor().copy(this);
   }
 }
-function Lo() {
+function qo() {
   let i = null, e = !1, t = null, n = null;
   function r(s, o) {
     t(s, o), n = i.requestAnimationFrame(r);
@@ -4202,7 +4202,7 @@ function Lo() {
     }
   };
 }
-function yc(i, e) {
+function Tc(i, e) {
   const t = e.isWebGL2, n = /* @__PURE__ */ new WeakMap();
   function r(l, h) {
     const d = l.array, f = l.usage, p = i.createBuffer();
@@ -4312,28 +4312,28 @@ class fs extends St {
     return new fs(e.width, e.height, e.widthSegments, e.heightSegments);
   }
 }
-var Tc = `#ifdef USE_ALPHAMAP
+var bc = `#ifdef USE_ALPHAMAP
 	diffuseColor.a *= texture2D( alphaMap, vAlphaMapUv ).g;
-#endif`, bc = `#ifdef USE_ALPHAMAP
+#endif`, Ac = `#ifdef USE_ALPHAMAP
 	uniform sampler2D alphaMap;
-#endif`, Ac = `#ifdef USE_ALPHATEST
-	if ( diffuseColor.a < alphaTest ) discard;
 #endif`, wc = `#ifdef USE_ALPHATEST
+	if ( diffuseColor.a < alphaTest ) discard;
+#endif`, Pc = `#ifdef USE_ALPHATEST
 	uniform float alphaTest;
-#endif`, Pc = `#ifdef USE_AOMAP
+#endif`, Rc = `#ifdef USE_AOMAP
 	float ambientOcclusion = ( texture2D( aoMap, vAoMapUv ).r - 1.0 ) * aoMapIntensity + 1.0;
 	reflectedLight.indirectDiffuse *= ambientOcclusion;
 	#if defined( USE_ENVMAP ) && defined( STANDARD )
 		float dotNV = saturate( dot( geometry.normal, geometry.viewDir ) );
 		reflectedLight.indirectSpecular *= computeSpecularOcclusion( dotNV, ambientOcclusion, material.roughness );
 	#endif
-#endif`, Rc = `#ifdef USE_AOMAP
+#endif`, Cc = `#ifdef USE_AOMAP
 	uniform sampler2D aoMap;
 	uniform float aoMapIntensity;
-#endif`, Cc = "vec3 transformed = vec3( position );", Lc = `vec3 objectNormal = vec3( normal );
+#endif`, Lc = "vec3 transformed = vec3( position );", qc = `vec3 objectNormal = vec3( normal );
 #ifdef USE_TANGENT
 	vec3 objectTangent = vec3( tangent.xyz );
-#endif`, qc = `float G_BlinnPhong_Implicit( ) {
+#endif`, Dc = `float G_BlinnPhong_Implicit( ) {
 	return 0.25;
 }
 float D_BlinnPhong( const in float shininess, const in float dotNH ) {
@@ -4347,7 +4347,7 @@ vec3 BRDF_BlinnPhong( const in vec3 lightDir, const in vec3 viewDir, const in ve
 	float G = G_BlinnPhong_Implicit( );
 	float D = D_BlinnPhong( shininess, dotNH );
 	return F * ( G * D );
-} // validated`, Dc = `#ifdef USE_IRIDESCENCE
+} // validated`, Uc = `#ifdef USE_IRIDESCENCE
 	const mat3 XYZ_TO_REC709 = mat3(
 		 3.2404542, -0.9692660,  0.0556434,
 		-1.5371385,  1.8760108, -0.2040259,
@@ -4411,7 +4411,7 @@ vec3 BRDF_BlinnPhong( const in vec3 lightDir, const in vec3 viewDir, const in ve
 		}
 		return max( I, vec3( 0.0 ) );
 	}
-#endif`, Uc = `#ifdef USE_BUMPMAP
+#endif`, Ic = `#ifdef USE_BUMPMAP
 	uniform sampler2D bumpMap;
 	uniform float bumpScale;
 	vec2 dHdxy_fwd() {
@@ -4432,7 +4432,7 @@ vec3 BRDF_BlinnPhong( const in vec3 lightDir, const in vec3 viewDir, const in ve
 		vec3 vGrad = sign( fDet ) * ( dHdxy.x * R1 + dHdxy.y * R2 );
 		return normalize( abs( fDet ) * surf_norm - vGrad );
 	}
-#endif`, Ic = `#if NUM_CLIPPING_PLANES > 0
+#endif`, Nc = `#if NUM_CLIPPING_PLANES > 0
 	vec4 plane;
 	#pragma unroll_loop_start
 	for ( int i = 0; i < UNION_CLIPPING_PLANES; i ++ ) {
@@ -4450,26 +4450,26 @@ vec3 BRDF_BlinnPhong( const in vec3 lightDir, const in vec3 viewDir, const in ve
 		#pragma unroll_loop_end
 		if ( clipped ) discard;
 	#endif
-#endif`, Nc = `#if NUM_CLIPPING_PLANES > 0
-	varying vec3 vClipPosition;
-	uniform vec4 clippingPlanes[ NUM_CLIPPING_PLANES ];
 #endif`, Fc = `#if NUM_CLIPPING_PLANES > 0
 	varying vec3 vClipPosition;
+	uniform vec4 clippingPlanes[ NUM_CLIPPING_PLANES ];
 #endif`, Oc = `#if NUM_CLIPPING_PLANES > 0
+	varying vec3 vClipPosition;
+#endif`, Bc = `#if NUM_CLIPPING_PLANES > 0
 	vClipPosition = - mvPosition.xyz;
-#endif`, Bc = `#if defined( USE_COLOR_ALPHA )
+#endif`, zc = `#if defined( USE_COLOR_ALPHA )
 	diffuseColor *= vColor;
 #elif defined( USE_COLOR )
 	diffuseColor.rgb *= vColor;
-#endif`, zc = `#if defined( USE_COLOR_ALPHA )
+#endif`, Gc = `#if defined( USE_COLOR_ALPHA )
 	varying vec4 vColor;
 #elif defined( USE_COLOR )
 	varying vec3 vColor;
-#endif`, Gc = `#if defined( USE_COLOR_ALPHA )
+#endif`, Hc = `#if defined( USE_COLOR_ALPHA )
 	varying vec4 vColor;
 #elif defined( USE_COLOR ) || defined( USE_INSTANCING_COLOR )
 	varying vec3 vColor;
-#endif`, Hc = `#if defined( USE_COLOR_ALPHA )
+#endif`, Vc = `#if defined( USE_COLOR_ALPHA )
 	vColor = vec4( 1.0 );
 #elif defined( USE_COLOR ) || defined( USE_INSTANCING_COLOR )
 	vColor = vec3( 1.0 );
@@ -4479,7 +4479,7 @@ vec3 BRDF_BlinnPhong( const in vec3 lightDir, const in vec3 viewDir, const in ve
 #endif
 #ifdef USE_INSTANCING_COLOR
 	vColor.xyz *= instanceColor.xyz;
-#endif`, Vc = `#define PI 3.141592653589793
+#endif`, kc = `#define PI 3.141592653589793
 #define PI2 6.283185307179586
 #define PI_HALF 1.5707963267948966
 #define RECIPROCAL_PI 0.3183098861837907
@@ -4562,7 +4562,7 @@ vec3 F_Schlick( const in vec3 f0, const in float f90, const in float dotVH ) {
 float F_Schlick( const in float f0, const in float f90, const in float dotVH ) {
 	float fresnel = exp2( ( - 5.55473 * dotVH - 6.98316 ) * dotVH );
 	return f0 * ( 1.0 - fresnel ) + ( f90 * fresnel );
-} // validated`, kc = `#ifdef ENVMAP_TYPE_CUBE_UV
+} // validated`, Wc = `#ifdef ENVMAP_TYPE_CUBE_UV
 	#define cubeUV_minMipLevel 4.0
 	#define cubeUV_minTileSize 16.0
 	float getFace( vec3 direction ) {
@@ -4660,7 +4660,7 @@ float F_Schlick( const in float f0, const in float f90, const in float dotVH ) {
 			return vec4( mix( color0, color1, mipF ), 1.0 );
 		}
 	}
-#endif`, Wc = `vec3 transformedNormal = objectNormal;
+#endif`, Xc = `vec3 transformedNormal = objectNormal;
 #ifdef USE_INSTANCING
 	mat3 m = mat3( instanceMatrix );
 	transformedNormal /= vec3( dot( m[ 0 ], m[ 0 ] ), dot( m[ 1 ], m[ 1 ] ), dot( m[ 2 ], m[ 2 ] ) );
@@ -4675,23 +4675,23 @@ transformedNormal = normalMatrix * transformedNormal;
 	#ifdef FLIP_SIDED
 		transformedTangent = - transformedTangent;
 	#endif
-#endif`, Xc = `#ifdef USE_DISPLACEMENTMAP
+#endif`, Yc = `#ifdef USE_DISPLACEMENTMAP
 	uniform sampler2D displacementMap;
 	uniform float displacementScale;
 	uniform float displacementBias;
-#endif`, Yc = `#ifdef USE_DISPLACEMENTMAP
+#endif`, jc = `#ifdef USE_DISPLACEMENTMAP
 	transformed += normalize( objectNormal ) * ( texture2D( displacementMap, vDisplacementMapUv ).x * displacementScale + displacementBias );
-#endif`, jc = `#ifdef USE_EMISSIVEMAP
+#endif`, Zc = `#ifdef USE_EMISSIVEMAP
 	vec4 emissiveColor = texture2D( emissiveMap, vEmissiveMapUv );
 	totalEmissiveRadiance *= emissiveColor.rgb;
-#endif`, Zc = `#ifdef USE_EMISSIVEMAP
+#endif`, Kc = `#ifdef USE_EMISSIVEMAP
 	uniform sampler2D emissiveMap;
-#endif`, Kc = "gl_FragColor = linearToOutputTexel( gl_FragColor );", Jc = `vec4 LinearToLinear( in vec4 value ) {
+#endif`, Jc = "gl_FragColor = linearToOutputTexel( gl_FragColor );", $c = `vec4 LinearToLinear( in vec4 value ) {
 	return value;
 }
 vec4 LinearTosRGB( in vec4 value ) {
 	return vec4( mix( pow( value.rgb, vec3( 0.41666 ) ) * 1.055 - vec3( 0.055 ), value.rgb * 12.92, vec3( lessThanEqual( value.rgb, vec3( 0.0031308 ) ) ) ), value.a );
-}`, $c = `#ifdef USE_ENVMAP
+}`, Qc = `#ifdef USE_ENVMAP
 	#ifdef ENV_WORLDPOS
 		vec3 cameraToFrag;
 		if ( isOrthographic ) {
@@ -4720,7 +4720,7 @@ vec4 LinearTosRGB( in vec4 value ) {
 	#elif defined( ENVMAP_BLENDING_ADD )
 		outgoingLight += envColor.xyz * specularStrength * reflectivity;
 	#endif
-#endif`, Qc = `#ifdef USE_ENVMAP
+#endif`, eh = `#ifdef USE_ENVMAP
 	uniform float envMapIntensity;
 	uniform float flipEnvMap;
 	#ifdef ENVMAP_TYPE_CUBE
@@ -4729,7 +4729,7 @@ vec4 LinearTosRGB( in vec4 value ) {
 		uniform sampler2D envMap;
 	#endif
 	
-#endif`, eh = `#ifdef USE_ENVMAP
+#endif`, th = `#ifdef USE_ENVMAP
 	uniform float reflectivity;
 	#if defined( USE_BUMPMAP ) || defined( USE_NORMALMAP ) || defined( PHONG ) || defined( LAMBERT )
 		#define ENV_WORLDPOS
@@ -4740,7 +4740,7 @@ vec4 LinearTosRGB( in vec4 value ) {
 	#else
 		varying vec3 vReflect;
 	#endif
-#endif`, th = `#ifdef USE_ENVMAP
+#endif`, nh = `#ifdef USE_ENVMAP
 	#if defined( USE_BUMPMAP ) || defined( USE_NORMALMAP ) || defined( PHONG ) || defined( LAMBERT )
 		#define ENV_WORLDPOS
 	#endif
@@ -4751,7 +4751,7 @@ vec4 LinearTosRGB( in vec4 value ) {
 		varying vec3 vReflect;
 		uniform float refractionRatio;
 	#endif
-#endif`, nh = `#ifdef USE_ENVMAP
+#endif`, ih = `#ifdef USE_ENVMAP
 	#ifdef ENV_WORLDPOS
 		vWorldPosition = worldPosition.xyz;
 	#else
@@ -4768,18 +4768,18 @@ vec4 LinearTosRGB( in vec4 value ) {
 			vReflect = refract( cameraToVertex, worldNormal, refractionRatio );
 		#endif
 	#endif
-#endif`, ih = `#ifdef USE_FOG
-	vFogDepth = - mvPosition.z;
 #endif`, rh = `#ifdef USE_FOG
-	varying float vFogDepth;
+	vFogDepth = - mvPosition.z;
 #endif`, sh = `#ifdef USE_FOG
+	varying float vFogDepth;
+#endif`, ah = `#ifdef USE_FOG
 	#ifdef FOG_EXP2
 		float fogFactor = 1.0 - exp( - fogDensity * fogDensity * vFogDepth * vFogDepth );
 	#else
 		float fogFactor = smoothstep( fogNear, fogFar, vFogDepth );
 	#endif
 	gl_FragColor.rgb = mix( gl_FragColor.rgb, fogColor, fogFactor );
-#endif`, ah = `#ifdef USE_FOG
+#endif`, oh = `#ifdef USE_FOG
 	uniform vec3 fogColor;
 	varying float vFogDepth;
 	#ifdef FOG_EXP2
@@ -4788,7 +4788,7 @@ vec4 LinearTosRGB( in vec4 value ) {
 		uniform float fogNear;
 		uniform float fogFar;
 	#endif
-#endif`, oh = `#ifdef USE_GRADIENTMAP
+#endif`, lh = `#ifdef USE_GRADIENTMAP
 	uniform sampler2D gradientMap;
 #endif
 vec3 getGradientIrradiance( vec3 normal, vec3 lightDirection ) {
@@ -4800,16 +4800,16 @@ vec3 getGradientIrradiance( vec3 normal, vec3 lightDirection ) {
 		vec2 fw = fwidth( coord ) * 0.5;
 		return mix( vec3( 0.7 ), vec3( 1.0 ), smoothstep( 0.7 - fw.x, 0.7 + fw.x, coord.x ) );
 	#endif
-}`, lh = `#ifdef USE_LIGHTMAP
+}`, ch = `#ifdef USE_LIGHTMAP
 	vec4 lightMapTexel = texture2D( lightMap, vLightMapUv );
 	vec3 lightMapIrradiance = lightMapTexel.rgb * lightMapIntensity;
 	reflectedLight.indirectDiffuse += lightMapIrradiance;
-#endif`, ch = `#ifdef USE_LIGHTMAP
+#endif`, hh = `#ifdef USE_LIGHTMAP
 	uniform sampler2D lightMap;
 	uniform float lightMapIntensity;
-#endif`, hh = `LambertMaterial material;
+#endif`, uh = `LambertMaterial material;
 material.diffuseColor = diffuseColor.rgb;
-material.specularStrength = specularStrength;`, uh = `varying vec3 vViewPosition;
+material.specularStrength = specularStrength;`, dh = `varying vec3 vViewPosition;
 struct LambertMaterial {
 	vec3 diffuseColor;
 	float specularStrength;
@@ -4823,7 +4823,7 @@ void RE_IndirectDiffuse_Lambert( const in vec3 irradiance, const in GeometricCon
 	reflectedLight.indirectDiffuse += irradiance * BRDF_Lambert( material.diffuseColor );
 }
 #define RE_Direct				RE_Direct_Lambert
-#define RE_IndirectDiffuse		RE_IndirectDiffuse_Lambert`, dh = `uniform bool receiveShadow;
+#define RE_IndirectDiffuse		RE_IndirectDiffuse_Lambert`, fh = `uniform bool receiveShadow;
 uniform vec3 ambientLightColor;
 uniform vec3 lightProbe[ 9 ];
 vec3 shGetIrradianceAt( in vec3 normal, in vec3 shCoefficients[ 9 ] ) {
@@ -4944,7 +4944,7 @@ float getSpotAttenuation( const in float coneCosine, const in float penumbraCosi
 		vec3 irradiance = mix( hemiLight.groundColor, hemiLight.skyColor, hemiDiffuseWeight );
 		return irradiance;
 	}
-#endif`, fh = `#if defined( USE_ENVMAP )
+#endif`, ph = `#if defined( USE_ENVMAP )
 	vec3 getIBLIrradiance( const in vec3 normal ) {
 		#if defined( ENVMAP_TYPE_CUBE_UV )
 			vec3 worldNormal = inverseTransformDirection( normal, viewMatrix );
@@ -4965,8 +4965,8 @@ float getSpotAttenuation( const in float coneCosine, const in float penumbraCosi
 			return vec3( 0.0 );
 		#endif
 	}
-#endif`, ph = `ToonMaterial material;
-material.diffuseColor = diffuseColor.rgb;`, mh = `varying vec3 vViewPosition;
+#endif`, mh = `ToonMaterial material;
+material.diffuseColor = diffuseColor.rgb;`, _h = `varying vec3 vViewPosition;
 struct ToonMaterial {
 	vec3 diffuseColor;
 };
@@ -4978,11 +4978,11 @@ void RE_IndirectDiffuse_Toon( const in vec3 irradiance, const in GeometricContex
 	reflectedLight.indirectDiffuse += irradiance * BRDF_Lambert( material.diffuseColor );
 }
 #define RE_Direct				RE_Direct_Toon
-#define RE_IndirectDiffuse		RE_IndirectDiffuse_Toon`, _h = `BlinnPhongMaterial material;
+#define RE_IndirectDiffuse		RE_IndirectDiffuse_Toon`, gh = `BlinnPhongMaterial material;
 material.diffuseColor = diffuseColor.rgb;
 material.specularColor = specular;
 material.specularShininess = shininess;
-material.specularStrength = specularStrength;`, gh = `varying vec3 vViewPosition;
+material.specularStrength = specularStrength;`, xh = `varying vec3 vViewPosition;
 struct BlinnPhongMaterial {
 	vec3 diffuseColor;
 	vec3 specularColor;
@@ -4999,7 +4999,7 @@ void RE_IndirectDiffuse_BlinnPhong( const in vec3 irradiance, const in Geometric
 	reflectedLight.indirectDiffuse += irradiance * BRDF_Lambert( material.diffuseColor );
 }
 #define RE_Direct				RE_Direct_BlinnPhong
-#define RE_IndirectDiffuse		RE_IndirectDiffuse_BlinnPhong`, xh = `PhysicalMaterial material;
+#define RE_IndirectDiffuse		RE_IndirectDiffuse_BlinnPhong`, vh = `PhysicalMaterial material;
 material.diffuseColor = diffuseColor.rgb * ( 1.0 - metalnessFactor );
 vec3 dxy = max( abs( dFdx( geometryNormal ) ), abs( dFdy( geometryNormal ) ) );
 float geometryRoughness = max( max( dxy.x, dxy.y ), dxy.z );
@@ -5063,7 +5063,7 @@ material.roughness = min( material.roughness, 1.0 );
 	#ifdef USE_SHEEN_ROUGHNESSMAP
 		material.sheenRoughness *= texture2D( sheenRoughnessMap, vSheenRoughnessMapUv ).a;
 	#endif
-#endif`, vh = `struct PhysicalMaterial {
+#endif`, Mh = `struct PhysicalMaterial {
 	vec3 diffuseColor;
 	float roughness;
 	vec3 specularColor;
@@ -5329,7 +5329,7 @@ void RE_IndirectSpecular_Physical( const in vec3 radiance, const in vec3 irradia
 #define RE_IndirectSpecular		RE_IndirectSpecular_Physical
 float computeSpecularOcclusion( const in float dotNV, const in float ambientOcclusion, const in float roughness ) {
 	return saturate( pow( dotNV + ambientOcclusion, exp2( - 16.0 * roughness - 1.0 ) ) - 1.0 + ambientOcclusion );
-}`, Mh = `
+}`, Sh = `
 GeometricContext geometry;
 geometry.position = - vViewPosition;
 geometry.normal = normal;
@@ -5442,7 +5442,7 @@ IncidentLight directLight;
 #if defined( RE_IndirectSpecular )
 	vec3 radiance = vec3( 0.0 );
 	vec3 clearcoatRadiance = vec3( 0.0 );
-#endif`, Sh = `#if defined( RE_IndirectDiffuse )
+#endif`, Eh = `#if defined( RE_IndirectDiffuse )
 	#ifdef USE_LIGHTMAP
 		vec4 lightMapTexel = texture2D( lightMap, vLightMapUv );
 		vec3 lightMapIrradiance = lightMapTexel.rgb * lightMapIntensity;
@@ -5457,25 +5457,25 @@ IncidentLight directLight;
 	#ifdef USE_CLEARCOAT
 		clearcoatRadiance += getIBLRadiance( geometry.viewDir, geometry.clearcoatNormal, material.clearcoatRoughness );
 	#endif
-#endif`, Eh = `#if defined( RE_IndirectDiffuse )
+#endif`, yh = `#if defined( RE_IndirectDiffuse )
 	RE_IndirectDiffuse( irradiance, geometry, material, reflectedLight );
 #endif
 #if defined( RE_IndirectSpecular )
 	RE_IndirectSpecular( radiance, iblIrradiance, clearcoatRadiance, geometry, material, reflectedLight );
-#endif`, yh = `#if defined( USE_LOGDEPTHBUF ) && defined( USE_LOGDEPTHBUF_EXT )
-	gl_FragDepthEXT = vIsPerspective == 0.0 ? gl_FragCoord.z : log2( vFragDepth ) * logDepthBufFC * 0.5;
 #endif`, Th = `#if defined( USE_LOGDEPTHBUF ) && defined( USE_LOGDEPTHBUF_EXT )
+	gl_FragDepthEXT = vIsPerspective == 0.0 ? gl_FragCoord.z : log2( vFragDepth ) * logDepthBufFC * 0.5;
+#endif`, bh = `#if defined( USE_LOGDEPTHBUF ) && defined( USE_LOGDEPTHBUF_EXT )
 	uniform float logDepthBufFC;
 	varying float vFragDepth;
 	varying float vIsPerspective;
-#endif`, bh = `#ifdef USE_LOGDEPTHBUF
+#endif`, Ah = `#ifdef USE_LOGDEPTHBUF
 	#ifdef USE_LOGDEPTHBUF_EXT
 		varying float vFragDepth;
 		varying float vIsPerspective;
 	#else
 		uniform float logDepthBufFC;
 	#endif
-#endif`, Ah = `#ifdef USE_LOGDEPTHBUF
+#endif`, wh = `#ifdef USE_LOGDEPTHBUF
 	#ifdef USE_LOGDEPTHBUF_EXT
 		vFragDepth = 1.0 + gl_Position.w;
 		vIsPerspective = float( isPerspectiveMatrix( projectionMatrix ) );
@@ -5485,11 +5485,11 @@ IncidentLight directLight;
 			gl_Position.z *= gl_Position.w;
 		}
 	#endif
-#endif`, wh = `#ifdef USE_MAP
-	diffuseColor *= texture2D( map, vMapUv );
 #endif`, Ph = `#ifdef USE_MAP
+	diffuseColor *= texture2D( map, vMapUv );
+#endif`, Rh = `#ifdef USE_MAP
 	uniform sampler2D map;
-#endif`, Rh = `#if defined( USE_MAP ) || defined( USE_ALPHAMAP )
+#endif`, Ch = `#if defined( USE_MAP ) || defined( USE_ALPHAMAP )
 	#if defined( USE_POINTS_UV )
 		vec2 uv = vUv;
 	#else
@@ -5501,7 +5501,7 @@ IncidentLight directLight;
 #endif
 #ifdef USE_ALPHAMAP
 	diffuseColor.a *= texture2D( alphaMap, uv ).g;
-#endif`, Ch = `#if defined( USE_POINTS_UV )
+#endif`, Lh = `#if defined( USE_POINTS_UV )
 	varying vec2 vUv;
 #else
 	#if defined( USE_MAP ) || defined( USE_ALPHAMAP )
@@ -5513,13 +5513,13 @@ IncidentLight directLight;
 #endif
 #ifdef USE_ALPHAMAP
 	uniform sampler2D alphaMap;
-#endif`, Lh = `float metalnessFactor = metalness;
+#endif`, qh = `float metalnessFactor = metalness;
 #ifdef USE_METALNESSMAP
 	vec4 texelMetalness = texture2D( metalnessMap, vMetalnessMapUv );
 	metalnessFactor *= texelMetalness.b;
-#endif`, qh = `#ifdef USE_METALNESSMAP
+#endif`, Dh = `#ifdef USE_METALNESSMAP
 	uniform sampler2D metalnessMap;
-#endif`, Dh = `#if defined( USE_MORPHCOLORS ) && defined( MORPHTARGETS_TEXTURE )
+#endif`, Uh = `#if defined( USE_MORPHCOLORS ) && defined( MORPHTARGETS_TEXTURE )
 	vColor *= morphTargetBaseInfluence;
 	for ( int i = 0; i < MORPHTARGETS_COUNT; i ++ ) {
 		#if defined( USE_COLOR_ALPHA )
@@ -5528,7 +5528,7 @@ IncidentLight directLight;
 			if ( morphTargetInfluences[ i ] != 0.0 ) vColor += getMorph( gl_VertexID, i, 2 ).rgb * morphTargetInfluences[ i ];
 		#endif
 	}
-#endif`, Uh = `#ifdef USE_MORPHNORMALS
+#endif`, Ih = `#ifdef USE_MORPHNORMALS
 	objectNormal *= morphTargetBaseInfluence;
 	#ifdef MORPHTARGETS_TEXTURE
 		for ( int i = 0; i < MORPHTARGETS_COUNT; i ++ ) {
@@ -5540,7 +5540,7 @@ IncidentLight directLight;
 		objectNormal += morphNormal2 * morphTargetInfluences[ 2 ];
 		objectNormal += morphNormal3 * morphTargetInfluences[ 3 ];
 	#endif
-#endif`, Ih = `#ifdef USE_MORPHTARGETS
+#endif`, Nh = `#ifdef USE_MORPHTARGETS
 	uniform float morphTargetBaseInfluence;
 	#ifdef MORPHTARGETS_TEXTURE
 		uniform float morphTargetInfluences[ MORPHTARGETS_COUNT ];
@@ -5560,7 +5560,7 @@ IncidentLight directLight;
 			uniform float morphTargetInfluences[ 4 ];
 		#endif
 	#endif
-#endif`, Nh = `#ifdef USE_MORPHTARGETS
+#endif`, Fh = `#ifdef USE_MORPHTARGETS
 	transformed *= morphTargetBaseInfluence;
 	#ifdef MORPHTARGETS_TEXTURE
 		for ( int i = 0; i < MORPHTARGETS_COUNT; i ++ ) {
@@ -5578,7 +5578,7 @@ IncidentLight directLight;
 			transformed += morphTarget7 * morphTargetInfluences[ 7 ];
 		#endif
 	#endif
-#endif`, Fh = `float faceDirection = gl_FrontFacing ? 1.0 : - 1.0;
+#endif`, Oh = `float faceDirection = gl_FrontFacing ? 1.0 : - 1.0;
 #ifdef FLAT_SHADED
 	vec3 fdx = dFdx( vViewPosition );
 	vec3 fdy = dFdy( vViewPosition );
@@ -5611,7 +5611,7 @@ IncidentLight directLight;
 		tbn2[1] *= faceDirection;
 	#endif
 #endif
-vec3 geometryNormal = normal;`, Oh = `#ifdef USE_NORMALMAP_OBJECTSPACE
+vec3 geometryNormal = normal;`, Bh = `#ifdef USE_NORMALMAP_OBJECTSPACE
 	normal = texture2D( normalMap, vNormalMapUv ).xyz * 2.0 - 1.0;
 	#ifdef FLIP_SIDED
 		normal = - normal;
@@ -5626,12 +5626,6 @@ vec3 geometryNormal = normal;`, Oh = `#ifdef USE_NORMALMAP_OBJECTSPACE
 	normal = normalize( tbn * mapN );
 #elif defined( USE_BUMPMAP )
 	normal = perturbNormalArb( - vViewPosition, normal, dHdxy_fwd(), faceDirection );
-#endif`, Bh = `#ifndef FLAT_SHADED
-	varying vec3 vNormal;
-	#ifdef USE_TANGENT
-		varying vec3 vTangent;
-		varying vec3 vBitangent;
-	#endif
 #endif`, zh = `#ifndef FLAT_SHADED
 	varying vec3 vNormal;
 	#ifdef USE_TANGENT
@@ -5639,12 +5633,18 @@ vec3 geometryNormal = normal;`, Oh = `#ifdef USE_NORMALMAP_OBJECTSPACE
 		varying vec3 vBitangent;
 	#endif
 #endif`, Gh = `#ifndef FLAT_SHADED
+	varying vec3 vNormal;
+	#ifdef USE_TANGENT
+		varying vec3 vTangent;
+		varying vec3 vBitangent;
+	#endif
+#endif`, Hh = `#ifndef FLAT_SHADED
 	vNormal = normalize( transformedNormal );
 	#ifdef USE_TANGENT
 		vTangent = normalize( transformedTangent );
 		vBitangent = normalize( cross( vNormal, vTangent ) * tangent.w );
 	#endif
-#endif`, Hh = `#ifdef USE_NORMALMAP
+#endif`, Vh = `#ifdef USE_NORMALMAP
 	uniform sampler2D normalMap;
 	uniform vec2 normalScale;
 #endif
@@ -5666,13 +5666,13 @@ vec3 geometryNormal = normal;`, Oh = `#ifdef USE_NORMALMAP_OBJECTSPACE
 		float scale = ( det == 0.0 ) ? 0.0 : inversesqrt( det );
 		return mat3( T * scale, B * scale, N );
 	}
-#endif`, Vh = `#ifdef USE_CLEARCOAT
+#endif`, kh = `#ifdef USE_CLEARCOAT
 	vec3 clearcoatNormal = geometryNormal;
-#endif`, kh = `#ifdef USE_CLEARCOAT_NORMALMAP
+#endif`, Wh = `#ifdef USE_CLEARCOAT_NORMALMAP
 	vec3 clearcoatMapN = texture2D( clearcoatNormalMap, vClearcoatNormalMapUv ).xyz * 2.0 - 1.0;
 	clearcoatMapN.xy *= clearcoatNormalScale;
 	clearcoatNormal = normalize( tbn2 * clearcoatMapN );
-#endif`, Wh = `#ifdef USE_CLEARCOATMAP
+#endif`, Xh = `#ifdef USE_CLEARCOATMAP
 	uniform sampler2D clearcoatMap;
 #endif
 #ifdef USE_CLEARCOAT_NORMALMAP
@@ -5681,18 +5681,18 @@ vec3 geometryNormal = normal;`, Oh = `#ifdef USE_NORMALMAP_OBJECTSPACE
 #endif
 #ifdef USE_CLEARCOAT_ROUGHNESSMAP
 	uniform sampler2D clearcoatRoughnessMap;
-#endif`, Xh = `#ifdef USE_IRIDESCENCEMAP
+#endif`, Yh = `#ifdef USE_IRIDESCENCEMAP
 	uniform sampler2D iridescenceMap;
 #endif
 #ifdef USE_IRIDESCENCE_THICKNESSMAP
 	uniform sampler2D iridescenceThicknessMap;
-#endif`, Yh = `#ifdef OPAQUE
+#endif`, jh = `#ifdef OPAQUE
 diffuseColor.a = 1.0;
 #endif
 #ifdef USE_TRANSMISSION
 diffuseColor.a *= material.transmissionAlpha + 0.1;
 #endif
-gl_FragColor = vec4( outgoingLight, diffuseColor.a );`, jh = `vec3 packNormalToRGB( const in vec3 normal ) {
+gl_FragColor = vec4( outgoingLight, diffuseColor.a );`, Zh = `vec3 packNormalToRGB( const in vec3 normal ) {
 	return normalize( normal ) * 0.5 + 0.5;
 }
 vec3 unpackRGBToNormal( const in vec3 rgb ) {
@@ -5733,29 +5733,29 @@ float viewZToPerspectiveDepth( const in float viewZ, const in float near, const 
 }
 float perspectiveDepthToViewZ( const in float depth, const in float near, const in float far ) {
 	return ( near * far ) / ( ( far - near ) * depth - far );
-}`, Zh = `#ifdef PREMULTIPLIED_ALPHA
+}`, Kh = `#ifdef PREMULTIPLIED_ALPHA
 	gl_FragColor.rgb *= gl_FragColor.a;
-#endif`, Kh = `vec4 mvPosition = vec4( transformed, 1.0 );
+#endif`, Jh = `vec4 mvPosition = vec4( transformed, 1.0 );
 #ifdef USE_INSTANCING
 	mvPosition = instanceMatrix * mvPosition;
 #endif
 mvPosition = modelViewMatrix * mvPosition;
-gl_Position = projectionMatrix * mvPosition;`, Jh = `#ifdef DITHERING
+gl_Position = projectionMatrix * mvPosition;`, $h = `#ifdef DITHERING
 	gl_FragColor.rgb = dithering( gl_FragColor.rgb );
-#endif`, $h = `#ifdef DITHERING
+#endif`, Qh = `#ifdef DITHERING
 	vec3 dithering( vec3 color ) {
 		float grid_position = rand( gl_FragCoord.xy );
 		vec3 dither_shift_RGB = vec3( 0.25 / 255.0, -0.25 / 255.0, 0.25 / 255.0 );
 		dither_shift_RGB = mix( 2.0 * dither_shift_RGB, -2.0 * dither_shift_RGB, grid_position );
 		return color + dither_shift_RGB;
 	}
-#endif`, Qh = `float roughnessFactor = roughness;
+#endif`, eu = `float roughnessFactor = roughness;
 #ifdef USE_ROUGHNESSMAP
 	vec4 texelRoughness = texture2D( roughnessMap, vRoughnessMapUv );
 	roughnessFactor *= texelRoughness.g;
-#endif`, eu = `#ifdef USE_ROUGHNESSMAP
+#endif`, tu = `#ifdef USE_ROUGHNESSMAP
 	uniform sampler2D roughnessMap;
-#endif`, tu = `#if NUM_SPOT_LIGHT_COORDS > 0
+#endif`, nu = `#if NUM_SPOT_LIGHT_COORDS > 0
 	varying vec4 vSpotLightCoord[ NUM_SPOT_LIGHT_COORDS ];
 #endif
 #if NUM_SPOT_LIGHT_MAPS > 0
@@ -5932,7 +5932,7 @@ gl_Position = projectionMatrix * mvPosition;`, Jh = `#ifdef DITHERING
 			return texture2DCompare( shadowMap, cubeToUV( bd3D, texelSize.y ), dp );
 		#endif
 	}
-#endif`, nu = `#if NUM_SPOT_LIGHT_COORDS > 0
+#endif`, iu = `#if NUM_SPOT_LIGHT_COORDS > 0
 	uniform mat4 spotLightMatrix[ NUM_SPOT_LIGHT_COORDS ];
 	varying vec4 vSpotLightCoord[ NUM_SPOT_LIGHT_COORDS ];
 #endif
@@ -5970,7 +5970,7 @@ gl_Position = projectionMatrix * mvPosition;`, Jh = `#ifdef DITHERING
 		};
 		uniform PointLightShadow pointLightShadows[ NUM_POINT_LIGHT_SHADOWS ];
 	#endif
-#endif`, iu = `#if ( defined( USE_SHADOWMAP ) && ( NUM_DIR_LIGHT_SHADOWS > 0 || NUM_POINT_LIGHT_SHADOWS > 0 ) ) || ( NUM_SPOT_LIGHT_COORDS > 0 )
+#endif`, ru = `#if ( defined( USE_SHADOWMAP ) && ( NUM_DIR_LIGHT_SHADOWS > 0 || NUM_POINT_LIGHT_SHADOWS > 0 ) ) || ( NUM_SPOT_LIGHT_COORDS > 0 )
 	vec3 shadowWorldNormal = inverseTransformDirection( transformedNormal, viewMatrix );
 	vec4 shadowWorldPosition;
 #endif
@@ -6002,7 +6002,7 @@ gl_Position = projectionMatrix * mvPosition;`, Jh = `#ifdef DITHERING
 		vSpotLightCoord[ i ] = spotLightMatrix[ i ] * shadowWorldPosition;
 	}
 	#pragma unroll_loop_end
-#endif`, ru = `float getShadowMask() {
+#endif`, su = `float getShadowMask() {
 	float shadow = 1.0;
 	#ifdef USE_SHADOWMAP
 	#if NUM_DIR_LIGHT_SHADOWS > 0
@@ -6034,12 +6034,12 @@ gl_Position = projectionMatrix * mvPosition;`, Jh = `#ifdef DITHERING
 	#endif
 	#endif
 	return shadow;
-}`, su = `#ifdef USE_SKINNING
+}`, au = `#ifdef USE_SKINNING
 	mat4 boneMatX = getBoneMatrix( skinIndex.x );
 	mat4 boneMatY = getBoneMatrix( skinIndex.y );
 	mat4 boneMatZ = getBoneMatrix( skinIndex.z );
 	mat4 boneMatW = getBoneMatrix( skinIndex.w );
-#endif`, au = `#ifdef USE_SKINNING
+#endif`, ou = `#ifdef USE_SKINNING
 	uniform mat4 bindMatrix;
 	uniform mat4 bindMatrixInverse;
 	uniform highp sampler2D boneTexture;
@@ -6058,7 +6058,7 @@ gl_Position = projectionMatrix * mvPosition;`, Jh = `#ifdef DITHERING
 		mat4 bone = mat4( v1, v2, v3, v4 );
 		return bone;
 	}
-#endif`, ou = `#ifdef USE_SKINNING
+#endif`, lu = `#ifdef USE_SKINNING
 	vec4 skinVertex = bindMatrix * vec4( transformed, 1.0 );
 	vec4 skinned = vec4( 0.0 );
 	skinned += boneMatX * skinVertex * skinWeight.x;
@@ -6066,7 +6066,7 @@ gl_Position = projectionMatrix * mvPosition;`, Jh = `#ifdef DITHERING
 	skinned += boneMatZ * skinVertex * skinWeight.z;
 	skinned += boneMatW * skinVertex * skinWeight.w;
 	transformed = ( bindMatrixInverse * skinned ).xyz;
-#endif`, lu = `#ifdef USE_SKINNING
+#endif`, cu = `#ifdef USE_SKINNING
 	mat4 skinMatrix = mat4( 0.0 );
 	skinMatrix += skinWeight.x * boneMatX;
 	skinMatrix += skinWeight.y * boneMatY;
@@ -6077,17 +6077,17 @@ gl_Position = projectionMatrix * mvPosition;`, Jh = `#ifdef DITHERING
 	#ifdef USE_TANGENT
 		objectTangent = vec4( skinMatrix * vec4( objectTangent, 0.0 ) ).xyz;
 	#endif
-#endif`, cu = `float specularStrength;
+#endif`, hu = `float specularStrength;
 #ifdef USE_SPECULARMAP
 	vec4 texelSpecular = texture2D( specularMap, vSpecularMapUv );
 	specularStrength = texelSpecular.r;
 #else
 	specularStrength = 1.0;
-#endif`, hu = `#ifdef USE_SPECULARMAP
+#endif`, uu = `#ifdef USE_SPECULARMAP
 	uniform sampler2D specularMap;
-#endif`, uu = `#if defined( TONE_MAPPING )
+#endif`, du = `#if defined( TONE_MAPPING )
 	gl_FragColor.rgb = toneMapping( gl_FragColor.rgb );
-#endif`, du = `#ifndef saturate
+#endif`, fu = `#ifndef saturate
 #define saturate( a ) clamp( a, 0.0, 1.0 )
 #endif
 uniform float toneMappingExposure;
@@ -6123,7 +6123,7 @@ vec3 ACESFilmicToneMapping( vec3 color ) {
 	color = ACESOutputMat * color;
 	return saturate( color );
 }
-vec3 CustomToneMapping( vec3 color ) { return color; }`, fu = `#ifdef USE_TRANSMISSION
+vec3 CustomToneMapping( vec3 color ) { return color; }`, pu = `#ifdef USE_TRANSMISSION
 	material.transmission = transmission;
 	material.transmissionAlpha = 1.0;
 	material.thickness = thickness;
@@ -6144,7 +6144,7 @@ vec3 CustomToneMapping( vec3 color ) { return color; }`, fu = `#ifdef USE_TRANSM
 		material.attenuationColor, material.attenuationDistance );
 	material.transmissionAlpha = mix( material.transmissionAlpha, transmission.a, material.transmission );
 	totalDiffuse = mix( totalDiffuse, transmission.rgb, material.transmission );
-#endif`, pu = `#ifdef USE_TRANSMISSION
+#endif`, mu = `#ifdef USE_TRANSMISSION
 	uniform float transmission;
 	uniform float thickness;
 	uniform float attenuationDistance;
@@ -6248,7 +6248,7 @@ vec3 CustomToneMapping( vec3 color ) { return color; }`, fu = `#ifdef USE_TRANSM
 		vec3 F = EnvironmentBRDF( n, v, specularColor, specularF90, roughness );
 		return vec4( ( 1.0 - F ) * attenuatedColor * diffuseColor, transmittedLight.a );
 	}
-#endif`, mu = `#ifdef USE_UV
+#endif`, _u = `#ifdef USE_UV
 	varying vec2 vUv;
 #endif
 #ifdef USE_MAP
@@ -6315,7 +6315,7 @@ vec3 CustomToneMapping( vec3 color ) { return color; }`, fu = `#ifdef USE_TRANSM
 #ifdef USE_THICKNESSMAP
 	uniform mat3 thicknessMapTransform;
 	varying vec2 vThicknessMapUv;
-#endif`, _u = `#ifdef USE_UV
+#endif`, gu = `#ifdef USE_UV
 	varying vec2 vUv;
 #endif
 #ifdef USE_MAP
@@ -6405,7 +6405,7 @@ vec3 CustomToneMapping( vec3 color ) { return color; }`, fu = `#ifdef USE_TRANSM
 #ifdef USE_THICKNESSMAP
 	uniform mat3 thicknessMapTransform;
 	varying vec2 vThicknessMapUv;
-#endif`, gu = `#ifdef USE_UV
+#endif`, xu = `#ifdef USE_UV
 	vUv = vec3( uv, 1 ).xy;
 #endif
 #ifdef USE_MAP
@@ -6473,19 +6473,19 @@ vec3 CustomToneMapping( vec3 color ) { return color; }`, fu = `#ifdef USE_TRANSM
 #endif
 #ifdef USE_THICKNESSMAP
 	vThicknessMapUv = ( thicknessMapTransform * vec3( THICKNESSMAP_UV, 1 ) ).xy;
-#endif`, xu = `#if defined( USE_ENVMAP ) || defined( DISTANCE ) || defined ( USE_SHADOWMAP ) || defined ( USE_TRANSMISSION ) || NUM_SPOT_LIGHT_COORDS > 0
+#endif`, vu = `#if defined( USE_ENVMAP ) || defined( DISTANCE ) || defined ( USE_SHADOWMAP ) || defined ( USE_TRANSMISSION ) || NUM_SPOT_LIGHT_COORDS > 0
 	vec4 worldPosition = vec4( transformed, 1.0 );
 	#ifdef USE_INSTANCING
 		worldPosition = instanceMatrix * worldPosition;
 	#endif
 	worldPosition = modelMatrix * worldPosition;
 #endif`;
-const vu = `varying vec2 vUv;
+const Mu = `varying vec2 vUv;
 uniform mat3 uvTransform;
 void main() {
 	vUv = ( uvTransform * vec3( uv, 1 ) ).xy;
 	gl_Position = vec4( position.xy, 1.0, 1.0 );
-}`, Mu = `uniform sampler2D t2D;
+}`, Su = `uniform sampler2D t2D;
 uniform float backgroundIntensity;
 varying vec2 vUv;
 void main() {
@@ -6494,14 +6494,14 @@ void main() {
 	gl_FragColor = texColor;
 	#include <tonemapping_fragment>
 	#include <encodings_fragment>
-}`, Su = `varying vec3 vWorldDirection;
+}`, Eu = `varying vec3 vWorldDirection;
 #include <common>
 void main() {
 	vWorldDirection = transformDirection( position, modelMatrix );
 	#include <begin_vertex>
 	#include <project_vertex>
 	gl_Position.z = gl_Position.w;
-}`, Eu = `#ifdef ENVMAP_TYPE_CUBE
+}`, yu = `#ifdef ENVMAP_TYPE_CUBE
 	uniform samplerCube envMap;
 #elif defined( ENVMAP_TYPE_CUBE_UV )
 	uniform sampler2D envMap;
@@ -6523,14 +6523,14 @@ void main() {
 	gl_FragColor = texColor;
 	#include <tonemapping_fragment>
 	#include <encodings_fragment>
-}`, yu = `varying vec3 vWorldDirection;
+}`, Tu = `varying vec3 vWorldDirection;
 #include <common>
 void main() {
 	vWorldDirection = transformDirection( position, modelMatrix );
 	#include <begin_vertex>
 	#include <project_vertex>
 	gl_Position.z = gl_Position.w;
-}`, Tu = `uniform samplerCube tCube;
+}`, bu = `uniform samplerCube tCube;
 uniform float tFlip;
 uniform float opacity;
 varying vec3 vWorldDirection;
@@ -6540,7 +6540,7 @@ void main() {
 	gl_FragColor.a *= opacity;
 	#include <tonemapping_fragment>
 	#include <encodings_fragment>
-}`, bu = `#include <common>
+}`, Au = `#include <common>
 #include <uv_pars_vertex>
 #include <displacementmap_pars_vertex>
 #include <morphtarget_pars_vertex>
@@ -6564,7 +6564,7 @@ void main() {
 	#include <logdepthbuf_vertex>
 	#include <clipping_planes_vertex>
 	vHighPrecisionZW = gl_Position.zw;
-}`, Au = `#if DEPTH_PACKING == 3200
+}`, wu = `#if DEPTH_PACKING == 3200
 	uniform float opacity;
 #endif
 #include <common>
@@ -6592,7 +6592,7 @@ void main() {
 	#elif DEPTH_PACKING == 3201
 		gl_FragColor = packDepthToRGBA( fragCoordZ );
 	#endif
-}`, wu = `#define DISTANCE
+}`, Pu = `#define DISTANCE
 varying vec3 vWorldPosition;
 #include <common>
 #include <uv_pars_vertex>
@@ -6616,7 +6616,7 @@ void main() {
 	#include <worldpos_vertex>
 	#include <clipping_planes_vertex>
 	vWorldPosition = worldPosition.xyz;
-}`, Pu = `#define DISTANCE
+}`, Ru = `#define DISTANCE
 uniform vec3 referencePosition;
 uniform float nearDistance;
 uniform float farDistance;
@@ -6638,13 +6638,13 @@ void main () {
 	dist = ( dist - nearDistance ) / ( farDistance - nearDistance );
 	dist = saturate( dist );
 	gl_FragColor = packDepthToRGBA( dist );
-}`, Ru = `varying vec3 vWorldDirection;
+}`, Cu = `varying vec3 vWorldDirection;
 #include <common>
 void main() {
 	vWorldDirection = transformDirection( position, modelMatrix );
 	#include <begin_vertex>
 	#include <project_vertex>
-}`, Cu = `uniform sampler2D tEquirect;
+}`, Lu = `uniform sampler2D tEquirect;
 varying vec3 vWorldDirection;
 #include <common>
 void main() {
@@ -6653,7 +6653,7 @@ void main() {
 	gl_FragColor = texture2D( tEquirect, sampleUV );
 	#include <tonemapping_fragment>
 	#include <encodings_fragment>
-}`, Lu = `uniform float scale;
+}`, qu = `uniform float scale;
 attribute float lineDistance;
 varying float vLineDistance;
 #include <common>
@@ -6674,7 +6674,7 @@ void main() {
 	#include <logdepthbuf_vertex>
 	#include <clipping_planes_vertex>
 	#include <fog_vertex>
-}`, qu = `uniform vec3 diffuse;
+}`, Du = `uniform vec3 diffuse;
 uniform float opacity;
 uniform float dashSize;
 uniform float totalSize;
@@ -6702,7 +6702,7 @@ void main() {
 	#include <encodings_fragment>
 	#include <fog_fragment>
 	#include <premultiplied_alpha_fragment>
-}`, Du = `#include <common>
+}`, Uu = `#include <common>
 #include <uv_pars_vertex>
 #include <envmap_pars_vertex>
 #include <color_pars_vertex>
@@ -6731,7 +6731,7 @@ void main() {
 	#include <worldpos_vertex>
 	#include <envmap_vertex>
 	#include <fog_vertex>
-}`, Uu = `uniform vec3 diffuse;
+}`, Iu = `uniform vec3 diffuse;
 uniform float opacity;
 #ifndef FLAT_SHADED
 	varying vec3 vNormal;
@@ -6777,7 +6777,7 @@ void main() {
 	#include <fog_fragment>
 	#include <premultiplied_alpha_fragment>
 	#include <dithering_fragment>
-}`, Iu = `#define LAMBERT
+}`, Nu = `#define LAMBERT
 varying vec3 vViewPosition;
 #include <common>
 #include <uv_pars_vertex>
@@ -6813,7 +6813,7 @@ void main() {
 	#include <envmap_vertex>
 	#include <shadowmap_vertex>
 	#include <fog_vertex>
-}`, Nu = `#define LAMBERT
+}`, Fu = `#define LAMBERT
 uniform vec3 diffuse;
 uniform vec3 emissive;
 uniform float opacity;
@@ -6868,7 +6868,7 @@ void main() {
 	#include <fog_fragment>
 	#include <premultiplied_alpha_fragment>
 	#include <dithering_fragment>
-}`, Fu = `#define MATCAP
+}`, Ou = `#define MATCAP
 varying vec3 vViewPosition;
 #include <common>
 #include <uv_pars_vertex>
@@ -6899,7 +6899,7 @@ void main() {
 	#include <clipping_planes_vertex>
 	#include <fog_vertex>
 	vViewPosition = - mvPosition.xyz;
-}`, Ou = `#define MATCAP
+}`, Bu = `#define MATCAP
 uniform vec3 diffuse;
 uniform float opacity;
 uniform sampler2D matcap;
@@ -6943,7 +6943,7 @@ void main() {
 	#include <fog_fragment>
 	#include <premultiplied_alpha_fragment>
 	#include <dithering_fragment>
-}`, Bu = `#define NORMAL
+}`, zu = `#define NORMAL
 #if defined( FLAT_SHADED ) || defined( USE_BUMPMAP ) || defined( USE_NORMALMAP_TANGENTSPACE )
 	varying vec3 vViewPosition;
 #endif
@@ -6973,7 +6973,7 @@ void main() {
 #if defined( FLAT_SHADED ) || defined( USE_BUMPMAP ) || defined( USE_NORMALMAP_TANGENTSPACE )
 	vViewPosition = - mvPosition.xyz;
 #endif
-}`, zu = `#define NORMAL
+}`, Gu = `#define NORMAL
 uniform float opacity;
 #if defined( FLAT_SHADED ) || defined( USE_BUMPMAP ) || defined( USE_NORMALMAP_TANGENTSPACE )
 	varying vec3 vViewPosition;
@@ -6994,7 +6994,7 @@ void main() {
 	#ifdef OPAQUE
 		gl_FragColor.a = 1.0;
 	#endif
-}`, Gu = `#define PHONG
+}`, Hu = `#define PHONG
 varying vec3 vViewPosition;
 #include <common>
 #include <uv_pars_vertex>
@@ -7030,7 +7030,7 @@ void main() {
 	#include <envmap_vertex>
 	#include <shadowmap_vertex>
 	#include <fog_vertex>
-}`, Hu = `#define PHONG
+}`, Vu = `#define PHONG
 uniform vec3 diffuse;
 uniform vec3 emissive;
 uniform vec3 specular;
@@ -7087,7 +7087,7 @@ void main() {
 	#include <fog_fragment>
 	#include <premultiplied_alpha_fragment>
 	#include <dithering_fragment>
-}`, Vu = `#define STANDARD
+}`, ku = `#define STANDARD
 varying vec3 vViewPosition;
 #ifdef USE_TRANSMISSION
 	varying vec3 vWorldPosition;
@@ -7127,7 +7127,7 @@ void main() {
 #ifdef USE_TRANSMISSION
 	vWorldPosition = worldPosition.xyz;
 #endif
-}`, ku = `#define STANDARD
+}`, Wu = `#define STANDARD
 #ifdef PHYSICAL
 	#define IOR
 	#define USE_SPECULAR
@@ -7241,7 +7241,7 @@ void main() {
 	#include <fog_fragment>
 	#include <premultiplied_alpha_fragment>
 	#include <dithering_fragment>
-}`, Wu = `#define TOON
+}`, Xu = `#define TOON
 varying vec3 vViewPosition;
 #include <common>
 #include <uv_pars_vertex>
@@ -7275,7 +7275,7 @@ void main() {
 	#include <worldpos_vertex>
 	#include <shadowmap_vertex>
 	#include <fog_vertex>
-}`, Xu = `#define TOON
+}`, Yu = `#define TOON
 uniform vec3 diffuse;
 uniform vec3 emissive;
 uniform float opacity;
@@ -7326,7 +7326,7 @@ void main() {
 	#include <fog_fragment>
 	#include <premultiplied_alpha_fragment>
 	#include <dithering_fragment>
-}`, Yu = `uniform float size;
+}`, ju = `uniform float size;
 uniform float scale;
 #include <common>
 #include <color_pars_vertex>
@@ -7356,7 +7356,7 @@ void main() {
 	#include <clipping_planes_vertex>
 	#include <worldpos_vertex>
 	#include <fog_vertex>
-}`, ju = `uniform vec3 diffuse;
+}`, Zu = `uniform vec3 diffuse;
 uniform float opacity;
 #include <common>
 #include <color_pars_fragment>
@@ -7379,7 +7379,7 @@ void main() {
 	#include <encodings_fragment>
 	#include <fog_fragment>
 	#include <premultiplied_alpha_fragment>
-}`, Zu = `#include <common>
+}`, Ku = `#include <common>
 #include <fog_pars_vertex>
 #include <morphtarget_pars_vertex>
 #include <skinning_pars_vertex>
@@ -7399,7 +7399,7 @@ void main() {
 	#include <worldpos_vertex>
 	#include <shadowmap_vertex>
 	#include <fog_vertex>
-}`, Ku = `uniform vec3 color;
+}`, Ju = `uniform vec3 color;
 uniform float opacity;
 #include <common>
 #include <packing>
@@ -7415,7 +7415,7 @@ void main() {
 	#include <tonemapping_fragment>
 	#include <encodings_fragment>
 	#include <fog_fragment>
-}`, Ju = `uniform float rotation;
+}`, $u = `uniform float rotation;
 uniform vec2 center;
 #include <common>
 #include <uv_pars_vertex>
@@ -7441,7 +7441,7 @@ void main() {
 	#include <logdepthbuf_vertex>
 	#include <clipping_planes_vertex>
 	#include <fog_vertex>
-}`, $u = `uniform vec3 diffuse;
+}`, Qu = `uniform vec3 diffuse;
 uniform float opacity;
 #include <common>
 #include <uv_pars_fragment>
@@ -7465,143 +7465,143 @@ void main() {
 	#include <encodings_fragment>
 	#include <fog_fragment>
 }`, Fe = {
-  alphamap_fragment: Tc,
-  alphamap_pars_fragment: bc,
-  alphatest_fragment: Ac,
-  alphatest_pars_fragment: wc,
-  aomap_fragment: Pc,
-  aomap_pars_fragment: Rc,
-  begin_vertex: Cc,
-  beginnormal_vertex: Lc,
-  bsdfs: qc,
-  iridescence_fragment: Dc,
-  bumpmap_pars_fragment: Uc,
-  clipping_planes_fragment: Ic,
-  clipping_planes_pars_fragment: Nc,
-  clipping_planes_pars_vertex: Fc,
-  clipping_planes_vertex: Oc,
-  color_fragment: Bc,
-  color_pars_fragment: zc,
-  color_pars_vertex: Gc,
-  color_vertex: Hc,
-  common: Vc,
-  cube_uv_reflection_fragment: kc,
-  defaultnormal_vertex: Wc,
-  displacementmap_pars_vertex: Xc,
-  displacementmap_vertex: Yc,
-  emissivemap_fragment: jc,
-  emissivemap_pars_fragment: Zc,
-  encodings_fragment: Kc,
-  encodings_pars_fragment: Jc,
-  envmap_fragment: $c,
-  envmap_common_pars_fragment: Qc,
-  envmap_pars_fragment: eh,
-  envmap_pars_vertex: th,
-  envmap_physical_pars_fragment: fh,
-  envmap_vertex: nh,
-  fog_vertex: ih,
-  fog_pars_vertex: rh,
-  fog_fragment: sh,
-  fog_pars_fragment: ah,
-  gradientmap_pars_fragment: oh,
-  lightmap_fragment: lh,
-  lightmap_pars_fragment: ch,
-  lights_lambert_fragment: hh,
-  lights_lambert_pars_fragment: uh,
-  lights_pars_begin: dh,
-  lights_toon_fragment: ph,
-  lights_toon_pars_fragment: mh,
-  lights_phong_fragment: _h,
-  lights_phong_pars_fragment: gh,
-  lights_physical_fragment: xh,
-  lights_physical_pars_fragment: vh,
-  lights_fragment_begin: Mh,
-  lights_fragment_maps: Sh,
-  lights_fragment_end: Eh,
-  logdepthbuf_fragment: yh,
-  logdepthbuf_pars_fragment: Th,
-  logdepthbuf_pars_vertex: bh,
-  logdepthbuf_vertex: Ah,
-  map_fragment: wh,
-  map_pars_fragment: Ph,
-  map_particle_fragment: Rh,
-  map_particle_pars_fragment: Ch,
-  metalnessmap_fragment: Lh,
-  metalnessmap_pars_fragment: qh,
-  morphcolor_vertex: Dh,
-  morphnormal_vertex: Uh,
-  morphtarget_pars_vertex: Ih,
-  morphtarget_vertex: Nh,
-  normal_fragment_begin: Fh,
-  normal_fragment_maps: Oh,
-  normal_pars_fragment: Bh,
-  normal_pars_vertex: zh,
-  normal_vertex: Gh,
-  normalmap_pars_fragment: Hh,
-  clearcoat_normal_fragment_begin: Vh,
-  clearcoat_normal_fragment_maps: kh,
-  clearcoat_pars_fragment: Wh,
-  iridescence_pars_fragment: Xh,
-  output_fragment: Yh,
-  packing: jh,
-  premultiplied_alpha_fragment: Zh,
-  project_vertex: Kh,
-  dithering_fragment: Jh,
-  dithering_pars_fragment: $h,
-  roughnessmap_fragment: Qh,
-  roughnessmap_pars_fragment: eu,
-  shadowmap_pars_fragment: tu,
-  shadowmap_pars_vertex: nu,
-  shadowmap_vertex: iu,
-  shadowmask_pars_fragment: ru,
-  skinbase_vertex: su,
-  skinning_pars_vertex: au,
-  skinning_vertex: ou,
-  skinnormal_vertex: lu,
-  specularmap_fragment: cu,
-  specularmap_pars_fragment: hu,
-  tonemapping_fragment: uu,
-  tonemapping_pars_fragment: du,
-  transmission_fragment: fu,
-  transmission_pars_fragment: pu,
-  uv_pars_fragment: mu,
-  uv_pars_vertex: _u,
-  uv_vertex: gu,
-  worldpos_vertex: xu,
-  background_vert: vu,
-  background_frag: Mu,
-  backgroundCube_vert: Su,
-  backgroundCube_frag: Eu,
-  cube_vert: yu,
-  cube_frag: Tu,
-  depth_vert: bu,
-  depth_frag: Au,
-  distanceRGBA_vert: wu,
-  distanceRGBA_frag: Pu,
-  equirect_vert: Ru,
-  equirect_frag: Cu,
-  linedashed_vert: Lu,
-  linedashed_frag: qu,
-  meshbasic_vert: Du,
-  meshbasic_frag: Uu,
-  meshlambert_vert: Iu,
-  meshlambert_frag: Nu,
-  meshmatcap_vert: Fu,
-  meshmatcap_frag: Ou,
-  meshnormal_vert: Bu,
-  meshnormal_frag: zu,
-  meshphong_vert: Gu,
-  meshphong_frag: Hu,
-  meshphysical_vert: Vu,
-  meshphysical_frag: ku,
-  meshtoon_vert: Wu,
-  meshtoon_frag: Xu,
-  points_vert: Yu,
-  points_frag: ju,
-  shadow_vert: Zu,
-  shadow_frag: Ku,
-  sprite_vert: Ju,
-  sprite_frag: $u
+  alphamap_fragment: bc,
+  alphamap_pars_fragment: Ac,
+  alphatest_fragment: wc,
+  alphatest_pars_fragment: Pc,
+  aomap_fragment: Rc,
+  aomap_pars_fragment: Cc,
+  begin_vertex: Lc,
+  beginnormal_vertex: qc,
+  bsdfs: Dc,
+  iridescence_fragment: Uc,
+  bumpmap_pars_fragment: Ic,
+  clipping_planes_fragment: Nc,
+  clipping_planes_pars_fragment: Fc,
+  clipping_planes_pars_vertex: Oc,
+  clipping_planes_vertex: Bc,
+  color_fragment: zc,
+  color_pars_fragment: Gc,
+  color_pars_vertex: Hc,
+  color_vertex: Vc,
+  common: kc,
+  cube_uv_reflection_fragment: Wc,
+  defaultnormal_vertex: Xc,
+  displacementmap_pars_vertex: Yc,
+  displacementmap_vertex: jc,
+  emissivemap_fragment: Zc,
+  emissivemap_pars_fragment: Kc,
+  encodings_fragment: Jc,
+  encodings_pars_fragment: $c,
+  envmap_fragment: Qc,
+  envmap_common_pars_fragment: eh,
+  envmap_pars_fragment: th,
+  envmap_pars_vertex: nh,
+  envmap_physical_pars_fragment: ph,
+  envmap_vertex: ih,
+  fog_vertex: rh,
+  fog_pars_vertex: sh,
+  fog_fragment: ah,
+  fog_pars_fragment: oh,
+  gradientmap_pars_fragment: lh,
+  lightmap_fragment: ch,
+  lightmap_pars_fragment: hh,
+  lights_lambert_fragment: uh,
+  lights_lambert_pars_fragment: dh,
+  lights_pars_begin: fh,
+  lights_toon_fragment: mh,
+  lights_toon_pars_fragment: _h,
+  lights_phong_fragment: gh,
+  lights_phong_pars_fragment: xh,
+  lights_physical_fragment: vh,
+  lights_physical_pars_fragment: Mh,
+  lights_fragment_begin: Sh,
+  lights_fragment_maps: Eh,
+  lights_fragment_end: yh,
+  logdepthbuf_fragment: Th,
+  logdepthbuf_pars_fragment: bh,
+  logdepthbuf_pars_vertex: Ah,
+  logdepthbuf_vertex: wh,
+  map_fragment: Ph,
+  map_pars_fragment: Rh,
+  map_particle_fragment: Ch,
+  map_particle_pars_fragment: Lh,
+  metalnessmap_fragment: qh,
+  metalnessmap_pars_fragment: Dh,
+  morphcolor_vertex: Uh,
+  morphnormal_vertex: Ih,
+  morphtarget_pars_vertex: Nh,
+  morphtarget_vertex: Fh,
+  normal_fragment_begin: Oh,
+  normal_fragment_maps: Bh,
+  normal_pars_fragment: zh,
+  normal_pars_vertex: Gh,
+  normal_vertex: Hh,
+  normalmap_pars_fragment: Vh,
+  clearcoat_normal_fragment_begin: kh,
+  clearcoat_normal_fragment_maps: Wh,
+  clearcoat_pars_fragment: Xh,
+  iridescence_pars_fragment: Yh,
+  output_fragment: jh,
+  packing: Zh,
+  premultiplied_alpha_fragment: Kh,
+  project_vertex: Jh,
+  dithering_fragment: $h,
+  dithering_pars_fragment: Qh,
+  roughnessmap_fragment: eu,
+  roughnessmap_pars_fragment: tu,
+  shadowmap_pars_fragment: nu,
+  shadowmap_pars_vertex: iu,
+  shadowmap_vertex: ru,
+  shadowmask_pars_fragment: su,
+  skinbase_vertex: au,
+  skinning_pars_vertex: ou,
+  skinning_vertex: lu,
+  skinnormal_vertex: cu,
+  specularmap_fragment: hu,
+  specularmap_pars_fragment: uu,
+  tonemapping_fragment: du,
+  tonemapping_pars_fragment: fu,
+  transmission_fragment: pu,
+  transmission_pars_fragment: mu,
+  uv_pars_fragment: _u,
+  uv_pars_vertex: gu,
+  uv_vertex: xu,
+  worldpos_vertex: vu,
+  background_vert: Mu,
+  background_frag: Su,
+  backgroundCube_vert: Eu,
+  backgroundCube_frag: yu,
+  cube_vert: Tu,
+  cube_frag: bu,
+  depth_vert: Au,
+  depth_frag: wu,
+  distanceRGBA_vert: Pu,
+  distanceRGBA_frag: Ru,
+  equirect_vert: Cu,
+  equirect_frag: Lu,
+  linedashed_vert: qu,
+  linedashed_frag: Du,
+  meshbasic_vert: Uu,
+  meshbasic_frag: Iu,
+  meshlambert_vert: Nu,
+  meshlambert_frag: Fu,
+  meshmatcap_vert: Ou,
+  meshmatcap_frag: Bu,
+  meshnormal_vert: zu,
+  meshnormal_frag: Gu,
+  meshphong_vert: Hu,
+  meshphong_frag: Vu,
+  meshphysical_vert: ku,
+  meshphysical_frag: Wu,
+  meshtoon_vert: Xu,
+  meshtoon_frag: Yu,
+  points_vert: ju,
+  points_frag: Zu,
+  shadow_vert: Ku,
+  shadow_frag: Ju,
+  sprite_vert: $u,
+  sprite_frag: Qu
 }, de = {
   common: {
     diffuse: { value: /* @__PURE__ */ new Ve(16777215) },
@@ -8031,7 +8031,7 @@ Ft.physical = {
   fragmentShader: Fe.meshphysical_frag
 };
 const ki = { r: 0, b: 0, g: 0 };
-function Qu(i, e, t, n, r, s, o) {
+function ed(i, e, t, n, r, s, o) {
   const a = new Ve(0);
   let c = s === !0 ? 0 : 1, l, h, d = null, f = 0, p = null;
   function _(m, u) {
@@ -8084,7 +8084,7 @@ function Qu(i, e, t, n, r, s, o) {
     }), r.update(l)), l.material.uniforms.t2D.value = x, l.material.uniforms.backgroundIntensity.value = u.backgroundIntensity, l.material.toneMapped = x.colorSpace !== Ie, x.matrixAutoUpdate === !0 && x.updateMatrix(), l.material.uniforms.uvTransform.value.copy(x.matrix), (d !== x || f !== x.version || p !== i.toneMapping) && (l.material.needsUpdate = !0, d = x, f = x.version, p = i.toneMapping), l.layers.enableAll(), m.unshift(l, l.geometry, l.material, 0, 0, null));
   }
   function g(m, u) {
-    m.getRGB(ki, Po(i)), n.buffers.color.setClear(ki.r, ki.g, ki.b, u, o);
+    m.getRGB(ki, Ro(i)), n.buffers.color.setClear(ki.r, ki.g, ki.b, u, o);
   }
   return {
     getClearColor: function() {
@@ -8102,7 +8102,7 @@ function Qu(i, e, t, n, r, s, o) {
     render: _
   };
 }
-function ed(i, e, t, n) {
+function td(i, e, t, n) {
   const r = i.getParameter(i.MAX_VERTEX_ATTRIBS), s = n.isWebGL2 ? null : e.get("OES_vertex_array_object"), o = n.isWebGL2 || s !== null, a = {}, c = m(null);
   let l = c, h = !1;
   function d(O, G, te, j, H) {
@@ -8325,7 +8325,7 @@ function ed(i, e, t, n) {
     disableUnusedAttributes: w
   };
 }
-function td(i, e, t, n) {
+function nd(i, e, t, n) {
   const r = n.isWebGL2;
   let s;
   function o(l) {
@@ -8348,7 +8348,7 @@ function td(i, e, t, n) {
   }
   this.setMode = o, this.render = a, this.renderInstances = c;
 }
-function nd(i, e, t) {
+function id(i, e, t) {
   let n;
   function r() {
     if (n !== void 0)
@@ -8394,7 +8394,7 @@ function nd(i, e, t) {
     maxSamples: w
   };
 }
-function id(i) {
+function rd(i) {
   const e = this;
   let t = null, n = 0, r = !1, s = !1;
   const o = new pn(), a = new He(), c = { value: null, needsUpdate: !1 };
@@ -8440,7 +8440,7 @@ function id(i) {
     return e.numPlanes = g, e.numIntersection = 0, m;
   }
 }
-function rd(i) {
+function sd(i) {
   let e = /* @__PURE__ */ new WeakMap();
   function t(o, a) {
     return a === Kr ? o.mapping = ei : a === Jr && (o.mapping = ti), o;
@@ -8455,7 +8455,7 @@ function rd(i) {
         } else {
           const c = o.image;
           if (c && c.height > 0) {
-            const l = new Mc(c.height / 2);
+            const l = new Sc(c.height / 2);
             return l.fromEquirectangularTexture(i, o), e.set(o, l), o.addEventListener("dispose", r), t(l.texture, o.mapping);
           } else
             return null;
@@ -8477,7 +8477,7 @@ function rd(i) {
     dispose: s
   };
 }
-class ns extends Ro {
+class ns extends Co {
   constructor(e = -1, t = 1, n = 1, r = -1, s = 0.1, o = 2e3) {
     super(), this.isOrthographicCamera = !0, this.type = "OrthographicCamera", this.zoom = 1, this.view = null, this.left = e, this.right = t, this.top = n, this.bottom = r, this.near = s, this.far = o, this.updateProjectionMatrix();
   }
@@ -8610,7 +8610,7 @@ class Sa {
     if (this._pingPongRenderTarget === null || this._pingPongRenderTarget.width !== e || this._pingPongRenderTarget.height !== t) {
       this._pingPongRenderTarget !== null && this._dispose(), this._pingPongRenderTarget = Ea(e, t, n);
       const { _lodMax: s } = this;
-      ({ sizeLods: this._sizeLods, lodPlanes: this._lodPlanes, sigmas: this._sigmas } = sd(s)), this._blurMaterial = ad(s, e, t);
+      ({ sizeLods: this._sizeLods, lodPlanes: this._lodPlanes, sigmas: this._sigmas } = ad(s)), this._blurMaterial = od(s, e, t);
     }
     return r;
   }
@@ -8704,7 +8704,7 @@ class Sa {
     Wi(t, E, w, 3 * b, 2 * b), c.setRenderTarget(t), c.render(d, Fr);
   }
 }
-function sd(i) {
+function ad(i) {
   const e = [], t = [], n = [];
   let r = i;
   const s = i - jn + 1 + xa.length;
@@ -8751,7 +8751,7 @@ function Ea(i, e, t) {
 function Wi(i, e, t, n, r) {
   i.viewport.set(e, t, n, r), i.scissor.set(e, t, n, r);
 }
-function ad(i, e, t) {
+function od(i, e, t) {
   const n = new Float32Array(_n), r = new R(0, 1, 0);
   return new An({
     name: "SphericalGaussianBlur",
@@ -8969,7 +8969,7 @@ function ps() {
 	`
   );
 }
-function od(i) {
+function ld(i) {
   let e = /* @__PURE__ */ new WeakMap(), t = null;
   function n(a) {
     if (a && a.isTexture) {
@@ -9016,7 +9016,7 @@ function od(i) {
     dispose: o
   };
 }
-function ld(i) {
+function cd(i) {
   const e = {};
   function t(n) {
     if (e[n] !== void 0)
@@ -9053,7 +9053,7 @@ function ld(i) {
     }
   };
 }
-function cd(i, e, t, n) {
+function hd(i, e, t, n) {
   const r = {}, s = /* @__PURE__ */ new WeakMap();
   function o(d) {
     const f = d.target;
@@ -9096,7 +9096,7 @@ function cd(i, e, t, n) {
         f.push(E, w, w, q, q, E);
       }
     }
-    const m = new (vo(f) ? wo : Ao)(f, 1);
+    const m = new (Mo(f) ? Po : wo)(f, 1);
     m.version = g;
     const u = s.get(d);
     u && e.remove(u), s.set(d, m);
@@ -9116,7 +9116,7 @@ function cd(i, e, t, n) {
     getWireframeAttribute: h
   };
 }
-function hd(i, e, t, n) {
+function ud(i, e, t, n) {
   const r = n.isWebGL2;
   let s;
   function o(f) {
@@ -9143,7 +9143,7 @@ function hd(i, e, t, n) {
   }
   this.setMode = o, this.setIndex = l, this.render = h, this.renderInstances = d;
 }
-function ud(i) {
+function dd(i) {
   const e = {
     geometries: 0,
     textures: 0
@@ -9188,13 +9188,13 @@ function ud(i) {
     update: n
   };
 }
-function dd(i, e) {
+function fd(i, e) {
   return i[0] - e[0];
 }
-function fd(i, e) {
+function pd(i, e) {
   return Math.abs(e[1]) - Math.abs(i[1]);
 }
-function pd(i, e, t) {
+function md(i, e, t) {
   const n = {}, r = new Float32Array(8), s = /* @__PURE__ */ new WeakMap(), o = new je(), a = [];
   for (let l = 0; l < 8; l++)
     a[l] = [l, 0];
@@ -9213,7 +9213,7 @@ function pd(i, e, t) {
         T === !0 && (N = 1), x === !0 && (N = 2), b === !0 && (N = 3);
         let v = h.attributes.position.count * N, A = 1;
         v > e.maxTextureSize && (A = Math.ceil(v / e.maxTextureSize), v = e.maxTextureSize);
-        const V = new Float32Array(v * A * 4 * _), ne = new Eo(V, v, A, _);
+        const V = new Float32Array(v * A * 4 * _), ne = new yo(V, v, A, _);
         ne.type = xn, ne.needsUpdate = !0;
         const D = N * 4;
         for (let G = 0; G < _; G++) {
@@ -9247,10 +9247,10 @@ function pd(i, e, t) {
         const b = _[x];
         b[0] = x, b[1] = f[x];
       }
-      _.sort(fd);
+      _.sort(pd);
       for (let x = 0; x < 8; x++)
         x < p && _[x][1] ? (a[x][0] = _[x][0], a[x][1] = _[x][1]) : (a[x][0] = Number.MAX_SAFE_INTEGER, a[x][1] = 0);
-      a.sort(dd);
+      a.sort(fd);
       const g = h.morphAttributes.position, m = h.morphAttributes.normal;
       let u = 0;
       for (let x = 0; x < 8; x++) {
@@ -9265,7 +9265,7 @@ function pd(i, e, t) {
     update: c
   };
 }
-function md(i, e, t, n) {
+function _d(i, e, t, n) {
   let r = /* @__PURE__ */ new WeakMap();
   function s(c) {
     const l = n.render.frame, h = c.geometry, d = e.get(c, h);
@@ -9283,7 +9283,7 @@ function md(i, e, t, n) {
     dispose: o
   };
 }
-const qo = /* @__PURE__ */ new Mt(), Do = /* @__PURE__ */ new Eo(), Uo = /* @__PURE__ */ new rc(), Io = /* @__PURE__ */ new Co(), ba = [], Aa = [], wa = new Float32Array(16), Pa = new Float32Array(9), Ra = new Float32Array(4);
+const Do = /* @__PURE__ */ new Mt(), Uo = /* @__PURE__ */ new yo(), Io = /* @__PURE__ */ new sc(), No = /* @__PURE__ */ new Lo(), ba = [], Aa = [], wa = new Float32Array(16), Pa = new Float32Array(9), Ra = new Float32Array(4);
 function ai(i, e, t) {
   const n = i[0];
   if (n <= 0 || n > 0)
@@ -9316,11 +9316,11 @@ function rr(i, e) {
     t[n] = i.allocateTextureUnit();
   return t;
 }
-function _d(i, e) {
+function gd(i, e) {
   const t = this.cache;
   t[0] !== e && (i.uniform1f(this.addr, e), t[0] = e);
 }
-function gd(i, e) {
+function xd(i, e) {
   const t = this.cache;
   if (e.x !== void 0)
     (t[0] !== e.x || t[1] !== e.y) && (i.uniform2f(this.addr, e.x, e.y), t[0] = e.x, t[1] = e.y);
@@ -9330,7 +9330,7 @@ function gd(i, e) {
     i.uniform2fv(this.addr, e), nt(t, e);
   }
 }
-function xd(i, e) {
+function vd(i, e) {
   const t = this.cache;
   if (e.x !== void 0)
     (t[0] !== e.x || t[1] !== e.y || t[2] !== e.z) && (i.uniform3f(this.addr, e.x, e.y, e.z), t[0] = e.x, t[1] = e.y, t[2] = e.z);
@@ -9342,7 +9342,7 @@ function xd(i, e) {
     i.uniform3fv(this.addr, e), nt(t, e);
   }
 }
-function vd(i, e) {
+function Md(i, e) {
   const t = this.cache;
   if (e.x !== void 0)
     (t[0] !== e.x || t[1] !== e.y || t[2] !== e.z || t[3] !== e.w) && (i.uniform4f(this.addr, e.x, e.y, e.z, e.w), t[0] = e.x, t[1] = e.y, t[2] = e.z, t[3] = e.w);
@@ -9352,7 +9352,7 @@ function vd(i, e) {
     i.uniform4fv(this.addr, e), nt(t, e);
   }
 }
-function Md(i, e) {
+function Sd(i, e) {
   const t = this.cache, n = e.elements;
   if (n === void 0) {
     if (tt(t, e))
@@ -9364,7 +9364,7 @@ function Md(i, e) {
     Ra.set(n), i.uniformMatrix2fv(this.addr, !1, Ra), nt(t, n);
   }
 }
-function Sd(i, e) {
+function Ed(i, e) {
   const t = this.cache, n = e.elements;
   if (n === void 0) {
     if (tt(t, e))
@@ -9376,7 +9376,7 @@ function Sd(i, e) {
     Pa.set(n), i.uniformMatrix3fv(this.addr, !1, Pa), nt(t, n);
   }
 }
-function Ed(i, e) {
+function yd(i, e) {
   const t = this.cache, n = e.elements;
   if (n === void 0) {
     if (tt(t, e))
@@ -9388,11 +9388,11 @@ function Ed(i, e) {
     wa.set(n), i.uniformMatrix4fv(this.addr, !1, wa), nt(t, n);
   }
 }
-function yd(i, e) {
+function Td(i, e) {
   const t = this.cache;
   t[0] !== e && (i.uniform1i(this.addr, e), t[0] = e);
 }
-function Td(i, e) {
+function bd(i, e) {
   const t = this.cache;
   if (e.x !== void 0)
     (t[0] !== e.x || t[1] !== e.y) && (i.uniform2i(this.addr, e.x, e.y), t[0] = e.x, t[1] = e.y);
@@ -9402,7 +9402,7 @@ function Td(i, e) {
     i.uniform2iv(this.addr, e), nt(t, e);
   }
 }
-function bd(i, e) {
+function Ad(i, e) {
   const t = this.cache;
   if (e.x !== void 0)
     (t[0] !== e.x || t[1] !== e.y || t[2] !== e.z) && (i.uniform3i(this.addr, e.x, e.y, e.z), t[0] = e.x, t[1] = e.y, t[2] = e.z);
@@ -9412,7 +9412,7 @@ function bd(i, e) {
     i.uniform3iv(this.addr, e), nt(t, e);
   }
 }
-function Ad(i, e) {
+function wd(i, e) {
   const t = this.cache;
   if (e.x !== void 0)
     (t[0] !== e.x || t[1] !== e.y || t[2] !== e.z || t[3] !== e.w) && (i.uniform4i(this.addr, e.x, e.y, e.z, e.w), t[0] = e.x, t[1] = e.y, t[2] = e.z, t[3] = e.w);
@@ -9422,11 +9422,11 @@ function Ad(i, e) {
     i.uniform4iv(this.addr, e), nt(t, e);
   }
 }
-function wd(i, e) {
+function Pd(i, e) {
   const t = this.cache;
   t[0] !== e && (i.uniform1ui(this.addr, e), t[0] = e);
 }
-function Pd(i, e) {
+function Rd(i, e) {
   const t = this.cache;
   if (e.x !== void 0)
     (t[0] !== e.x || t[1] !== e.y) && (i.uniform2ui(this.addr, e.x, e.y), t[0] = e.x, t[1] = e.y);
@@ -9436,7 +9436,7 @@ function Pd(i, e) {
     i.uniform2uiv(this.addr, e), nt(t, e);
   }
 }
-function Rd(i, e) {
+function Cd(i, e) {
   const t = this.cache;
   if (e.x !== void 0)
     (t[0] !== e.x || t[1] !== e.y || t[2] !== e.z) && (i.uniform3ui(this.addr, e.x, e.y, e.z), t[0] = e.x, t[1] = e.y, t[2] = e.z);
@@ -9446,7 +9446,7 @@ function Rd(i, e) {
     i.uniform3uiv(this.addr, e), nt(t, e);
   }
 }
-function Cd(i, e) {
+function Ld(i, e) {
   const t = this.cache;
   if (e.x !== void 0)
     (t[0] !== e.x || t[1] !== e.y || t[2] !== e.z || t[3] !== e.w) && (i.uniform4ui(this.addr, e.x, e.y, e.z, e.w), t[0] = e.x, t[1] = e.y, t[2] = e.z, t[3] = e.w);
@@ -9456,224 +9456,224 @@ function Cd(i, e) {
     i.uniform4uiv(this.addr, e), nt(t, e);
   }
 }
-function Ld(i, e, t) {
-  const n = this.cache, r = t.allocateTextureUnit();
-  n[0] !== r && (i.uniform1i(this.addr, r), n[0] = r), t.setTexture2D(e || qo, r);
-}
 function qd(i, e, t) {
   const n = this.cache, r = t.allocateTextureUnit();
-  n[0] !== r && (i.uniform1i(this.addr, r), n[0] = r), t.setTexture3D(e || Uo, r);
+  n[0] !== r && (i.uniform1i(this.addr, r), n[0] = r), t.setTexture2D(e || Do, r);
 }
 function Dd(i, e, t) {
   const n = this.cache, r = t.allocateTextureUnit();
-  n[0] !== r && (i.uniform1i(this.addr, r), n[0] = r), t.setTextureCube(e || Io, r);
+  n[0] !== r && (i.uniform1i(this.addr, r), n[0] = r), t.setTexture3D(e || Io, r);
 }
 function Ud(i, e, t) {
   const n = this.cache, r = t.allocateTextureUnit();
-  n[0] !== r && (i.uniform1i(this.addr, r), n[0] = r), t.setTexture2DArray(e || Do, r);
+  n[0] !== r && (i.uniform1i(this.addr, r), n[0] = r), t.setTextureCube(e || No, r);
 }
-function Id(i) {
+function Id(i, e, t) {
+  const n = this.cache, r = t.allocateTextureUnit();
+  n[0] !== r && (i.uniform1i(this.addr, r), n[0] = r), t.setTexture2DArray(e || Uo, r);
+}
+function Nd(i) {
   switch (i) {
     case 5126:
-      return _d;
-    case 35664:
       return gd;
-    case 35665:
+    case 35664:
       return xd;
-    case 35666:
+    case 35665:
       return vd;
-    case 35674:
+    case 35666:
       return Md;
-    case 35675:
+    case 35674:
       return Sd;
-    case 35676:
+    case 35675:
       return Ed;
+    case 35676:
+      return yd;
     case 5124:
     case 35670:
-      return yd;
+      return Td;
     case 35667:
     case 35671:
-      return Td;
+      return bd;
     case 35668:
     case 35672:
-      return bd;
+      return Ad;
     case 35669:
     case 35673:
-      return Ad;
-    case 5125:
       return wd;
-    case 36294:
+    case 5125:
       return Pd;
-    case 36295:
+    case 36294:
       return Rd;
-    case 36296:
+    case 36295:
       return Cd;
+    case 36296:
+      return Ld;
     case 35678:
     case 36198:
     case 36298:
     case 36306:
     case 35682:
-      return Ld;
+      return qd;
     case 35679:
     case 36299:
     case 36307:
-      return qd;
+      return Dd;
     case 35680:
     case 36300:
     case 36308:
     case 36293:
-      return Dd;
+      return Ud;
     case 36289:
     case 36303:
     case 36311:
     case 36292:
-      return Ud;
+      return Id;
   }
 }
-function Nd(i, e) {
+function Fd(i, e) {
   i.uniform1fv(this.addr, e);
 }
-function Fd(i, e) {
+function Od(i, e) {
   const t = ai(e, this.size, 2);
   i.uniform2fv(this.addr, t);
 }
-function Od(i, e) {
+function Bd(i, e) {
   const t = ai(e, this.size, 3);
   i.uniform3fv(this.addr, t);
 }
-function Bd(i, e) {
+function zd(i, e) {
   const t = ai(e, this.size, 4);
   i.uniform4fv(this.addr, t);
 }
-function zd(i, e) {
+function Gd(i, e) {
   const t = ai(e, this.size, 4);
   i.uniformMatrix2fv(this.addr, !1, t);
 }
-function Gd(i, e) {
+function Hd(i, e) {
   const t = ai(e, this.size, 9);
   i.uniformMatrix3fv(this.addr, !1, t);
 }
-function Hd(i, e) {
+function Vd(i, e) {
   const t = ai(e, this.size, 16);
   i.uniformMatrix4fv(this.addr, !1, t);
 }
-function Vd(i, e) {
+function kd(i, e) {
   i.uniform1iv(this.addr, e);
 }
-function kd(i, e) {
+function Wd(i, e) {
   i.uniform2iv(this.addr, e);
 }
-function Wd(i, e) {
+function Xd(i, e) {
   i.uniform3iv(this.addr, e);
 }
-function Xd(i, e) {
+function Yd(i, e) {
   i.uniform4iv(this.addr, e);
 }
-function Yd(i, e) {
+function jd(i, e) {
   i.uniform1uiv(this.addr, e);
 }
-function jd(i, e) {
+function Zd(i, e) {
   i.uniform2uiv(this.addr, e);
 }
-function Zd(i, e) {
+function Kd(i, e) {
   i.uniform3uiv(this.addr, e);
 }
-function Kd(i, e) {
+function Jd(i, e) {
   i.uniform4uiv(this.addr, e);
-}
-function Jd(i, e, t) {
-  const n = this.cache, r = e.length, s = rr(t, r);
-  tt(n, s) || (i.uniform1iv(this.addr, s), nt(n, s));
-  for (let o = 0; o !== r; ++o)
-    t.setTexture2D(e[o] || qo, s[o]);
 }
 function $d(i, e, t) {
   const n = this.cache, r = e.length, s = rr(t, r);
   tt(n, s) || (i.uniform1iv(this.addr, s), nt(n, s));
   for (let o = 0; o !== r; ++o)
-    t.setTexture3D(e[o] || Uo, s[o]);
+    t.setTexture2D(e[o] || Do, s[o]);
 }
 function Qd(i, e, t) {
   const n = this.cache, r = e.length, s = rr(t, r);
   tt(n, s) || (i.uniform1iv(this.addr, s), nt(n, s));
   for (let o = 0; o !== r; ++o)
-    t.setTextureCube(e[o] || Io, s[o]);
+    t.setTexture3D(e[o] || Io, s[o]);
 }
 function ef(i, e, t) {
   const n = this.cache, r = e.length, s = rr(t, r);
   tt(n, s) || (i.uniform1iv(this.addr, s), nt(n, s));
   for (let o = 0; o !== r; ++o)
-    t.setTexture2DArray(e[o] || Do, s[o]);
+    t.setTextureCube(e[o] || No, s[o]);
 }
-function tf(i) {
+function tf(i, e, t) {
+  const n = this.cache, r = e.length, s = rr(t, r);
+  tt(n, s) || (i.uniform1iv(this.addr, s), nt(n, s));
+  for (let o = 0; o !== r; ++o)
+    t.setTexture2DArray(e[o] || Uo, s[o]);
+}
+function nf(i) {
   switch (i) {
     case 5126:
-      return Nd;
-    case 35664:
       return Fd;
-    case 35665:
+    case 35664:
       return Od;
-    case 35666:
+    case 35665:
       return Bd;
-    case 35674:
+    case 35666:
       return zd;
-    case 35675:
+    case 35674:
       return Gd;
-    case 35676:
+    case 35675:
       return Hd;
+    case 35676:
+      return Vd;
     case 5124:
     case 35670:
-      return Vd;
+      return kd;
     case 35667:
     case 35671:
-      return kd;
+      return Wd;
     case 35668:
     case 35672:
-      return Wd;
+      return Xd;
     case 35669:
     case 35673:
-      return Xd;
-    case 5125:
       return Yd;
-    case 36294:
+    case 5125:
       return jd;
-    case 36295:
+    case 36294:
       return Zd;
-    case 36296:
+    case 36295:
       return Kd;
+    case 36296:
+      return Jd;
     case 35678:
     case 36198:
     case 36298:
     case 36306:
     case 35682:
-      return Jd;
+      return $d;
     case 35679:
     case 36299:
     case 36307:
-      return $d;
+      return Qd;
     case 35680:
     case 36300:
     case 36308:
     case 36293:
-      return Qd;
+      return ef;
     case 36289:
     case 36303:
     case 36311:
     case 36292:
-      return ef;
-  }
-}
-class nf {
-  constructor(e, t, n) {
-    this.id = e, this.addr = n, this.cache = [], this.setValue = Id(t.type);
+      return tf;
   }
 }
 class rf {
   constructor(e, t, n) {
-    this.id = e, this.addr = n, this.cache = [], this.size = t.size, this.setValue = tf(t.type);
+    this.id = e, this.addr = n, this.cache = [], this.setValue = Nd(t.type);
   }
 }
 class sf {
+  constructor(e, t, n) {
+    this.id = e, this.addr = n, this.cache = [], this.size = t.size, this.setValue = nf(t.type);
+  }
+}
+class af {
   constructor(e) {
     this.id = e, this.seq = [], this.map = {};
   }
@@ -9689,18 +9689,18 @@ const Br = /(\w+)(\])?(\[|\.)?/g;
 function Ca(i, e) {
   i.seq.push(e), i.map[e.id] = e;
 }
-function af(i, e, t) {
+function of(i, e, t) {
   const n = i.name, r = n.length;
   for (Br.lastIndex = 0; ; ) {
     const s = Br.exec(n), o = Br.lastIndex;
     let a = s[1];
     const c = s[2] === "]", l = s[3];
     if (c && (a = a | 0), l === void 0 || l === "[" && o + 2 === r) {
-      Ca(t, l === void 0 ? new nf(a, i, e) : new rf(a, i, e));
+      Ca(t, l === void 0 ? new rf(a, i, e) : new sf(a, i, e));
       break;
     } else {
       let d = t.map[a];
-      d === void 0 && (d = new sf(a), Ca(t, d)), t = d;
+      d === void 0 && (d = new af(a), Ca(t, d)), t = d;
     }
   }
 }
@@ -9710,7 +9710,7 @@ class Ki {
     const n = e.getProgramParameter(t, e.ACTIVE_UNIFORMS);
     for (let r = 0; r < n; ++r) {
       const s = e.getActiveUniform(t, r), o = e.getUniformLocation(t, s.name);
-      af(s, o, this);
+      of(s, o, this);
     }
   }
   setValue(e, t, n, r) {
@@ -9740,8 +9740,8 @@ function La(i, e, t) {
   const n = i.createShader(e);
   return i.shaderSource(n, t), i.compileShader(n), n;
 }
-let of = 0;
-function lf(i, e) {
+let lf = 0;
+function cf(i, e) {
   const t = i.split(`
 `), n = [], r = Math.max(e - 6, 0), s = Math.min(e + 6, t.length);
   for (let o = r; o < s; o++) {
@@ -9751,7 +9751,7 @@ function lf(i, e) {
   return n.join(`
 `);
 }
-function cf(i) {
+function hf(i) {
   switch (i) {
     case Ht:
       return ["Linear", "( value )"];
@@ -9772,30 +9772,30 @@ function qa(i, e, t) {
 
 ` + r + `
 
-` + lf(i.getShaderSource(e), o);
+` + cf(i.getShaderSource(e), o);
   } else
     return r;
 }
-function hf(i, e) {
-  const t = cf(e);
+function uf(i, e) {
+  const t = hf(e);
   return "vec4 " + i + "( vec4 value ) { return LinearTo" + t[0] + t[1] + "; }";
 }
-function uf(i, e) {
+function df(i, e) {
   let t;
   switch (e) {
-    case Tl:
+    case bl:
       t = "Linear";
       break;
-    case bl:
+    case Al:
       t = "Reinhard";
       break;
-    case Al:
+    case wl:
       t = "OptimizedCineon";
       break;
-    case wl:
+    case Pl:
       t = "ACESFilmic";
       break;
-    case Pl:
+    case Rl:
       t = "Custom";
       break;
     default:
@@ -9803,7 +9803,7 @@ function uf(i, e) {
   }
   return "vec3 " + i + "( vec3 color ) { return " + t + "ToneMapping( color ); }";
 }
-function df(i) {
+function ff(i) {
   return [
     i.extensionDerivatives || i.envMapCubeUVHeight || i.bumpMap || i.normalMapTangentSpace || i.clearcoatNormalMap || i.flatShading || i.shaderID === "physical" ? "#extension GL_OES_standard_derivatives : enable" : "",
     (i.extensionFragDepth || i.logarithmicDepthBuffer) && i.rendererExtensionFragDepth ? "#extension GL_EXT_frag_depth : enable" : "",
@@ -9812,7 +9812,7 @@ function df(i) {
   ].filter(pi).join(`
 `);
 }
-function ff(i) {
+function pf(i) {
   const e = [];
   for (const t in i) {
     const n = i[t];
@@ -9821,7 +9821,7 @@ function ff(i) {
   return e.join(`
 `);
 }
-function pf(i, e) {
+function mf(i, e) {
   const t = {}, n = i.getProgramParameter(e, i.ACTIVE_ATTRIBUTES);
   for (let r = 0; r < n; r++) {
     const s = i.getActiveAttrib(e, r), o = s.name;
@@ -9844,21 +9844,21 @@ function Da(i, e) {
 function Ua(i, e) {
   return i.replace(/NUM_CLIPPING_PLANES/g, e.numClippingPlanes).replace(/UNION_CLIPPING_PLANES/g, e.numClippingPlanes - e.numClipIntersection);
 }
-const mf = /^[ \t]*#include +<([\w\d./]+)>/gm;
+const _f = /^[ \t]*#include +<([\w\d./]+)>/gm;
 function is(i) {
-  return i.replace(mf, _f);
+  return i.replace(_f, gf);
 }
-function _f(i, e) {
+function gf(i, e) {
   const t = Fe[e];
   if (t === void 0)
     throw new Error("Can not resolve #include <" + e + ">");
   return is(t);
 }
-const gf = /#pragma unroll_loop_start\s+for\s*\(\s*int\s+i\s*=\s*(\d+)\s*;\s*i\s*<\s*(\d+)\s*;\s*i\s*\+\+\s*\)\s*{([\s\S]+?)}\s+#pragma unroll_loop_end/g;
+const xf = /#pragma unroll_loop_start\s+for\s*\(\s*int\s+i\s*=\s*(\d+)\s*;\s*i\s*<\s*(\d+)\s*;\s*i\s*\+\+\s*\)\s*{([\s\S]+?)}\s+#pragma unroll_loop_end/g;
 function Ia(i) {
-  return i.replace(gf, xf);
+  return i.replace(xf, vf);
 }
-function xf(i, e, t, n) {
+function vf(i, e, t, n) {
   let r = "";
   for (let s = parseInt(e); s < parseInt(t); s++)
     r += n.replace(/\[\s*i\s*\]/g, "[ " + s + " ]").replace(/UNROLLED_LOOP_INDEX/g, s);
@@ -9872,11 +9872,11 @@ precision ` + i.precision + " int;";
 #define MEDIUM_PRECISION` : i.precision === "lowp" && (e += `
 #define LOW_PRECISION`), e;
 }
-function vf(i) {
-  let e = "SHADOWMAP_TYPE_BASIC";
-  return i.shadowMapType === co ? e = "SHADOWMAP_TYPE_PCF" : i.shadowMapType === nl ? e = "SHADOWMAP_TYPE_PCF_SOFT" : i.shadowMapType === Jt && (e = "SHADOWMAP_TYPE_VSM"), e;
-}
 function Mf(i) {
+  let e = "SHADOWMAP_TYPE_BASIC";
+  return i.shadowMapType === ho ? e = "SHADOWMAP_TYPE_PCF" : i.shadowMapType === il ? e = "SHADOWMAP_TYPE_PCF_SOFT" : i.shadowMapType === Jt && (e = "SHADOWMAP_TYPE_VSM"), e;
+}
+function Sf(i) {
   let e = "ENVMAP_TYPE_CUBE";
   if (i.envMap)
     switch (i.envMapMode) {
@@ -9890,7 +9890,7 @@ function Mf(i) {
     }
   return e;
 }
-function Sf(i) {
+function Ef(i) {
   let e = "ENVMAP_MODE_REFLECTION";
   if (i.envMap)
     switch (i.envMapMode) {
@@ -9900,33 +9900,33 @@ function Sf(i) {
     }
   return e;
 }
-function Ef(i) {
+function yf(i) {
   let e = "ENVMAP_BLENDING_NONE";
   if (i.envMap)
     switch (i.combine) {
       case hs:
         e = "ENVMAP_BLENDING_MULTIPLY";
         break;
-      case El:
+      case yl:
         e = "ENVMAP_BLENDING_MIX";
         break;
-      case yl:
+      case Tl:
         e = "ENVMAP_BLENDING_ADD";
         break;
     }
   return e;
 }
-function yf(i) {
+function Tf(i) {
   const e = i.envMapCubeUVHeight;
   if (e === null)
     return null;
   const t = Math.log2(e) - 2, n = 1 / e;
   return { texelWidth: 1 / (3 * Math.max(Math.pow(2, t), 7 * 16)), texelHeight: n, maxMip: t };
 }
-function Tf(i, e, t, n) {
+function bf(i, e, t, n) {
   const r = i.getContext(), s = t.defines;
   let o = t.vertexShader, a = t.fragmentShader;
-  const c = vf(t), l = Mf(t), h = Sf(t), d = Ef(t), f = yf(t), p = t.isWebGL2 ? "" : df(t), _ = ff(s), g = r.createProgram();
+  const c = Mf(t), l = Sf(t), h = Ef(t), d = yf(t), f = Tf(t), p = t.isWebGL2 ? "" : ff(t), _ = pf(s), g = r.createProgram();
   let m, u, T = t.glslVersion ? "#version " + t.glslVersion + `
 ` : "";
   t.isRawShaderMaterial ? (m = [
@@ -10142,12 +10142,12 @@ function Tf(i, e, t, n) {
     t.toneMapping !== $t ? "#define TONE_MAPPING" : "",
     t.toneMapping !== $t ? Fe.tonemapping_pars_fragment : "",
     // this code is required here because it is used by the toneMapping() function defined below
-    t.toneMapping !== $t ? uf("toneMapping", t.toneMapping) : "",
+    t.toneMapping !== $t ? df("toneMapping", t.toneMapping) : "",
     t.dithering ? "#define DITHERING" : "",
     t.opaque ? "#define OPAQUE" : "",
     Fe.encodings_pars_fragment,
     // this code is required here because it is used by the various encoding/decoding function defined below
-    hf("linearToOutputTexel", t.outputColorSpace),
+    uf("linearToOutputTexel", t.outputColorSpace),
     t.useDepthPacking ? "#define DEPTH_PACKING " + t.depthPacking : "",
     `
 `
@@ -10216,13 +10216,13 @@ Program Info Log: ` + v + `
   };
   let N;
   return this.getAttributes = function() {
-    return N === void 0 && (N = pf(r, g)), N;
+    return N === void 0 && (N = mf(r, g)), N;
   }, this.destroy = function() {
     n.releaseStatesOfProgram(this), r.deleteProgram(g), this.program = void 0;
-  }, this.name = t.shaderName, this.id = of++, this.cacheKey = e, this.usedTimes = 1, this.program = g, this.vertexShader = E, this.fragmentShader = w, this;
+  }, this.name = t.shaderName, this.id = lf++, this.cacheKey = e, this.usedTimes = 1, this.program = g, this.vertexShader = E, this.fragmentShader = w, this;
 }
-let bf = 0;
-class Af {
+let Af = 0;
+class wf {
   constructor() {
     this.shaderCache = /* @__PURE__ */ new Map(), this.materialCache = /* @__PURE__ */ new Map();
   }
@@ -10253,16 +10253,16 @@ class Af {
   _getShaderStage(e) {
     const t = this.shaderCache;
     let n = t.get(e);
-    return n === void 0 && (n = new wf(e), t.set(e, n)), n;
+    return n === void 0 && (n = new Pf(e), t.set(e, n)), n;
   }
 }
-class wf {
+class Pf {
   constructor(e) {
-    this.id = bf++, this.code = e, this.usedTimes = 0;
+    this.id = Af++, this.code = e, this.usedTimes = 0;
   }
 }
-function Pf(i, e, t, n, r, s, o) {
-  const a = new To(), c = new Af(), l = [], h = r.isWebGL2, d = r.logarithmicDepthBuffer, f = r.vertexTextures;
+function Rf(i, e, t, n, r, s, o) {
+  const a = new bo(), c = new wf(), l = [], h = r.isWebGL2, d = r.logarithmicDepthBuffer, f = r.vertexTextures;
   let p = r.precision;
   const _ = {
     MeshDepthMaterial: "depth",
@@ -10324,8 +10324,8 @@ function Pf(i, e, t, n, r, s, o) {
       normalMap: _e,
       displacementMap: f && oe,
       emissiveMap: we,
-      normalMapObjectSpace: _e && v.normalMapType === Yl,
-      normalMapTangentSpace: _e && v.normalMapType === _o,
+      normalMapObjectSpace: _e && v.normalMapType === jl,
+      normalMapTangentSpace: _e && v.normalMapType === go,
       metalnessMap: Pe,
       roughnessMap: Ee,
       clearcoat: qe,
@@ -10443,7 +10443,7 @@ function Pf(i, e, t, n, r, s, o) {
     let V;
     if (A) {
       const ne = Ft[A];
-      V = _c.clone(ne.uniforms);
+      V = gc.clone(ne.uniforms);
     } else
       V = v.uniforms;
     return V;
@@ -10457,7 +10457,7 @@ function Pf(i, e, t, n, r, s, o) {
         break;
       }
     }
-    return V === void 0 && (V = new Tf(i, A, v, s), l.push(V)), V;
+    return V === void 0 && (V = new bf(i, A, v, s), l.push(V)), V;
   }
   function w(v) {
     if (--v.usedTimes === 0) {
@@ -10483,7 +10483,7 @@ function Pf(i, e, t, n, r, s, o) {
     dispose: N
   };
 }
-function Rf() {
+function Cf() {
   let i = /* @__PURE__ */ new WeakMap();
   function e(s) {
     let o = i.get(s);
@@ -10505,7 +10505,7 @@ function Rf() {
     dispose: r
   };
 }
-function Cf(i, e) {
+function Lf(i, e) {
   return i.groupOrder !== e.groupOrder ? i.groupOrder - e.groupOrder : i.renderOrder !== e.renderOrder ? i.renderOrder - e.renderOrder : i.material.id !== e.material.id ? i.material.id - e.material.id : i.z !== e.z ? i.z - e.z : i.id - e.id;
 }
 function Fa(i, e) {
@@ -10540,7 +10540,7 @@ function Oa() {
     p.transmission > 0 ? n.unshift(u) : p.transparent === !0 ? r.unshift(u) : t.unshift(u);
   }
   function l(d, f) {
-    t.length > 1 && t.sort(d || Cf), n.length > 1 && n.sort(f || Fa), r.length > 1 && r.sort(f || Fa);
+    t.length > 1 && t.sort(d || Lf), n.length > 1 && n.sort(f || Fa), r.length > 1 && r.sort(f || Fa);
   }
   function h() {
     for (let d = e, f = i.length; d < f; d++) {
@@ -10561,7 +10561,7 @@ function Oa() {
     sort: l
   };
 }
-function Lf() {
+function qf() {
   let i = /* @__PURE__ */ new WeakMap();
   function e(n, r) {
     const s = i.get(n);
@@ -10576,7 +10576,7 @@ function Lf() {
     dispose: t
   };
 }
-function qf() {
+function Df() {
   const i = {};
   return {
     get: function(e) {
@@ -10629,7 +10629,7 @@ function qf() {
     }
   };
 }
-function Df() {
+function Uf() {
   const i = {};
   return {
     get: function(e) {
@@ -10668,12 +10668,12 @@ function Df() {
     }
   };
 }
-let Uf = 0;
-function If(i, e) {
+let If = 0;
+function Nf(i, e) {
   return (e.castShadow ? 2 : 0) - (i.castShadow ? 2 : 0) + (e.map ? 1 : 0) - (i.map ? 1 : 0);
 }
-function Nf(i, e) {
-  const t = new qf(), n = Df(), r = {
+function Ff(i, e) {
+  const t = new Df(), n = Uf(), r = {
     version: 0,
     hash: {
       directionalLength: -1,
@@ -10715,7 +10715,7 @@ function Nf(i, e) {
     for (let V = 0; V < 9; V++)
       r.probe[V].set(0, 0, 0);
     let g = 0, m = 0, u = 0, T = 0, x = 0, b = 0, E = 0, w = 0, q = 0, N = 0;
-    h.sort(If);
+    h.sort(Nf);
     const v = d === !0 ? Math.PI : 1;
     for (let V = 0, ne = h.length; V < ne; V++) {
       const D = h[V], O = D.color, G = D.intensity, te = D.distance, j = D.shadow && D.shadow.map ? D.shadow.map.texture : null;
@@ -10757,7 +10757,7 @@ function Nf(i, e) {
     }
     T > 0 && (e.isWebGL2 || i.has("OES_texture_float_linear") === !0 ? (r.rectAreaLTC1 = de.LTC_FLOAT_1, r.rectAreaLTC2 = de.LTC_FLOAT_2) : i.has("OES_texture_half_float_linear") === !0 ? (r.rectAreaLTC1 = de.LTC_HALF_1, r.rectAreaLTC2 = de.LTC_HALF_2) : console.error("THREE.WebGLRenderer: Unable to use RectAreaLight. Missing WebGL extensions.")), r.ambient[0] = f, r.ambient[1] = p, r.ambient[2] = _;
     const A = r.hash;
-    (A.directionalLength !== g || A.pointLength !== m || A.spotLength !== u || A.rectAreaLength !== T || A.hemiLength !== x || A.numDirectionalShadows !== b || A.numPointShadows !== E || A.numSpotShadows !== w || A.numSpotMaps !== q) && (r.directional.length = g, r.spot.length = u, r.rectArea.length = T, r.point.length = m, r.hemi.length = x, r.directionalShadow.length = b, r.directionalShadowMap.length = b, r.pointShadow.length = E, r.pointShadowMap.length = E, r.spotShadow.length = w, r.spotShadowMap.length = w, r.directionalShadowMatrix.length = b, r.pointShadowMatrix.length = E, r.spotLightMatrix.length = w + q - N, r.spotLightMap.length = q, r.numSpotLightShadowsWithMaps = N, A.directionalLength = g, A.pointLength = m, A.spotLength = u, A.rectAreaLength = T, A.hemiLength = x, A.numDirectionalShadows = b, A.numPointShadows = E, A.numSpotShadows = w, A.numSpotMaps = q, r.version = Uf++);
+    (A.directionalLength !== g || A.pointLength !== m || A.spotLength !== u || A.rectAreaLength !== T || A.hemiLength !== x || A.numDirectionalShadows !== b || A.numPointShadows !== E || A.numSpotShadows !== w || A.numSpotMaps !== q) && (r.directional.length = g, r.spot.length = u, r.rectArea.length = T, r.point.length = m, r.hemi.length = x, r.directionalShadow.length = b, r.directionalShadowMap.length = b, r.pointShadow.length = E, r.pointShadowMap.length = E, r.spotShadow.length = w, r.spotShadowMap.length = w, r.directionalShadowMatrix.length = b, r.pointShadowMatrix.length = E, r.spotLightMatrix.length = w + q - N, r.spotLightMap.length = q, r.numSpotLightShadowsWithMaps = N, A.directionalLength = g, A.pointLength = m, A.spotLength = u, A.rectAreaLength = T, A.hemiLength = x, A.numDirectionalShadows = b, A.numPointShadows = E, A.numSpotShadows = w, A.numSpotMaps = q, r.version = If++);
   }
   function l(h, d) {
     let f = 0, p = 0, _ = 0, g = 0, m = 0;
@@ -10789,7 +10789,7 @@ function Nf(i, e) {
   };
 }
 function Ba(i, e) {
-  const t = new Nf(i, e), n = [], r = [];
+  const t = new Ff(i, e), n = [], r = [];
   function s() {
     n.length = 0, r.length = 0;
   }
@@ -10818,7 +10818,7 @@ function Ba(i, e) {
     pushShadow: a
   };
 }
-function Ff(i, e) {
+function Of(i, e) {
   let t = /* @__PURE__ */ new WeakMap();
   function n(s, o = 0) {
     const a = t.get(s);
@@ -10833,15 +10833,15 @@ function Ff(i, e) {
     dispose: r
   };
 }
-class Of extends si {
+class Bf extends si {
   constructor(e) {
-    super(), this.isMeshDepthMaterial = !0, this.type = "MeshDepthMaterial", this.depthPacking = Wl, this.map = null, this.alphaMap = null, this.displacementMap = null, this.displacementScale = 1, this.displacementBias = 0, this.wireframe = !1, this.wireframeLinewidth = 1, this.setValues(e);
+    super(), this.isMeshDepthMaterial = !0, this.type = "MeshDepthMaterial", this.depthPacking = Xl, this.map = null, this.alphaMap = null, this.displacementMap = null, this.displacementScale = 1, this.displacementBias = 0, this.wireframe = !1, this.wireframeLinewidth = 1, this.setValues(e);
   }
   copy(e) {
     return super.copy(e), this.depthPacking = e.depthPacking, this.map = e.map, this.alphaMap = e.alphaMap, this.displacementMap = e.displacementMap, this.displacementScale = e.displacementScale, this.displacementBias = e.displacementBias, this.wireframe = e.wireframe, this.wireframeLinewidth = e.wireframeLinewidth, this;
   }
 }
-class Bf extends si {
+class zf extends si {
   constructor(e) {
     super(), this.isMeshDistanceMaterial = !0, this.type = "MeshDistanceMaterial", this.map = null, this.alphaMap = null, this.displacementMap = null, this.displacementScale = 1, this.displacementBias = 0, this.setValues(e);
   }
@@ -10849,9 +10849,9 @@ class Bf extends si {
     return super.copy(e), this.map = e.map, this.alphaMap = e.alphaMap, this.displacementMap = e.displacementMap, this.displacementScale = e.displacementScale, this.displacementBias = e.displacementBias, this;
   }
 }
-const zf = `void main() {
+const Gf = `void main() {
 	gl_Position = vec4( position, 1.0 );
-}`, Gf = `uniform sampler2D shadow_pass;
+}`, Hf = `uniform sampler2D shadow_pass;
 uniform vec2 resolution;
 uniform float radius;
 #include <packing>
@@ -10878,9 +10878,9 @@ void main() {
 	float std_dev = sqrt( squared_mean - mean * mean );
 	gl_FragColor = pack2HalfToRGBA( vec2( mean, std_dev ) );
 }`;
-function Hf(i, e, t) {
+function Vf(i, e, t) {
   let n = new ds();
-  const r = new he(), s = new he(), o = new je(), a = new Of({ depthPacking: Xl }), c = new Bf(), l = {}, h = t.maxTextureSize, d = { [on]: mt, [mt]: on, [zt]: zt }, f = new An({
+  const r = new he(), s = new he(), o = new je(), a = new Bf({ depthPacking: Yl }), c = new zf(), l = {}, h = t.maxTextureSize, d = { [on]: mt, [mt]: on, [zt]: zt }, f = new An({
     defines: {
       VSM_SAMPLES: 8
     },
@@ -10889,8 +10889,8 @@ function Hf(i, e, t) {
       resolution: { value: new he() },
       radius: { value: 4 }
     },
-    vertexShader: zf,
-    fragmentShader: Gf
+    vertexShader: Gf,
+    fragmentShader: Hf
   }), p = f.clone();
   p.defines.HORIZONTAL_PASS = 1;
   const _ = new St();
@@ -10902,7 +10902,7 @@ function Hf(i, e, t) {
     )
   );
   const g = new At(_, f), m = this;
-  this.enabled = !1, this.autoUpdate = !0, this.needsUpdate = !1, this.type = co;
+  this.enabled = !1, this.autoUpdate = !0, this.needsUpdate = !1, this.type = ho;
   let u = this.type;
   this.render = function(E, w, q) {
     if (m.enabled === !1 || m.autoUpdate === !1 && m.needsUpdate === !1 || E.length === 0)
@@ -10986,7 +10986,7 @@ function Hf(i, e, t) {
       b(V[ne], w, q, N, v);
   }
 }
-function Vf(i, e, t) {
+function kf(i, e, t) {
   const n = t.isWebGL2;
   function r() {
     let L = !1;
@@ -11020,28 +11020,28 @@ function Vf(i, e, t) {
       setFunc: function(be) {
         if (se !== be) {
           switch (be) {
-            case ml:
+            case _l:
               i.depthFunc(i.NEVER);
               break;
-            case _l:
+            case gl:
               i.depthFunc(i.ALWAYS);
               break;
-            case gl:
+            case xl:
               i.depthFunc(i.LESS);
               break;
             case Zr:
               i.depthFunc(i.LEQUAL);
               break;
-            case xl:
+            case vl:
               i.depthFunc(i.EQUAL);
               break;
-            case vl:
+            case Ml:
               i.depthFunc(i.GEQUAL);
               break;
-            case Ml:
+            case Sl:
               i.depthFunc(i.GREATER);
               break;
-            case Sl:
+            case El:
               i.depthFunc(i.NOTEQUAL);
               break;
             default:
@@ -11134,8 +11134,8 @@ function Vf(i, e, t) {
   }
   const ee = {
     [Yn]: i.FUNC_ADD,
-    [rl]: i.FUNC_SUBTRACT,
-    [sl]: i.FUNC_REVERSE_SUBTRACT
+    [sl]: i.FUNC_SUBTRACT,
+    [al]: i.FUNC_REVERSE_SUBTRACT
   };
   if (n)
     ee[Ps] = i.MIN, ee[Rs] = i.MAX;
@@ -11144,24 +11144,24 @@ function Vf(i, e, t) {
     L !== null && (ee[Ps] = L.MIN_EXT, ee[Rs] = L.MAX_EXT);
   }
   const k = {
-    [al]: i.ZERO,
-    [ol]: i.ONE,
-    [ll]: i.SRC_COLOR,
-    [ho]: i.SRC_ALPHA,
-    [pl]: i.SRC_ALPHA_SATURATE,
-    [dl]: i.DST_COLOR,
-    [hl]: i.DST_ALPHA,
-    [cl]: i.ONE_MINUS_SRC_COLOR,
-    [uo]: i.ONE_MINUS_SRC_ALPHA,
-    [fl]: i.ONE_MINUS_DST_COLOR,
-    [ul]: i.ONE_MINUS_DST_ALPHA
+    [ol]: i.ZERO,
+    [ll]: i.ONE,
+    [cl]: i.SRC_COLOR,
+    [uo]: i.SRC_ALPHA,
+    [ml]: i.SRC_ALPHA_SATURATE,
+    [fl]: i.DST_COLOR,
+    [ul]: i.DST_ALPHA,
+    [hl]: i.ONE_MINUS_SRC_COLOR,
+    [fo]: i.ONE_MINUS_SRC_ALPHA,
+    [pl]: i.ONE_MINUS_DST_COLOR,
+    [dl]: i.ONE_MINUS_DST_ALPHA
   };
   function Q(L, W, se, xe, be, Xe, Ye, lt) {
     if (L === an) {
       u === !0 && (Ce(i.BLEND), u = !1);
       return;
     }
-    if (u === !1 && (C(i.BLEND), u = !0), L !== il) {
+    if (u === !1 && (C(i.BLEND), u = !0), L !== rl) {
       if (L !== T || lt !== v) {
         if ((x !== Yn || w !== Yn) && (i.blendEquation(i.FUNC_ADD), x = Yn, w = Yn), lt)
           switch (L) {
@@ -11216,7 +11216,7 @@ function Vf(i, e, t) {
     A !== L && (L ? i.frontFace(i.CW) : i.frontFace(i.CCW), A = L);
   }
   function we(L) {
-    L !== el ? (C(i.CULL_FACE), L !== V && (L === Ts ? i.cullFace(i.BACK) : L === tl ? i.cullFace(i.FRONT) : i.cullFace(i.FRONT_AND_BACK))) : Ce(i.CULL_FACE), V = L;
+    L !== tl ? (C(i.CULL_FACE), L !== V && (L === Ts ? i.cullFace(i.BACK) : L === nl ? i.cullFace(i.FRONT) : i.cullFace(i.FRONT_AND_BACK))) : Ce(i.CULL_FACE), V = L;
   }
   function Pe(L) {
     L !== ne && (te && i.lineWidth(L), ne = L);
@@ -11366,7 +11366,7 @@ function Vf(i, e, t) {
     reset: Je
   };
 }
-function kf(i, e, t, n, r, s, o) {
+function Wf(i, e, t, n, r, s, o) {
   const a = r.isWebGL2, c = r.maxTextures, l = r.maxCubemapSize, h = r.maxTextureSize, d = r.maxSamples, f = e.has("WEBGL_multisampled_render_to_texture") ? e.get("WEBGL_multisampled_render_to_texture") : null, p = typeof navigator > "u" ? !1 : /OculusBrowser/g.test(navigator.userAgent), _ = /* @__PURE__ */ new WeakMap();
   let g;
   const m = /* @__PURE__ */ new WeakMap();
@@ -11385,7 +11385,7 @@ function kf(i, e, t, n, r, s, o) {
     let re = 1;
     if ((y.width > ie || y.height > ie) && (re = ie / Math.max(y.width, y.height)), re < 1 || M === !0)
       if (typeof HTMLImageElement < "u" && y instanceof HTMLImageElement || typeof HTMLCanvasElement < "u" && y instanceof HTMLCanvasElement || typeof ImageBitmap < "u" && y instanceof ImageBitmap) {
-        const ue = M ? Kl : Math.floor, P = ue(re * y.width), Z = ue(re * y.height);
+        const ue = M ? Jl : Math.floor, P = ue(re * y.width), Z = ue(re * y.height);
         g === void 0 && (g = T(P, Z));
         const B = F ? T(P, Z) : g;
         return B.width = P, B.height = Z, B.getContext("2d").drawImage(y, 0, 0, P, Z), console.warn("THREE.WebGLRenderer: Texture has been resized from (" + y.width + "x" + y.height + ") to (" + P + "x" + Z + ")."), B;
@@ -11525,7 +11525,7 @@ function kf(i, e, t, n, r, s, o) {
     [Cs]: i.NEAREST_MIPMAP_NEAREST,
     [ur]: i.NEAREST_MIPMAP_LINEAR,
     [Tt]: i.LINEAR,
-    [Rl]: i.LINEAR_MIPMAP_NEAREST,
+    [Cl]: i.LINEAR_MIPMAP_NEAREST,
     [xi]: i.LINEAR_MIPMAP_LINEAR
   };
   function pe(y, M, F) {
@@ -11570,7 +11570,7 @@ function kf(i, e, t, n, r, s, o) {
       let ye;
       const De = M.mipmaps, Oe = a && M.isVideoTexture !== !0, Je = P.__version === void 0 || re === !0, L = v(M, B, me);
       if (M.isDepthTexture)
-        ge = i.DEPTH_COMPONENT, a ? M.type === xn ? ge = i.DEPTH_COMPONENT32F : M.type === gn ? ge = i.DEPTH_COMPONENT24 : M.type === Jn ? ge = i.DEPTH24_STENCIL8 : ge = i.DEPTH_COMPONENT16 : M.type === xn && console.error("WebGLRenderer: Floating point depth texture requires WebGL2."), M.format === vn && ge === i.DEPTH_COMPONENT && M.type !== po && M.type !== gn && (console.warn("THREE.WebGLRenderer: Use UnsignedShortType or UnsignedIntType for DepthFormat DepthTexture."), M.type = gn, Te = s.convert(M.type)), M.format === ni && ge === i.DEPTH_COMPONENT && (ge = i.DEPTH_STENCIL, M.type !== Jn && (console.warn("THREE.WebGLRenderer: Use UnsignedInt248Type for DepthStencilFormat DepthTexture."), M.type = Jn, Te = s.convert(M.type))), Je && (Oe ? t.texStorage2D(i.TEXTURE_2D, 1, ge, B.width, B.height) : t.texImage2D(i.TEXTURE_2D, 0, ge, B.width, B.height, 0, Me, Te, null));
+        ge = i.DEPTH_COMPONENT, a ? M.type === xn ? ge = i.DEPTH_COMPONENT32F : M.type === gn ? ge = i.DEPTH_COMPONENT24 : M.type === Jn ? ge = i.DEPTH24_STENCIL8 : ge = i.DEPTH_COMPONENT16 : M.type === xn && console.error("WebGLRenderer: Floating point depth texture requires WebGL2."), M.format === vn && ge === i.DEPTH_COMPONENT && M.type !== mo && M.type !== gn && (console.warn("THREE.WebGLRenderer: Use UnsignedShortType or UnsignedIntType for DepthFormat DepthTexture."), M.type = gn, Te = s.convert(M.type)), M.format === ni && ge === i.DEPTH_COMPONENT && (ge = i.DEPTH_STENCIL, M.type !== Jn && (console.warn("THREE.WebGLRenderer: Use UnsignedInt248Type for DepthStencilFormat DepthTexture."), M.type = Jn, Te = s.convert(M.type))), Je && (Oe ? t.texStorage2D(i.TEXTURE_2D, 1, ge, B.width, B.height) : t.texImage2D(i.TEXTURE_2D, 0, ge, B.width, B.height, 0, Me, Te, null));
       else if (M.isDataTexture)
         if (De.length > 0 && me) {
           Oe && Je && t.texStorage2D(i.TEXTURE_2D, L, ge, De[0].width, De[0].height);
@@ -11815,27 +11815,27 @@ function kf(i, e, t, n, r, s, o) {
   }
   function ve(y, M) {
     const F = y.colorSpace, ie = y.format, re = y.type;
-    return y.isCompressedTexture === !0 || y.format === es || F !== Ht && F !== Sn && (F === Ie ? a === !1 ? e.has("EXT_sRGB") === !0 && ie === Ut ? (y.format = es, y.minFilter = Tt, y.generateMipmaps = !1) : M = Mo.sRGBToLinear(M) : (ie !== Ut || re !== En) && console.warn("THREE.WebGLTextures: sRGB encoded textures have to use RGBAFormat and UnsignedByteType.") : console.error("THREE.WebGLTextures: Unsupported texture color space:", F)), M;
+    return y.isCompressedTexture === !0 || y.format === es || F !== Ht && F !== Sn && (F === Ie ? a === !1 ? e.has("EXT_sRGB") === !0 && ie === Ut ? (y.format = es, y.minFilter = Tt, y.generateMipmaps = !1) : M = So.sRGBToLinear(M) : (ie !== Ut || re !== En) && console.warn("THREE.WebGLTextures: sRGB encoded textures have to use RGBAFormat and UnsignedByteType.") : console.error("THREE.WebGLTextures: Unsupported texture color space:", F)), M;
   }
   this.allocateTextureUnit = H, this.resetTextureUnits = j, this.setTexture2D = $, this.setTexture2DArray = ce, this.setTexture3D = fe, this.setTextureCube = z, this.rebindTextures = Q, this.setupRenderTarget = _e, this.updateRenderTargetMipmap = oe, this.updateMultisampleRenderTarget = we, this.setupDepthRenderbuffer = k, this.setupFrameBufferTexture = ae, this.useMultisampledRTT = Ee;
 }
-function Wf(i, e, t) {
+function Xf(i, e, t) {
   const n = t.isWebGL2;
   function r(s, o = Sn) {
     let a;
     if (s === En)
       return i.UNSIGNED_BYTE;
-    if (s === Dl)
-      return i.UNSIGNED_SHORT_4_4_4_4;
     if (s === Ul)
+      return i.UNSIGNED_SHORT_4_4_4_4;
+    if (s === Il)
       return i.UNSIGNED_SHORT_5_5_5_1;
-    if (s === Cl)
-      return i.BYTE;
     if (s === Ll)
-      return i.SHORT;
-    if (s === po)
-      return i.UNSIGNED_SHORT;
+      return i.BYTE;
     if (s === ql)
+      return i.SHORT;
+    if (s === mo)
+      return i.UNSIGNED_SHORT;
+    if (s === Dl)
       return i.INT;
     if (s === gn)
       return i.UNSIGNED_INT;
@@ -11843,13 +11843,13 @@ function Wf(i, e, t) {
       return i.FLOAT;
     if (s === vi)
       return n ? i.HALF_FLOAT : (a = e.get("OES_texture_half_float"), a !== null ? a.HALF_FLOAT_OES : null);
-    if (s === Il)
+    if (s === Nl)
       return i.ALPHA;
     if (s === Ut)
       return i.RGBA;
-    if (s === Nl)
-      return i.LUMINANCE;
     if (s === Fl)
+      return i.LUMINANCE;
+    if (s === Ol)
       return i.LUMINANCE_ALPHA;
     if (s === vn)
       return i.DEPTH_COMPONENT;
@@ -11857,15 +11857,15 @@ function Wf(i, e, t) {
       return i.DEPTH_STENCIL;
     if (s === es)
       return a = e.get("EXT_sRGB"), a !== null ? a.SRGB_ALPHA_EXT : null;
-    if (s === Ol)
-      return i.RED;
     if (s === Bl)
-      return i.RED_INTEGER;
+      return i.RED;
     if (s === zl)
-      return i.RG;
+      return i.RED_INTEGER;
     if (s === Gl)
-      return i.RG_INTEGER;
+      return i.RG;
     if (s === Hl)
+      return i.RG_INTEGER;
+    if (s === Vl)
       return i.RGBA_INTEGER;
     if (s === dr || s === fr || s === pr || s === mr)
       if (o === Ie)
@@ -11903,7 +11903,7 @@ function Wf(i, e, t) {
           return a.COMPRESSED_RGBA_PVRTC_2BPPV1_IMG;
       } else
         return null;
-    if (s === Vl)
+    if (s === kl)
       return a = e.get("WEBGL_compressed_texture_etc1"), a !== null ? a.COMPRESSED_RGB_ETC1_WEBGL : null;
     if (s === Is || s === Ns)
       if (a = e.get("WEBGL_compressed_texture_etc"), a !== null) {
@@ -11951,7 +11951,7 @@ function Wf(i, e, t) {
           return o === Ie ? a.COMPRESSED_SRGB_ALPHA_BPTC_UNORM_EXT : a.COMPRESSED_RGBA_BPTC_UNORM_EXT;
       } else
         return null;
-    if (s === kl || s === Js || s === $s || s === Qs)
+    if (s === Wl || s === Js || s === $s || s === Qs)
       if (a = e.get("EXT_texture_compression_rgtc"), a !== null) {
         if (s === _r)
           return a.COMPRESSED_RED_RGTC1_EXT;
@@ -11967,7 +11967,7 @@ function Wf(i, e, t) {
   }
   return { convert: r };
 }
-class Xf extends bt {
+class Yf extends bt {
   constructor(e = []) {
     super(), this.isArrayCamera = !0, this.cameras = e;
   }
@@ -11977,7 +11977,7 @@ class sn extends ot {
     super(), this.isGroup = !0, this.type = "Group";
   }
 }
-const Yf = { type: "move" };
+const jf = { type: "move" };
 class zr {
   constructor() {
     this._targetRay = null, this._grip = null, this._hand = null;
@@ -12028,7 +12028,7 @@ class zr {
         }));
       } else
         c !== null && e.gripSpace && (s = t.getPose(e.gripSpace, n), s !== null && (c.matrix.fromArray(s.transform.matrix), c.matrix.decompose(c.position, c.rotation, c.scale), c.matrixWorldNeedsUpdate = !0, s.linearVelocity ? (c.hasLinearVelocity = !0, c.linearVelocity.copy(s.linearVelocity)) : c.hasLinearVelocity = !1, s.angularVelocity ? (c.hasAngularVelocity = !0, c.angularVelocity.copy(s.angularVelocity)) : c.hasAngularVelocity = !1));
-      a !== null && (r = t.getPose(e.targetRaySpace, n), r === null && s !== null && (r = s), r !== null && (a.matrix.fromArray(r.transform.matrix), a.matrix.decompose(a.position, a.rotation, a.scale), a.matrixWorldNeedsUpdate = !0, r.linearVelocity ? (a.hasLinearVelocity = !0, a.linearVelocity.copy(r.linearVelocity)) : a.hasLinearVelocity = !1, r.angularVelocity ? (a.hasAngularVelocity = !0, a.angularVelocity.copy(r.angularVelocity)) : a.hasAngularVelocity = !1, this.dispatchEvent(Yf)));
+      a !== null && (r = t.getPose(e.targetRaySpace, n), r === null && s !== null && (r = s), r !== null && (a.matrix.fromArray(r.transform.matrix), a.matrix.decompose(a.position, a.rotation, a.scale), a.matrixWorldNeedsUpdate = !0, r.linearVelocity ? (a.hasLinearVelocity = !0, a.linearVelocity.copy(r.linearVelocity)) : a.hasLinearVelocity = !1, r.angularVelocity ? (a.hasAngularVelocity = !0, a.angularVelocity.copy(r.angularVelocity)) : a.hasAngularVelocity = !1, this.dispatchEvent(jf)));
     }
     return a !== null && (a.visible = r !== null), c !== null && (c.visible = s !== null), l !== null && (l.visible = o !== null), this;
   }
@@ -12041,14 +12041,14 @@ class zr {
     return e.joints[t.jointName];
   }
 }
-class jf extends Mt {
+class Zf extends Mt {
   constructor(e, t, n, r, s, o, a, c, l, h) {
     if (h = h !== void 0 ? h : vn, h !== vn && h !== ni)
       throw new Error("DepthTexture format must be either THREE.DepthFormat or THREE.DepthStencilFormat");
     n === void 0 && h === vn && (n = gn), n === void 0 && h === ni && (n = Jn), super(null, r, s, o, a, c, h, n, l), this.isDepthTexture = !0, this.image = { width: e, height: t }, this.magFilter = a !== void 0 ? a : pt, this.minFilter = c !== void 0 ? c : pt, this.flipY = !1, this.generateMipmaps = !1;
   }
 }
-class Zf extends Pn {
+class Kf extends Pn {
   constructor(e, t) {
     super();
     const n = this;
@@ -12059,7 +12059,7 @@ class Zf extends Pn {
     w.layers.enable(1), w.viewport = new je();
     const q = new bt();
     q.layers.enable(2), q.viewport = new je();
-    const N = [w, q], v = new Xf();
+    const N = [w, q], v = new Yf();
     v.layers.enable(1), v.layers.enable(2);
     let A = null, V = null;
     this.cameraAutoUpdate = !0, this.enabled = !1, this.isPresenting = !1, this.getController = function(z) {
@@ -12137,7 +12137,7 @@ class Zf extends Pn {
             {
               format: Ut,
               type: En,
-              depthTexture: new jf(f.textureWidth, f.textureHeight, le, void 0, void 0, void 0, void 0, void 0, void 0, K),
+              depthTexture: new Zf(f.textureWidth, f.textureHeight, le, void 0, void 0, void 0, void 0, void 0, void 0, K),
               stencilBuffer: g.stencil,
               colorSpace: e.outputColorSpace,
               samples: g.antialias ? 4 : 0
@@ -12263,19 +12263,19 @@ class Zf extends Pn {
       }
       _ = null;
     }
-    const fe = new Lo();
+    const fe = new qo();
     fe.setAnimationLoop(ce), this.setAnimationLoop = function(z) {
       $ = z;
     }, this.dispose = function() {
     };
   }
 }
-function Kf(i, e) {
+function Jf(i, e) {
   function t(m, u) {
     m.matrixAutoUpdate === !0 && m.updateMatrix(), u.value.copy(m.matrix);
   }
   function n(m, u) {
-    u.color.getRGB(m.fogColor.value, Po(i)), u.isFog ? (m.fogNear.value = u.near, m.fogFar.value = u.far) : u.isFogExp2 && (m.fogDensity.value = u.density);
+    u.color.getRGB(m.fogColor.value, Ro(i)), u.isFog ? (m.fogNear.value = u.near, m.fogFar.value = u.far) : u.isFogExp2 && (m.fogDensity.value = u.density);
   }
   function r(m, u, T, x, b) {
     u.isMeshBasicMaterial || u.isMeshLambertMaterial ? s(m, u) : u.isMeshToonMaterial ? (s(m, u), d(m, u)) : u.isMeshPhongMaterial ? (s(m, u), h(m, u)) : u.isMeshStandardMaterial ? (s(m, u), f(m, u), u.isMeshPhysicalMaterial && p(m, u, b)) : u.isMeshMatcapMaterial ? (s(m, u), _(m, u)) : u.isMeshDepthMaterial ? s(m, u) : u.isMeshDistanceMaterial ? (s(m, u), g(m, u)) : u.isMeshNormalMaterial ? s(m, u) : u.isLineBasicMaterial ? (o(m, u), u.isLineDashedMaterial && a(m, u)) : u.isPointsMaterial ? c(m, u, T, x) : u.isSpriteMaterial ? l(m, u) : u.isShadowMaterial ? (m.color.value.copy(u.color), m.opacity.value = u.opacity) : u.isShaderMaterial && (u.uniformsNeedUpdate = !1);
@@ -12326,7 +12326,7 @@ function Kf(i, e) {
     refreshMaterialUniforms: r
   };
 }
-function Jf(i, e, t, n) {
+function $f(i, e, t, n) {
   let r = {}, s = {}, o = [];
   const a = t.isWebGL2 ? i.getParameter(i.MAX_UNIFORM_BUFFER_BINDINGS) : 0;
   function c(T, x) {
@@ -12446,14 +12446,14 @@ function Jf(i, e, t, n) {
     dispose: u
   };
 }
-function $f() {
+function Qf() {
   const i = er("canvas");
   return i.style.display = "block", i;
 }
-class No {
+class Fo {
   constructor(e = {}) {
     const {
-      canvas: t = $f(),
+      canvas: t = Qf(),
       context: n = null,
       depth: r = !0,
       stencil: s = !0,
@@ -12526,10 +12526,10 @@ class No {
     }
     let Ae, ae, Se, ee, k, Q, _e, oe, we, Pe, Ee, qe, ve, y, M, F, ie, re, ue, P, Z, B, me, Me;
     function Te() {
-      Ae = new ld(C), ae = new nd(C, Ae, e), Ae.init(ae), B = new Wf(C, Ae, ae), Se = new Vf(C, Ae, ae), ee = new ud(C), k = new Rf(), Q = new kf(C, Ae, Se, k, ae, B, ee), _e = new rd(u), oe = new od(u), we = new yc(C, ae), me = new ed(C, Ae, we, ae), Pe = new cd(C, we, ee, me), Ee = new md(C, Pe, we, ee), ue = new pd(C, ae, Q), F = new id(k), qe = new Pf(u, _e, oe, Ae, ae, me, F), ve = new Kf(u, k), y = new Lf(), M = new Ff(Ae, ae), re = new Qu(u, _e, oe, Se, Ee, f, c), ie = new Hf(u, Ee, ae), Me = new Jf(C, ee, ae, Se), P = new td(C, Ae, ee, ae), Z = new hd(C, Ae, ee, ae), ee.programs = qe.programs, u.capabilities = ae, u.extensions = Ae, u.properties = k, u.renderLists = y, u.shadowMap = ie, u.state = Se, u.info = ee;
+      Ae = new cd(C), ae = new id(C, Ae, e), Ae.init(ae), B = new Xf(C, Ae, ae), Se = new kf(C, Ae, ae), ee = new dd(C), k = new Cf(), Q = new Wf(C, Ae, Se, k, ae, B, ee), _e = new sd(u), oe = new ld(u), we = new Tc(C, ae), me = new td(C, Ae, we, ae), Pe = new hd(C, we, ee, me), Ee = new _d(C, Pe, we, ee), ue = new md(C, ae, Q), F = new rd(k), qe = new Rf(u, _e, oe, Ae, ae, me, F), ve = new Jf(u, k), y = new qf(), M = new Of(Ae, ae), re = new ed(u, _e, oe, Se, Ee, f, c), ie = new Vf(u, Ee, ae), Me = new $f(C, ee, ae, Se), P = new nd(C, Ae, ee, ae), Z = new ud(C, Ae, ee, ae), ee.programs = qe.programs, u.capabilities = ae, u.extensions = Ae, u.properties = k, u.renderLists = y, u.shadowMap = ie, u.state = Se, u.info = ee;
     }
     Te();
-    const ge = new Zf(u, C);
+    const ge = new Kf(u, C);
     this.xr = ge, this.getContext = function() {
       return C;
     }, this.getContextAttributes = function() {
@@ -12620,7 +12620,7 @@ class No {
     }
     this.renderBufferDirect = function(S, I, X, U, Y, Re) {
       I === null && (I = le);
-      const Le = Y.isMesh && Y.matrixWorld.determinant() < 0, Ue = Ko(S, I, X, U, Y);
+      const Le = Y.isMesh && Y.matrixWorld.determinant() < 0, Ue = Jo(S, I, X, U, Y);
       Se.setMaterial(U, Le);
       let Ne = X.index, Be = 1;
       U.wireframe === !0 && (Ne = Pe.getWireframeAttribute(X), Be = 2);
@@ -12674,7 +12674,7 @@ class No {
     function Xe() {
       Ye.start();
     }
-    const Ye = new Lo();
+    const Ye = new qo();
     Ye.setAnimationLoop(xe), typeof self < "u" && Ye.setContext(self), this.setAnimationLoop = function(S) {
       se = S, ge.setAnimationLoop(S), S === null ? Ye.stop() : Ye.start();
     }, ge.addEventListener("sessionstart", be), ge.addEventListener("sessionend", Xe), this.render = function(S, I) {
@@ -12779,7 +12779,7 @@ class No {
       } else
         Ue.uniforms = qe.getUniforms(S), S.onBuild(X, Ue, u), S.onBeforeCompile(Ue, u), ze = qe.acquireProgram(Ue, Ne), Be.set(Ne, ze), U.uniforms = Ue.uniforms;
       const Ge = U.uniforms;
-      (!S.isShaderMaterial && !S.isRawShaderMaterial || S.clipping === !0) && (Ge.clippingPlanes = F.uniform), Ss(S, Ue), U.needsLights = $o(S), U.lightsStateVersion = Le, U.needsLights && (Ge.ambientLightColor.value = Y.state.ambient, Ge.lightProbe.value = Y.state.probe, Ge.directionalLights.value = Y.state.directional, Ge.directionalLightShadows.value = Y.state.directionalShadow, Ge.spotLights.value = Y.state.spot, Ge.spotLightShadows.value = Y.state.spotShadow, Ge.rectAreaLights.value = Y.state.rectArea, Ge.ltc_1.value = Y.state.rectAreaLTC1, Ge.ltc_2.value = Y.state.rectAreaLTC2, Ge.pointLights.value = Y.state.point, Ge.pointLightShadows.value = Y.state.pointShadow, Ge.hemisphereLights.value = Y.state.hemi, Ge.directionalShadowMap.value = Y.state.directionalShadowMap, Ge.directionalShadowMatrix.value = Y.state.directionalShadowMatrix, Ge.spotShadowMap.value = Y.state.spotShadowMap, Ge.spotLightMatrix.value = Y.state.spotLightMatrix, Ge.spotLightMap.value = Y.state.spotLightMap, Ge.pointShadowMap.value = Y.state.pointShadowMap, Ge.pointShadowMatrix.value = Y.state.pointShadowMatrix);
+      (!S.isShaderMaterial && !S.isRawShaderMaterial || S.clipping === !0) && (Ge.clippingPlanes = F.uniform), Ss(S, Ue), U.needsLights = Qo(S), U.lightsStateVersion = Le, U.needsLights && (Ge.ambientLightColor.value = Y.state.ambient, Ge.lightProbe.value = Y.state.probe, Ge.directionalLights.value = Y.state.directional, Ge.directionalLightShadows.value = Y.state.directionalShadow, Ge.spotLights.value = Y.state.spot, Ge.spotLightShadows.value = Y.state.spotShadow, Ge.rectAreaLights.value = Y.state.rectArea, Ge.ltc_1.value = Y.state.rectAreaLTC1, Ge.ltc_2.value = Y.state.rectAreaLTC2, Ge.pointLights.value = Y.state.point, Ge.pointLightShadows.value = Y.state.pointShadow, Ge.hemisphereLights.value = Y.state.hemi, Ge.directionalShadowMap.value = Y.state.directionalShadowMap, Ge.directionalShadowMatrix.value = Y.state.directionalShadowMatrix, Ge.spotShadowMap.value = Y.state.spotShadowMap, Ge.spotLightMatrix.value = Y.state.spotLightMatrix, Ge.spotLightMap.value = Y.state.spotLightMap, Ge.pointShadowMap.value = Y.state.pointShadowMap, Ge.pointShadowMatrix.value = Y.state.pointShadowMatrix);
       const We = ze.getUniforms(), ut = Ki.seqWithValue(We.seq, Ge);
       return U.currentProgram = ze, U.uniformsList = ut, ze;
     }
@@ -12787,7 +12787,7 @@ class No {
       const X = k.get(S);
       X.outputColorSpace = I.outputColorSpace, X.instancing = I.instancing, X.skinning = I.skinning, X.morphTargets = I.morphTargets, X.morphNormals = I.morphNormals, X.morphColors = I.morphColors, X.morphTargetsCount = I.morphTargetsCount, X.numClippingPlanes = I.numClippingPlanes, X.numIntersection = I.numClipIntersection, X.vertexAlphas = I.vertexAlphas, X.vertexTangents = I.vertexTangents, X.toneMapping = I.toneMapping;
     }
-    function Ko(S, I, X, U, Y) {
+    function Jo(S, I, X, U, Y) {
       I.isScene !== !0 && (I = le), Q.resetTextureUnits();
       const Re = I.fog, Le = U.isMeshStandardMaterial ? I.environment : null, Ue = E === null ? u.outputColorSpace : E.isXRRenderTarget === !0 ? E.texture.colorSpace : Ht, Ne = (U.isMeshStandardMaterial ? oe : _e).get(U.envMap || Le), Be = U.vertexColors === !0 && !!X.attributes.color && X.attributes.color.itemSize === 4, ze = !!U.normalMap && !!X.attributes.tangent, Ge = !!X.morphAttributes.position, We = !!X.morphAttributes.normal, ut = !!X.morphAttributes.color, wt = U.toneMapped ? u.toneMapping : $t, ln = X.morphAttributes.position || X.morphAttributes.normal || X.morphAttributes.color, Qe = ln !== void 0 ? ln.length : 0, ke = k.get(U), or = _.state.lights;
       if ($ === !0 && (ce === !0 || S !== q)) {
@@ -12820,9 +12820,9 @@ class No {
         _t && (ae.floatVertexTextures ? (_t.boneTexture === null && _t.computeBoneTexture(), dt.setValue(C, "boneTexture", _t.boneTexture, Q), dt.setValue(C, "boneTextureSize", _t.boneTextureSize)) : console.warn("THREE.WebGLRenderer: SkinnedMesh can only be used with WebGL 2. With WebGL 1 OES_texture_float and vertex textures support is required."));
       }
       const cr = X.morphAttributes;
-      if ((cr.position !== void 0 || cr.normal !== void 0 || cr.color !== void 0 && ae.isWebGL2 === !0) && ue.update(Y, X, cn), (oi || ke.receiveShadow !== Y.receiveShadow) && (ke.receiveShadow = Y.receiveShadow, dt.setValue(C, "receiveShadow", Y.receiveShadow)), U.isMeshGouraudMaterial && U.envMap !== null && (hn.envMap.value = Ne, hn.flipEnvMap.value = Ne.isCubeTexture && Ne.isRenderTargetTexture === !1 ? -1 : 1), oi && (dt.setValue(C, "toneMappingExposure", u.toneMappingExposure), ke.needsLights && Jo(hn, lr), Re && U.fog === !0 && ve.refreshFogUniforms(hn, Re), ve.refreshMaterialUniforms(hn, U, D, ne, fe), Ki.upload(C, ke.uniformsList, hn, Q)), U.isShaderMaterial && U.uniformsNeedUpdate === !0 && (Ki.upload(C, ke.uniformsList, hn, Q), U.uniformsNeedUpdate = !1), U.isSpriteMaterial && dt.setValue(C, "center", Y.center), dt.setValue(C, "modelViewMatrix", Y.modelViewMatrix), dt.setValue(C, "normalMatrix", Y.normalMatrix), dt.setValue(C, "modelMatrix", Y.matrixWorld), U.isShaderMaterial || U.isRawShaderMaterial) {
+      if ((cr.position !== void 0 || cr.normal !== void 0 || cr.color !== void 0 && ae.isWebGL2 === !0) && ue.update(Y, X, cn), (oi || ke.receiveShadow !== Y.receiveShadow) && (ke.receiveShadow = Y.receiveShadow, dt.setValue(C, "receiveShadow", Y.receiveShadow)), U.isMeshGouraudMaterial && U.envMap !== null && (hn.envMap.value = Ne, hn.flipEnvMap.value = Ne.isCubeTexture && Ne.isRenderTargetTexture === !1 ? -1 : 1), oi && (dt.setValue(C, "toneMappingExposure", u.toneMappingExposure), ke.needsLights && $o(hn, lr), Re && U.fog === !0 && ve.refreshFogUniforms(hn, Re), ve.refreshMaterialUniforms(hn, U, D, ne, fe), Ki.upload(C, ke.uniformsList, hn, Q)), U.isShaderMaterial && U.uniformsNeedUpdate === !0 && (Ki.upload(C, ke.uniformsList, hn, Q), U.uniformsNeedUpdate = !1), U.isSpriteMaterial && dt.setValue(C, "center", Y.center), dt.setValue(C, "modelViewMatrix", Y.modelViewMatrix), dt.setValue(C, "normalMatrix", Y.normalMatrix), dt.setValue(C, "modelMatrix", Y.matrixWorld), U.isShaderMaterial || U.isRawShaderMaterial) {
         const _t = U.uniformsGroups;
-        for (let hr = 0, Qo = _t.length; hr < Qo; hr++)
+        for (let hr = 0, el = _t.length; hr < el; hr++)
           if (ae.isWebGL2) {
             const ys = _t[hr];
             Me.update(ys, cn), Me.bind(ys, cn);
@@ -12831,10 +12831,10 @@ class No {
       }
       return cn;
     }
-    function Jo(S, I) {
+    function $o(S, I) {
       S.ambientLightColor.needsUpdate = I, S.lightProbe.needsUpdate = I, S.directionalLights.needsUpdate = I, S.directionalLightShadows.needsUpdate = I, S.pointLights.needsUpdate = I, S.pointLightShadows.needsUpdate = I, S.spotLights.needsUpdate = I, S.spotLightShadows.needsUpdate = I, S.rectAreaLights.needsUpdate = I, S.hemisphereLights.needsUpdate = I;
     }
-    function $o(S) {
+    function Qo(S) {
       return S.isMeshLambertMaterial || S.isMeshToonMaterial || S.isMeshPhongMaterial || S.isMeshStandardMaterial || S.isShadowMaterial || S.isShaderMaterial && S.lights === !0;
     }
     this.getActiveCubeFace = function() {
@@ -12934,16 +12934,16 @@ class No {
     console.warn("THREE.WebGLRenderer: the property .physicallyCorrectLights has been removed. Set renderer.useLegacyLights instead."), this.useLegacyLights = !e;
   }
   get outputEncoding() {
-    return console.warn("THREE.WebGLRenderer: Property .outputEncoding has been removed. Use .outputColorSpace instead."), this.outputColorSpace === Ie ? Mn : mo;
+    return console.warn("THREE.WebGLRenderer: Property .outputEncoding has been removed. Use .outputColorSpace instead."), this.outputColorSpace === Ie ? Mn : _o;
   }
   set outputEncoding(e) {
     console.warn("THREE.WebGLRenderer: Property .outputEncoding has been removed. Use .outputColorSpace instead."), this.outputColorSpace = e === Mn ? Ie : Ht;
   }
 }
-class Qf extends No {
+class ep extends Fo {
 }
-Qf.prototype.isWebGL1Renderer = !0;
-class ep extends ot {
+ep.prototype.isWebGL1Renderer = !0;
+class tp extends ot {
   constructor() {
     super(), this.isScene = !0, this.type = "Scene", this.background = null, this.environment = null, this.fog = null, this.backgroundBlurriness = 0, this.backgroundIntensity = 1, this.overrideMaterial = null, typeof __THREE_DEVTOOLS__ < "u" && __THREE_DEVTOOLS__.dispatchEvent(new CustomEvent("observe", { detail: this }));
   }
@@ -12969,8 +12969,8 @@ class sr extends si {
     return super.copy(e), this.color.copy(e.color), this.map = e.map, this.linewidth = e.linewidth, this.linecap = e.linecap, this.linejoin = e.linejoin, this.fog = e.fog, this;
   }
 }
-const za = /* @__PURE__ */ new R(), Ga = /* @__PURE__ */ new R(), Ha = /* @__PURE__ */ new Ke(), Gr = /* @__PURE__ */ new yo(), Xi = /* @__PURE__ */ new nr();
-class tp extends ot {
+const za = /* @__PURE__ */ new R(), Ga = /* @__PURE__ */ new R(), Ha = /* @__PURE__ */ new Ke(), Gr = /* @__PURE__ */ new To(), Xi = /* @__PURE__ */ new nr();
+class np extends ot {
   constructor(e = new St(), t = new sr()) {
     super(), this.isLine = !0, this.type = "Line", this.geometry = e, this.material = t, this.updateMorphTargets();
   }
@@ -13048,7 +13048,7 @@ class tp extends ot {
   }
 }
 const Va = /* @__PURE__ */ new R(), ka = /* @__PURE__ */ new R();
-class ms extends tp {
+class ms extends np {
   constructor(e, t) {
     super(e, t), this.isLineSegments = !0, this.type = "LineSegments";
   }
@@ -13231,7 +13231,7 @@ class _s extends Vt {
     return super.fromJSON(e), this.aX = e.aX, this.aY = e.aY, this.xRadius = e.xRadius, this.yRadius = e.yRadius, this.aStartAngle = e.aStartAngle, this.aEndAngle = e.aEndAngle, this.aClockwise = e.aClockwise, this.aRotation = e.aRotation, this;
   }
 }
-class np extends _s {
+class ip extends _s {
   constructor(e, t, n, r, s, o) {
     super(e, t, n, n, r, s, o), this.isArcCurve = !0, this.type = "ArcCurve";
   }
@@ -13256,7 +13256,7 @@ function gs() {
   };
 }
 const Yi = /* @__PURE__ */ new R(), Hr = /* @__PURE__ */ new gs(), Vr = /* @__PURE__ */ new gs(), kr = /* @__PURE__ */ new gs();
-class ip extends Vt {
+class rp extends Vt {
   constructor(e = [], t = !1, n = "centripetal", r = 0.5) {
     super(), this.isCatmullRomCurve3 = !0, this.type = "CatmullRomCurve3", this.points = e, this.closed = t, this.curveType = n, this.tension = r;
   }
@@ -13309,37 +13309,37 @@ function Wa(i, e, t, n, r) {
   const s = (n - e) * 0.5, o = (r - t) * 0.5, a = i * i, c = i * a;
   return (2 * t - 2 * n + s + o) * c + (-3 * t + 3 * n - 2 * s - o) * a + s * i + t;
 }
-function rp(i, e) {
+function sp(i, e) {
   const t = 1 - i;
   return t * t * e;
 }
-function sp(i, e) {
+function ap(i, e) {
   return 2 * (1 - i) * i * e;
 }
-function ap(i, e) {
+function op(i, e) {
   return i * i * e;
 }
 function _i(i, e, t, n) {
-  return rp(i, e) + sp(i, t) + ap(i, n);
-}
-function op(i, e) {
-  const t = 1 - i;
-  return t * t * t * e;
+  return sp(i, e) + ap(i, t) + op(i, n);
 }
 function lp(i, e) {
   const t = 1 - i;
-  return 3 * t * t * i * e;
+  return t * t * t * e;
 }
 function cp(i, e) {
-  return 3 * (1 - i) * i * i * e;
+  const t = 1 - i;
+  return 3 * t * t * i * e;
 }
 function hp(i, e) {
+  return 3 * (1 - i) * i * i * e;
+}
+function up(i, e) {
   return i * i * i * e;
 }
 function gi(i, e, t, n, r) {
-  return op(i, e) + lp(i, t) + cp(i, n) + hp(i, r);
+  return lp(i, e) + cp(i, t) + hp(i, n) + up(i, r);
 }
-class Fo extends Vt {
+class Oo extends Vt {
   constructor(e = new he(), t = new he(), n = new he(), r = new he()) {
     super(), this.isCubicBezierCurve = !0, this.type = "CubicBezierCurve", this.v0 = e, this.v1 = t, this.v2 = n, this.v3 = r;
   }
@@ -13361,7 +13361,7 @@ class Fo extends Vt {
     return super.fromJSON(e), this.v0.fromArray(e.v0), this.v1.fromArray(e.v1), this.v2.fromArray(e.v2), this.v3.fromArray(e.v3), this;
   }
 }
-class up extends Vt {
+class dp extends Vt {
   constructor(e = new R(), t = new R(), n = new R(), r = new R()) {
     super(), this.isCubicBezierCurve3 = !0, this.type = "CubicBezierCurve3", this.v0 = e, this.v1 = t, this.v2 = n, this.v3 = r;
   }
@@ -13413,7 +13413,7 @@ class xs extends Vt {
     return super.fromJSON(e), this.v1.fromArray(e.v1), this.v2.fromArray(e.v2), this;
   }
 }
-class dp extends Vt {
+class fp extends Vt {
   constructor(e = new R(), t = new R()) {
     super(), this.isLineCurve3 = !0, this.type = "LineCurve3", this.v1 = e, this.v2 = t;
   }
@@ -13442,7 +13442,7 @@ class dp extends Vt {
     return super.fromJSON(e), this.v1.fromArray(e.v1), this.v2.fromArray(e.v2), this;
   }
 }
-class Oo extends Vt {
+class Bo extends Vt {
   constructor(e = new he(), t = new he(), n = new he()) {
     super(), this.isQuadraticBezierCurve = !0, this.type = "QuadraticBezierCurve", this.v0 = e, this.v1 = t, this.v2 = n;
   }
@@ -13464,7 +13464,7 @@ class Oo extends Vt {
     return super.fromJSON(e), this.v0.fromArray(e.v0), this.v1.fromArray(e.v1), this.v2.fromArray(e.v2), this;
   }
 }
-class fp extends Vt {
+class pp extends Vt {
   constructor(e = new R(), t = new R(), n = new R()) {
     super(), this.isQuadraticBezierCurve3 = !0, this.type = "QuadraticBezierCurve3", this.v0 = e, this.v1 = t, this.v2 = n;
   }
@@ -13487,7 +13487,7 @@ class fp extends Vt {
     return super.fromJSON(e), this.v0.fromArray(e.v0), this.v1.fromArray(e.v1), this.v2.fromArray(e.v2), this;
   }
 }
-class Bo extends Vt {
+class zo extends Vt {
   constructor(e = []) {
     super(), this.isSplineCurve = !0, this.type = "SplineCurve", this.points = e;
   }
@@ -13524,20 +13524,20 @@ class Bo extends Vt {
     return this;
   }
 }
-var zo = /* @__PURE__ */ Object.freeze({
+var Go = /* @__PURE__ */ Object.freeze({
   __proto__: null,
-  ArcCurve: np,
-  CatmullRomCurve3: ip,
-  CubicBezierCurve: Fo,
-  CubicBezierCurve3: up,
+  ArcCurve: ip,
+  CatmullRomCurve3: rp,
+  CubicBezierCurve: Oo,
+  CubicBezierCurve3: dp,
   EllipseCurve: _s,
   LineCurve: xs,
-  LineCurve3: dp,
-  QuadraticBezierCurve: Oo,
-  QuadraticBezierCurve3: fp,
-  SplineCurve: Bo
+  LineCurve3: fp,
+  QuadraticBezierCurve: Bo,
+  QuadraticBezierCurve3: pp,
+  SplineCurve: zo
 });
-class pp extends Vt {
+class mp extends Vt {
   constructor() {
     super(), this.type = "CurvePath", this.curves = [], this.autoClose = !1;
   }
@@ -13628,12 +13628,12 @@ class pp extends Vt {
     super.fromJSON(e), this.autoClose = e.autoClose, this.curves = [];
     for (let t = 0, n = e.curves.length; t < n; t++) {
       const r = e.curves[t];
-      this.curves.push(new zo[r.type]().fromJSON(r));
+      this.curves.push(new Go[r.type]().fromJSON(r));
     }
     return this;
   }
 }
-class rs extends pp {
+class rs extends mp {
   constructor(e) {
     super(), this.type = "Path", this.currentPoint = new he(), e && this.setFromPoints(e);
   }
@@ -13651,7 +13651,7 @@ class rs extends pp {
     return this.curves.push(n), this.currentPoint.set(e, t), this;
   }
   quadraticCurveTo(e, t, n, r) {
-    const s = new Oo(
+    const s = new Bo(
       this.currentPoint.clone(),
       new he(e, t),
       new he(n, r)
@@ -13659,7 +13659,7 @@ class rs extends pp {
     return this.curves.push(s), this.currentPoint.set(n, r), this;
   }
   bezierCurveTo(e, t, n, r, s, o) {
-    const a = new Fo(
+    const a = new Oo(
       this.currentPoint.clone(),
       new he(e, t),
       new he(n, r),
@@ -13668,7 +13668,7 @@ class rs extends pp {
     return this.curves.push(a), this.currentPoint.set(s, o), this;
   }
   splineThru(e) {
-    const t = [this.currentPoint.clone()].concat(e), n = new Bo(t);
+    const t = [this.currentPoint.clone()].concat(e), n = new zo(t);
     return this.curves.push(n), this.currentPoint.copy(e[e.length - 1]), this;
   }
   arc(e, t, n, r, s, o) {
@@ -13753,15 +13753,15 @@ class Ji extends rs {
     return this;
   }
 }
-const mp = {
+const _p = {
   triangulate: function(i, e, t = 2) {
     const n = e && e.length, r = n ? e[0] * t : i.length;
-    let s = Go(i, 0, r, t, !0);
+    let s = Ho(i, 0, r, t, !0);
     const o = [];
     if (!s || s.next === s.prev)
       return o;
     let a, c, l, h, d, f, p;
-    if (n && (s = Mp(i, e, s, t)), i.length > 80 * t) {
+    if (n && (s = Sp(i, e, s, t)), i.length > 80 * t) {
       a = l = i[0], c = h = i[1];
       for (let _ = t; _ < r; _ += t)
         d = i[_], f = i[_ + 1], d < a && (a = d), f < c && (c = f), d > l && (l = d), f > h && (h = f);
@@ -13770,9 +13770,9 @@ const mp = {
     return Mi(s, o, t, a, c, p, 0), o;
   }
 };
-function Go(i, e, t, n, r) {
+function Ho(i, e, t, n, r) {
   let s, o;
-  if (r === Lp(i, e, t, n) > 0)
+  if (r === qp(i, e, t, n) > 0)
     for (s = e; s < t; s += n)
       o = Xa(s, i[s], i[s + 1], o);
   else
@@ -13798,20 +13798,20 @@ function wn(i, e) {
 function Mi(i, e, t, n, r, s, o) {
   if (!i)
     return;
-  !o && s && bp(i, n, r, s);
+  !o && s && Ap(i, n, r, s);
   let a = i, c, l;
   for (; i.prev !== i.next; ) {
-    if (c = i.prev, l = i.next, s ? gp(i, n, r, s) : _p(i)) {
+    if (c = i.prev, l = i.next, s ? xp(i, n, r, s) : gp(i)) {
       e.push(c.i / t | 0), e.push(i.i / t | 0), e.push(l.i / t | 0), Ei(i), i = l.next, a = l.next;
       continue;
     }
     if (i = l, i === a) {
-      o ? o === 1 ? (i = xp(wn(i), e, t), Mi(i, e, t, n, r, s, 2)) : o === 2 && vp(i, e, t, n, r, s) : Mi(wn(i), e, t, n, r, s, 1);
+      o ? o === 1 ? (i = vp(wn(i), e, t), Mi(i, e, t, n, r, s, 2)) : o === 2 && Mp(i, e, t, n, r, s) : Mi(wn(i), e, t, n, r, s, 1);
       break;
     }
   }
 }
-function _p(i) {
+function gp(i) {
   const e = i.prev, t = i, n = i.next;
   if (Ze(e, t, n) >= 0)
     return !1;
@@ -13824,7 +13824,7 @@ function _p(i) {
   }
   return !0;
 }
-function gp(i, e, t, n) {
+function xp(i, e, t, n) {
   const r = i.prev, s = i, o = i.next;
   if (Ze(r, s, o) >= 0)
     return !1;
@@ -13847,21 +13847,21 @@ function gp(i, e, t, n) {
   }
   return !0;
 }
-function xp(i, e, t) {
+function vp(i, e, t) {
   let n = i;
   do {
     const r = n.prev, s = n.next.next;
-    !ar(r, s) && Ho(r, n, n.next, s) && Si(r, s) && Si(s, r) && (e.push(r.i / t | 0), e.push(n.i / t | 0), e.push(s.i / t | 0), Ei(n), Ei(n.next), n = i = s), n = n.next;
+    !ar(r, s) && Vo(r, n, n.next, s) && Si(r, s) && Si(s, r) && (e.push(r.i / t | 0), e.push(n.i / t | 0), e.push(s.i / t | 0), Ei(n), Ei(n.next), n = i = s), n = n.next;
   } while (n !== i);
   return wn(n);
 }
-function vp(i, e, t, n, r, s) {
+function Mp(i, e, t, n, r, s) {
   let o = i;
   do {
     let a = o.next.next;
     for (; a !== o.prev; ) {
-      if (o.i !== a.i && Pp(o, a)) {
-        let c = Vo(o, a);
+      if (o.i !== a.i && Rp(o, a)) {
+        let c = ko(o, a);
         o = wn(o, o.next), c = wn(c, c.next), Mi(o, e, t, n, r, s, 0), Mi(c, e, t, n, r, s, 0);
         return;
       }
@@ -13870,26 +13870,26 @@ function vp(i, e, t, n, r, s) {
     o = o.next;
   } while (o !== i);
 }
-function Mp(i, e, t, n) {
+function Sp(i, e, t, n) {
   const r = [];
   let s, o, a, c, l;
   for (s = 0, o = e.length; s < o; s++)
-    a = e[s] * n, c = s < o - 1 ? e[s + 1] * n : i.length, l = Go(i, a, c, n, !1), l === l.next && (l.steiner = !0), r.push(wp(l));
-  for (r.sort(Sp), s = 0; s < r.length; s++)
-    t = Ep(r[s], t);
+    a = e[s] * n, c = s < o - 1 ? e[s + 1] * n : i.length, l = Ho(i, a, c, n, !1), l === l.next && (l.steiner = !0), r.push(Pp(l));
+  for (r.sort(Ep), s = 0; s < r.length; s++)
+    t = yp(r[s], t);
   return t;
 }
-function Sp(i, e) {
+function Ep(i, e) {
   return i.x - e.x;
 }
-function Ep(i, e) {
-  const t = yp(i, e);
+function yp(i, e) {
+  const t = Tp(i, e);
   if (!t)
     return e;
-  const n = Vo(t, i);
+  const n = ko(t, i);
   return wn(n, n.next), wn(t, t.next);
 }
-function yp(i, e) {
+function Tp(i, e) {
   let t = e, n = -1 / 0, r;
   const s = i.x, o = i.y;
   do {
@@ -13906,21 +13906,21 @@ function yp(i, e) {
   let h = 1 / 0, d;
   t = r;
   do
-    s >= t.x && t.x >= c && s !== t.x && Zn(o < l ? s : n, o, c, l, o < l ? n : s, o, t.x, t.y) && (d = Math.abs(o - t.y) / (s - t.x), Si(t, i) && (d < h || d === h && (t.x > r.x || t.x === r.x && Tp(r, t))) && (r = t, h = d)), t = t.next;
+    s >= t.x && t.x >= c && s !== t.x && Zn(o < l ? s : n, o, c, l, o < l ? n : s, o, t.x, t.y) && (d = Math.abs(o - t.y) / (s - t.x), Si(t, i) && (d < h || d === h && (t.x > r.x || t.x === r.x && bp(r, t))) && (r = t, h = d)), t = t.next;
   while (t !== a);
   return r;
 }
-function Tp(i, e) {
+function bp(i, e) {
   return Ze(i.prev, i, e.prev) < 0 && Ze(e.next, i, i.next) < 0;
 }
-function bp(i, e, t, n) {
+function Ap(i, e, t, n) {
   let r = i;
   do
     r.z === 0 && (r.z = ss(r.x, r.y, e, t, n)), r.prevZ = r.prev, r.nextZ = r.next, r = r.next;
   while (r !== i);
-  r.prevZ.nextZ = null, r.prevZ = null, Ap(r);
+  r.prevZ.nextZ = null, r.prevZ = null, wp(r);
 }
-function Ap(i) {
+function wp(i) {
   let e, t, n, r, s, o, a, c, l = 1;
   do {
     for (t = i, i = null, s = null, o = 0; t; ) {
@@ -13937,7 +13937,7 @@ function Ap(i) {
 function ss(i, e, t, n, r) {
   return i = (i - t) * r | 0, e = (e - n) * r | 0, i = (i | i << 8) & 16711935, i = (i | i << 4) & 252645135, i = (i | i << 2) & 858993459, i = (i | i << 1) & 1431655765, e = (e | e << 8) & 16711935, e = (e | e << 4) & 252645135, e = (e | e << 2) & 858993459, e = (e | e << 1) & 1431655765, i | e << 1;
 }
-function wp(i) {
+function Pp(i) {
   let e = i, t = i;
   do
     (e.x < t.x || e.x === t.x && e.y < t.y) && (t = e), e = e.next;
@@ -13947,9 +13947,9 @@ function wp(i) {
 function Zn(i, e, t, n, r, s, o, a) {
   return (r - o) * (e - a) >= (i - o) * (s - a) && (i - o) * (n - a) >= (t - o) * (e - a) && (t - o) * (s - a) >= (r - o) * (n - a);
 }
-function Pp(i, e) {
-  return i.next.i !== e.i && i.prev.i !== e.i && !Rp(i, e) && // dones't intersect other edges
-  (Si(i, e) && Si(e, i) && Cp(i, e) && // locally visible
+function Rp(i, e) {
+  return i.next.i !== e.i && i.prev.i !== e.i && !Cp(i, e) && // dones't intersect other edges
+  (Si(i, e) && Si(e, i) && Lp(i, e) && // locally visible
   (Ze(i.prev, i, e.prev) || Ze(i, e.prev, e)) || // does not create opposite-facing sectors
   ar(i, e) && Ze(i.prev, i, i.next) > 0 && Ze(e.prev, e, e.next) > 0);
 }
@@ -13959,7 +13959,7 @@ function Ze(i, e, t) {
 function ar(i, e) {
   return i.x === e.x && i.y === e.y;
 }
-function Ho(i, e, t, n) {
+function Vo(i, e, t, n) {
   const r = Zi(Ze(i, e, t)), s = Zi(Ze(i, e, n)), o = Zi(Ze(t, n, i)), a = Zi(Ze(t, n, e));
   return !!(r !== s && o !== a || r === 0 && ji(i, t, e) || s === 0 && ji(i, n, e) || o === 0 && ji(t, i, n) || a === 0 && ji(t, e, n));
 }
@@ -13969,10 +13969,10 @@ function ji(i, e, t) {
 function Zi(i) {
   return i > 0 ? 1 : i < 0 ? -1 : 0;
 }
-function Rp(i, e) {
+function Cp(i, e) {
   let t = i;
   do {
-    if (t.i !== i.i && t.next.i !== i.i && t.i !== e.i && t.next.i !== e.i && Ho(t, t.next, i, e))
+    if (t.i !== i.i && t.next.i !== i.i && t.i !== e.i && t.next.i !== e.i && Vo(t, t.next, i, e))
       return !0;
     t = t.next;
   } while (t !== i);
@@ -13981,7 +13981,7 @@ function Rp(i, e) {
 function Si(i, e) {
   return Ze(i.prev, i, i.next) < 0 ? Ze(i, e, i.next) >= 0 && Ze(i, i.prev, e) >= 0 : Ze(i, e, i.prev) < 0 || Ze(i, i.next, e) < 0;
 }
-function Cp(i, e) {
+function Lp(i, e) {
   let t = i, n = !1;
   const r = (i.x + e.x) / 2, s = (i.y + e.y) / 2;
   do
@@ -13989,7 +13989,7 @@ function Cp(i, e) {
   while (t !== i);
   return n;
 }
-function Vo(i, e) {
+function ko(i, e) {
   const t = new as(i.i, i.x, i.y), n = new as(e.i, e.x, e.y), r = i.next, s = e.prev;
   return i.next = e, e.prev = i, t.next = r, r.prev = t, n.next = t, t.prev = n, s.next = n, n.prev = s, n;
 }
@@ -14003,7 +14003,7 @@ function Ei(i) {
 function as(i, e, t) {
   this.i = i, this.x = e, this.y = t, this.prev = null, this.next = null, this.z = 0, this.prevZ = null, this.nextZ = null, this.steiner = !1;
 }
-function Lp(i, e, t, n) {
+function qp(i, e, t, n) {
   let r = 0;
   for (let s = e, o = t - n; s < t; s += n)
     r += (i[o] - i[s]) * (i[s + 1] + i[o + 1]), o = s;
@@ -14028,7 +14028,7 @@ class Qn {
     t.forEach(Ya);
     for (let c = 0; c < t.length; c++)
       r.push(o), o += t[c].length, ja(n, t[c]);
-    const a = mp.triangulate(n, r);
+    const a = _p.triangulate(n, r);
     for (let c = 0; c < a.length; c += 3)
       s.push(a.slice(c, c + 3));
     return s;
@@ -14057,7 +14057,7 @@ class vs extends St {
     function o(a) {
       const c = [], l = t.curveSegments !== void 0 ? t.curveSegments : 12, h = t.steps !== void 0 ? t.steps : 1, d = t.depth !== void 0 ? t.depth : 1;
       let f = t.bevelEnabled !== void 0 ? t.bevelEnabled : !0, p = t.bevelThickness !== void 0 ? t.bevelThickness : 0.2, _ = t.bevelSize !== void 0 ? t.bevelSize : p - 0.1, g = t.bevelOffset !== void 0 ? t.bevelOffset : 0, m = t.bevelSegments !== void 0 ? t.bevelSegments : 3;
-      const u = t.extrudePath, T = t.UVGenerator !== void 0 ? t.UVGenerator : qp;
+      const u = t.extrudePath, T = t.UVGenerator !== void 0 ? t.UVGenerator : Dp;
       let x, b = !1, E, w, q, N;
       u && (x = u.getSpacedPoints(h), b = !0, f = !1, E = u.computeFrenetFrames(h, !1), w = new R(), q = new R(), N = new R()), f || (m = 0, p = 0, _ = 0, g = 0);
       const v = a.extractPoints(l);
@@ -14221,7 +14221,7 @@ class vs extends St {
   }
   toJSON() {
     const e = super.toJSON(), t = this.parameters.shapes, n = this.parameters.options;
-    return Dp(t, n, e);
+    return Up(t, n, e);
   }
   static fromJSON(e, t) {
     const n = [];
@@ -14230,10 +14230,10 @@ class vs extends St {
       n.push(a);
     }
     const r = e.options.extrudePath;
-    return r !== void 0 && (e.options.extrudePath = new zo[r.type]().fromJSON(r)), new vs(n, e.options);
+    return r !== void 0 && (e.options.extrudePath = new Go[r.type]().fromJSON(r)), new vs(n, e.options);
   }
 }
-const qp = {
+const Dp = {
   generateTopUV: function(i, e, t, n, r) {
     const s = e[t * 3], o = e[t * 3 + 1], a = e[n * 3], c = e[n * 3 + 1], l = e[r * 3], h = e[r * 3 + 1];
     return [
@@ -14257,7 +14257,7 @@ const qp = {
     ];
   }
 };
-function Dp(i, e, t) {
+function Up(i, e, t) {
   if (t.shapes = [], Array.isArray(i))
     for (let n = 0, r = i.length; n < r; n++) {
       const s = i[n];
@@ -14307,7 +14307,7 @@ class Ms extends St {
 }
 class Wr extends si {
   constructor(e) {
-    super(), this.isMeshPhongMaterial = !0, this.type = "MeshPhongMaterial", this.color = new Ve(16777215), this.specular = new Ve(1118481), this.shininess = 30, this.map = null, this.lightMap = null, this.lightMapIntensity = 1, this.aoMap = null, this.aoMapIntensity = 1, this.emissive = new Ve(0), this.emissiveIntensity = 1, this.emissiveMap = null, this.bumpMap = null, this.bumpScale = 1, this.normalMap = null, this.normalMapType = _o, this.normalScale = new he(1, 1), this.displacementMap = null, this.displacementScale = 1, this.displacementBias = 0, this.specularMap = null, this.alphaMap = null, this.envMap = null, this.combine = hs, this.reflectivity = 1, this.refractionRatio = 0.98, this.wireframe = !1, this.wireframeLinewidth = 1, this.wireframeLinecap = "round", this.wireframeLinejoin = "round", this.flatShading = !1, this.fog = !0, this.setValues(e);
+    super(), this.isMeshPhongMaterial = !0, this.type = "MeshPhongMaterial", this.color = new Ve(16777215), this.specular = new Ve(1118481), this.shininess = 30, this.map = null, this.lightMap = null, this.lightMapIntensity = 1, this.aoMap = null, this.aoMapIntensity = 1, this.emissive = new Ve(0), this.emissiveIntensity = 1, this.emissiveMap = null, this.bumpMap = null, this.bumpScale = 1, this.normalMap = null, this.normalMapType = go, this.normalScale = new he(1, 1), this.displacementMap = null, this.displacementScale = 1, this.displacementBias = 0, this.specularMap = null, this.alphaMap = null, this.envMap = null, this.combine = hs, this.reflectivity = 1, this.refractionRatio = 0.98, this.wireframe = !1, this.wireframeLinewidth = 1, this.wireframeLinecap = "round", this.wireframeLinejoin = "round", this.flatShading = !1, this.fog = !0, this.setValues(e);
   }
   copy(e) {
     return super.copy(e), this.color.copy(e.color), this.specular.copy(e.specular), this.shininess = e.shininess, this.map = e.map, this.lightMap = e.lightMap, this.lightMapIntensity = e.lightMapIntensity, this.aoMap = e.aoMap, this.aoMapIntensity = e.aoMapIntensity, this.emissive.copy(e.emissive), this.emissiveMap = e.emissiveMap, this.emissiveIntensity = e.emissiveIntensity, this.bumpMap = e.bumpMap, this.bumpScale = e.bumpScale, this.normalMap = e.normalMap, this.normalMapType = e.normalMapType, this.normalScale.copy(e.normalScale), this.displacementMap = e.displacementMap, this.displacementScale = e.displacementScale, this.displacementBias = e.displacementBias, this.specularMap = e.specularMap, this.alphaMap = e.alphaMap, this.envMap = e.envMap, this.combine = e.combine, this.reflectivity = e.reflectivity, this.refractionRatio = e.refractionRatio, this.wireframe = e.wireframe, this.wireframeLinewidth = e.wireframeLinewidth, this.wireframeLinecap = e.wireframeLinecap, this.wireframeLinejoin = e.wireframeLinejoin, this.flatShading = e.flatShading, this.fog = e.fog, this;
@@ -14330,7 +14330,7 @@ const Za = {
     this.files = {};
   }
 };
-class Up {
+class Ip {
   constructor(e, t, n) {
     const r = this;
     let s = !1, o = 0, a = 0, c;
@@ -14360,10 +14360,10 @@ class Up {
     };
   }
 }
-const Ip = /* @__PURE__ */ new Up();
-class ko {
+const Np = /* @__PURE__ */ new Ip();
+class Wo {
   constructor(e) {
-    this.manager = e !== void 0 ? e : Ip, this.crossOrigin = "anonymous", this.withCredentials = !1, this.path = "", this.resourcePath = "", this.requestHeader = {};
+    this.manager = e !== void 0 ? e : Np, this.crossOrigin = "anonymous", this.withCredentials = !1, this.path = "", this.resourcePath = "", this.requestHeader = {};
   }
   load() {
   }
@@ -14392,12 +14392,12 @@ class ko {
   }
 }
 const Kt = {};
-class Np extends Error {
+class Fp extends Error {
   constructor(e, t) {
     super(e), this.response = t;
   }
 }
-class Fp extends ko {
+class Op extends Wo {
   constructor(e) {
     super(e);
   }
@@ -14454,7 +14454,7 @@ class Fp extends ko {
         });
         return new Response(m);
       } else
-        throw new Np(`fetch for "${l.url}" responded with ${l.status}: ${l.statusText}`, l);
+        throw new Fp(`fetch for "${l.url}" responded with ${l.status}: ${l.statusText}`, l);
     }).then((l) => {
       switch (c) {
         case "arraybuffer":
@@ -14502,7 +14502,7 @@ class Fp extends ko {
     return this.mimeType = e, this;
   }
 }
-class Wo extends ot {
+class Xo extends ot {
   constructor(e, t = 1) {
     super(), this.isLight = !0, this.type = "Light", this.color = new Ve(e), this.intensity = t;
   }
@@ -14517,7 +14517,7 @@ class Wo extends ot {
   }
 }
 const Xr = /* @__PURE__ */ new Ke(), Ka = /* @__PURE__ */ new R(), Ja = /* @__PURE__ */ new R();
-class Op {
+class Bp {
   constructor(e) {
     this.camera = e, this.bias = 0, this.normalBias = 0, this.radius = 1, this.blurSamples = 8, this.mapSize = new he(512, 512), this.map = null, this.mapPass = null, this.matrix = new Ke(), this.autoUpdate = !0, this.needsUpdate = !1, this._frustum = new ds(), this._frameExtents = new he(1, 1), this._viewportCount = 1, this._viewports = [
       new je(0, 0, 1, 1)
@@ -14571,7 +14571,7 @@ class Op {
   }
 }
 const $a = /* @__PURE__ */ new Ke(), di = /* @__PURE__ */ new R(), Yr = /* @__PURE__ */ new R();
-class Bp extends Op {
+class zp extends Bp {
   constructor() {
     super(new bt(90, 1, 0.5, 500)), this.isPointLightShadow = !0, this._frameExtents = new he(4, 2), this._viewportCount = 6, this._viewports = [
       // These viewports map a cube-map onto a 2D texture with the
@@ -14619,9 +14619,9 @@ class Bp extends Op {
     s !== n.far && (n.far = s, n.updateProjectionMatrix()), di.setFromMatrixPosition(e.matrixWorld), n.position.copy(di), Yr.copy(n.position), Yr.add(this._cubeDirections[t]), n.up.copy(this._cubeUps[t]), n.lookAt(Yr), n.updateMatrixWorld(), r.makeTranslation(-di.x, -di.y, -di.z), $a.multiplyMatrices(n.projectionMatrix, n.matrixWorldInverse), this._frustum.setFromProjectionMatrix($a);
   }
 }
-class Qa extends Wo {
+class Qa extends Xo {
   constructor(e, t, n = 0, r = 2) {
-    super(e, t), this.isPointLight = !0, this.type = "PointLight", this.distance = n, this.decay = r, this.shadow = new Bp();
+    super(e, t), this.isPointLight = !0, this.type = "PointLight", this.distance = n, this.decay = r, this.shadow = new zp();
   }
   get power() {
     return this.intensity * 4 * Math.PI;
@@ -14636,7 +14636,7 @@ class Qa extends Wo {
     return super.copy(e, t), this.distance = e.distance, this.decay = e.decay, this.shadow = e.shadow.clone(), this;
   }
 }
-class zp extends Wo {
+class Gp extends Xo {
   constructor(e, t) {
     super(e, t), this.isAmbientLight = !0, this.type = "AmbientLight";
   }
@@ -14665,7 +14665,7 @@ class eo {
     return new this.constructor().copy(this);
   }
 }
-class Gp extends ms {
+class Hp extends ms {
   constructor(e = 10, t = 10, n = 4473924, r = 8947848) {
     n = new Ve(n), r = new Ve(r);
     const s = t / 2, o = e / t, a = e / 2, c = [], l = [];
@@ -14683,7 +14683,7 @@ class Gp extends ms {
     this.geometry.dispose(), this.material.dispose();
   }
 }
-class Hp {
+class Vp {
   constructor() {
     this.type = "ShapePath", this.color = new Ve(), this.subPaths = [], this.currentPath = null;
   }
@@ -14784,33 +14784,33 @@ typeof __THREE_DEVTOOLS__ < "u" && __THREE_DEVTOOLS__.dispatchEvent(new CustomEv
   revision: cs
 } }));
 typeof window < "u" && (window.__THREE__ ? console.warn("WARNING: Multiple instances of Three.js being imported.") : window.__THREE__ = cs);
-class Vp extends ko {
+class kp extends Wo {
   constructor(e) {
     super(e);
   }
   load(e, t, n, r) {
-    const s = this, o = new Fp(this.manager);
+    const s = this, o = new Op(this.manager);
     o.setPath(this.path), o.setRequestHeader(this.requestHeader), o.setWithCredentials(this.withCredentials), o.load(e, function(a) {
       const c = s.parse(JSON.parse(a));
       t && t(c);
     }, n, r);
   }
   parse(e) {
-    return new kp(e);
+    return new Wp(e);
   }
 }
-class kp {
+class Wp {
   constructor(e) {
     this.isFont = !0, this.type = "Font", this.data = e;
   }
   generateShapes(e, t = 100) {
-    const n = [], r = Wp(e, t, this.data);
+    const n = [], r = Xp(e, t, this.data);
     for (let s = 0, o = r.length; s < o; s++)
       n.push(...r[s].toShapes());
     return n;
   }
 }
-function Wp(i, e, t) {
+function Xp(i, e, t) {
   const n = Array.from(i), r = e / t.resolution, s = (t.boundingBox.yMax - t.boundingBox.yMin + t.underlineThickness) * r, o = [];
   let a = 0, c = 0;
   for (let l = 0; l < n.length; l++) {
@@ -14819,19 +14819,19 @@ function Wp(i, e, t) {
 `)
       a = 0, c -= s;
     else {
-      const d = Xp(h, r, a, c, t);
+      const d = Yp(h, r, a, c, t);
       a += d.offsetX, o.push(d.path);
     }
   }
   return o;
 }
-function Xp(i, e, t, n, r) {
+function Yp(i, e, t, n, r) {
   const s = r.glyphs[i] || r.glyphs["?"];
   if (!s) {
     console.error('THREE.Font: character "' + i + '" does not exists in font family ' + r.familyName + ".");
     return;
   }
-  const o = new Hp();
+  const o = new Vp();
   let a, c, l, h, d, f, p, _;
   if (s.o) {
     const g = s._cachedOutline || (s._cachedOutline = s.o.split(" "));
@@ -14853,7 +14853,7 @@ function Xp(i, e, t, n, r) {
   }
   return { offsetX: s.ha * e, path: o };
 }
-class Yp extends vs {
+class jp extends vs {
   constructor(e, t = {}) {
     const n = t.font;
     if (n === void 0)
@@ -14865,7 +14865,7 @@ class Yp extends vs {
     this.type = "TextGeometry";
   }
 }
-const jp = { glyphs: { ο: { x_min: 0, x_max: 712, ha: 815, o: "m 356 -25 q 96 88 192 -25 q 0 368 0 201 q 92 642 0 533 q 356 761 192 761 q 617 644 517 761 q 712 368 712 533 q 619 91 712 201 q 356 -25 520 -25 m 356 85 q 527 175 465 85 q 583 369 583 255 q 528 562 583 484 q 356 651 466 651 q 189 560 250 651 q 135 369 135 481 q 187 177 135 257 q 356 85 250 85 " }, S: { x_min: 0, x_max: 788, ha: 890, o: "m 788 291 q 662 54 788 144 q 397 -26 550 -26 q 116 68 226 -26 q 0 337 0 168 l 131 337 q 200 152 131 220 q 384 85 269 85 q 557 129 479 85 q 650 270 650 183 q 490 429 650 379 q 194 513 341 470 q 33 739 33 584 q 142 964 33 881 q 388 1041 242 1041 q 644 957 543 1041 q 756 716 756 867 l 625 716 q 561 874 625 816 q 395 933 497 933 q 243 891 309 933 q 164 759 164 841 q 325 609 164 656 q 625 526 475 568 q 788 291 788 454 " }, "¦": { x_min: 343, x_max: 449, ha: 792, o: "m 449 462 l 343 462 l 343 986 l 449 986 l 449 462 m 449 -242 l 343 -242 l 343 280 l 449 280 l 449 -242 " }, "/": { x_min: 183.25, x_max: 608.328125, ha: 792, o: "m 608 1041 l 266 -129 l 183 -129 l 520 1041 l 608 1041 " }, Τ: { x_min: -0.4375, x_max: 777.453125, ha: 839, o: "m 777 893 l 458 893 l 458 0 l 319 0 l 319 892 l 0 892 l 0 1013 l 777 1013 l 777 893 " }, y: { x_min: 0, x_max: 684.78125, ha: 771, o: "m 684 738 l 388 -83 q 311 -216 356 -167 q 173 -279 252 -279 q 97 -266 133 -279 l 97 -149 q 132 -155 109 -151 q 168 -160 155 -160 q 240 -114 213 -160 q 274 -26 248 -98 l 0 738 l 137 737 l 341 139 l 548 737 l 684 738 " }, Π: { x_min: 0, x_max: 803, ha: 917, o: "m 803 0 l 667 0 l 667 886 l 140 886 l 140 0 l 0 0 l 0 1012 l 803 1012 l 803 0 " }, ΐ: { x_min: -111, x_max: 339, ha: 361, o: "m 339 800 l 229 800 l 229 925 l 339 925 l 339 800 m -1 800 l -111 800 l -111 925 l -1 925 l -1 800 m 284 3 q 233 -10 258 -5 q 182 -15 207 -15 q 85 26 119 -15 q 42 200 42 79 l 42 737 l 167 737 l 168 215 q 172 141 168 157 q 226 101 183 101 q 248 103 239 101 q 284 112 257 104 l 284 3 m 302 1040 l 113 819 l 30 819 l 165 1040 l 302 1040 " }, g: { x_min: 0, x_max: 686, ha: 838, o: "m 686 34 q 586 -213 686 -121 q 331 -306 487 -306 q 131 -252 216 -306 q 31 -84 31 -190 l 155 -84 q 228 -174 166 -138 q 345 -207 284 -207 q 514 -109 454 -207 q 564 89 564 -27 q 461 6 521 36 q 335 -23 401 -23 q 88 100 184 -23 q 0 370 0 215 q 87 634 0 522 q 330 758 183 758 q 457 728 398 758 q 564 644 515 699 l 564 737 l 686 737 l 686 34 m 582 367 q 529 560 582 481 q 358 652 468 652 q 189 561 250 652 q 135 369 135 482 q 189 176 135 255 q 361 85 251 85 q 529 176 468 85 q 582 367 582 255 " }, "²": { x_min: 0, x_max: 442, ha: 539, o: "m 442 383 l 0 383 q 91 566 0 492 q 260 668 176 617 q 354 798 354 727 q 315 875 354 845 q 227 905 277 905 q 136 869 173 905 q 99 761 99 833 l 14 761 q 82 922 14 864 q 232 974 141 974 q 379 926 316 974 q 442 797 442 878 q 351 635 442 704 q 183 539 321 611 q 92 455 92 491 l 442 455 l 442 383 " }, "–": { x_min: 0, x_max: 705.5625, ha: 803, o: "m 705 334 l 0 334 l 0 410 l 705 410 l 705 334 " }, Κ: { x_min: 0, x_max: 819.5625, ha: 893, o: "m 819 0 l 650 0 l 294 509 l 139 356 l 139 0 l 0 0 l 0 1013 l 139 1013 l 139 526 l 626 1013 l 809 1013 l 395 600 l 819 0 " }, ƒ: { x_min: -46.265625, x_max: 392, ha: 513, o: "m 392 651 l 259 651 l 79 -279 l -46 -278 l 134 651 l 14 651 l 14 751 l 135 751 q 151 948 135 900 q 304 1041 185 1041 q 334 1040 319 1041 q 392 1034 348 1039 l 392 922 q 337 931 360 931 q 271 883 287 931 q 260 793 260 853 l 260 751 l 392 751 l 392 651 " }, e: { x_min: 0, x_max: 714, ha: 813, o: "m 714 326 l 140 326 q 200 157 140 227 q 359 87 260 87 q 488 130 431 87 q 561 245 545 174 l 697 245 q 577 48 670 123 q 358 -26 484 -26 q 97 85 195 -26 q 0 363 0 197 q 94 642 0 529 q 358 765 195 765 q 626 627 529 765 q 714 326 714 503 m 576 429 q 507 583 564 522 q 355 650 445 650 q 206 583 266 650 q 140 429 152 522 l 576 429 " }, ό: { x_min: 0, x_max: 712, ha: 815, o: "m 356 -25 q 94 91 194 -25 q 0 368 0 202 q 92 642 0 533 q 356 761 192 761 q 617 644 517 761 q 712 368 712 533 q 619 91 712 201 q 356 -25 520 -25 m 356 85 q 527 175 465 85 q 583 369 583 255 q 528 562 583 484 q 356 651 466 651 q 189 560 250 651 q 135 369 135 481 q 187 177 135 257 q 356 85 250 85 m 576 1040 l 387 819 l 303 819 l 438 1040 l 576 1040 " }, J: { x_min: 0, x_max: 588, ha: 699, o: "m 588 279 q 287 -26 588 -26 q 58 73 126 -26 q 0 327 0 158 l 133 327 q 160 172 133 227 q 288 96 198 96 q 426 171 391 96 q 449 336 449 219 l 449 1013 l 588 1013 l 588 279 " }, "»": { x_min: -1, x_max: 503, ha: 601, o: "m 503 302 l 280 136 l 281 256 l 429 373 l 281 486 l 280 608 l 503 440 l 503 302 m 221 302 l 0 136 l 0 255 l 145 372 l 0 486 l -1 608 l 221 440 l 221 302 " }, "©": { x_min: -3, x_max: 1008, ha: 1106, o: "m 502 -7 q 123 151 263 -7 q -3 501 -3 294 q 123 851 -3 706 q 502 1011 263 1011 q 881 851 739 1011 q 1008 501 1008 708 q 883 151 1008 292 q 502 -7 744 -7 m 502 60 q 830 197 709 60 q 940 501 940 322 q 831 805 940 681 q 502 944 709 944 q 174 805 296 944 q 65 501 65 680 q 173 197 65 320 q 502 60 294 60 m 741 394 q 661 246 731 302 q 496 190 591 190 q 294 285 369 190 q 228 497 228 370 q 295 714 228 625 q 499 813 370 813 q 656 762 588 813 q 733 625 724 711 l 634 625 q 589 704 629 673 q 498 735 550 735 q 377 666 421 735 q 334 504 334 597 q 374 340 334 408 q 490 272 415 272 q 589 304 549 272 q 638 394 628 337 l 741 394 " }, ώ: { x_min: 0, x_max: 922, ha: 1030, o: "m 687 1040 l 498 819 l 415 819 l 549 1040 l 687 1040 m 922 339 q 856 97 922 203 q 650 -26 780 -26 q 538 9 587 -26 q 461 103 489 44 q 387 12 436 46 q 277 -22 339 -22 q 69 97 147 -22 q 0 338 0 202 q 45 551 0 444 q 161 737 84 643 l 302 737 q 175 552 219 647 q 124 336 124 446 q 155 179 124 248 q 275 88 197 88 q 375 163 341 88 q 400 294 400 219 l 400 572 l 524 572 l 524 294 q 561 135 524 192 q 643 88 591 88 q 762 182 719 88 q 797 341 797 257 q 745 555 797 450 q 619 737 705 637 l 760 737 q 874 551 835 640 q 922 339 922 444 " }, "^": { x_min: 193.0625, x_max: 598.609375, ha: 792, o: "m 598 772 l 515 772 l 395 931 l 277 772 l 193 772 l 326 1013 l 462 1013 l 598 772 " }, "«": { x_min: 0, x_max: 507.203125, ha: 604, o: "m 506 136 l 284 302 l 284 440 l 506 608 l 507 485 l 360 371 l 506 255 l 506 136 m 222 136 l 0 302 l 0 440 l 222 608 l 221 486 l 73 373 l 222 256 l 222 136 " }, D: { x_min: 0, x_max: 828, ha: 935, o: "m 389 1013 q 714 867 593 1013 q 828 521 828 729 q 712 161 828 309 q 382 0 587 0 l 0 0 l 0 1013 l 389 1013 m 376 124 q 607 247 523 124 q 681 510 681 355 q 607 771 681 662 q 376 896 522 896 l 139 896 l 139 124 l 376 124 " }, "∙": { x_min: 0, x_max: 142, ha: 239, o: "m 142 585 l 0 585 l 0 738 l 142 738 l 142 585 " }, ÿ: { x_min: 0, x_max: 47, ha: 125, o: "m 47 3 q 37 -7 47 -7 q 28 0 30 -7 q 39 -4 32 -4 q 45 3 45 -1 l 37 0 q 28 9 28 0 q 39 19 28 19 l 47 16 l 47 19 l 47 3 m 37 1 q 44 8 44 1 q 37 16 44 16 q 30 8 30 16 q 37 1 30 1 m 26 1 l 23 22 l 14 0 l 3 22 l 3 3 l 0 25 l 13 1 l 22 25 l 26 1 " }, w: { x_min: 0, x_max: 1009.71875, ha: 1100, o: "m 1009 738 l 783 0 l 658 0 l 501 567 l 345 0 l 222 0 l 0 738 l 130 738 l 284 174 l 432 737 l 576 738 l 721 173 l 881 737 l 1009 738 " }, $: { x_min: 0, x_max: 700, ha: 793, o: "m 664 717 l 542 717 q 490 825 531 785 q 381 872 450 865 l 381 551 q 620 446 540 522 q 700 241 700 370 q 618 45 700 116 q 381 -25 536 -25 l 381 -152 l 307 -152 l 307 -25 q 81 62 162 -25 q 0 297 0 149 l 124 297 q 169 146 124 204 q 307 81 215 89 l 307 441 q 80 536 148 469 q 13 725 13 603 q 96 910 13 839 q 307 982 180 982 l 307 1077 l 381 1077 l 381 982 q 574 917 494 982 q 664 717 664 845 m 307 565 l 307 872 q 187 831 233 872 q 142 724 142 791 q 180 618 142 656 q 307 565 218 580 m 381 76 q 562 237 562 96 q 517 361 562 313 q 381 423 472 409 l 381 76 " }, "\\": { x_min: -0.015625, x_max: 425.0625, ha: 522, o: "m 425 -129 l 337 -129 l 0 1041 l 83 1041 l 425 -129 " }, µ: { x_min: 0, x_max: 697.21875, ha: 747, o: "m 697 -4 q 629 -14 658 -14 q 498 97 513 -14 q 422 9 470 41 q 313 -23 374 -23 q 207 4 258 -23 q 119 81 156 32 l 119 -278 l 0 -278 l 0 738 l 124 738 l 124 343 q 165 173 124 246 q 308 83 216 83 q 452 178 402 83 q 493 359 493 255 l 493 738 l 617 738 l 617 214 q 623 136 617 160 q 673 92 637 92 q 697 96 684 92 l 697 -4 " }, Ι: { x_min: 42, x_max: 181, ha: 297, o: "m 181 0 l 42 0 l 42 1013 l 181 1013 l 181 0 " }, Ύ: { x_min: 0, x_max: 1144.5, ha: 1214, o: "m 1144 1012 l 807 416 l 807 0 l 667 0 l 667 416 l 325 1012 l 465 1012 l 736 533 l 1004 1012 l 1144 1012 m 277 1040 l 83 799 l 0 799 l 140 1040 l 277 1040 " }, "’": { x_min: 0, x_max: 139, ha: 236, o: "m 139 851 q 102 737 139 784 q 0 669 65 690 l 0 734 q 59 787 42 741 q 72 873 72 821 l 0 873 l 0 1013 l 139 1013 l 139 851 " }, Ν: { x_min: 0, x_max: 801, ha: 915, o: "m 801 0 l 651 0 l 131 822 l 131 0 l 0 0 l 0 1013 l 151 1013 l 670 191 l 670 1013 l 801 1013 l 801 0 " }, "-": { x_min: 8.71875, x_max: 350.390625, ha: 478, o: "m 350 317 l 8 317 l 8 428 l 350 428 l 350 317 " }, Q: { x_min: 0, x_max: 968, ha: 1072, o: "m 954 5 l 887 -79 l 744 35 q 622 -11 687 2 q 483 -26 556 -26 q 127 130 262 -26 q 0 504 0 279 q 127 880 0 728 q 484 1041 262 1041 q 841 884 708 1041 q 968 507 968 735 q 933 293 968 398 q 832 104 899 188 l 954 5 m 723 191 q 802 330 777 248 q 828 499 828 412 q 744 790 828 673 q 483 922 650 922 q 228 791 322 922 q 142 505 142 673 q 227 221 142 337 q 487 91 323 91 q 632 123 566 91 l 520 215 l 587 301 l 723 191 " }, ς: { x_min: 1, x_max: 676.28125, ha: 740, o: "m 676 460 l 551 460 q 498 595 542 546 q 365 651 448 651 q 199 578 263 651 q 136 401 136 505 q 266 178 136 241 q 508 106 387 142 q 640 -50 640 62 q 625 -158 640 -105 q 583 -278 611 -211 l 465 -278 q 498 -182 490 -211 q 515 -80 515 -126 q 381 12 515 -15 q 134 91 197 51 q 1 388 1 179 q 100 651 1 542 q 354 761 199 761 q 587 680 498 761 q 676 460 676 599 " }, M: { x_min: 0, x_max: 954, ha: 1067, o: "m 954 0 l 819 0 l 819 869 l 537 0 l 405 0 l 128 866 l 128 0 l 0 0 l 0 1013 l 200 1013 l 472 160 l 757 1013 l 954 1013 l 954 0 " }, Ψ: { x_min: 0, x_max: 1006, ha: 1094, o: "m 1006 678 q 914 319 1006 429 q 571 200 814 200 l 571 0 l 433 0 l 433 200 q 92 319 194 200 q 0 678 0 429 l 0 1013 l 139 1013 l 139 679 q 191 417 139 492 q 433 326 255 326 l 433 1013 l 571 1013 l 571 326 l 580 326 q 813 423 747 326 q 868 679 868 502 l 868 1013 l 1006 1013 l 1006 678 " }, C: { x_min: 0, x_max: 886, ha: 944, o: "m 886 379 q 760 87 886 201 q 455 -26 634 -26 q 112 136 236 -26 q 0 509 0 283 q 118 882 0 737 q 469 1041 245 1041 q 748 955 630 1041 q 879 708 879 859 l 745 708 q 649 862 724 805 q 473 920 573 920 q 219 791 312 920 q 136 509 136 675 q 217 229 136 344 q 470 99 311 99 q 672 179 591 99 q 753 379 753 259 l 886 379 " }, "!": { x_min: 0, x_max: 138, ha: 236, o: "m 138 684 q 116 409 138 629 q 105 244 105 299 l 33 244 q 16 465 33 313 q 0 684 0 616 l 0 1013 l 138 1013 l 138 684 m 138 0 l 0 0 l 0 151 l 138 151 l 138 0 " }, "{": { x_min: 0, x_max: 480.5625, ha: 578, o: "m 480 -286 q 237 -213 303 -286 q 187 -45 187 -159 q 194 48 187 -15 q 201 141 201 112 q 164 264 201 225 q 0 314 118 314 l 0 417 q 164 471 119 417 q 201 605 201 514 q 199 665 201 644 q 193 772 193 769 q 241 941 193 887 q 480 1015 308 1015 l 480 915 q 336 866 375 915 q 306 742 306 828 q 310 662 306 717 q 314 577 314 606 q 288 452 314 500 q 176 365 256 391 q 289 275 257 337 q 314 143 314 226 q 313 84 314 107 q 310 -11 310 -5 q 339 -131 310 -94 q 480 -182 377 -182 l 480 -286 " }, X: { x_min: -0.015625, x_max: 854.15625, ha: 940, o: "m 854 0 l 683 0 l 423 409 l 166 0 l 0 0 l 347 519 l 18 1013 l 186 1013 l 428 637 l 675 1013 l 836 1013 l 504 520 l 854 0 " }, "#": { x_min: 0, x_max: 963.890625, ha: 1061, o: "m 963 690 l 927 590 l 719 590 l 655 410 l 876 410 l 840 310 l 618 310 l 508 -3 l 393 -2 l 506 309 l 329 310 l 215 -2 l 102 -3 l 212 310 l 0 310 l 36 410 l 248 409 l 312 590 l 86 590 l 120 690 l 347 690 l 459 1006 l 573 1006 l 462 690 l 640 690 l 751 1006 l 865 1006 l 754 690 l 963 690 m 606 590 l 425 590 l 362 410 l 543 410 l 606 590 " }, ι: { x_min: 42, x_max: 284, ha: 361, o: "m 284 3 q 233 -10 258 -5 q 182 -15 207 -15 q 85 26 119 -15 q 42 200 42 79 l 42 738 l 167 738 l 168 215 q 172 141 168 157 q 226 101 183 101 q 248 103 239 101 q 284 112 257 104 l 284 3 " }, Ά: { x_min: 0, x_max: 906.953125, ha: 982, o: "m 283 1040 l 88 799 l 5 799 l 145 1040 l 283 1040 m 906 0 l 756 0 l 650 303 l 251 303 l 143 0 l 0 0 l 376 1012 l 529 1012 l 906 0 m 609 421 l 452 866 l 293 421 l 609 421 " }, ")": { x_min: 0, x_max: 318, ha: 415, o: "m 318 365 q 257 25 318 191 q 87 -290 197 -141 l 0 -290 q 140 21 93 -128 q 193 360 193 189 q 141 704 193 537 q 0 1024 97 850 l 87 1024 q 257 706 197 871 q 318 365 318 542 " }, ε: { x_min: 0, x_max: 634.71875, ha: 714, o: "m 634 234 q 527 38 634 110 q 300 -25 433 -25 q 98 29 183 -25 q 0 204 0 93 q 37 314 0 265 q 128 390 67 353 q 56 460 82 419 q 26 555 26 505 q 114 712 26 654 q 295 763 191 763 q 499 700 416 763 q 589 515 589 631 l 478 515 q 419 618 464 580 q 307 657 374 657 q 207 630 253 657 q 151 547 151 598 q 238 445 151 469 q 389 434 280 434 l 389 331 l 349 331 q 206 315 255 331 q 125 210 125 287 q 183 107 125 145 q 302 76 233 76 q 436 117 379 76 q 509 234 493 159 l 634 234 " }, Δ: { x_min: 0, x_max: 952.78125, ha: 1028, o: "m 952 0 l 0 0 l 400 1013 l 551 1013 l 952 0 m 762 124 l 476 867 l 187 124 l 762 124 " }, "}": { x_min: 0, x_max: 481, ha: 578, o: "m 481 314 q 318 262 364 314 q 282 136 282 222 q 284 65 282 97 q 293 -58 293 -48 q 241 -217 293 -166 q 0 -286 174 -286 l 0 -182 q 143 -130 105 -182 q 171 -2 171 -93 q 168 81 171 22 q 165 144 165 140 q 188 275 165 229 q 306 365 220 339 q 191 455 224 391 q 165 588 165 505 q 168 681 165 624 q 171 742 171 737 q 141 865 171 827 q 0 915 102 915 l 0 1015 q 243 942 176 1015 q 293 773 293 888 q 287 675 293 741 q 282 590 282 608 q 318 466 282 505 q 481 417 364 417 l 481 314 " }, "‰": { x_min: -3, x_max: 1672, ha: 1821, o: "m 846 0 q 664 76 732 0 q 603 244 603 145 q 662 412 603 344 q 846 489 729 489 q 1027 412 959 489 q 1089 244 1089 343 q 1029 76 1089 144 q 846 0 962 0 m 845 103 q 945 143 910 103 q 981 243 981 184 q 947 340 981 301 q 845 385 910 385 q 745 342 782 385 q 709 243 709 300 q 742 147 709 186 q 845 103 781 103 m 888 986 l 284 -25 l 199 -25 l 803 986 l 888 986 m 241 468 q 58 545 126 468 q -3 715 -3 615 q 56 881 -3 813 q 238 958 124 958 q 421 881 353 958 q 483 712 483 813 q 423 544 483 612 q 241 468 356 468 m 241 855 q 137 811 175 855 q 100 710 100 768 q 136 612 100 653 q 240 572 172 572 q 344 614 306 572 q 382 713 382 656 q 347 810 382 771 q 241 855 308 855 m 1428 0 q 1246 76 1314 0 q 1185 244 1185 145 q 1244 412 1185 344 q 1428 489 1311 489 q 1610 412 1542 489 q 1672 244 1672 343 q 1612 76 1672 144 q 1428 0 1545 0 m 1427 103 q 1528 143 1492 103 q 1564 243 1564 184 q 1530 340 1564 301 q 1427 385 1492 385 q 1327 342 1364 385 q 1291 243 1291 300 q 1324 147 1291 186 q 1427 103 1363 103 " }, a: { x_min: 0, x_max: 698.609375, ha: 794, o: "m 698 0 q 661 -12 679 -7 q 615 -17 643 -17 q 536 12 564 -17 q 500 96 508 41 q 384 6 456 37 q 236 -25 312 -25 q 65 31 130 -25 q 0 194 0 88 q 118 390 0 334 q 328 435 180 420 q 488 483 476 451 q 495 523 495 504 q 442 619 495 584 q 325 654 389 654 q 209 617 257 654 q 152 513 161 580 l 33 513 q 123 705 33 633 q 332 772 207 772 q 528 712 448 772 q 617 531 617 645 l 617 163 q 624 108 617 126 q 664 90 632 90 l 698 94 l 698 0 m 491 262 l 491 372 q 272 329 350 347 q 128 201 128 294 q 166 113 128 144 q 264 83 205 83 q 414 130 346 83 q 491 262 491 183 " }, "—": { x_min: 0, x_max: 941.671875, ha: 1039, o: "m 941 334 l 0 334 l 0 410 l 941 410 l 941 334 " }, "=": { x_min: 8.71875, x_max: 780.953125, ha: 792, o: "m 780 510 l 8 510 l 8 606 l 780 606 l 780 510 m 780 235 l 8 235 l 8 332 l 780 332 l 780 235 " }, N: { x_min: 0, x_max: 801, ha: 914, o: "m 801 0 l 651 0 l 131 823 l 131 0 l 0 0 l 0 1013 l 151 1013 l 670 193 l 670 1013 l 801 1013 l 801 0 " }, ρ: { x_min: 0, x_max: 712, ha: 797, o: "m 712 369 q 620 94 712 207 q 362 -26 521 -26 q 230 2 292 -26 q 119 83 167 30 l 119 -278 l 0 -278 l 0 362 q 91 643 0 531 q 355 764 190 764 q 617 647 517 764 q 712 369 712 536 m 583 366 q 530 559 583 480 q 359 651 469 651 q 190 562 252 651 q 135 370 135 483 q 189 176 135 257 q 359 85 250 85 q 528 175 466 85 q 583 366 583 254 " }, 2: { x_min: 59, x_max: 731, ha: 792, o: "m 731 0 l 59 0 q 197 314 59 188 q 457 487 199 315 q 598 691 598 580 q 543 819 598 772 q 411 867 488 867 q 272 811 328 867 q 209 630 209 747 l 81 630 q 182 901 81 805 q 408 986 271 986 q 629 909 536 986 q 731 694 731 826 q 613 449 731 541 q 378 316 495 383 q 201 122 235 234 l 731 122 l 731 0 " }, "¯": { x_min: 0, x_max: 941.671875, ha: 938, o: "m 941 1033 l 0 1033 l 0 1109 l 941 1109 l 941 1033 " }, Z: { x_min: 0, x_max: 779, ha: 849, o: "m 779 0 l 0 0 l 0 113 l 621 896 l 40 896 l 40 1013 l 779 1013 l 778 887 l 171 124 l 779 124 l 779 0 " }, u: { x_min: 0, x_max: 617, ha: 729, o: "m 617 0 l 499 0 l 499 110 q 391 10 460 45 q 246 -25 322 -25 q 61 58 127 -25 q 0 258 0 136 l 0 738 l 125 738 l 125 284 q 156 148 125 202 q 273 82 197 82 q 433 165 369 82 q 493 340 493 243 l 493 738 l 617 738 l 617 0 " }, k: { x_min: 0, x_max: 612.484375, ha: 697, o: "m 612 738 l 338 465 l 608 0 l 469 0 l 251 382 l 121 251 l 121 0 l 0 0 l 0 1013 l 121 1013 l 121 402 l 456 738 l 612 738 " }, Η: { x_min: 0, x_max: 803, ha: 917, o: "m 803 0 l 667 0 l 667 475 l 140 475 l 140 0 l 0 0 l 0 1013 l 140 1013 l 140 599 l 667 599 l 667 1013 l 803 1013 l 803 0 " }, Α: { x_min: 0, x_max: 906.953125, ha: 985, o: "m 906 0 l 756 0 l 650 303 l 251 303 l 143 0 l 0 0 l 376 1013 l 529 1013 l 906 0 m 609 421 l 452 866 l 293 421 l 609 421 " }, s: { x_min: 0, x_max: 604, ha: 697, o: "m 604 217 q 501 36 604 104 q 292 -23 411 -23 q 86 43 166 -23 q 0 238 0 114 l 121 237 q 175 122 121 164 q 300 85 223 85 q 415 112 363 85 q 479 207 479 147 q 361 309 479 276 q 140 372 141 370 q 21 544 21 426 q 111 708 21 647 q 298 761 190 761 q 492 705 413 761 q 583 531 583 643 l 462 531 q 412 625 462 594 q 298 657 363 657 q 199 636 242 657 q 143 558 143 608 q 262 454 143 486 q 484 394 479 397 q 604 217 604 341 " }, B: { x_min: 0, x_max: 778, ha: 876, o: "m 580 546 q 724 469 670 535 q 778 311 778 403 q 673 83 778 171 q 432 0 575 0 l 0 0 l 0 1013 l 411 1013 q 629 957 541 1013 q 732 768 732 892 q 691 633 732 693 q 580 546 650 572 m 393 899 l 139 899 l 139 588 l 379 588 q 521 624 462 588 q 592 744 592 667 q 531 859 592 819 q 393 899 471 899 m 419 124 q 566 169 504 124 q 635 303 635 219 q 559 436 635 389 q 402 477 494 477 l 139 477 l 139 124 l 419 124 " }, "…": { x_min: 0, x_max: 614, ha: 708, o: "m 142 0 l 0 0 l 0 151 l 142 151 l 142 0 m 378 0 l 236 0 l 236 151 l 378 151 l 378 0 m 614 0 l 472 0 l 472 151 l 614 151 l 614 0 " }, "?": { x_min: 0, x_max: 607, ha: 704, o: "m 607 777 q 543 599 607 674 q 422 474 482 537 q 357 272 357 391 l 236 272 q 297 487 236 395 q 411 619 298 490 q 474 762 474 691 q 422 885 474 838 q 301 933 371 933 q 179 880 228 933 q 124 706 124 819 l 0 706 q 94 963 0 872 q 302 1044 177 1044 q 511 973 423 1044 q 607 777 607 895 m 370 0 l 230 0 l 230 151 l 370 151 l 370 0 " }, H: { x_min: 0, x_max: 803, ha: 915, o: "m 803 0 l 667 0 l 667 475 l 140 475 l 140 0 l 0 0 l 0 1013 l 140 1013 l 140 599 l 667 599 l 667 1013 l 803 1013 l 803 0 " }, ν: { x_min: 0, x_max: 675, ha: 761, o: "m 675 738 l 404 0 l 272 0 l 0 738 l 133 738 l 340 147 l 541 738 l 675 738 " }, c: { x_min: 1, x_max: 701.390625, ha: 775, o: "m 701 264 q 584 53 681 133 q 353 -26 487 -26 q 91 91 188 -26 q 1 370 1 201 q 92 645 1 537 q 353 761 190 761 q 572 688 479 761 q 690 493 666 615 l 556 493 q 487 606 545 562 q 356 650 428 650 q 186 563 246 650 q 134 372 134 487 q 188 179 134 258 q 359 88 250 88 q 492 136 437 88 q 566 264 548 185 l 701 264 " }, "¶": { x_min: 0, x_max: 566.671875, ha: 678, o: "m 21 892 l 52 892 l 98 761 l 145 892 l 176 892 l 178 741 l 157 741 l 157 867 l 108 741 l 88 741 l 40 871 l 40 741 l 21 741 l 21 892 m 308 854 l 308 731 q 252 691 308 691 q 227 691 240 691 q 207 696 213 695 l 207 712 l 253 706 q 288 733 288 706 l 288 763 q 244 741 279 741 q 193 797 193 741 q 261 860 193 860 q 287 860 273 860 q 308 854 302 855 m 288 842 l 263 843 q 213 796 213 843 q 248 756 213 756 q 288 796 288 756 l 288 842 m 566 988 l 502 988 l 502 -1 l 439 -1 l 439 988 l 317 988 l 317 -1 l 252 -1 l 252 602 q 81 653 155 602 q 0 805 0 711 q 101 989 0 918 q 309 1053 194 1053 l 566 1053 l 566 988 " }, β: { x_min: 0, x_max: 660, ha: 745, o: "m 471 550 q 610 450 561 522 q 660 280 660 378 q 578 64 660 151 q 367 -22 497 -22 q 239 5 299 -22 q 126 82 178 32 l 126 -278 l 0 -278 l 0 593 q 54 903 0 801 q 318 1042 127 1042 q 519 964 436 1042 q 603 771 603 887 q 567 644 603 701 q 471 550 532 586 m 337 79 q 476 138 418 79 q 535 279 535 198 q 427 437 535 386 q 226 477 344 477 l 226 583 q 398 620 329 583 q 486 762 486 668 q 435 884 486 833 q 312 935 384 935 q 169 861 219 935 q 126 698 126 797 l 126 362 q 170 169 126 242 q 337 79 224 79 " }, Μ: { x_min: 0, x_max: 954, ha: 1068, o: "m 954 0 l 819 0 l 819 868 l 537 0 l 405 0 l 128 865 l 128 0 l 0 0 l 0 1013 l 199 1013 l 472 158 l 758 1013 l 954 1013 l 954 0 " }, Ό: { x_min: 0.109375, x_max: 1120, ha: 1217, o: "m 1120 505 q 994 132 1120 282 q 642 -29 861 -29 q 290 130 422 -29 q 167 505 167 280 q 294 883 167 730 q 650 1046 430 1046 q 999 882 868 1046 q 1120 505 1120 730 m 977 504 q 896 784 977 669 q 644 915 804 915 q 391 785 484 915 q 307 504 307 669 q 391 224 307 339 q 644 95 486 95 q 894 224 803 95 q 977 504 977 339 m 277 1040 l 83 799 l 0 799 l 140 1040 l 277 1040 " }, Ή: { x_min: 0, x_max: 1158, ha: 1275, o: "m 1158 0 l 1022 0 l 1022 475 l 496 475 l 496 0 l 356 0 l 356 1012 l 496 1012 l 496 599 l 1022 599 l 1022 1012 l 1158 1012 l 1158 0 m 277 1040 l 83 799 l 0 799 l 140 1040 l 277 1040 " }, "•": { x_min: 0, x_max: 663.890625, ha: 775, o: "m 663 529 q 566 293 663 391 q 331 196 469 196 q 97 294 194 196 q 0 529 0 393 q 96 763 0 665 q 331 861 193 861 q 566 763 469 861 q 663 529 663 665 " }, "¥": { x_min: 0.1875, x_max: 819.546875, ha: 886, o: "m 563 561 l 697 561 l 696 487 l 520 487 l 482 416 l 482 380 l 697 380 l 695 308 l 482 308 l 482 0 l 342 0 l 342 308 l 125 308 l 125 380 l 342 380 l 342 417 l 303 487 l 125 487 l 125 561 l 258 561 l 0 1013 l 140 1013 l 411 533 l 679 1013 l 819 1013 l 563 561 " }, "(": { x_min: 0, x_max: 318.0625, ha: 415, o: "m 318 -290 l 230 -290 q 61 23 122 -142 q 0 365 0 190 q 62 712 0 540 q 230 1024 119 869 l 318 1024 q 175 705 219 853 q 125 360 125 542 q 176 22 125 187 q 318 -290 223 -127 " }, U: { x_min: 0, x_max: 796, ha: 904, o: "m 796 393 q 681 93 796 212 q 386 -25 566 -25 q 101 95 208 -25 q 0 393 0 211 l 0 1013 l 138 1013 l 138 391 q 204 191 138 270 q 394 107 276 107 q 586 191 512 107 q 656 391 656 270 l 656 1013 l 796 1013 l 796 393 " }, γ: { x_min: 0.5, x_max: 744.953125, ha: 822, o: "m 744 737 l 463 54 l 463 -278 l 338 -278 l 338 54 l 154 495 q 104 597 124 569 q 13 651 67 651 l 0 651 l 0 751 l 39 753 q 168 711 121 753 q 242 594 207 676 l 403 208 l 617 737 l 744 737 " }, α: { x_min: 0, x_max: 765.5625, ha: 809, o: "m 765 -4 q 698 -14 726 -14 q 564 97 586 -14 q 466 7 525 40 q 337 -26 407 -26 q 88 98 186 -26 q 0 369 0 212 q 88 637 0 525 q 337 760 184 760 q 465 728 407 760 q 563 637 524 696 l 563 739 l 685 739 l 685 222 q 693 141 685 168 q 748 94 708 94 q 765 96 760 94 l 765 -4 m 584 371 q 531 562 584 485 q 360 653 470 653 q 192 566 254 653 q 135 379 135 489 q 186 181 135 261 q 358 84 247 84 q 528 176 465 84 q 584 371 584 260 " }, F: { x_min: 0, x_max: 683.328125, ha: 717, o: "m 683 888 l 140 888 l 140 583 l 613 583 l 613 458 l 140 458 l 140 0 l 0 0 l 0 1013 l 683 1013 l 683 888 " }, "­": { x_min: 0, x_max: 705.5625, ha: 803, o: "m 705 334 l 0 334 l 0 410 l 705 410 l 705 334 " }, ":": { x_min: 0, x_max: 142, ha: 239, o: "m 142 585 l 0 585 l 0 738 l 142 738 l 142 585 m 142 0 l 0 0 l 0 151 l 142 151 l 142 0 " }, Χ: { x_min: 0, x_max: 854.171875, ha: 935, o: "m 854 0 l 683 0 l 423 409 l 166 0 l 0 0 l 347 519 l 18 1013 l 186 1013 l 427 637 l 675 1013 l 836 1013 l 504 521 l 854 0 " }, "*": { x_min: 116, x_max: 674, ha: 792, o: "m 674 768 l 475 713 l 610 544 l 517 477 l 394 652 l 272 478 l 178 544 l 314 713 l 116 766 l 153 876 l 341 812 l 342 1013 l 446 1013 l 446 811 l 635 874 l 674 768 " }, "†": { x_min: 0, x_max: 777, ha: 835, o: "m 458 804 l 777 804 l 777 683 l 458 683 l 458 0 l 319 0 l 319 681 l 0 683 l 0 804 l 319 804 l 319 1015 l 458 1013 l 458 804 " }, "°": { x_min: 0, x_max: 347, ha: 444, o: "m 173 802 q 43 856 91 802 q 0 977 0 905 q 45 1101 0 1049 q 173 1153 90 1153 q 303 1098 255 1153 q 347 977 347 1049 q 303 856 347 905 q 173 802 256 802 m 173 884 q 238 910 214 884 q 262 973 262 937 q 239 1038 262 1012 q 173 1064 217 1064 q 108 1037 132 1064 q 85 973 85 1010 q 108 910 85 937 q 173 884 132 884 " }, V: { x_min: 0, x_max: 862.71875, ha: 940, o: "m 862 1013 l 505 0 l 361 0 l 0 1013 l 143 1013 l 434 165 l 718 1012 l 862 1013 " }, Ξ: { x_min: 0, x_max: 734.71875, ha: 763, o: "m 723 889 l 9 889 l 9 1013 l 723 1013 l 723 889 m 673 463 l 61 463 l 61 589 l 673 589 l 673 463 m 734 0 l 0 0 l 0 124 l 734 124 l 734 0 " }, " ": { x_min: 0, x_max: 0, ha: 853 }, Ϋ: { x_min: 0.328125, x_max: 819.515625, ha: 889, o: "m 588 1046 l 460 1046 l 460 1189 l 588 1189 l 588 1046 m 360 1046 l 232 1046 l 232 1189 l 360 1189 l 360 1046 m 819 1012 l 482 416 l 482 0 l 342 0 l 342 416 l 0 1012 l 140 1012 l 411 533 l 679 1012 l 819 1012 " }, 0: { x_min: 73, x_max: 715, ha: 792, o: "m 394 -29 q 153 129 242 -29 q 73 479 73 272 q 152 829 73 687 q 394 989 241 989 q 634 829 545 989 q 715 479 715 684 q 635 129 715 270 q 394 -29 546 -29 m 394 89 q 546 211 489 89 q 598 479 598 322 q 548 748 598 640 q 394 871 491 871 q 241 748 298 871 q 190 479 190 637 q 239 211 190 319 q 394 89 296 89 " }, "”": { x_min: 0, x_max: 347, ha: 454, o: "m 139 851 q 102 737 139 784 q 0 669 65 690 l 0 734 q 59 787 42 741 q 72 873 72 821 l 0 873 l 0 1013 l 139 1013 l 139 851 m 347 851 q 310 737 347 784 q 208 669 273 690 l 208 734 q 267 787 250 741 q 280 873 280 821 l 208 873 l 208 1013 l 347 1013 l 347 851 " }, "@": { x_min: 0, x_max: 1260, ha: 1357, o: "m 1098 -45 q 877 -160 1001 -117 q 633 -203 752 -203 q 155 -29 327 -203 q 0 360 0 127 q 176 802 0 616 q 687 1008 372 1008 q 1123 854 969 1008 q 1260 517 1260 718 q 1155 216 1260 341 q 868 82 1044 82 q 772 106 801 82 q 737 202 737 135 q 647 113 700 144 q 527 82 594 82 q 367 147 420 82 q 314 312 314 212 q 401 565 314 452 q 639 690 498 690 q 810 588 760 690 l 849 668 l 938 668 q 877 441 900 532 q 833 226 833 268 q 853 182 833 198 q 902 167 873 167 q 1088 272 1012 167 q 1159 512 1159 372 q 1051 793 1159 681 q 687 925 925 925 q 248 747 415 925 q 97 361 97 586 q 226 26 97 159 q 627 -122 370 -122 q 856 -87 737 -122 q 1061 8 976 -53 l 1098 -45 m 786 488 q 738 580 777 545 q 643 615 700 615 q 483 517 548 615 q 425 322 425 430 q 457 203 425 250 q 552 156 490 156 q 722 273 665 156 q 786 488 738 309 " }, Ί: { x_min: 0, x_max: 499, ha: 613, o: "m 277 1040 l 83 799 l 0 799 l 140 1040 l 277 1040 m 499 0 l 360 0 l 360 1012 l 499 1012 l 499 0 " }, i: { x_min: 14, x_max: 136, ha: 275, o: "m 136 873 l 14 873 l 14 1013 l 136 1013 l 136 873 m 136 0 l 14 0 l 14 737 l 136 737 l 136 0 " }, Β: { x_min: 0, x_max: 778, ha: 877, o: "m 580 545 q 724 468 671 534 q 778 310 778 402 q 673 83 778 170 q 432 0 575 0 l 0 0 l 0 1013 l 411 1013 q 629 957 541 1013 q 732 768 732 891 q 691 632 732 692 q 580 545 650 571 m 393 899 l 139 899 l 139 587 l 379 587 q 521 623 462 587 q 592 744 592 666 q 531 859 592 819 q 393 899 471 899 m 419 124 q 566 169 504 124 q 635 302 635 219 q 559 435 635 388 q 402 476 494 476 l 139 476 l 139 124 l 419 124 " }, υ: { x_min: 0, x_max: 617, ha: 725, o: "m 617 352 q 540 94 617 199 q 308 -24 455 -24 q 76 94 161 -24 q 0 352 0 199 l 0 739 l 126 739 l 126 355 q 169 185 126 257 q 312 98 220 98 q 451 185 402 98 q 492 355 492 257 l 492 739 l 617 739 l 617 352 " }, "]": { x_min: 0, x_max: 275, ha: 372, o: "m 275 -281 l 0 -281 l 0 -187 l 151 -187 l 151 920 l 0 920 l 0 1013 l 275 1013 l 275 -281 " }, m: { x_min: 0, x_max: 1019, ha: 1128, o: "m 1019 0 l 897 0 l 897 454 q 860 591 897 536 q 739 660 816 660 q 613 586 659 660 q 573 436 573 522 l 573 0 l 447 0 l 447 455 q 412 591 447 535 q 294 657 372 657 q 165 586 213 657 q 122 437 122 521 l 122 0 l 0 0 l 0 738 l 117 738 l 117 640 q 202 730 150 697 q 316 763 254 763 q 437 730 381 763 q 525 642 494 697 q 621 731 559 700 q 753 763 682 763 q 943 694 867 763 q 1019 512 1019 625 l 1019 0 " }, χ: { x_min: 8.328125, x_max: 780.5625, ha: 815, o: "m 780 -278 q 715 -294 747 -294 q 616 -257 663 -294 q 548 -175 576 -227 l 379 133 l 143 -277 l 9 -277 l 313 254 l 163 522 q 127 586 131 580 q 36 640 91 640 q 8 637 27 640 l 8 752 l 52 757 q 162 719 113 757 q 236 627 200 690 l 383 372 l 594 737 l 726 737 l 448 250 l 625 -69 q 670 -153 647 -110 q 743 -188 695 -188 q 780 -184 759 -188 l 780 -278 " }, 8: { x_min: 55, x_max: 736, ha: 792, o: "m 571 527 q 694 424 652 491 q 736 280 736 358 q 648 71 736 158 q 395 -26 551 -26 q 142 69 238 -26 q 55 279 55 157 q 96 425 55 359 q 220 527 138 491 q 120 615 153 562 q 88 726 88 668 q 171 904 88 827 q 395 986 261 986 q 618 905 529 986 q 702 727 702 830 q 670 616 702 667 q 571 527 638 565 m 394 565 q 519 610 475 565 q 563 717 563 655 q 521 823 563 781 q 392 872 474 872 q 265 824 312 872 q 224 720 224 783 q 265 613 224 656 q 394 565 312 565 m 395 91 q 545 150 488 91 q 597 280 597 204 q 546 408 597 355 q 395 465 492 465 q 244 408 299 465 q 194 280 194 356 q 244 150 194 203 q 395 91 299 91 " }, ί: { x_min: 42, x_max: 326.71875, ha: 361, o: "m 284 3 q 233 -10 258 -5 q 182 -15 207 -15 q 85 26 119 -15 q 42 200 42 79 l 42 737 l 167 737 l 168 215 q 172 141 168 157 q 226 101 183 101 q 248 102 239 101 q 284 112 257 104 l 284 3 m 326 1040 l 137 819 l 54 819 l 189 1040 l 326 1040 " }, Ζ: { x_min: 0, x_max: 779.171875, ha: 850, o: "m 779 0 l 0 0 l 0 113 l 620 896 l 40 896 l 40 1013 l 779 1013 l 779 887 l 170 124 l 779 124 l 779 0 " }, R: { x_min: 0, x_max: 781.953125, ha: 907, o: "m 781 0 l 623 0 q 587 242 590 52 q 407 433 585 433 l 138 433 l 138 0 l 0 0 l 0 1013 l 396 1013 q 636 946 539 1013 q 749 731 749 868 q 711 597 749 659 q 608 502 674 534 q 718 370 696 474 q 729 207 722 352 q 781 26 736 62 l 781 0 m 373 551 q 533 594 465 551 q 614 731 614 645 q 532 859 614 815 q 373 896 465 896 l 138 896 l 138 551 l 373 551 " }, o: { x_min: 0, x_max: 713, ha: 821, o: "m 357 -25 q 94 91 194 -25 q 0 368 0 202 q 93 642 0 533 q 357 761 193 761 q 618 644 518 761 q 713 368 713 533 q 619 91 713 201 q 357 -25 521 -25 m 357 85 q 528 175 465 85 q 584 369 584 255 q 529 562 584 484 q 357 651 467 651 q 189 560 250 651 q 135 369 135 481 q 187 177 135 257 q 357 85 250 85 " }, 5: { x_min: 54.171875, x_max: 738, ha: 792, o: "m 738 314 q 626 60 738 153 q 382 -23 526 -23 q 155 47 248 -23 q 54 256 54 125 l 183 256 q 259 132 204 174 q 382 91 314 91 q 533 149 471 91 q 602 314 602 213 q 538 469 602 411 q 386 528 475 528 q 284 506 332 528 q 197 439 237 484 l 81 439 l 159 958 l 684 958 l 684 840 l 254 840 l 214 579 q 306 627 258 612 q 407 643 354 643 q 636 552 540 643 q 738 314 738 457 " }, 7: { x_min: 58.71875, x_max: 730.953125, ha: 792, o: "m 730 839 q 469 448 560 641 q 335 0 378 255 l 192 0 q 328 441 235 252 q 593 830 421 630 l 58 830 l 58 958 l 730 958 l 730 839 " }, K: { x_min: 0, x_max: 819.46875, ha: 906, o: "m 819 0 l 649 0 l 294 509 l 139 355 l 139 0 l 0 0 l 0 1013 l 139 1013 l 139 526 l 626 1013 l 809 1013 l 395 600 l 819 0 " }, ",": { x_min: 0, x_max: 142, ha: 239, o: "m 142 -12 q 105 -132 142 -82 q 0 -205 68 -182 l 0 -138 q 57 -82 40 -124 q 70 0 70 -51 l 0 0 l 0 151 l 142 151 l 142 -12 " }, d: { x_min: 0, x_max: 683, ha: 796, o: "m 683 0 l 564 0 l 564 93 q 456 6 516 38 q 327 -25 395 -25 q 87 100 181 -25 q 0 365 0 215 q 90 639 0 525 q 343 763 187 763 q 564 647 486 763 l 564 1013 l 683 1013 l 683 0 m 582 373 q 529 562 582 484 q 361 653 468 653 q 190 561 253 653 q 135 365 135 479 q 189 175 135 254 q 358 85 251 85 q 529 178 468 85 q 582 373 582 258 " }, "¨": { x_min: -109, x_max: 247, ha: 232, o: "m 247 1046 l 119 1046 l 119 1189 l 247 1189 l 247 1046 m 19 1046 l -109 1046 l -109 1189 l 19 1189 l 19 1046 " }, E: { x_min: 0, x_max: 736.109375, ha: 789, o: "m 736 0 l 0 0 l 0 1013 l 725 1013 l 725 889 l 139 889 l 139 585 l 677 585 l 677 467 l 139 467 l 139 125 l 736 125 l 736 0 " }, Y: { x_min: 0, x_max: 820, ha: 886, o: "m 820 1013 l 482 416 l 482 0 l 342 0 l 342 416 l 0 1013 l 140 1013 l 411 534 l 679 1012 l 820 1013 " }, '"': { x_min: 0, x_max: 299, ha: 396, o: "m 299 606 l 203 606 l 203 988 l 299 988 l 299 606 m 96 606 l 0 606 l 0 988 l 96 988 l 96 606 " }, "‹": { x_min: 17.984375, x_max: 773.609375, ha: 792, o: "m 773 40 l 18 376 l 17 465 l 773 799 l 773 692 l 159 420 l 773 149 l 773 40 " }, "„": { x_min: 0, x_max: 364, ha: 467, o: "m 141 -12 q 104 -132 141 -82 q 0 -205 67 -182 l 0 -138 q 56 -82 40 -124 q 69 0 69 -51 l 0 0 l 0 151 l 141 151 l 141 -12 m 364 -12 q 327 -132 364 -82 q 222 -205 290 -182 l 222 -138 q 279 -82 262 -124 q 292 0 292 -51 l 222 0 l 222 151 l 364 151 l 364 -12 " }, δ: { x_min: 1, x_max: 710, ha: 810, o: "m 710 360 q 616 87 710 196 q 356 -28 518 -28 q 99 82 197 -28 q 1 356 1 192 q 100 606 1 509 q 355 703 199 703 q 180 829 288 754 q 70 903 124 866 l 70 1012 l 643 1012 l 643 901 l 258 901 q 462 763 422 794 q 636 592 577 677 q 710 360 710 485 m 584 365 q 552 501 584 447 q 451 602 521 555 q 372 611 411 611 q 197 541 258 611 q 136 355 136 472 q 190 171 136 245 q 358 85 252 85 q 528 173 465 85 q 584 365 584 252 " }, έ: { x_min: 0, x_max: 634.71875, ha: 714, o: "m 634 234 q 527 38 634 110 q 300 -25 433 -25 q 98 29 183 -25 q 0 204 0 93 q 37 313 0 265 q 128 390 67 352 q 56 459 82 419 q 26 555 26 505 q 114 712 26 654 q 295 763 191 763 q 499 700 416 763 q 589 515 589 631 l 478 515 q 419 618 464 580 q 307 657 374 657 q 207 630 253 657 q 151 547 151 598 q 238 445 151 469 q 389 434 280 434 l 389 331 l 349 331 q 206 315 255 331 q 125 210 125 287 q 183 107 125 145 q 302 76 233 76 q 436 117 379 76 q 509 234 493 159 l 634 234 m 520 1040 l 331 819 l 248 819 l 383 1040 l 520 1040 " }, ω: { x_min: 0, x_max: 922, ha: 1031, o: "m 922 339 q 856 97 922 203 q 650 -26 780 -26 q 538 9 587 -26 q 461 103 489 44 q 387 12 436 46 q 277 -22 339 -22 q 69 97 147 -22 q 0 339 0 203 q 45 551 0 444 q 161 738 84 643 l 302 738 q 175 553 219 647 q 124 336 124 446 q 155 179 124 249 q 275 88 197 88 q 375 163 341 88 q 400 294 400 219 l 400 572 l 524 572 l 524 294 q 561 135 524 192 q 643 88 591 88 q 762 182 719 88 q 797 342 797 257 q 745 556 797 450 q 619 738 705 638 l 760 738 q 874 551 835 640 q 922 339 922 444 " }, "´": { x_min: 0, x_max: 96, ha: 251, o: "m 96 606 l 0 606 l 0 988 l 96 988 l 96 606 " }, "±": { x_min: 11, x_max: 781, ha: 792, o: "m 781 490 l 446 490 l 446 255 l 349 255 l 349 490 l 11 490 l 11 586 l 349 586 l 349 819 l 446 819 l 446 586 l 781 586 l 781 490 m 781 21 l 11 21 l 11 115 l 781 115 l 781 21 " }, "|": { x_min: 343, x_max: 449, ha: 792, o: "m 449 462 l 343 462 l 343 986 l 449 986 l 449 462 m 449 -242 l 343 -242 l 343 280 l 449 280 l 449 -242 " }, ϋ: { x_min: 0, x_max: 617, ha: 725, o: "m 482 800 l 372 800 l 372 925 l 482 925 l 482 800 m 239 800 l 129 800 l 129 925 l 239 925 l 239 800 m 617 352 q 540 93 617 199 q 308 -24 455 -24 q 76 93 161 -24 q 0 352 0 199 l 0 738 l 126 738 l 126 354 q 169 185 126 257 q 312 98 220 98 q 451 185 402 98 q 492 354 492 257 l 492 738 l 617 738 l 617 352 " }, "§": { x_min: 0, x_max: 593, ha: 690, o: "m 593 425 q 554 312 593 369 q 467 233 516 254 q 537 83 537 172 q 459 -74 537 -12 q 288 -133 387 -133 q 115 -69 184 -133 q 47 96 47 -6 l 166 96 q 199 7 166 40 q 288 -26 232 -26 q 371 -5 332 -26 q 420 60 420 21 q 311 201 420 139 q 108 309 210 255 q 0 490 0 383 q 33 602 0 551 q 124 687 66 654 q 75 743 93 712 q 58 812 58 773 q 133 984 58 920 q 300 1043 201 1043 q 458 987 394 1043 q 529 814 529 925 l 411 814 q 370 908 404 877 q 289 939 336 939 q 213 911 246 939 q 180 841 180 883 q 286 720 180 779 q 484 612 480 615 q 593 425 593 534 m 467 409 q 355 544 467 473 q 196 630 228 612 q 146 587 162 609 q 124 525 124 558 q 239 387 124 462 q 398 298 369 315 q 448 345 429 316 q 467 409 467 375 " }, b: { x_min: 0, x_max: 685, ha: 783, o: "m 685 372 q 597 99 685 213 q 347 -25 501 -25 q 219 5 277 -25 q 121 93 161 36 l 121 0 l 0 0 l 0 1013 l 121 1013 l 121 634 q 214 723 157 692 q 341 754 272 754 q 591 637 493 754 q 685 372 685 526 m 554 356 q 499 550 554 470 q 328 644 437 644 q 162 556 223 644 q 108 369 108 478 q 160 176 108 256 q 330 83 221 83 q 498 169 435 83 q 554 356 554 245 " }, q: { x_min: 0, x_max: 683, ha: 876, o: "m 683 -278 l 564 -278 l 564 97 q 474 8 533 39 q 345 -23 415 -23 q 91 93 188 -23 q 0 364 0 203 q 87 635 0 522 q 337 760 184 760 q 466 727 408 760 q 564 637 523 695 l 564 737 l 683 737 l 683 -278 m 582 375 q 527 564 582 488 q 358 652 466 652 q 190 565 253 652 q 135 377 135 488 q 189 179 135 261 q 361 84 251 84 q 530 179 469 84 q 582 375 582 260 " }, Ω: { x_min: -0.171875, x_max: 969.5625, ha: 1068, o: "m 969 0 l 555 0 l 555 123 q 744 308 675 194 q 814 558 814 423 q 726 812 814 709 q 484 922 633 922 q 244 820 334 922 q 154 567 154 719 q 223 316 154 433 q 412 123 292 199 l 412 0 l 0 0 l 0 124 l 217 124 q 68 327 122 210 q 15 572 15 444 q 144 911 15 781 q 484 1041 274 1041 q 822 909 691 1041 q 953 569 953 777 q 899 326 953 443 q 750 124 846 210 l 969 124 l 969 0 " }, ύ: { x_min: 0, x_max: 617, ha: 725, o: "m 617 352 q 540 93 617 199 q 308 -24 455 -24 q 76 93 161 -24 q 0 352 0 199 l 0 738 l 126 738 l 126 354 q 169 185 126 257 q 312 98 220 98 q 451 185 402 98 q 492 354 492 257 l 492 738 l 617 738 l 617 352 m 535 1040 l 346 819 l 262 819 l 397 1040 l 535 1040 " }, z: { x_min: -0.015625, x_max: 613.890625, ha: 697, o: "m 613 0 l 0 0 l 0 100 l 433 630 l 20 630 l 20 738 l 594 738 l 593 636 l 163 110 l 613 110 l 613 0 " }, "™": { x_min: 0, x_max: 894, ha: 1e3, o: "m 389 951 l 229 951 l 229 503 l 160 503 l 160 951 l 0 951 l 0 1011 l 389 1011 l 389 951 m 894 503 l 827 503 l 827 939 l 685 503 l 620 503 l 481 937 l 481 503 l 417 503 l 417 1011 l 517 1011 l 653 580 l 796 1010 l 894 1011 l 894 503 " }, ή: { x_min: 0.78125, x_max: 697, ha: 810, o: "m 697 -278 l 572 -278 l 572 454 q 540 587 572 536 q 425 650 501 650 q 271 579 337 650 q 206 420 206 509 l 206 0 l 81 0 l 81 489 q 73 588 81 562 q 0 644 56 644 l 0 741 q 68 755 38 755 q 158 721 124 755 q 200 630 193 687 q 297 726 234 692 q 434 761 359 761 q 620 692 544 761 q 697 516 697 624 l 697 -278 m 479 1040 l 290 819 l 207 819 l 341 1040 l 479 1040 " }, Θ: { x_min: 0, x_max: 960, ha: 1056, o: "m 960 507 q 833 129 960 280 q 476 -32 698 -32 q 123 129 255 -32 q 0 507 0 280 q 123 883 0 732 q 476 1045 255 1045 q 832 883 696 1045 q 960 507 960 732 m 817 500 q 733 789 817 669 q 476 924 639 924 q 223 792 317 924 q 142 507 142 675 q 222 222 142 339 q 476 89 315 89 q 730 218 636 89 q 817 500 817 334 m 716 449 l 243 449 l 243 571 l 716 571 l 716 449 " }, "®": { x_min: -3, x_max: 1008, ha: 1106, o: "m 503 532 q 614 562 566 532 q 672 658 672 598 q 614 747 672 716 q 503 772 569 772 l 338 772 l 338 532 l 503 532 m 502 -7 q 123 151 263 -7 q -3 501 -3 294 q 123 851 -3 706 q 502 1011 263 1011 q 881 851 739 1011 q 1008 501 1008 708 q 883 151 1008 292 q 502 -7 744 -7 m 502 60 q 830 197 709 60 q 940 501 940 322 q 831 805 940 681 q 502 944 709 944 q 174 805 296 944 q 65 501 65 680 q 173 197 65 320 q 502 60 294 60 m 788 146 l 678 146 q 653 316 655 183 q 527 449 652 449 l 338 449 l 338 146 l 241 146 l 241 854 l 518 854 q 688 808 621 854 q 766 658 766 755 q 739 563 766 607 q 668 497 713 519 q 751 331 747 472 q 788 164 756 190 l 788 146 " }, "~": { x_min: 0, x_max: 833, ha: 931, o: "m 833 958 q 778 753 833 831 q 594 665 716 665 q 402 761 502 665 q 240 857 302 857 q 131 795 166 857 q 104 665 104 745 l 0 665 q 54 867 0 789 q 237 958 116 958 q 429 861 331 958 q 594 765 527 765 q 704 827 670 765 q 729 958 729 874 l 833 958 " }, Ε: { x_min: 0, x_max: 736.21875, ha: 778, o: "m 736 0 l 0 0 l 0 1013 l 725 1013 l 725 889 l 139 889 l 139 585 l 677 585 l 677 467 l 139 467 l 139 125 l 736 125 l 736 0 " }, "³": { x_min: 0, x_max: 450, ha: 547, o: "m 450 552 q 379 413 450 464 q 220 366 313 366 q 69 414 130 366 q 0 567 0 470 l 85 567 q 126 470 85 504 q 225 437 168 437 q 320 467 280 437 q 360 552 360 498 q 318 632 360 608 q 213 657 276 657 q 195 657 203 657 q 176 657 181 657 l 176 722 q 279 733 249 722 q 334 815 334 752 q 300 881 334 856 q 220 907 267 907 q 133 875 169 907 q 97 781 97 844 l 15 781 q 78 926 15 875 q 220 972 135 972 q 364 930 303 972 q 426 817 426 888 q 344 697 426 733 q 421 642 392 681 q 450 552 450 603 " }, "[": { x_min: 0, x_max: 273.609375, ha: 371, o: "m 273 -281 l 0 -281 l 0 1013 l 273 1013 l 273 920 l 124 920 l 124 -187 l 273 -187 l 273 -281 " }, L: { x_min: 0, x_max: 645.828125, ha: 696, o: "m 645 0 l 0 0 l 0 1013 l 140 1013 l 140 126 l 645 126 l 645 0 " }, σ: { x_min: 0, x_max: 803.390625, ha: 894, o: "m 803 628 l 633 628 q 713 368 713 512 q 618 93 713 204 q 357 -25 518 -25 q 94 91 194 -25 q 0 368 0 201 q 94 644 0 533 q 356 761 194 761 q 481 750 398 761 q 608 739 564 739 l 803 739 l 803 628 m 360 85 q 529 180 467 85 q 584 374 584 262 q 527 566 584 490 q 352 651 463 651 q 187 559 247 651 q 135 368 135 478 q 189 175 135 254 q 360 85 251 85 " }, ζ: { x_min: 0, x_max: 573, ha: 642, o: "m 573 -40 q 553 -162 573 -97 q 510 -278 543 -193 l 400 -278 q 441 -187 428 -219 q 462 -90 462 -132 q 378 -14 462 -14 q 108 45 197 -14 q 0 290 0 117 q 108 631 0 462 q 353 901 194 767 l 55 901 l 55 1012 l 561 1012 l 561 924 q 261 669 382 831 q 128 301 128 489 q 243 117 128 149 q 458 98 350 108 q 573 -40 573 80 " }, θ: { x_min: 0, x_max: 674, ha: 778, o: "m 674 496 q 601 160 674 304 q 336 -26 508 -26 q 73 153 165 -26 q 0 485 0 296 q 72 840 0 683 q 343 1045 166 1045 q 605 844 516 1045 q 674 496 674 692 m 546 579 q 498 798 546 691 q 336 935 437 935 q 178 798 237 935 q 126 579 137 701 l 546 579 m 546 475 l 126 475 q 170 233 126 348 q 338 80 230 80 q 504 233 447 80 q 546 475 546 346 " }, Ο: { x_min: 0, x_max: 958, ha: 1054, o: "m 485 1042 q 834 883 703 1042 q 958 511 958 735 q 834 136 958 287 q 481 -26 701 -26 q 126 130 261 -26 q 0 504 0 279 q 127 880 0 729 q 485 1042 263 1042 m 480 98 q 731 225 638 98 q 815 504 815 340 q 733 783 815 670 q 480 913 640 913 q 226 785 321 913 q 142 504 142 671 q 226 224 142 339 q 480 98 319 98 " }, Γ: { x_min: 0, x_max: 705.28125, ha: 749, o: "m 705 886 l 140 886 l 140 0 l 0 0 l 0 1012 l 705 1012 l 705 886 " }, " ": { x_min: 0, x_max: 0, ha: 375 }, "%": { x_min: -3, x_max: 1089, ha: 1186, o: "m 845 0 q 663 76 731 0 q 602 244 602 145 q 661 412 602 344 q 845 489 728 489 q 1027 412 959 489 q 1089 244 1089 343 q 1029 76 1089 144 q 845 0 962 0 m 844 103 q 945 143 909 103 q 981 243 981 184 q 947 340 981 301 q 844 385 909 385 q 744 342 781 385 q 708 243 708 300 q 741 147 708 186 q 844 103 780 103 m 888 986 l 284 -25 l 199 -25 l 803 986 l 888 986 m 241 468 q 58 545 126 468 q -3 715 -3 615 q 56 881 -3 813 q 238 958 124 958 q 421 881 353 958 q 483 712 483 813 q 423 544 483 612 q 241 468 356 468 m 241 855 q 137 811 175 855 q 100 710 100 768 q 136 612 100 653 q 240 572 172 572 q 344 614 306 572 q 382 713 382 656 q 347 810 382 771 q 241 855 308 855 " }, P: { x_min: 0, x_max: 726, ha: 806, o: "m 424 1013 q 640 931 555 1013 q 726 719 726 850 q 637 506 726 587 q 413 426 548 426 l 140 426 l 140 0 l 0 0 l 0 1013 l 424 1013 m 379 889 l 140 889 l 140 548 l 372 548 q 522 589 459 548 q 593 720 593 637 q 528 845 593 801 q 379 889 463 889 " }, Έ: { x_min: 0, x_max: 1078.21875, ha: 1118, o: "m 1078 0 l 342 0 l 342 1013 l 1067 1013 l 1067 889 l 481 889 l 481 585 l 1019 585 l 1019 467 l 481 467 l 481 125 l 1078 125 l 1078 0 m 277 1040 l 83 799 l 0 799 l 140 1040 l 277 1040 " }, Ώ: { x_min: 0.125, x_max: 1136.546875, ha: 1235, o: "m 1136 0 l 722 0 l 722 123 q 911 309 842 194 q 981 558 981 423 q 893 813 981 710 q 651 923 800 923 q 411 821 501 923 q 321 568 321 720 q 390 316 321 433 q 579 123 459 200 l 579 0 l 166 0 l 166 124 l 384 124 q 235 327 289 210 q 182 572 182 444 q 311 912 182 782 q 651 1042 441 1042 q 989 910 858 1042 q 1120 569 1120 778 q 1066 326 1120 443 q 917 124 1013 210 l 1136 124 l 1136 0 m 277 1040 l 83 800 l 0 800 l 140 1041 l 277 1040 " }, _: { x_min: 0, x_max: 705.5625, ha: 803, o: "m 705 -334 l 0 -334 l 0 -234 l 705 -234 l 705 -334 " }, Ϊ: { x_min: -110, x_max: 246, ha: 275, o: "m 246 1046 l 118 1046 l 118 1189 l 246 1189 l 246 1046 m 18 1046 l -110 1046 l -110 1189 l 18 1189 l 18 1046 m 136 0 l 0 0 l 0 1012 l 136 1012 l 136 0 " }, "+": { x_min: 23, x_max: 768, ha: 792, o: "m 768 372 l 444 372 l 444 0 l 347 0 l 347 372 l 23 372 l 23 468 l 347 468 l 347 840 l 444 840 l 444 468 l 768 468 l 768 372 " }, "½": { x_min: 0, x_max: 1050, ha: 1149, o: "m 1050 0 l 625 0 q 712 178 625 108 q 878 277 722 187 q 967 385 967 328 q 932 456 967 429 q 850 484 897 484 q 759 450 798 484 q 721 352 721 416 l 640 352 q 706 502 640 448 q 851 551 766 551 q 987 509 931 551 q 1050 385 1050 462 q 976 251 1050 301 q 829 179 902 215 q 717 68 740 133 l 1050 68 l 1050 0 m 834 985 l 215 -28 l 130 -28 l 750 984 l 834 985 m 224 422 l 142 422 l 142 811 l 0 811 l 0 867 q 104 889 62 867 q 164 973 157 916 l 224 973 l 224 422 " }, Ρ: { x_min: 0, x_max: 720, ha: 783, o: "m 424 1013 q 637 933 554 1013 q 720 723 720 853 q 633 508 720 591 q 413 426 546 426 l 140 426 l 140 0 l 0 0 l 0 1013 l 424 1013 m 378 889 l 140 889 l 140 548 l 371 548 q 521 589 458 548 q 592 720 592 637 q 527 845 592 801 q 378 889 463 889 " }, "'": { x_min: 0, x_max: 139, ha: 236, o: "m 139 851 q 102 737 139 784 q 0 669 65 690 l 0 734 q 59 787 42 741 q 72 873 72 821 l 0 873 l 0 1013 l 139 1013 l 139 851 " }, ª: { x_min: 0, x_max: 350, ha: 397, o: "m 350 625 q 307 616 328 616 q 266 631 281 616 q 247 673 251 645 q 190 628 225 644 q 116 613 156 613 q 32 641 64 613 q 0 722 0 669 q 72 826 0 800 q 247 866 159 846 l 247 887 q 220 934 247 916 q 162 953 194 953 q 104 934 129 953 q 76 882 80 915 l 16 882 q 60 976 16 941 q 166 1011 104 1011 q 266 979 224 1011 q 308 891 308 948 l 308 706 q 311 679 308 688 q 331 670 315 670 l 350 672 l 350 625 m 247 757 l 247 811 q 136 790 175 798 q 64 726 64 773 q 83 682 64 697 q 132 667 103 667 q 207 690 174 667 q 247 757 247 718 " }, "΅": { x_min: 0, x_max: 450, ha: 553, o: "m 450 800 l 340 800 l 340 925 l 450 925 l 450 800 m 406 1040 l 212 800 l 129 800 l 269 1040 l 406 1040 m 110 800 l 0 800 l 0 925 l 110 925 l 110 800 " }, T: { x_min: 0, x_max: 777, ha: 835, o: "m 777 894 l 458 894 l 458 0 l 319 0 l 319 894 l 0 894 l 0 1013 l 777 1013 l 777 894 " }, Φ: { x_min: 0, x_max: 915, ha: 997, o: "m 527 0 l 389 0 l 389 122 q 110 231 220 122 q 0 509 0 340 q 110 785 0 677 q 389 893 220 893 l 389 1013 l 527 1013 l 527 893 q 804 786 693 893 q 915 509 915 679 q 805 231 915 341 q 527 122 696 122 l 527 0 m 527 226 q 712 310 641 226 q 779 507 779 389 q 712 705 779 627 q 527 787 641 787 l 527 226 m 389 226 l 389 787 q 205 698 275 775 q 136 505 136 620 q 206 308 136 391 q 389 226 276 226 " }, "⁋": { x_min: 0, x_max: 0, ha: 694 }, j: { x_min: -77.78125, x_max: 167, ha: 349, o: "m 167 871 l 42 871 l 42 1013 l 167 1013 l 167 871 m 167 -80 q 121 -231 167 -184 q -26 -278 76 -278 l -77 -278 l -77 -164 l -41 -164 q 26 -143 11 -164 q 42 -65 42 -122 l 42 737 l 167 737 l 167 -80 " }, Σ: { x_min: 0, x_max: 756.953125, ha: 819, o: "m 756 0 l 0 0 l 0 107 l 395 523 l 22 904 l 22 1013 l 745 1013 l 745 889 l 209 889 l 566 523 l 187 125 l 756 125 l 756 0 " }, 1: { x_min: 215.671875, x_max: 574, ha: 792, o: "m 574 0 l 442 0 l 442 697 l 215 697 l 215 796 q 386 833 330 796 q 475 986 447 875 l 574 986 l 574 0 " }, "›": { x_min: 18.0625, x_max: 774, ha: 792, o: "m 774 376 l 18 40 l 18 149 l 631 421 l 18 692 l 18 799 l 774 465 l 774 376 " }, "<": { x_min: 17.984375, x_max: 773.609375, ha: 792, o: "m 773 40 l 18 376 l 17 465 l 773 799 l 773 692 l 159 420 l 773 149 l 773 40 " }, "£": { x_min: 0, x_max: 704.484375, ha: 801, o: "m 704 41 q 623 -10 664 5 q 543 -26 583 -26 q 359 15 501 -26 q 243 36 288 36 q 158 23 197 36 q 73 -21 119 10 l 6 76 q 125 195 90 150 q 175 331 175 262 q 147 443 175 383 l 0 443 l 0 512 l 108 512 q 43 734 43 623 q 120 929 43 854 q 358 1010 204 1010 q 579 936 487 1010 q 678 729 678 857 l 678 684 l 552 684 q 504 838 552 780 q 362 896 457 896 q 216 852 263 896 q 176 747 176 815 q 199 627 176 697 q 248 512 217 574 l 468 512 l 468 443 l 279 443 q 297 356 297 398 q 230 194 297 279 q 153 107 211 170 q 227 133 190 125 q 293 142 264 142 q 410 119 339 142 q 516 96 482 96 q 579 105 550 96 q 648 142 608 115 l 704 41 " }, t: { x_min: 0, x_max: 367, ha: 458, o: "m 367 0 q 312 -5 339 -2 q 262 -8 284 -8 q 145 28 183 -8 q 108 143 108 64 l 108 638 l 0 638 l 0 738 l 108 738 l 108 944 l 232 944 l 232 738 l 367 738 l 367 638 l 232 638 l 232 185 q 248 121 232 140 q 307 102 264 102 q 345 104 330 102 q 367 107 360 107 l 367 0 " }, "¬": { x_min: 0, x_max: 706, ha: 803, o: "m 706 411 l 706 158 l 630 158 l 630 335 l 0 335 l 0 411 l 706 411 " }, λ: { x_min: 0, x_max: 750, ha: 803, o: "m 750 -7 q 679 -15 716 -15 q 538 59 591 -15 q 466 214 512 97 l 336 551 l 126 0 l 0 0 l 270 705 q 223 837 247 770 q 116 899 190 899 q 90 898 100 899 l 90 1004 q 152 1011 125 1011 q 298 938 244 1011 q 373 783 326 901 l 605 192 q 649 115 629 136 q 716 95 669 95 l 736 95 q 750 97 745 97 l 750 -7 " }, W: { x_min: 0, x_max: 1263.890625, ha: 1351, o: "m 1263 1013 l 995 0 l 859 0 l 627 837 l 405 0 l 265 0 l 0 1013 l 136 1013 l 342 202 l 556 1013 l 701 1013 l 921 207 l 1133 1012 l 1263 1013 " }, ">": { x_min: 18.0625, x_max: 774, ha: 792, o: "m 774 376 l 18 40 l 18 149 l 631 421 l 18 692 l 18 799 l 774 465 l 774 376 " }, v: { x_min: 0, x_max: 675.15625, ha: 761, o: "m 675 738 l 404 0 l 272 0 l 0 738 l 133 737 l 340 147 l 541 737 l 675 738 " }, τ: { x_min: 0.28125, x_max: 644.5, ha: 703, o: "m 644 628 l 382 628 l 382 179 q 388 120 382 137 q 436 91 401 91 q 474 94 447 91 q 504 97 501 97 l 504 0 q 454 -9 482 -5 q 401 -14 426 -14 q 278 67 308 -14 q 260 233 260 118 l 260 628 l 0 628 l 0 739 l 644 739 l 644 628 " }, ξ: { x_min: 0, x_max: 624.9375, ha: 699, o: "m 624 -37 q 608 -153 624 -96 q 563 -278 593 -211 l 454 -278 q 491 -183 486 -200 q 511 -83 511 -126 q 484 -23 511 -44 q 370 1 452 1 q 323 0 354 1 q 283 -1 293 -1 q 84 76 169 -1 q 0 266 0 154 q 56 431 0 358 q 197 538 108 498 q 94 613 134 562 q 54 730 54 665 q 77 823 54 780 q 143 901 101 867 l 27 901 l 27 1012 l 576 1012 l 576 901 l 380 901 q 244 863 303 901 q 178 745 178 820 q 312 600 178 636 q 532 582 380 582 l 532 479 q 276 455 361 479 q 118 281 118 410 q 165 173 118 217 q 274 120 208 133 q 494 101 384 110 q 624 -37 624 76 " }, "&": { x_min: -3, x_max: 894.25, ha: 992, o: "m 894 0 l 725 0 l 624 123 q 471 0 553 40 q 306 -41 390 -41 q 168 -7 231 -41 q 62 92 105 26 q 14 187 31 139 q -3 276 -3 235 q 55 433 -3 358 q 248 581 114 508 q 170 689 196 640 q 137 817 137 751 q 214 985 137 922 q 384 1041 284 1041 q 548 988 483 1041 q 622 824 622 928 q 563 666 622 739 q 431 556 516 608 l 621 326 q 649 407 639 361 q 663 493 653 426 l 781 493 q 703 229 781 352 l 894 0 m 504 818 q 468 908 504 877 q 384 940 433 940 q 293 907 331 940 q 255 818 255 875 q 289 714 255 767 q 363 628 313 678 q 477 729 446 682 q 504 818 504 771 m 556 209 l 314 499 q 179 395 223 449 q 135 283 135 341 q 146 222 135 253 q 183 158 158 192 q 333 80 241 80 q 556 209 448 80 " }, Λ: { x_min: 0, x_max: 862.5, ha: 942, o: "m 862 0 l 719 0 l 426 847 l 143 0 l 0 0 l 356 1013 l 501 1013 l 862 0 " }, I: { x_min: 41, x_max: 180, ha: 293, o: "m 180 0 l 41 0 l 41 1013 l 180 1013 l 180 0 " }, G: { x_min: 0, x_max: 921, ha: 1011, o: "m 921 0 l 832 0 l 801 136 q 655 15 741 58 q 470 -28 568 -28 q 126 133 259 -28 q 0 499 0 284 q 125 881 0 731 q 486 1043 259 1043 q 763 957 647 1043 q 905 709 890 864 l 772 709 q 668 866 747 807 q 486 926 589 926 q 228 795 322 926 q 142 507 142 677 q 228 224 142 342 q 483 94 323 94 q 712 195 625 94 q 796 435 796 291 l 477 435 l 477 549 l 921 549 l 921 0 " }, ΰ: { x_min: 0, x_max: 617, ha: 725, o: "m 524 800 l 414 800 l 414 925 l 524 925 l 524 800 m 183 800 l 73 800 l 73 925 l 183 925 l 183 800 m 617 352 q 540 93 617 199 q 308 -24 455 -24 q 76 93 161 -24 q 0 352 0 199 l 0 738 l 126 738 l 126 354 q 169 185 126 257 q 312 98 220 98 q 451 185 402 98 q 492 354 492 257 l 492 738 l 617 738 l 617 352 m 489 1040 l 300 819 l 216 819 l 351 1040 l 489 1040 " }, "`": { x_min: 0, x_max: 138.890625, ha: 236, o: "m 138 699 l 0 699 l 0 861 q 36 974 0 929 q 138 1041 72 1020 l 138 977 q 82 931 95 969 q 69 839 69 893 l 138 839 l 138 699 " }, "·": { x_min: 0, x_max: 142, ha: 239, o: "m 142 585 l 0 585 l 0 738 l 142 738 l 142 585 " }, Υ: { x_min: 0.328125, x_max: 819.515625, ha: 889, o: "m 819 1013 l 482 416 l 482 0 l 342 0 l 342 416 l 0 1013 l 140 1013 l 411 533 l 679 1013 l 819 1013 " }, r: { x_min: 0, x_max: 355.5625, ha: 432, o: "m 355 621 l 343 621 q 179 569 236 621 q 122 411 122 518 l 122 0 l 0 0 l 0 737 l 117 737 l 117 604 q 204 719 146 686 q 355 753 262 753 l 355 621 " }, x: { x_min: 0, x_max: 675, ha: 764, o: "m 675 0 l 525 0 l 331 286 l 144 0 l 0 0 l 256 379 l 12 738 l 157 737 l 336 473 l 516 738 l 661 738 l 412 380 l 675 0 " }, μ: { x_min: 0, x_max: 696.609375, ha: 747, o: "m 696 -4 q 628 -14 657 -14 q 498 97 513 -14 q 422 8 470 41 q 313 -24 374 -24 q 207 3 258 -24 q 120 80 157 31 l 120 -278 l 0 -278 l 0 738 l 124 738 l 124 343 q 165 172 124 246 q 308 82 216 82 q 451 177 402 82 q 492 358 492 254 l 492 738 l 616 738 l 616 214 q 623 136 616 160 q 673 92 636 92 q 696 95 684 92 l 696 -4 " }, h: { x_min: 0, x_max: 615, ha: 724, o: "m 615 472 l 615 0 l 490 0 l 490 454 q 456 590 490 535 q 338 654 416 654 q 186 588 251 654 q 122 436 122 522 l 122 0 l 0 0 l 0 1013 l 122 1013 l 122 633 q 218 727 149 694 q 362 760 287 760 q 552 676 484 760 q 615 472 615 600 " }, ".": { x_min: 0, x_max: 142, ha: 239, o: "m 142 0 l 0 0 l 0 151 l 142 151 l 142 0 " }, φ: { x_min: -2, x_max: 878, ha: 974, o: "m 496 -279 l 378 -279 l 378 -17 q 101 88 204 -17 q -2 367 -2 194 q 68 626 -2 510 q 283 758 151 758 l 283 646 q 167 537 209 626 q 133 373 133 462 q 192 177 133 254 q 378 93 259 93 l 378 758 q 445 764 426 763 q 476 765 464 765 q 765 659 653 765 q 878 377 878 553 q 771 96 878 209 q 496 -17 665 -17 l 496 -279 m 496 93 l 514 93 q 687 183 623 93 q 746 380 746 265 q 691 569 746 491 q 522 658 629 658 l 496 656 l 496 93 " }, ";": { x_min: 0, x_max: 142, ha: 239, o: "m 142 585 l 0 585 l 0 738 l 142 738 l 142 585 m 142 -12 q 105 -132 142 -82 q 0 -206 68 -182 l 0 -138 q 58 -82 43 -123 q 68 0 68 -56 l 0 0 l 0 151 l 142 151 l 142 -12 " }, f: { x_min: 0, x_max: 378, ha: 472, o: "m 378 638 l 246 638 l 246 0 l 121 0 l 121 638 l 0 638 l 0 738 l 121 738 q 137 935 121 887 q 290 1028 171 1028 q 320 1027 305 1028 q 378 1021 334 1026 l 378 908 q 323 918 346 918 q 257 870 273 918 q 246 780 246 840 l 246 738 l 378 738 l 378 638 " }, "“": { x_min: 1, x_max: 348.21875, ha: 454, o: "m 140 670 l 1 670 l 1 830 q 37 943 1 897 q 140 1011 74 990 l 140 947 q 82 900 97 940 q 68 810 68 861 l 140 810 l 140 670 m 348 670 l 209 670 l 209 830 q 245 943 209 897 q 348 1011 282 990 l 348 947 q 290 900 305 940 q 276 810 276 861 l 348 810 l 348 670 " }, A: { x_min: 0.03125, x_max: 906.953125, ha: 1008, o: "m 906 0 l 756 0 l 648 303 l 251 303 l 142 0 l 0 0 l 376 1013 l 529 1013 l 906 0 m 610 421 l 452 867 l 293 421 l 610 421 " }, 6: { x_min: 53, x_max: 739, ha: 792, o: "m 739 312 q 633 62 739 162 q 400 -31 534 -31 q 162 78 257 -31 q 53 439 53 206 q 178 859 53 712 q 441 986 284 986 q 643 912 559 986 q 732 713 732 833 l 601 713 q 544 830 594 786 q 426 875 494 875 q 268 793 331 875 q 193 517 193 697 q 301 597 240 570 q 427 624 362 624 q 643 540 552 624 q 739 312 739 451 m 603 298 q 540 461 603 400 q 404 516 484 516 q 268 461 323 516 q 207 300 207 401 q 269 137 207 198 q 405 83 325 83 q 541 137 486 83 q 603 298 603 197 " }, "‘": { x_min: 1, x_max: 139.890625, ha: 236, o: "m 139 670 l 1 670 l 1 830 q 37 943 1 897 q 139 1011 74 990 l 139 947 q 82 900 97 940 q 68 810 68 861 l 139 810 l 139 670 " }, ϊ: { x_min: -70, x_max: 283, ha: 361, o: "m 283 800 l 173 800 l 173 925 l 283 925 l 283 800 m 40 800 l -70 800 l -70 925 l 40 925 l 40 800 m 283 3 q 232 -10 257 -5 q 181 -15 206 -15 q 84 26 118 -15 q 41 200 41 79 l 41 737 l 166 737 l 167 215 q 171 141 167 157 q 225 101 182 101 q 247 103 238 101 q 283 112 256 104 l 283 3 " }, π: { x_min: -0.21875, x_max: 773.21875, ha: 857, o: "m 773 -7 l 707 -11 q 575 40 607 -11 q 552 174 552 77 l 552 226 l 552 626 l 222 626 l 222 0 l 97 0 l 97 626 l 0 626 l 0 737 l 773 737 l 773 626 l 676 626 l 676 171 q 695 103 676 117 q 773 90 714 90 l 773 -7 " }, ά: { x_min: 0, x_max: 765.5625, ha: 809, o: "m 765 -4 q 698 -14 726 -14 q 564 97 586 -14 q 466 7 525 40 q 337 -26 407 -26 q 88 98 186 -26 q 0 369 0 212 q 88 637 0 525 q 337 760 184 760 q 465 727 407 760 q 563 637 524 695 l 563 738 l 685 738 l 685 222 q 693 141 685 168 q 748 94 708 94 q 765 95 760 94 l 765 -4 m 584 371 q 531 562 584 485 q 360 653 470 653 q 192 566 254 653 q 135 379 135 489 q 186 181 135 261 q 358 84 247 84 q 528 176 465 84 q 584 371 584 260 m 604 1040 l 415 819 l 332 819 l 466 1040 l 604 1040 " }, O: { x_min: 0, x_max: 958, ha: 1057, o: "m 485 1041 q 834 882 702 1041 q 958 512 958 734 q 834 136 958 287 q 481 -26 702 -26 q 126 130 261 -26 q 0 504 0 279 q 127 880 0 728 q 485 1041 263 1041 m 480 98 q 731 225 638 98 q 815 504 815 340 q 733 783 815 669 q 480 912 640 912 q 226 784 321 912 q 142 504 142 670 q 226 224 142 339 q 480 98 319 98 " }, n: { x_min: 0, x_max: 615, ha: 724, o: "m 615 463 l 615 0 l 490 0 l 490 454 q 453 592 490 537 q 331 656 410 656 q 178 585 240 656 q 117 421 117 514 l 117 0 l 0 0 l 0 738 l 117 738 l 117 630 q 218 728 150 693 q 359 764 286 764 q 552 675 484 764 q 615 463 615 593 " }, 3: { x_min: 54, x_max: 737, ha: 792, o: "m 737 284 q 635 55 737 141 q 399 -25 541 -25 q 156 52 248 -25 q 54 308 54 140 l 185 308 q 245 147 185 202 q 395 96 302 96 q 539 140 484 96 q 602 280 602 190 q 510 429 602 390 q 324 454 451 454 l 324 565 q 487 584 441 565 q 565 719 565 617 q 515 835 565 791 q 395 879 466 879 q 255 824 307 879 q 203 661 203 769 l 78 661 q 166 909 78 822 q 387 992 250 992 q 603 921 513 992 q 701 723 701 844 q 669 607 701 656 q 578 524 637 558 q 696 434 655 499 q 737 284 737 369 " }, 9: { x_min: 53, x_max: 739, ha: 792, o: "m 739 524 q 619 94 739 241 q 362 -32 516 -32 q 150 47 242 -32 q 59 244 59 126 l 191 244 q 246 129 191 176 q 373 82 301 82 q 526 161 466 82 q 597 440 597 255 q 363 334 501 334 q 130 432 216 334 q 53 650 53 521 q 134 880 53 786 q 383 986 226 986 q 659 841 566 986 q 739 524 739 719 m 388 449 q 535 514 480 449 q 585 658 585 573 q 535 805 585 744 q 388 873 480 873 q 242 809 294 873 q 191 658 191 745 q 239 514 191 572 q 388 449 292 449 " }, l: { x_min: 41, x_max: 166, ha: 279, o: "m 166 0 l 41 0 l 41 1013 l 166 1013 l 166 0 " }, "¤": { x_min: 40.09375, x_max: 728.796875, ha: 825, o: "m 728 304 l 649 224 l 512 363 q 383 331 458 331 q 256 363 310 331 l 119 224 l 40 304 l 177 441 q 150 553 150 493 q 184 673 150 621 l 40 818 l 119 898 l 267 749 q 321 766 291 759 q 384 773 351 773 q 447 766 417 773 q 501 749 477 759 l 649 898 l 728 818 l 585 675 q 612 618 604 648 q 621 553 621 587 q 591 441 621 491 l 728 304 m 384 682 q 280 643 318 682 q 243 551 243 604 q 279 461 243 499 q 383 423 316 423 q 487 461 449 423 q 525 553 525 500 q 490 641 525 605 q 384 682 451 682 " }, κ: { x_min: 0, x_max: 632.328125, ha: 679, o: "m 632 0 l 482 0 l 225 384 l 124 288 l 124 0 l 0 0 l 0 738 l 124 738 l 124 446 l 433 738 l 596 738 l 312 466 l 632 0 " }, 4: { x_min: 48, x_max: 742.453125, ha: 792, o: "m 742 243 l 602 243 l 602 0 l 476 0 l 476 243 l 48 243 l 48 368 l 476 958 l 602 958 l 602 354 l 742 354 l 742 243 m 476 354 l 476 792 l 162 354 l 476 354 " }, p: { x_min: 0, x_max: 685, ha: 786, o: "m 685 364 q 598 96 685 205 q 350 -23 504 -23 q 121 89 205 -23 l 121 -278 l 0 -278 l 0 738 l 121 738 l 121 633 q 220 726 159 691 q 351 761 280 761 q 598 636 504 761 q 685 364 685 522 m 557 371 q 501 560 557 481 q 330 651 437 651 q 162 559 223 651 q 108 366 108 479 q 162 177 108 254 q 333 87 224 87 q 502 178 441 87 q 557 371 557 258 " }, "‡": { x_min: 0, x_max: 777, ha: 835, o: "m 458 238 l 458 0 l 319 0 l 319 238 l 0 238 l 0 360 l 319 360 l 319 681 l 0 683 l 0 804 l 319 804 l 319 1015 l 458 1013 l 458 804 l 777 804 l 777 683 l 458 683 l 458 360 l 777 360 l 777 238 l 458 238 " }, ψ: { x_min: 0, x_max: 808, ha: 907, o: "m 465 -278 l 341 -278 l 341 -15 q 87 102 180 -15 q 0 378 0 210 l 0 739 l 133 739 l 133 379 q 182 195 133 275 q 341 98 242 98 l 341 922 l 465 922 l 465 98 q 623 195 563 98 q 675 382 675 278 l 675 742 l 808 742 l 808 381 q 720 104 808 213 q 466 -13 627 -13 l 465 -278 " }, η: { x_min: 0.78125, x_max: 697, ha: 810, o: "m 697 -278 l 572 -278 l 572 454 q 540 587 572 536 q 425 650 501 650 q 271 579 337 650 q 206 420 206 509 l 206 0 l 81 0 l 81 489 q 73 588 81 562 q 0 644 56 644 l 0 741 q 68 755 38 755 q 158 720 124 755 q 200 630 193 686 q 297 726 234 692 q 434 761 359 761 q 620 692 544 761 q 697 516 697 624 l 697 -278 " } }, cssFontWeight: "normal", ascender: 1189, underlinePosition: -100, cssFontStyle: "normal", boundingBox: { yMin: -334, xMin: -111, yMax: 1189, xMax: 1672 }, resolution: 1e3, original_font_information: { postscript_name: "Helvetiker-Regular", version_string: "Version 1.00 2004 initial release", vendor_url: "http://www.magenta.gr/", full_font_name: "Helvetiker", font_family_name: "Helvetiker", copyright: "Copyright (c) Μagenta ltd, 2004", description: "", trademark: "", designer: "", designer_url: "", unique_font_identifier: "Μagenta ltd:Helvetiker:22-10-104", license_url: "http://www.ellak.gr/fonts/MgOpen/license.html", license_description: `Copyright (c) 2004 by MAGENTA Ltd. All Rights Reserved.\r
+const Zp = { glyphs: { ο: { x_min: 0, x_max: 712, ha: 815, o: "m 356 -25 q 96 88 192 -25 q 0 368 0 201 q 92 642 0 533 q 356 761 192 761 q 617 644 517 761 q 712 368 712 533 q 619 91 712 201 q 356 -25 520 -25 m 356 85 q 527 175 465 85 q 583 369 583 255 q 528 562 583 484 q 356 651 466 651 q 189 560 250 651 q 135 369 135 481 q 187 177 135 257 q 356 85 250 85 " }, S: { x_min: 0, x_max: 788, ha: 890, o: "m 788 291 q 662 54 788 144 q 397 -26 550 -26 q 116 68 226 -26 q 0 337 0 168 l 131 337 q 200 152 131 220 q 384 85 269 85 q 557 129 479 85 q 650 270 650 183 q 490 429 650 379 q 194 513 341 470 q 33 739 33 584 q 142 964 33 881 q 388 1041 242 1041 q 644 957 543 1041 q 756 716 756 867 l 625 716 q 561 874 625 816 q 395 933 497 933 q 243 891 309 933 q 164 759 164 841 q 325 609 164 656 q 625 526 475 568 q 788 291 788 454 " }, "¦": { x_min: 343, x_max: 449, ha: 792, o: "m 449 462 l 343 462 l 343 986 l 449 986 l 449 462 m 449 -242 l 343 -242 l 343 280 l 449 280 l 449 -242 " }, "/": { x_min: 183.25, x_max: 608.328125, ha: 792, o: "m 608 1041 l 266 -129 l 183 -129 l 520 1041 l 608 1041 " }, Τ: { x_min: -0.4375, x_max: 777.453125, ha: 839, o: "m 777 893 l 458 893 l 458 0 l 319 0 l 319 892 l 0 892 l 0 1013 l 777 1013 l 777 893 " }, y: { x_min: 0, x_max: 684.78125, ha: 771, o: "m 684 738 l 388 -83 q 311 -216 356 -167 q 173 -279 252 -279 q 97 -266 133 -279 l 97 -149 q 132 -155 109 -151 q 168 -160 155 -160 q 240 -114 213 -160 q 274 -26 248 -98 l 0 738 l 137 737 l 341 139 l 548 737 l 684 738 " }, Π: { x_min: 0, x_max: 803, ha: 917, o: "m 803 0 l 667 0 l 667 886 l 140 886 l 140 0 l 0 0 l 0 1012 l 803 1012 l 803 0 " }, ΐ: { x_min: -111, x_max: 339, ha: 361, o: "m 339 800 l 229 800 l 229 925 l 339 925 l 339 800 m -1 800 l -111 800 l -111 925 l -1 925 l -1 800 m 284 3 q 233 -10 258 -5 q 182 -15 207 -15 q 85 26 119 -15 q 42 200 42 79 l 42 737 l 167 737 l 168 215 q 172 141 168 157 q 226 101 183 101 q 248 103 239 101 q 284 112 257 104 l 284 3 m 302 1040 l 113 819 l 30 819 l 165 1040 l 302 1040 " }, g: { x_min: 0, x_max: 686, ha: 838, o: "m 686 34 q 586 -213 686 -121 q 331 -306 487 -306 q 131 -252 216 -306 q 31 -84 31 -190 l 155 -84 q 228 -174 166 -138 q 345 -207 284 -207 q 514 -109 454 -207 q 564 89 564 -27 q 461 6 521 36 q 335 -23 401 -23 q 88 100 184 -23 q 0 370 0 215 q 87 634 0 522 q 330 758 183 758 q 457 728 398 758 q 564 644 515 699 l 564 737 l 686 737 l 686 34 m 582 367 q 529 560 582 481 q 358 652 468 652 q 189 561 250 652 q 135 369 135 482 q 189 176 135 255 q 361 85 251 85 q 529 176 468 85 q 582 367 582 255 " }, "²": { x_min: 0, x_max: 442, ha: 539, o: "m 442 383 l 0 383 q 91 566 0 492 q 260 668 176 617 q 354 798 354 727 q 315 875 354 845 q 227 905 277 905 q 136 869 173 905 q 99 761 99 833 l 14 761 q 82 922 14 864 q 232 974 141 974 q 379 926 316 974 q 442 797 442 878 q 351 635 442 704 q 183 539 321 611 q 92 455 92 491 l 442 455 l 442 383 " }, "–": { x_min: 0, x_max: 705.5625, ha: 803, o: "m 705 334 l 0 334 l 0 410 l 705 410 l 705 334 " }, Κ: { x_min: 0, x_max: 819.5625, ha: 893, o: "m 819 0 l 650 0 l 294 509 l 139 356 l 139 0 l 0 0 l 0 1013 l 139 1013 l 139 526 l 626 1013 l 809 1013 l 395 600 l 819 0 " }, ƒ: { x_min: -46.265625, x_max: 392, ha: 513, o: "m 392 651 l 259 651 l 79 -279 l -46 -278 l 134 651 l 14 651 l 14 751 l 135 751 q 151 948 135 900 q 304 1041 185 1041 q 334 1040 319 1041 q 392 1034 348 1039 l 392 922 q 337 931 360 931 q 271 883 287 931 q 260 793 260 853 l 260 751 l 392 751 l 392 651 " }, e: { x_min: 0, x_max: 714, ha: 813, o: "m 714 326 l 140 326 q 200 157 140 227 q 359 87 260 87 q 488 130 431 87 q 561 245 545 174 l 697 245 q 577 48 670 123 q 358 -26 484 -26 q 97 85 195 -26 q 0 363 0 197 q 94 642 0 529 q 358 765 195 765 q 626 627 529 765 q 714 326 714 503 m 576 429 q 507 583 564 522 q 355 650 445 650 q 206 583 266 650 q 140 429 152 522 l 576 429 " }, ό: { x_min: 0, x_max: 712, ha: 815, o: "m 356 -25 q 94 91 194 -25 q 0 368 0 202 q 92 642 0 533 q 356 761 192 761 q 617 644 517 761 q 712 368 712 533 q 619 91 712 201 q 356 -25 520 -25 m 356 85 q 527 175 465 85 q 583 369 583 255 q 528 562 583 484 q 356 651 466 651 q 189 560 250 651 q 135 369 135 481 q 187 177 135 257 q 356 85 250 85 m 576 1040 l 387 819 l 303 819 l 438 1040 l 576 1040 " }, J: { x_min: 0, x_max: 588, ha: 699, o: "m 588 279 q 287 -26 588 -26 q 58 73 126 -26 q 0 327 0 158 l 133 327 q 160 172 133 227 q 288 96 198 96 q 426 171 391 96 q 449 336 449 219 l 449 1013 l 588 1013 l 588 279 " }, "»": { x_min: -1, x_max: 503, ha: 601, o: "m 503 302 l 280 136 l 281 256 l 429 373 l 281 486 l 280 608 l 503 440 l 503 302 m 221 302 l 0 136 l 0 255 l 145 372 l 0 486 l -1 608 l 221 440 l 221 302 " }, "©": { x_min: -3, x_max: 1008, ha: 1106, o: "m 502 -7 q 123 151 263 -7 q -3 501 -3 294 q 123 851 -3 706 q 502 1011 263 1011 q 881 851 739 1011 q 1008 501 1008 708 q 883 151 1008 292 q 502 -7 744 -7 m 502 60 q 830 197 709 60 q 940 501 940 322 q 831 805 940 681 q 502 944 709 944 q 174 805 296 944 q 65 501 65 680 q 173 197 65 320 q 502 60 294 60 m 741 394 q 661 246 731 302 q 496 190 591 190 q 294 285 369 190 q 228 497 228 370 q 295 714 228 625 q 499 813 370 813 q 656 762 588 813 q 733 625 724 711 l 634 625 q 589 704 629 673 q 498 735 550 735 q 377 666 421 735 q 334 504 334 597 q 374 340 334 408 q 490 272 415 272 q 589 304 549 272 q 638 394 628 337 l 741 394 " }, ώ: { x_min: 0, x_max: 922, ha: 1030, o: "m 687 1040 l 498 819 l 415 819 l 549 1040 l 687 1040 m 922 339 q 856 97 922 203 q 650 -26 780 -26 q 538 9 587 -26 q 461 103 489 44 q 387 12 436 46 q 277 -22 339 -22 q 69 97 147 -22 q 0 338 0 202 q 45 551 0 444 q 161 737 84 643 l 302 737 q 175 552 219 647 q 124 336 124 446 q 155 179 124 248 q 275 88 197 88 q 375 163 341 88 q 400 294 400 219 l 400 572 l 524 572 l 524 294 q 561 135 524 192 q 643 88 591 88 q 762 182 719 88 q 797 341 797 257 q 745 555 797 450 q 619 737 705 637 l 760 737 q 874 551 835 640 q 922 339 922 444 " }, "^": { x_min: 193.0625, x_max: 598.609375, ha: 792, o: "m 598 772 l 515 772 l 395 931 l 277 772 l 193 772 l 326 1013 l 462 1013 l 598 772 " }, "«": { x_min: 0, x_max: 507.203125, ha: 604, o: "m 506 136 l 284 302 l 284 440 l 506 608 l 507 485 l 360 371 l 506 255 l 506 136 m 222 136 l 0 302 l 0 440 l 222 608 l 221 486 l 73 373 l 222 256 l 222 136 " }, D: { x_min: 0, x_max: 828, ha: 935, o: "m 389 1013 q 714 867 593 1013 q 828 521 828 729 q 712 161 828 309 q 382 0 587 0 l 0 0 l 0 1013 l 389 1013 m 376 124 q 607 247 523 124 q 681 510 681 355 q 607 771 681 662 q 376 896 522 896 l 139 896 l 139 124 l 376 124 " }, "∙": { x_min: 0, x_max: 142, ha: 239, o: "m 142 585 l 0 585 l 0 738 l 142 738 l 142 585 " }, ÿ: { x_min: 0, x_max: 47, ha: 125, o: "m 47 3 q 37 -7 47 -7 q 28 0 30 -7 q 39 -4 32 -4 q 45 3 45 -1 l 37 0 q 28 9 28 0 q 39 19 28 19 l 47 16 l 47 19 l 47 3 m 37 1 q 44 8 44 1 q 37 16 44 16 q 30 8 30 16 q 37 1 30 1 m 26 1 l 23 22 l 14 0 l 3 22 l 3 3 l 0 25 l 13 1 l 22 25 l 26 1 " }, w: { x_min: 0, x_max: 1009.71875, ha: 1100, o: "m 1009 738 l 783 0 l 658 0 l 501 567 l 345 0 l 222 0 l 0 738 l 130 738 l 284 174 l 432 737 l 576 738 l 721 173 l 881 737 l 1009 738 " }, $: { x_min: 0, x_max: 700, ha: 793, o: "m 664 717 l 542 717 q 490 825 531 785 q 381 872 450 865 l 381 551 q 620 446 540 522 q 700 241 700 370 q 618 45 700 116 q 381 -25 536 -25 l 381 -152 l 307 -152 l 307 -25 q 81 62 162 -25 q 0 297 0 149 l 124 297 q 169 146 124 204 q 307 81 215 89 l 307 441 q 80 536 148 469 q 13 725 13 603 q 96 910 13 839 q 307 982 180 982 l 307 1077 l 381 1077 l 381 982 q 574 917 494 982 q 664 717 664 845 m 307 565 l 307 872 q 187 831 233 872 q 142 724 142 791 q 180 618 142 656 q 307 565 218 580 m 381 76 q 562 237 562 96 q 517 361 562 313 q 381 423 472 409 l 381 76 " }, "\\": { x_min: -0.015625, x_max: 425.0625, ha: 522, o: "m 425 -129 l 337 -129 l 0 1041 l 83 1041 l 425 -129 " }, µ: { x_min: 0, x_max: 697.21875, ha: 747, o: "m 697 -4 q 629 -14 658 -14 q 498 97 513 -14 q 422 9 470 41 q 313 -23 374 -23 q 207 4 258 -23 q 119 81 156 32 l 119 -278 l 0 -278 l 0 738 l 124 738 l 124 343 q 165 173 124 246 q 308 83 216 83 q 452 178 402 83 q 493 359 493 255 l 493 738 l 617 738 l 617 214 q 623 136 617 160 q 673 92 637 92 q 697 96 684 92 l 697 -4 " }, Ι: { x_min: 42, x_max: 181, ha: 297, o: "m 181 0 l 42 0 l 42 1013 l 181 1013 l 181 0 " }, Ύ: { x_min: 0, x_max: 1144.5, ha: 1214, o: "m 1144 1012 l 807 416 l 807 0 l 667 0 l 667 416 l 325 1012 l 465 1012 l 736 533 l 1004 1012 l 1144 1012 m 277 1040 l 83 799 l 0 799 l 140 1040 l 277 1040 " }, "’": { x_min: 0, x_max: 139, ha: 236, o: "m 139 851 q 102 737 139 784 q 0 669 65 690 l 0 734 q 59 787 42 741 q 72 873 72 821 l 0 873 l 0 1013 l 139 1013 l 139 851 " }, Ν: { x_min: 0, x_max: 801, ha: 915, o: "m 801 0 l 651 0 l 131 822 l 131 0 l 0 0 l 0 1013 l 151 1013 l 670 191 l 670 1013 l 801 1013 l 801 0 " }, "-": { x_min: 8.71875, x_max: 350.390625, ha: 478, o: "m 350 317 l 8 317 l 8 428 l 350 428 l 350 317 " }, Q: { x_min: 0, x_max: 968, ha: 1072, o: "m 954 5 l 887 -79 l 744 35 q 622 -11 687 2 q 483 -26 556 -26 q 127 130 262 -26 q 0 504 0 279 q 127 880 0 728 q 484 1041 262 1041 q 841 884 708 1041 q 968 507 968 735 q 933 293 968 398 q 832 104 899 188 l 954 5 m 723 191 q 802 330 777 248 q 828 499 828 412 q 744 790 828 673 q 483 922 650 922 q 228 791 322 922 q 142 505 142 673 q 227 221 142 337 q 487 91 323 91 q 632 123 566 91 l 520 215 l 587 301 l 723 191 " }, ς: { x_min: 1, x_max: 676.28125, ha: 740, o: "m 676 460 l 551 460 q 498 595 542 546 q 365 651 448 651 q 199 578 263 651 q 136 401 136 505 q 266 178 136 241 q 508 106 387 142 q 640 -50 640 62 q 625 -158 640 -105 q 583 -278 611 -211 l 465 -278 q 498 -182 490 -211 q 515 -80 515 -126 q 381 12 515 -15 q 134 91 197 51 q 1 388 1 179 q 100 651 1 542 q 354 761 199 761 q 587 680 498 761 q 676 460 676 599 " }, M: { x_min: 0, x_max: 954, ha: 1067, o: "m 954 0 l 819 0 l 819 869 l 537 0 l 405 0 l 128 866 l 128 0 l 0 0 l 0 1013 l 200 1013 l 472 160 l 757 1013 l 954 1013 l 954 0 " }, Ψ: { x_min: 0, x_max: 1006, ha: 1094, o: "m 1006 678 q 914 319 1006 429 q 571 200 814 200 l 571 0 l 433 0 l 433 200 q 92 319 194 200 q 0 678 0 429 l 0 1013 l 139 1013 l 139 679 q 191 417 139 492 q 433 326 255 326 l 433 1013 l 571 1013 l 571 326 l 580 326 q 813 423 747 326 q 868 679 868 502 l 868 1013 l 1006 1013 l 1006 678 " }, C: { x_min: 0, x_max: 886, ha: 944, o: "m 886 379 q 760 87 886 201 q 455 -26 634 -26 q 112 136 236 -26 q 0 509 0 283 q 118 882 0 737 q 469 1041 245 1041 q 748 955 630 1041 q 879 708 879 859 l 745 708 q 649 862 724 805 q 473 920 573 920 q 219 791 312 920 q 136 509 136 675 q 217 229 136 344 q 470 99 311 99 q 672 179 591 99 q 753 379 753 259 l 886 379 " }, "!": { x_min: 0, x_max: 138, ha: 236, o: "m 138 684 q 116 409 138 629 q 105 244 105 299 l 33 244 q 16 465 33 313 q 0 684 0 616 l 0 1013 l 138 1013 l 138 684 m 138 0 l 0 0 l 0 151 l 138 151 l 138 0 " }, "{": { x_min: 0, x_max: 480.5625, ha: 578, o: "m 480 -286 q 237 -213 303 -286 q 187 -45 187 -159 q 194 48 187 -15 q 201 141 201 112 q 164 264 201 225 q 0 314 118 314 l 0 417 q 164 471 119 417 q 201 605 201 514 q 199 665 201 644 q 193 772 193 769 q 241 941 193 887 q 480 1015 308 1015 l 480 915 q 336 866 375 915 q 306 742 306 828 q 310 662 306 717 q 314 577 314 606 q 288 452 314 500 q 176 365 256 391 q 289 275 257 337 q 314 143 314 226 q 313 84 314 107 q 310 -11 310 -5 q 339 -131 310 -94 q 480 -182 377 -182 l 480 -286 " }, X: { x_min: -0.015625, x_max: 854.15625, ha: 940, o: "m 854 0 l 683 0 l 423 409 l 166 0 l 0 0 l 347 519 l 18 1013 l 186 1013 l 428 637 l 675 1013 l 836 1013 l 504 520 l 854 0 " }, "#": { x_min: 0, x_max: 963.890625, ha: 1061, o: "m 963 690 l 927 590 l 719 590 l 655 410 l 876 410 l 840 310 l 618 310 l 508 -3 l 393 -2 l 506 309 l 329 310 l 215 -2 l 102 -3 l 212 310 l 0 310 l 36 410 l 248 409 l 312 590 l 86 590 l 120 690 l 347 690 l 459 1006 l 573 1006 l 462 690 l 640 690 l 751 1006 l 865 1006 l 754 690 l 963 690 m 606 590 l 425 590 l 362 410 l 543 410 l 606 590 " }, ι: { x_min: 42, x_max: 284, ha: 361, o: "m 284 3 q 233 -10 258 -5 q 182 -15 207 -15 q 85 26 119 -15 q 42 200 42 79 l 42 738 l 167 738 l 168 215 q 172 141 168 157 q 226 101 183 101 q 248 103 239 101 q 284 112 257 104 l 284 3 " }, Ά: { x_min: 0, x_max: 906.953125, ha: 982, o: "m 283 1040 l 88 799 l 5 799 l 145 1040 l 283 1040 m 906 0 l 756 0 l 650 303 l 251 303 l 143 0 l 0 0 l 376 1012 l 529 1012 l 906 0 m 609 421 l 452 866 l 293 421 l 609 421 " }, ")": { x_min: 0, x_max: 318, ha: 415, o: "m 318 365 q 257 25 318 191 q 87 -290 197 -141 l 0 -290 q 140 21 93 -128 q 193 360 193 189 q 141 704 193 537 q 0 1024 97 850 l 87 1024 q 257 706 197 871 q 318 365 318 542 " }, ε: { x_min: 0, x_max: 634.71875, ha: 714, o: "m 634 234 q 527 38 634 110 q 300 -25 433 -25 q 98 29 183 -25 q 0 204 0 93 q 37 314 0 265 q 128 390 67 353 q 56 460 82 419 q 26 555 26 505 q 114 712 26 654 q 295 763 191 763 q 499 700 416 763 q 589 515 589 631 l 478 515 q 419 618 464 580 q 307 657 374 657 q 207 630 253 657 q 151 547 151 598 q 238 445 151 469 q 389 434 280 434 l 389 331 l 349 331 q 206 315 255 331 q 125 210 125 287 q 183 107 125 145 q 302 76 233 76 q 436 117 379 76 q 509 234 493 159 l 634 234 " }, Δ: { x_min: 0, x_max: 952.78125, ha: 1028, o: "m 952 0 l 0 0 l 400 1013 l 551 1013 l 952 0 m 762 124 l 476 867 l 187 124 l 762 124 " }, "}": { x_min: 0, x_max: 481, ha: 578, o: "m 481 314 q 318 262 364 314 q 282 136 282 222 q 284 65 282 97 q 293 -58 293 -48 q 241 -217 293 -166 q 0 -286 174 -286 l 0 -182 q 143 -130 105 -182 q 171 -2 171 -93 q 168 81 171 22 q 165 144 165 140 q 188 275 165 229 q 306 365 220 339 q 191 455 224 391 q 165 588 165 505 q 168 681 165 624 q 171 742 171 737 q 141 865 171 827 q 0 915 102 915 l 0 1015 q 243 942 176 1015 q 293 773 293 888 q 287 675 293 741 q 282 590 282 608 q 318 466 282 505 q 481 417 364 417 l 481 314 " }, "‰": { x_min: -3, x_max: 1672, ha: 1821, o: "m 846 0 q 664 76 732 0 q 603 244 603 145 q 662 412 603 344 q 846 489 729 489 q 1027 412 959 489 q 1089 244 1089 343 q 1029 76 1089 144 q 846 0 962 0 m 845 103 q 945 143 910 103 q 981 243 981 184 q 947 340 981 301 q 845 385 910 385 q 745 342 782 385 q 709 243 709 300 q 742 147 709 186 q 845 103 781 103 m 888 986 l 284 -25 l 199 -25 l 803 986 l 888 986 m 241 468 q 58 545 126 468 q -3 715 -3 615 q 56 881 -3 813 q 238 958 124 958 q 421 881 353 958 q 483 712 483 813 q 423 544 483 612 q 241 468 356 468 m 241 855 q 137 811 175 855 q 100 710 100 768 q 136 612 100 653 q 240 572 172 572 q 344 614 306 572 q 382 713 382 656 q 347 810 382 771 q 241 855 308 855 m 1428 0 q 1246 76 1314 0 q 1185 244 1185 145 q 1244 412 1185 344 q 1428 489 1311 489 q 1610 412 1542 489 q 1672 244 1672 343 q 1612 76 1672 144 q 1428 0 1545 0 m 1427 103 q 1528 143 1492 103 q 1564 243 1564 184 q 1530 340 1564 301 q 1427 385 1492 385 q 1327 342 1364 385 q 1291 243 1291 300 q 1324 147 1291 186 q 1427 103 1363 103 " }, a: { x_min: 0, x_max: 698.609375, ha: 794, o: "m 698 0 q 661 -12 679 -7 q 615 -17 643 -17 q 536 12 564 -17 q 500 96 508 41 q 384 6 456 37 q 236 -25 312 -25 q 65 31 130 -25 q 0 194 0 88 q 118 390 0 334 q 328 435 180 420 q 488 483 476 451 q 495 523 495 504 q 442 619 495 584 q 325 654 389 654 q 209 617 257 654 q 152 513 161 580 l 33 513 q 123 705 33 633 q 332 772 207 772 q 528 712 448 772 q 617 531 617 645 l 617 163 q 624 108 617 126 q 664 90 632 90 l 698 94 l 698 0 m 491 262 l 491 372 q 272 329 350 347 q 128 201 128 294 q 166 113 128 144 q 264 83 205 83 q 414 130 346 83 q 491 262 491 183 " }, "—": { x_min: 0, x_max: 941.671875, ha: 1039, o: "m 941 334 l 0 334 l 0 410 l 941 410 l 941 334 " }, "=": { x_min: 8.71875, x_max: 780.953125, ha: 792, o: "m 780 510 l 8 510 l 8 606 l 780 606 l 780 510 m 780 235 l 8 235 l 8 332 l 780 332 l 780 235 " }, N: { x_min: 0, x_max: 801, ha: 914, o: "m 801 0 l 651 0 l 131 823 l 131 0 l 0 0 l 0 1013 l 151 1013 l 670 193 l 670 1013 l 801 1013 l 801 0 " }, ρ: { x_min: 0, x_max: 712, ha: 797, o: "m 712 369 q 620 94 712 207 q 362 -26 521 -26 q 230 2 292 -26 q 119 83 167 30 l 119 -278 l 0 -278 l 0 362 q 91 643 0 531 q 355 764 190 764 q 617 647 517 764 q 712 369 712 536 m 583 366 q 530 559 583 480 q 359 651 469 651 q 190 562 252 651 q 135 370 135 483 q 189 176 135 257 q 359 85 250 85 q 528 175 466 85 q 583 366 583 254 " }, 2: { x_min: 59, x_max: 731, ha: 792, o: "m 731 0 l 59 0 q 197 314 59 188 q 457 487 199 315 q 598 691 598 580 q 543 819 598 772 q 411 867 488 867 q 272 811 328 867 q 209 630 209 747 l 81 630 q 182 901 81 805 q 408 986 271 986 q 629 909 536 986 q 731 694 731 826 q 613 449 731 541 q 378 316 495 383 q 201 122 235 234 l 731 122 l 731 0 " }, "¯": { x_min: 0, x_max: 941.671875, ha: 938, o: "m 941 1033 l 0 1033 l 0 1109 l 941 1109 l 941 1033 " }, Z: { x_min: 0, x_max: 779, ha: 849, o: "m 779 0 l 0 0 l 0 113 l 621 896 l 40 896 l 40 1013 l 779 1013 l 778 887 l 171 124 l 779 124 l 779 0 " }, u: { x_min: 0, x_max: 617, ha: 729, o: "m 617 0 l 499 0 l 499 110 q 391 10 460 45 q 246 -25 322 -25 q 61 58 127 -25 q 0 258 0 136 l 0 738 l 125 738 l 125 284 q 156 148 125 202 q 273 82 197 82 q 433 165 369 82 q 493 340 493 243 l 493 738 l 617 738 l 617 0 " }, k: { x_min: 0, x_max: 612.484375, ha: 697, o: "m 612 738 l 338 465 l 608 0 l 469 0 l 251 382 l 121 251 l 121 0 l 0 0 l 0 1013 l 121 1013 l 121 402 l 456 738 l 612 738 " }, Η: { x_min: 0, x_max: 803, ha: 917, o: "m 803 0 l 667 0 l 667 475 l 140 475 l 140 0 l 0 0 l 0 1013 l 140 1013 l 140 599 l 667 599 l 667 1013 l 803 1013 l 803 0 " }, Α: { x_min: 0, x_max: 906.953125, ha: 985, o: "m 906 0 l 756 0 l 650 303 l 251 303 l 143 0 l 0 0 l 376 1013 l 529 1013 l 906 0 m 609 421 l 452 866 l 293 421 l 609 421 " }, s: { x_min: 0, x_max: 604, ha: 697, o: "m 604 217 q 501 36 604 104 q 292 -23 411 -23 q 86 43 166 -23 q 0 238 0 114 l 121 237 q 175 122 121 164 q 300 85 223 85 q 415 112 363 85 q 479 207 479 147 q 361 309 479 276 q 140 372 141 370 q 21 544 21 426 q 111 708 21 647 q 298 761 190 761 q 492 705 413 761 q 583 531 583 643 l 462 531 q 412 625 462 594 q 298 657 363 657 q 199 636 242 657 q 143 558 143 608 q 262 454 143 486 q 484 394 479 397 q 604 217 604 341 " }, B: { x_min: 0, x_max: 778, ha: 876, o: "m 580 546 q 724 469 670 535 q 778 311 778 403 q 673 83 778 171 q 432 0 575 0 l 0 0 l 0 1013 l 411 1013 q 629 957 541 1013 q 732 768 732 892 q 691 633 732 693 q 580 546 650 572 m 393 899 l 139 899 l 139 588 l 379 588 q 521 624 462 588 q 592 744 592 667 q 531 859 592 819 q 393 899 471 899 m 419 124 q 566 169 504 124 q 635 303 635 219 q 559 436 635 389 q 402 477 494 477 l 139 477 l 139 124 l 419 124 " }, "…": { x_min: 0, x_max: 614, ha: 708, o: "m 142 0 l 0 0 l 0 151 l 142 151 l 142 0 m 378 0 l 236 0 l 236 151 l 378 151 l 378 0 m 614 0 l 472 0 l 472 151 l 614 151 l 614 0 " }, "?": { x_min: 0, x_max: 607, ha: 704, o: "m 607 777 q 543 599 607 674 q 422 474 482 537 q 357 272 357 391 l 236 272 q 297 487 236 395 q 411 619 298 490 q 474 762 474 691 q 422 885 474 838 q 301 933 371 933 q 179 880 228 933 q 124 706 124 819 l 0 706 q 94 963 0 872 q 302 1044 177 1044 q 511 973 423 1044 q 607 777 607 895 m 370 0 l 230 0 l 230 151 l 370 151 l 370 0 " }, H: { x_min: 0, x_max: 803, ha: 915, o: "m 803 0 l 667 0 l 667 475 l 140 475 l 140 0 l 0 0 l 0 1013 l 140 1013 l 140 599 l 667 599 l 667 1013 l 803 1013 l 803 0 " }, ν: { x_min: 0, x_max: 675, ha: 761, o: "m 675 738 l 404 0 l 272 0 l 0 738 l 133 738 l 340 147 l 541 738 l 675 738 " }, c: { x_min: 1, x_max: 701.390625, ha: 775, o: "m 701 264 q 584 53 681 133 q 353 -26 487 -26 q 91 91 188 -26 q 1 370 1 201 q 92 645 1 537 q 353 761 190 761 q 572 688 479 761 q 690 493 666 615 l 556 493 q 487 606 545 562 q 356 650 428 650 q 186 563 246 650 q 134 372 134 487 q 188 179 134 258 q 359 88 250 88 q 492 136 437 88 q 566 264 548 185 l 701 264 " }, "¶": { x_min: 0, x_max: 566.671875, ha: 678, o: "m 21 892 l 52 892 l 98 761 l 145 892 l 176 892 l 178 741 l 157 741 l 157 867 l 108 741 l 88 741 l 40 871 l 40 741 l 21 741 l 21 892 m 308 854 l 308 731 q 252 691 308 691 q 227 691 240 691 q 207 696 213 695 l 207 712 l 253 706 q 288 733 288 706 l 288 763 q 244 741 279 741 q 193 797 193 741 q 261 860 193 860 q 287 860 273 860 q 308 854 302 855 m 288 842 l 263 843 q 213 796 213 843 q 248 756 213 756 q 288 796 288 756 l 288 842 m 566 988 l 502 988 l 502 -1 l 439 -1 l 439 988 l 317 988 l 317 -1 l 252 -1 l 252 602 q 81 653 155 602 q 0 805 0 711 q 101 989 0 918 q 309 1053 194 1053 l 566 1053 l 566 988 " }, β: { x_min: 0, x_max: 660, ha: 745, o: "m 471 550 q 610 450 561 522 q 660 280 660 378 q 578 64 660 151 q 367 -22 497 -22 q 239 5 299 -22 q 126 82 178 32 l 126 -278 l 0 -278 l 0 593 q 54 903 0 801 q 318 1042 127 1042 q 519 964 436 1042 q 603 771 603 887 q 567 644 603 701 q 471 550 532 586 m 337 79 q 476 138 418 79 q 535 279 535 198 q 427 437 535 386 q 226 477 344 477 l 226 583 q 398 620 329 583 q 486 762 486 668 q 435 884 486 833 q 312 935 384 935 q 169 861 219 935 q 126 698 126 797 l 126 362 q 170 169 126 242 q 337 79 224 79 " }, Μ: { x_min: 0, x_max: 954, ha: 1068, o: "m 954 0 l 819 0 l 819 868 l 537 0 l 405 0 l 128 865 l 128 0 l 0 0 l 0 1013 l 199 1013 l 472 158 l 758 1013 l 954 1013 l 954 0 " }, Ό: { x_min: 0.109375, x_max: 1120, ha: 1217, o: "m 1120 505 q 994 132 1120 282 q 642 -29 861 -29 q 290 130 422 -29 q 167 505 167 280 q 294 883 167 730 q 650 1046 430 1046 q 999 882 868 1046 q 1120 505 1120 730 m 977 504 q 896 784 977 669 q 644 915 804 915 q 391 785 484 915 q 307 504 307 669 q 391 224 307 339 q 644 95 486 95 q 894 224 803 95 q 977 504 977 339 m 277 1040 l 83 799 l 0 799 l 140 1040 l 277 1040 " }, Ή: { x_min: 0, x_max: 1158, ha: 1275, o: "m 1158 0 l 1022 0 l 1022 475 l 496 475 l 496 0 l 356 0 l 356 1012 l 496 1012 l 496 599 l 1022 599 l 1022 1012 l 1158 1012 l 1158 0 m 277 1040 l 83 799 l 0 799 l 140 1040 l 277 1040 " }, "•": { x_min: 0, x_max: 663.890625, ha: 775, o: "m 663 529 q 566 293 663 391 q 331 196 469 196 q 97 294 194 196 q 0 529 0 393 q 96 763 0 665 q 331 861 193 861 q 566 763 469 861 q 663 529 663 665 " }, "¥": { x_min: 0.1875, x_max: 819.546875, ha: 886, o: "m 563 561 l 697 561 l 696 487 l 520 487 l 482 416 l 482 380 l 697 380 l 695 308 l 482 308 l 482 0 l 342 0 l 342 308 l 125 308 l 125 380 l 342 380 l 342 417 l 303 487 l 125 487 l 125 561 l 258 561 l 0 1013 l 140 1013 l 411 533 l 679 1013 l 819 1013 l 563 561 " }, "(": { x_min: 0, x_max: 318.0625, ha: 415, o: "m 318 -290 l 230 -290 q 61 23 122 -142 q 0 365 0 190 q 62 712 0 540 q 230 1024 119 869 l 318 1024 q 175 705 219 853 q 125 360 125 542 q 176 22 125 187 q 318 -290 223 -127 " }, U: { x_min: 0, x_max: 796, ha: 904, o: "m 796 393 q 681 93 796 212 q 386 -25 566 -25 q 101 95 208 -25 q 0 393 0 211 l 0 1013 l 138 1013 l 138 391 q 204 191 138 270 q 394 107 276 107 q 586 191 512 107 q 656 391 656 270 l 656 1013 l 796 1013 l 796 393 " }, γ: { x_min: 0.5, x_max: 744.953125, ha: 822, o: "m 744 737 l 463 54 l 463 -278 l 338 -278 l 338 54 l 154 495 q 104 597 124 569 q 13 651 67 651 l 0 651 l 0 751 l 39 753 q 168 711 121 753 q 242 594 207 676 l 403 208 l 617 737 l 744 737 " }, α: { x_min: 0, x_max: 765.5625, ha: 809, o: "m 765 -4 q 698 -14 726 -14 q 564 97 586 -14 q 466 7 525 40 q 337 -26 407 -26 q 88 98 186 -26 q 0 369 0 212 q 88 637 0 525 q 337 760 184 760 q 465 728 407 760 q 563 637 524 696 l 563 739 l 685 739 l 685 222 q 693 141 685 168 q 748 94 708 94 q 765 96 760 94 l 765 -4 m 584 371 q 531 562 584 485 q 360 653 470 653 q 192 566 254 653 q 135 379 135 489 q 186 181 135 261 q 358 84 247 84 q 528 176 465 84 q 584 371 584 260 " }, F: { x_min: 0, x_max: 683.328125, ha: 717, o: "m 683 888 l 140 888 l 140 583 l 613 583 l 613 458 l 140 458 l 140 0 l 0 0 l 0 1013 l 683 1013 l 683 888 " }, "­": { x_min: 0, x_max: 705.5625, ha: 803, o: "m 705 334 l 0 334 l 0 410 l 705 410 l 705 334 " }, ":": { x_min: 0, x_max: 142, ha: 239, o: "m 142 585 l 0 585 l 0 738 l 142 738 l 142 585 m 142 0 l 0 0 l 0 151 l 142 151 l 142 0 " }, Χ: { x_min: 0, x_max: 854.171875, ha: 935, o: "m 854 0 l 683 0 l 423 409 l 166 0 l 0 0 l 347 519 l 18 1013 l 186 1013 l 427 637 l 675 1013 l 836 1013 l 504 521 l 854 0 " }, "*": { x_min: 116, x_max: 674, ha: 792, o: "m 674 768 l 475 713 l 610 544 l 517 477 l 394 652 l 272 478 l 178 544 l 314 713 l 116 766 l 153 876 l 341 812 l 342 1013 l 446 1013 l 446 811 l 635 874 l 674 768 " }, "†": { x_min: 0, x_max: 777, ha: 835, o: "m 458 804 l 777 804 l 777 683 l 458 683 l 458 0 l 319 0 l 319 681 l 0 683 l 0 804 l 319 804 l 319 1015 l 458 1013 l 458 804 " }, "°": { x_min: 0, x_max: 347, ha: 444, o: "m 173 802 q 43 856 91 802 q 0 977 0 905 q 45 1101 0 1049 q 173 1153 90 1153 q 303 1098 255 1153 q 347 977 347 1049 q 303 856 347 905 q 173 802 256 802 m 173 884 q 238 910 214 884 q 262 973 262 937 q 239 1038 262 1012 q 173 1064 217 1064 q 108 1037 132 1064 q 85 973 85 1010 q 108 910 85 937 q 173 884 132 884 " }, V: { x_min: 0, x_max: 862.71875, ha: 940, o: "m 862 1013 l 505 0 l 361 0 l 0 1013 l 143 1013 l 434 165 l 718 1012 l 862 1013 " }, Ξ: { x_min: 0, x_max: 734.71875, ha: 763, o: "m 723 889 l 9 889 l 9 1013 l 723 1013 l 723 889 m 673 463 l 61 463 l 61 589 l 673 589 l 673 463 m 734 0 l 0 0 l 0 124 l 734 124 l 734 0 " }, " ": { x_min: 0, x_max: 0, ha: 853 }, Ϋ: { x_min: 0.328125, x_max: 819.515625, ha: 889, o: "m 588 1046 l 460 1046 l 460 1189 l 588 1189 l 588 1046 m 360 1046 l 232 1046 l 232 1189 l 360 1189 l 360 1046 m 819 1012 l 482 416 l 482 0 l 342 0 l 342 416 l 0 1012 l 140 1012 l 411 533 l 679 1012 l 819 1012 " }, 0: { x_min: 73, x_max: 715, ha: 792, o: "m 394 -29 q 153 129 242 -29 q 73 479 73 272 q 152 829 73 687 q 394 989 241 989 q 634 829 545 989 q 715 479 715 684 q 635 129 715 270 q 394 -29 546 -29 m 394 89 q 546 211 489 89 q 598 479 598 322 q 548 748 598 640 q 394 871 491 871 q 241 748 298 871 q 190 479 190 637 q 239 211 190 319 q 394 89 296 89 " }, "”": { x_min: 0, x_max: 347, ha: 454, o: "m 139 851 q 102 737 139 784 q 0 669 65 690 l 0 734 q 59 787 42 741 q 72 873 72 821 l 0 873 l 0 1013 l 139 1013 l 139 851 m 347 851 q 310 737 347 784 q 208 669 273 690 l 208 734 q 267 787 250 741 q 280 873 280 821 l 208 873 l 208 1013 l 347 1013 l 347 851 " }, "@": { x_min: 0, x_max: 1260, ha: 1357, o: "m 1098 -45 q 877 -160 1001 -117 q 633 -203 752 -203 q 155 -29 327 -203 q 0 360 0 127 q 176 802 0 616 q 687 1008 372 1008 q 1123 854 969 1008 q 1260 517 1260 718 q 1155 216 1260 341 q 868 82 1044 82 q 772 106 801 82 q 737 202 737 135 q 647 113 700 144 q 527 82 594 82 q 367 147 420 82 q 314 312 314 212 q 401 565 314 452 q 639 690 498 690 q 810 588 760 690 l 849 668 l 938 668 q 877 441 900 532 q 833 226 833 268 q 853 182 833 198 q 902 167 873 167 q 1088 272 1012 167 q 1159 512 1159 372 q 1051 793 1159 681 q 687 925 925 925 q 248 747 415 925 q 97 361 97 586 q 226 26 97 159 q 627 -122 370 -122 q 856 -87 737 -122 q 1061 8 976 -53 l 1098 -45 m 786 488 q 738 580 777 545 q 643 615 700 615 q 483 517 548 615 q 425 322 425 430 q 457 203 425 250 q 552 156 490 156 q 722 273 665 156 q 786 488 738 309 " }, Ί: { x_min: 0, x_max: 499, ha: 613, o: "m 277 1040 l 83 799 l 0 799 l 140 1040 l 277 1040 m 499 0 l 360 0 l 360 1012 l 499 1012 l 499 0 " }, i: { x_min: 14, x_max: 136, ha: 275, o: "m 136 873 l 14 873 l 14 1013 l 136 1013 l 136 873 m 136 0 l 14 0 l 14 737 l 136 737 l 136 0 " }, Β: { x_min: 0, x_max: 778, ha: 877, o: "m 580 545 q 724 468 671 534 q 778 310 778 402 q 673 83 778 170 q 432 0 575 0 l 0 0 l 0 1013 l 411 1013 q 629 957 541 1013 q 732 768 732 891 q 691 632 732 692 q 580 545 650 571 m 393 899 l 139 899 l 139 587 l 379 587 q 521 623 462 587 q 592 744 592 666 q 531 859 592 819 q 393 899 471 899 m 419 124 q 566 169 504 124 q 635 302 635 219 q 559 435 635 388 q 402 476 494 476 l 139 476 l 139 124 l 419 124 " }, υ: { x_min: 0, x_max: 617, ha: 725, o: "m 617 352 q 540 94 617 199 q 308 -24 455 -24 q 76 94 161 -24 q 0 352 0 199 l 0 739 l 126 739 l 126 355 q 169 185 126 257 q 312 98 220 98 q 451 185 402 98 q 492 355 492 257 l 492 739 l 617 739 l 617 352 " }, "]": { x_min: 0, x_max: 275, ha: 372, o: "m 275 -281 l 0 -281 l 0 -187 l 151 -187 l 151 920 l 0 920 l 0 1013 l 275 1013 l 275 -281 " }, m: { x_min: 0, x_max: 1019, ha: 1128, o: "m 1019 0 l 897 0 l 897 454 q 860 591 897 536 q 739 660 816 660 q 613 586 659 660 q 573 436 573 522 l 573 0 l 447 0 l 447 455 q 412 591 447 535 q 294 657 372 657 q 165 586 213 657 q 122 437 122 521 l 122 0 l 0 0 l 0 738 l 117 738 l 117 640 q 202 730 150 697 q 316 763 254 763 q 437 730 381 763 q 525 642 494 697 q 621 731 559 700 q 753 763 682 763 q 943 694 867 763 q 1019 512 1019 625 l 1019 0 " }, χ: { x_min: 8.328125, x_max: 780.5625, ha: 815, o: "m 780 -278 q 715 -294 747 -294 q 616 -257 663 -294 q 548 -175 576 -227 l 379 133 l 143 -277 l 9 -277 l 313 254 l 163 522 q 127 586 131 580 q 36 640 91 640 q 8 637 27 640 l 8 752 l 52 757 q 162 719 113 757 q 236 627 200 690 l 383 372 l 594 737 l 726 737 l 448 250 l 625 -69 q 670 -153 647 -110 q 743 -188 695 -188 q 780 -184 759 -188 l 780 -278 " }, 8: { x_min: 55, x_max: 736, ha: 792, o: "m 571 527 q 694 424 652 491 q 736 280 736 358 q 648 71 736 158 q 395 -26 551 -26 q 142 69 238 -26 q 55 279 55 157 q 96 425 55 359 q 220 527 138 491 q 120 615 153 562 q 88 726 88 668 q 171 904 88 827 q 395 986 261 986 q 618 905 529 986 q 702 727 702 830 q 670 616 702 667 q 571 527 638 565 m 394 565 q 519 610 475 565 q 563 717 563 655 q 521 823 563 781 q 392 872 474 872 q 265 824 312 872 q 224 720 224 783 q 265 613 224 656 q 394 565 312 565 m 395 91 q 545 150 488 91 q 597 280 597 204 q 546 408 597 355 q 395 465 492 465 q 244 408 299 465 q 194 280 194 356 q 244 150 194 203 q 395 91 299 91 " }, ί: { x_min: 42, x_max: 326.71875, ha: 361, o: "m 284 3 q 233 -10 258 -5 q 182 -15 207 -15 q 85 26 119 -15 q 42 200 42 79 l 42 737 l 167 737 l 168 215 q 172 141 168 157 q 226 101 183 101 q 248 102 239 101 q 284 112 257 104 l 284 3 m 326 1040 l 137 819 l 54 819 l 189 1040 l 326 1040 " }, Ζ: { x_min: 0, x_max: 779.171875, ha: 850, o: "m 779 0 l 0 0 l 0 113 l 620 896 l 40 896 l 40 1013 l 779 1013 l 779 887 l 170 124 l 779 124 l 779 0 " }, R: { x_min: 0, x_max: 781.953125, ha: 907, o: "m 781 0 l 623 0 q 587 242 590 52 q 407 433 585 433 l 138 433 l 138 0 l 0 0 l 0 1013 l 396 1013 q 636 946 539 1013 q 749 731 749 868 q 711 597 749 659 q 608 502 674 534 q 718 370 696 474 q 729 207 722 352 q 781 26 736 62 l 781 0 m 373 551 q 533 594 465 551 q 614 731 614 645 q 532 859 614 815 q 373 896 465 896 l 138 896 l 138 551 l 373 551 " }, o: { x_min: 0, x_max: 713, ha: 821, o: "m 357 -25 q 94 91 194 -25 q 0 368 0 202 q 93 642 0 533 q 357 761 193 761 q 618 644 518 761 q 713 368 713 533 q 619 91 713 201 q 357 -25 521 -25 m 357 85 q 528 175 465 85 q 584 369 584 255 q 529 562 584 484 q 357 651 467 651 q 189 560 250 651 q 135 369 135 481 q 187 177 135 257 q 357 85 250 85 " }, 5: { x_min: 54.171875, x_max: 738, ha: 792, o: "m 738 314 q 626 60 738 153 q 382 -23 526 -23 q 155 47 248 -23 q 54 256 54 125 l 183 256 q 259 132 204 174 q 382 91 314 91 q 533 149 471 91 q 602 314 602 213 q 538 469 602 411 q 386 528 475 528 q 284 506 332 528 q 197 439 237 484 l 81 439 l 159 958 l 684 958 l 684 840 l 254 840 l 214 579 q 306 627 258 612 q 407 643 354 643 q 636 552 540 643 q 738 314 738 457 " }, 7: { x_min: 58.71875, x_max: 730.953125, ha: 792, o: "m 730 839 q 469 448 560 641 q 335 0 378 255 l 192 0 q 328 441 235 252 q 593 830 421 630 l 58 830 l 58 958 l 730 958 l 730 839 " }, K: { x_min: 0, x_max: 819.46875, ha: 906, o: "m 819 0 l 649 0 l 294 509 l 139 355 l 139 0 l 0 0 l 0 1013 l 139 1013 l 139 526 l 626 1013 l 809 1013 l 395 600 l 819 0 " }, ",": { x_min: 0, x_max: 142, ha: 239, o: "m 142 -12 q 105 -132 142 -82 q 0 -205 68 -182 l 0 -138 q 57 -82 40 -124 q 70 0 70 -51 l 0 0 l 0 151 l 142 151 l 142 -12 " }, d: { x_min: 0, x_max: 683, ha: 796, o: "m 683 0 l 564 0 l 564 93 q 456 6 516 38 q 327 -25 395 -25 q 87 100 181 -25 q 0 365 0 215 q 90 639 0 525 q 343 763 187 763 q 564 647 486 763 l 564 1013 l 683 1013 l 683 0 m 582 373 q 529 562 582 484 q 361 653 468 653 q 190 561 253 653 q 135 365 135 479 q 189 175 135 254 q 358 85 251 85 q 529 178 468 85 q 582 373 582 258 " }, "¨": { x_min: -109, x_max: 247, ha: 232, o: "m 247 1046 l 119 1046 l 119 1189 l 247 1189 l 247 1046 m 19 1046 l -109 1046 l -109 1189 l 19 1189 l 19 1046 " }, E: { x_min: 0, x_max: 736.109375, ha: 789, o: "m 736 0 l 0 0 l 0 1013 l 725 1013 l 725 889 l 139 889 l 139 585 l 677 585 l 677 467 l 139 467 l 139 125 l 736 125 l 736 0 " }, Y: { x_min: 0, x_max: 820, ha: 886, o: "m 820 1013 l 482 416 l 482 0 l 342 0 l 342 416 l 0 1013 l 140 1013 l 411 534 l 679 1012 l 820 1013 " }, '"': { x_min: 0, x_max: 299, ha: 396, o: "m 299 606 l 203 606 l 203 988 l 299 988 l 299 606 m 96 606 l 0 606 l 0 988 l 96 988 l 96 606 " }, "‹": { x_min: 17.984375, x_max: 773.609375, ha: 792, o: "m 773 40 l 18 376 l 17 465 l 773 799 l 773 692 l 159 420 l 773 149 l 773 40 " }, "„": { x_min: 0, x_max: 364, ha: 467, o: "m 141 -12 q 104 -132 141 -82 q 0 -205 67 -182 l 0 -138 q 56 -82 40 -124 q 69 0 69 -51 l 0 0 l 0 151 l 141 151 l 141 -12 m 364 -12 q 327 -132 364 -82 q 222 -205 290 -182 l 222 -138 q 279 -82 262 -124 q 292 0 292 -51 l 222 0 l 222 151 l 364 151 l 364 -12 " }, δ: { x_min: 1, x_max: 710, ha: 810, o: "m 710 360 q 616 87 710 196 q 356 -28 518 -28 q 99 82 197 -28 q 1 356 1 192 q 100 606 1 509 q 355 703 199 703 q 180 829 288 754 q 70 903 124 866 l 70 1012 l 643 1012 l 643 901 l 258 901 q 462 763 422 794 q 636 592 577 677 q 710 360 710 485 m 584 365 q 552 501 584 447 q 451 602 521 555 q 372 611 411 611 q 197 541 258 611 q 136 355 136 472 q 190 171 136 245 q 358 85 252 85 q 528 173 465 85 q 584 365 584 252 " }, έ: { x_min: 0, x_max: 634.71875, ha: 714, o: "m 634 234 q 527 38 634 110 q 300 -25 433 -25 q 98 29 183 -25 q 0 204 0 93 q 37 313 0 265 q 128 390 67 352 q 56 459 82 419 q 26 555 26 505 q 114 712 26 654 q 295 763 191 763 q 499 700 416 763 q 589 515 589 631 l 478 515 q 419 618 464 580 q 307 657 374 657 q 207 630 253 657 q 151 547 151 598 q 238 445 151 469 q 389 434 280 434 l 389 331 l 349 331 q 206 315 255 331 q 125 210 125 287 q 183 107 125 145 q 302 76 233 76 q 436 117 379 76 q 509 234 493 159 l 634 234 m 520 1040 l 331 819 l 248 819 l 383 1040 l 520 1040 " }, ω: { x_min: 0, x_max: 922, ha: 1031, o: "m 922 339 q 856 97 922 203 q 650 -26 780 -26 q 538 9 587 -26 q 461 103 489 44 q 387 12 436 46 q 277 -22 339 -22 q 69 97 147 -22 q 0 339 0 203 q 45 551 0 444 q 161 738 84 643 l 302 738 q 175 553 219 647 q 124 336 124 446 q 155 179 124 249 q 275 88 197 88 q 375 163 341 88 q 400 294 400 219 l 400 572 l 524 572 l 524 294 q 561 135 524 192 q 643 88 591 88 q 762 182 719 88 q 797 342 797 257 q 745 556 797 450 q 619 738 705 638 l 760 738 q 874 551 835 640 q 922 339 922 444 " }, "´": { x_min: 0, x_max: 96, ha: 251, o: "m 96 606 l 0 606 l 0 988 l 96 988 l 96 606 " }, "±": { x_min: 11, x_max: 781, ha: 792, o: "m 781 490 l 446 490 l 446 255 l 349 255 l 349 490 l 11 490 l 11 586 l 349 586 l 349 819 l 446 819 l 446 586 l 781 586 l 781 490 m 781 21 l 11 21 l 11 115 l 781 115 l 781 21 " }, "|": { x_min: 343, x_max: 449, ha: 792, o: "m 449 462 l 343 462 l 343 986 l 449 986 l 449 462 m 449 -242 l 343 -242 l 343 280 l 449 280 l 449 -242 " }, ϋ: { x_min: 0, x_max: 617, ha: 725, o: "m 482 800 l 372 800 l 372 925 l 482 925 l 482 800 m 239 800 l 129 800 l 129 925 l 239 925 l 239 800 m 617 352 q 540 93 617 199 q 308 -24 455 -24 q 76 93 161 -24 q 0 352 0 199 l 0 738 l 126 738 l 126 354 q 169 185 126 257 q 312 98 220 98 q 451 185 402 98 q 492 354 492 257 l 492 738 l 617 738 l 617 352 " }, "§": { x_min: 0, x_max: 593, ha: 690, o: "m 593 425 q 554 312 593 369 q 467 233 516 254 q 537 83 537 172 q 459 -74 537 -12 q 288 -133 387 -133 q 115 -69 184 -133 q 47 96 47 -6 l 166 96 q 199 7 166 40 q 288 -26 232 -26 q 371 -5 332 -26 q 420 60 420 21 q 311 201 420 139 q 108 309 210 255 q 0 490 0 383 q 33 602 0 551 q 124 687 66 654 q 75 743 93 712 q 58 812 58 773 q 133 984 58 920 q 300 1043 201 1043 q 458 987 394 1043 q 529 814 529 925 l 411 814 q 370 908 404 877 q 289 939 336 939 q 213 911 246 939 q 180 841 180 883 q 286 720 180 779 q 484 612 480 615 q 593 425 593 534 m 467 409 q 355 544 467 473 q 196 630 228 612 q 146 587 162 609 q 124 525 124 558 q 239 387 124 462 q 398 298 369 315 q 448 345 429 316 q 467 409 467 375 " }, b: { x_min: 0, x_max: 685, ha: 783, o: "m 685 372 q 597 99 685 213 q 347 -25 501 -25 q 219 5 277 -25 q 121 93 161 36 l 121 0 l 0 0 l 0 1013 l 121 1013 l 121 634 q 214 723 157 692 q 341 754 272 754 q 591 637 493 754 q 685 372 685 526 m 554 356 q 499 550 554 470 q 328 644 437 644 q 162 556 223 644 q 108 369 108 478 q 160 176 108 256 q 330 83 221 83 q 498 169 435 83 q 554 356 554 245 " }, q: { x_min: 0, x_max: 683, ha: 876, o: "m 683 -278 l 564 -278 l 564 97 q 474 8 533 39 q 345 -23 415 -23 q 91 93 188 -23 q 0 364 0 203 q 87 635 0 522 q 337 760 184 760 q 466 727 408 760 q 564 637 523 695 l 564 737 l 683 737 l 683 -278 m 582 375 q 527 564 582 488 q 358 652 466 652 q 190 565 253 652 q 135 377 135 488 q 189 179 135 261 q 361 84 251 84 q 530 179 469 84 q 582 375 582 260 " }, Ω: { x_min: -0.171875, x_max: 969.5625, ha: 1068, o: "m 969 0 l 555 0 l 555 123 q 744 308 675 194 q 814 558 814 423 q 726 812 814 709 q 484 922 633 922 q 244 820 334 922 q 154 567 154 719 q 223 316 154 433 q 412 123 292 199 l 412 0 l 0 0 l 0 124 l 217 124 q 68 327 122 210 q 15 572 15 444 q 144 911 15 781 q 484 1041 274 1041 q 822 909 691 1041 q 953 569 953 777 q 899 326 953 443 q 750 124 846 210 l 969 124 l 969 0 " }, ύ: { x_min: 0, x_max: 617, ha: 725, o: "m 617 352 q 540 93 617 199 q 308 -24 455 -24 q 76 93 161 -24 q 0 352 0 199 l 0 738 l 126 738 l 126 354 q 169 185 126 257 q 312 98 220 98 q 451 185 402 98 q 492 354 492 257 l 492 738 l 617 738 l 617 352 m 535 1040 l 346 819 l 262 819 l 397 1040 l 535 1040 " }, z: { x_min: -0.015625, x_max: 613.890625, ha: 697, o: "m 613 0 l 0 0 l 0 100 l 433 630 l 20 630 l 20 738 l 594 738 l 593 636 l 163 110 l 613 110 l 613 0 " }, "™": { x_min: 0, x_max: 894, ha: 1e3, o: "m 389 951 l 229 951 l 229 503 l 160 503 l 160 951 l 0 951 l 0 1011 l 389 1011 l 389 951 m 894 503 l 827 503 l 827 939 l 685 503 l 620 503 l 481 937 l 481 503 l 417 503 l 417 1011 l 517 1011 l 653 580 l 796 1010 l 894 1011 l 894 503 " }, ή: { x_min: 0.78125, x_max: 697, ha: 810, o: "m 697 -278 l 572 -278 l 572 454 q 540 587 572 536 q 425 650 501 650 q 271 579 337 650 q 206 420 206 509 l 206 0 l 81 0 l 81 489 q 73 588 81 562 q 0 644 56 644 l 0 741 q 68 755 38 755 q 158 721 124 755 q 200 630 193 687 q 297 726 234 692 q 434 761 359 761 q 620 692 544 761 q 697 516 697 624 l 697 -278 m 479 1040 l 290 819 l 207 819 l 341 1040 l 479 1040 " }, Θ: { x_min: 0, x_max: 960, ha: 1056, o: "m 960 507 q 833 129 960 280 q 476 -32 698 -32 q 123 129 255 -32 q 0 507 0 280 q 123 883 0 732 q 476 1045 255 1045 q 832 883 696 1045 q 960 507 960 732 m 817 500 q 733 789 817 669 q 476 924 639 924 q 223 792 317 924 q 142 507 142 675 q 222 222 142 339 q 476 89 315 89 q 730 218 636 89 q 817 500 817 334 m 716 449 l 243 449 l 243 571 l 716 571 l 716 449 " }, "®": { x_min: -3, x_max: 1008, ha: 1106, o: "m 503 532 q 614 562 566 532 q 672 658 672 598 q 614 747 672 716 q 503 772 569 772 l 338 772 l 338 532 l 503 532 m 502 -7 q 123 151 263 -7 q -3 501 -3 294 q 123 851 -3 706 q 502 1011 263 1011 q 881 851 739 1011 q 1008 501 1008 708 q 883 151 1008 292 q 502 -7 744 -7 m 502 60 q 830 197 709 60 q 940 501 940 322 q 831 805 940 681 q 502 944 709 944 q 174 805 296 944 q 65 501 65 680 q 173 197 65 320 q 502 60 294 60 m 788 146 l 678 146 q 653 316 655 183 q 527 449 652 449 l 338 449 l 338 146 l 241 146 l 241 854 l 518 854 q 688 808 621 854 q 766 658 766 755 q 739 563 766 607 q 668 497 713 519 q 751 331 747 472 q 788 164 756 190 l 788 146 " }, "~": { x_min: 0, x_max: 833, ha: 931, o: "m 833 958 q 778 753 833 831 q 594 665 716 665 q 402 761 502 665 q 240 857 302 857 q 131 795 166 857 q 104 665 104 745 l 0 665 q 54 867 0 789 q 237 958 116 958 q 429 861 331 958 q 594 765 527 765 q 704 827 670 765 q 729 958 729 874 l 833 958 " }, Ε: { x_min: 0, x_max: 736.21875, ha: 778, o: "m 736 0 l 0 0 l 0 1013 l 725 1013 l 725 889 l 139 889 l 139 585 l 677 585 l 677 467 l 139 467 l 139 125 l 736 125 l 736 0 " }, "³": { x_min: 0, x_max: 450, ha: 547, o: "m 450 552 q 379 413 450 464 q 220 366 313 366 q 69 414 130 366 q 0 567 0 470 l 85 567 q 126 470 85 504 q 225 437 168 437 q 320 467 280 437 q 360 552 360 498 q 318 632 360 608 q 213 657 276 657 q 195 657 203 657 q 176 657 181 657 l 176 722 q 279 733 249 722 q 334 815 334 752 q 300 881 334 856 q 220 907 267 907 q 133 875 169 907 q 97 781 97 844 l 15 781 q 78 926 15 875 q 220 972 135 972 q 364 930 303 972 q 426 817 426 888 q 344 697 426 733 q 421 642 392 681 q 450 552 450 603 " }, "[": { x_min: 0, x_max: 273.609375, ha: 371, o: "m 273 -281 l 0 -281 l 0 1013 l 273 1013 l 273 920 l 124 920 l 124 -187 l 273 -187 l 273 -281 " }, L: { x_min: 0, x_max: 645.828125, ha: 696, o: "m 645 0 l 0 0 l 0 1013 l 140 1013 l 140 126 l 645 126 l 645 0 " }, σ: { x_min: 0, x_max: 803.390625, ha: 894, o: "m 803 628 l 633 628 q 713 368 713 512 q 618 93 713 204 q 357 -25 518 -25 q 94 91 194 -25 q 0 368 0 201 q 94 644 0 533 q 356 761 194 761 q 481 750 398 761 q 608 739 564 739 l 803 739 l 803 628 m 360 85 q 529 180 467 85 q 584 374 584 262 q 527 566 584 490 q 352 651 463 651 q 187 559 247 651 q 135 368 135 478 q 189 175 135 254 q 360 85 251 85 " }, ζ: { x_min: 0, x_max: 573, ha: 642, o: "m 573 -40 q 553 -162 573 -97 q 510 -278 543 -193 l 400 -278 q 441 -187 428 -219 q 462 -90 462 -132 q 378 -14 462 -14 q 108 45 197 -14 q 0 290 0 117 q 108 631 0 462 q 353 901 194 767 l 55 901 l 55 1012 l 561 1012 l 561 924 q 261 669 382 831 q 128 301 128 489 q 243 117 128 149 q 458 98 350 108 q 573 -40 573 80 " }, θ: { x_min: 0, x_max: 674, ha: 778, o: "m 674 496 q 601 160 674 304 q 336 -26 508 -26 q 73 153 165 -26 q 0 485 0 296 q 72 840 0 683 q 343 1045 166 1045 q 605 844 516 1045 q 674 496 674 692 m 546 579 q 498 798 546 691 q 336 935 437 935 q 178 798 237 935 q 126 579 137 701 l 546 579 m 546 475 l 126 475 q 170 233 126 348 q 338 80 230 80 q 504 233 447 80 q 546 475 546 346 " }, Ο: { x_min: 0, x_max: 958, ha: 1054, o: "m 485 1042 q 834 883 703 1042 q 958 511 958 735 q 834 136 958 287 q 481 -26 701 -26 q 126 130 261 -26 q 0 504 0 279 q 127 880 0 729 q 485 1042 263 1042 m 480 98 q 731 225 638 98 q 815 504 815 340 q 733 783 815 670 q 480 913 640 913 q 226 785 321 913 q 142 504 142 671 q 226 224 142 339 q 480 98 319 98 " }, Γ: { x_min: 0, x_max: 705.28125, ha: 749, o: "m 705 886 l 140 886 l 140 0 l 0 0 l 0 1012 l 705 1012 l 705 886 " }, " ": { x_min: 0, x_max: 0, ha: 375 }, "%": { x_min: -3, x_max: 1089, ha: 1186, o: "m 845 0 q 663 76 731 0 q 602 244 602 145 q 661 412 602 344 q 845 489 728 489 q 1027 412 959 489 q 1089 244 1089 343 q 1029 76 1089 144 q 845 0 962 0 m 844 103 q 945 143 909 103 q 981 243 981 184 q 947 340 981 301 q 844 385 909 385 q 744 342 781 385 q 708 243 708 300 q 741 147 708 186 q 844 103 780 103 m 888 986 l 284 -25 l 199 -25 l 803 986 l 888 986 m 241 468 q 58 545 126 468 q -3 715 -3 615 q 56 881 -3 813 q 238 958 124 958 q 421 881 353 958 q 483 712 483 813 q 423 544 483 612 q 241 468 356 468 m 241 855 q 137 811 175 855 q 100 710 100 768 q 136 612 100 653 q 240 572 172 572 q 344 614 306 572 q 382 713 382 656 q 347 810 382 771 q 241 855 308 855 " }, P: { x_min: 0, x_max: 726, ha: 806, o: "m 424 1013 q 640 931 555 1013 q 726 719 726 850 q 637 506 726 587 q 413 426 548 426 l 140 426 l 140 0 l 0 0 l 0 1013 l 424 1013 m 379 889 l 140 889 l 140 548 l 372 548 q 522 589 459 548 q 593 720 593 637 q 528 845 593 801 q 379 889 463 889 " }, Έ: { x_min: 0, x_max: 1078.21875, ha: 1118, o: "m 1078 0 l 342 0 l 342 1013 l 1067 1013 l 1067 889 l 481 889 l 481 585 l 1019 585 l 1019 467 l 481 467 l 481 125 l 1078 125 l 1078 0 m 277 1040 l 83 799 l 0 799 l 140 1040 l 277 1040 " }, Ώ: { x_min: 0.125, x_max: 1136.546875, ha: 1235, o: "m 1136 0 l 722 0 l 722 123 q 911 309 842 194 q 981 558 981 423 q 893 813 981 710 q 651 923 800 923 q 411 821 501 923 q 321 568 321 720 q 390 316 321 433 q 579 123 459 200 l 579 0 l 166 0 l 166 124 l 384 124 q 235 327 289 210 q 182 572 182 444 q 311 912 182 782 q 651 1042 441 1042 q 989 910 858 1042 q 1120 569 1120 778 q 1066 326 1120 443 q 917 124 1013 210 l 1136 124 l 1136 0 m 277 1040 l 83 800 l 0 800 l 140 1041 l 277 1040 " }, _: { x_min: 0, x_max: 705.5625, ha: 803, o: "m 705 -334 l 0 -334 l 0 -234 l 705 -234 l 705 -334 " }, Ϊ: { x_min: -110, x_max: 246, ha: 275, o: "m 246 1046 l 118 1046 l 118 1189 l 246 1189 l 246 1046 m 18 1046 l -110 1046 l -110 1189 l 18 1189 l 18 1046 m 136 0 l 0 0 l 0 1012 l 136 1012 l 136 0 " }, "+": { x_min: 23, x_max: 768, ha: 792, o: "m 768 372 l 444 372 l 444 0 l 347 0 l 347 372 l 23 372 l 23 468 l 347 468 l 347 840 l 444 840 l 444 468 l 768 468 l 768 372 " }, "½": { x_min: 0, x_max: 1050, ha: 1149, o: "m 1050 0 l 625 0 q 712 178 625 108 q 878 277 722 187 q 967 385 967 328 q 932 456 967 429 q 850 484 897 484 q 759 450 798 484 q 721 352 721 416 l 640 352 q 706 502 640 448 q 851 551 766 551 q 987 509 931 551 q 1050 385 1050 462 q 976 251 1050 301 q 829 179 902 215 q 717 68 740 133 l 1050 68 l 1050 0 m 834 985 l 215 -28 l 130 -28 l 750 984 l 834 985 m 224 422 l 142 422 l 142 811 l 0 811 l 0 867 q 104 889 62 867 q 164 973 157 916 l 224 973 l 224 422 " }, Ρ: { x_min: 0, x_max: 720, ha: 783, o: "m 424 1013 q 637 933 554 1013 q 720 723 720 853 q 633 508 720 591 q 413 426 546 426 l 140 426 l 140 0 l 0 0 l 0 1013 l 424 1013 m 378 889 l 140 889 l 140 548 l 371 548 q 521 589 458 548 q 592 720 592 637 q 527 845 592 801 q 378 889 463 889 " }, "'": { x_min: 0, x_max: 139, ha: 236, o: "m 139 851 q 102 737 139 784 q 0 669 65 690 l 0 734 q 59 787 42 741 q 72 873 72 821 l 0 873 l 0 1013 l 139 1013 l 139 851 " }, ª: { x_min: 0, x_max: 350, ha: 397, o: "m 350 625 q 307 616 328 616 q 266 631 281 616 q 247 673 251 645 q 190 628 225 644 q 116 613 156 613 q 32 641 64 613 q 0 722 0 669 q 72 826 0 800 q 247 866 159 846 l 247 887 q 220 934 247 916 q 162 953 194 953 q 104 934 129 953 q 76 882 80 915 l 16 882 q 60 976 16 941 q 166 1011 104 1011 q 266 979 224 1011 q 308 891 308 948 l 308 706 q 311 679 308 688 q 331 670 315 670 l 350 672 l 350 625 m 247 757 l 247 811 q 136 790 175 798 q 64 726 64 773 q 83 682 64 697 q 132 667 103 667 q 207 690 174 667 q 247 757 247 718 " }, "΅": { x_min: 0, x_max: 450, ha: 553, o: "m 450 800 l 340 800 l 340 925 l 450 925 l 450 800 m 406 1040 l 212 800 l 129 800 l 269 1040 l 406 1040 m 110 800 l 0 800 l 0 925 l 110 925 l 110 800 " }, T: { x_min: 0, x_max: 777, ha: 835, o: "m 777 894 l 458 894 l 458 0 l 319 0 l 319 894 l 0 894 l 0 1013 l 777 1013 l 777 894 " }, Φ: { x_min: 0, x_max: 915, ha: 997, o: "m 527 0 l 389 0 l 389 122 q 110 231 220 122 q 0 509 0 340 q 110 785 0 677 q 389 893 220 893 l 389 1013 l 527 1013 l 527 893 q 804 786 693 893 q 915 509 915 679 q 805 231 915 341 q 527 122 696 122 l 527 0 m 527 226 q 712 310 641 226 q 779 507 779 389 q 712 705 779 627 q 527 787 641 787 l 527 226 m 389 226 l 389 787 q 205 698 275 775 q 136 505 136 620 q 206 308 136 391 q 389 226 276 226 " }, "⁋": { x_min: 0, x_max: 0, ha: 694 }, j: { x_min: -77.78125, x_max: 167, ha: 349, o: "m 167 871 l 42 871 l 42 1013 l 167 1013 l 167 871 m 167 -80 q 121 -231 167 -184 q -26 -278 76 -278 l -77 -278 l -77 -164 l -41 -164 q 26 -143 11 -164 q 42 -65 42 -122 l 42 737 l 167 737 l 167 -80 " }, Σ: { x_min: 0, x_max: 756.953125, ha: 819, o: "m 756 0 l 0 0 l 0 107 l 395 523 l 22 904 l 22 1013 l 745 1013 l 745 889 l 209 889 l 566 523 l 187 125 l 756 125 l 756 0 " }, 1: { x_min: 215.671875, x_max: 574, ha: 792, o: "m 574 0 l 442 0 l 442 697 l 215 697 l 215 796 q 386 833 330 796 q 475 986 447 875 l 574 986 l 574 0 " }, "›": { x_min: 18.0625, x_max: 774, ha: 792, o: "m 774 376 l 18 40 l 18 149 l 631 421 l 18 692 l 18 799 l 774 465 l 774 376 " }, "<": { x_min: 17.984375, x_max: 773.609375, ha: 792, o: "m 773 40 l 18 376 l 17 465 l 773 799 l 773 692 l 159 420 l 773 149 l 773 40 " }, "£": { x_min: 0, x_max: 704.484375, ha: 801, o: "m 704 41 q 623 -10 664 5 q 543 -26 583 -26 q 359 15 501 -26 q 243 36 288 36 q 158 23 197 36 q 73 -21 119 10 l 6 76 q 125 195 90 150 q 175 331 175 262 q 147 443 175 383 l 0 443 l 0 512 l 108 512 q 43 734 43 623 q 120 929 43 854 q 358 1010 204 1010 q 579 936 487 1010 q 678 729 678 857 l 678 684 l 552 684 q 504 838 552 780 q 362 896 457 896 q 216 852 263 896 q 176 747 176 815 q 199 627 176 697 q 248 512 217 574 l 468 512 l 468 443 l 279 443 q 297 356 297 398 q 230 194 297 279 q 153 107 211 170 q 227 133 190 125 q 293 142 264 142 q 410 119 339 142 q 516 96 482 96 q 579 105 550 96 q 648 142 608 115 l 704 41 " }, t: { x_min: 0, x_max: 367, ha: 458, o: "m 367 0 q 312 -5 339 -2 q 262 -8 284 -8 q 145 28 183 -8 q 108 143 108 64 l 108 638 l 0 638 l 0 738 l 108 738 l 108 944 l 232 944 l 232 738 l 367 738 l 367 638 l 232 638 l 232 185 q 248 121 232 140 q 307 102 264 102 q 345 104 330 102 q 367 107 360 107 l 367 0 " }, "¬": { x_min: 0, x_max: 706, ha: 803, o: "m 706 411 l 706 158 l 630 158 l 630 335 l 0 335 l 0 411 l 706 411 " }, λ: { x_min: 0, x_max: 750, ha: 803, o: "m 750 -7 q 679 -15 716 -15 q 538 59 591 -15 q 466 214 512 97 l 336 551 l 126 0 l 0 0 l 270 705 q 223 837 247 770 q 116 899 190 899 q 90 898 100 899 l 90 1004 q 152 1011 125 1011 q 298 938 244 1011 q 373 783 326 901 l 605 192 q 649 115 629 136 q 716 95 669 95 l 736 95 q 750 97 745 97 l 750 -7 " }, W: { x_min: 0, x_max: 1263.890625, ha: 1351, o: "m 1263 1013 l 995 0 l 859 0 l 627 837 l 405 0 l 265 0 l 0 1013 l 136 1013 l 342 202 l 556 1013 l 701 1013 l 921 207 l 1133 1012 l 1263 1013 " }, ">": { x_min: 18.0625, x_max: 774, ha: 792, o: "m 774 376 l 18 40 l 18 149 l 631 421 l 18 692 l 18 799 l 774 465 l 774 376 " }, v: { x_min: 0, x_max: 675.15625, ha: 761, o: "m 675 738 l 404 0 l 272 0 l 0 738 l 133 737 l 340 147 l 541 737 l 675 738 " }, τ: { x_min: 0.28125, x_max: 644.5, ha: 703, o: "m 644 628 l 382 628 l 382 179 q 388 120 382 137 q 436 91 401 91 q 474 94 447 91 q 504 97 501 97 l 504 0 q 454 -9 482 -5 q 401 -14 426 -14 q 278 67 308 -14 q 260 233 260 118 l 260 628 l 0 628 l 0 739 l 644 739 l 644 628 " }, ξ: { x_min: 0, x_max: 624.9375, ha: 699, o: "m 624 -37 q 608 -153 624 -96 q 563 -278 593 -211 l 454 -278 q 491 -183 486 -200 q 511 -83 511 -126 q 484 -23 511 -44 q 370 1 452 1 q 323 0 354 1 q 283 -1 293 -1 q 84 76 169 -1 q 0 266 0 154 q 56 431 0 358 q 197 538 108 498 q 94 613 134 562 q 54 730 54 665 q 77 823 54 780 q 143 901 101 867 l 27 901 l 27 1012 l 576 1012 l 576 901 l 380 901 q 244 863 303 901 q 178 745 178 820 q 312 600 178 636 q 532 582 380 582 l 532 479 q 276 455 361 479 q 118 281 118 410 q 165 173 118 217 q 274 120 208 133 q 494 101 384 110 q 624 -37 624 76 " }, "&": { x_min: -3, x_max: 894.25, ha: 992, o: "m 894 0 l 725 0 l 624 123 q 471 0 553 40 q 306 -41 390 -41 q 168 -7 231 -41 q 62 92 105 26 q 14 187 31 139 q -3 276 -3 235 q 55 433 -3 358 q 248 581 114 508 q 170 689 196 640 q 137 817 137 751 q 214 985 137 922 q 384 1041 284 1041 q 548 988 483 1041 q 622 824 622 928 q 563 666 622 739 q 431 556 516 608 l 621 326 q 649 407 639 361 q 663 493 653 426 l 781 493 q 703 229 781 352 l 894 0 m 504 818 q 468 908 504 877 q 384 940 433 940 q 293 907 331 940 q 255 818 255 875 q 289 714 255 767 q 363 628 313 678 q 477 729 446 682 q 504 818 504 771 m 556 209 l 314 499 q 179 395 223 449 q 135 283 135 341 q 146 222 135 253 q 183 158 158 192 q 333 80 241 80 q 556 209 448 80 " }, Λ: { x_min: 0, x_max: 862.5, ha: 942, o: "m 862 0 l 719 0 l 426 847 l 143 0 l 0 0 l 356 1013 l 501 1013 l 862 0 " }, I: { x_min: 41, x_max: 180, ha: 293, o: "m 180 0 l 41 0 l 41 1013 l 180 1013 l 180 0 " }, G: { x_min: 0, x_max: 921, ha: 1011, o: "m 921 0 l 832 0 l 801 136 q 655 15 741 58 q 470 -28 568 -28 q 126 133 259 -28 q 0 499 0 284 q 125 881 0 731 q 486 1043 259 1043 q 763 957 647 1043 q 905 709 890 864 l 772 709 q 668 866 747 807 q 486 926 589 926 q 228 795 322 926 q 142 507 142 677 q 228 224 142 342 q 483 94 323 94 q 712 195 625 94 q 796 435 796 291 l 477 435 l 477 549 l 921 549 l 921 0 " }, ΰ: { x_min: 0, x_max: 617, ha: 725, o: "m 524 800 l 414 800 l 414 925 l 524 925 l 524 800 m 183 800 l 73 800 l 73 925 l 183 925 l 183 800 m 617 352 q 540 93 617 199 q 308 -24 455 -24 q 76 93 161 -24 q 0 352 0 199 l 0 738 l 126 738 l 126 354 q 169 185 126 257 q 312 98 220 98 q 451 185 402 98 q 492 354 492 257 l 492 738 l 617 738 l 617 352 m 489 1040 l 300 819 l 216 819 l 351 1040 l 489 1040 " }, "`": { x_min: 0, x_max: 138.890625, ha: 236, o: "m 138 699 l 0 699 l 0 861 q 36 974 0 929 q 138 1041 72 1020 l 138 977 q 82 931 95 969 q 69 839 69 893 l 138 839 l 138 699 " }, "·": { x_min: 0, x_max: 142, ha: 239, o: "m 142 585 l 0 585 l 0 738 l 142 738 l 142 585 " }, Υ: { x_min: 0.328125, x_max: 819.515625, ha: 889, o: "m 819 1013 l 482 416 l 482 0 l 342 0 l 342 416 l 0 1013 l 140 1013 l 411 533 l 679 1013 l 819 1013 " }, r: { x_min: 0, x_max: 355.5625, ha: 432, o: "m 355 621 l 343 621 q 179 569 236 621 q 122 411 122 518 l 122 0 l 0 0 l 0 737 l 117 737 l 117 604 q 204 719 146 686 q 355 753 262 753 l 355 621 " }, x: { x_min: 0, x_max: 675, ha: 764, o: "m 675 0 l 525 0 l 331 286 l 144 0 l 0 0 l 256 379 l 12 738 l 157 737 l 336 473 l 516 738 l 661 738 l 412 380 l 675 0 " }, μ: { x_min: 0, x_max: 696.609375, ha: 747, o: "m 696 -4 q 628 -14 657 -14 q 498 97 513 -14 q 422 8 470 41 q 313 -24 374 -24 q 207 3 258 -24 q 120 80 157 31 l 120 -278 l 0 -278 l 0 738 l 124 738 l 124 343 q 165 172 124 246 q 308 82 216 82 q 451 177 402 82 q 492 358 492 254 l 492 738 l 616 738 l 616 214 q 623 136 616 160 q 673 92 636 92 q 696 95 684 92 l 696 -4 " }, h: { x_min: 0, x_max: 615, ha: 724, o: "m 615 472 l 615 0 l 490 0 l 490 454 q 456 590 490 535 q 338 654 416 654 q 186 588 251 654 q 122 436 122 522 l 122 0 l 0 0 l 0 1013 l 122 1013 l 122 633 q 218 727 149 694 q 362 760 287 760 q 552 676 484 760 q 615 472 615 600 " }, ".": { x_min: 0, x_max: 142, ha: 239, o: "m 142 0 l 0 0 l 0 151 l 142 151 l 142 0 " }, φ: { x_min: -2, x_max: 878, ha: 974, o: "m 496 -279 l 378 -279 l 378 -17 q 101 88 204 -17 q -2 367 -2 194 q 68 626 -2 510 q 283 758 151 758 l 283 646 q 167 537 209 626 q 133 373 133 462 q 192 177 133 254 q 378 93 259 93 l 378 758 q 445 764 426 763 q 476 765 464 765 q 765 659 653 765 q 878 377 878 553 q 771 96 878 209 q 496 -17 665 -17 l 496 -279 m 496 93 l 514 93 q 687 183 623 93 q 746 380 746 265 q 691 569 746 491 q 522 658 629 658 l 496 656 l 496 93 " }, ";": { x_min: 0, x_max: 142, ha: 239, o: "m 142 585 l 0 585 l 0 738 l 142 738 l 142 585 m 142 -12 q 105 -132 142 -82 q 0 -206 68 -182 l 0 -138 q 58 -82 43 -123 q 68 0 68 -56 l 0 0 l 0 151 l 142 151 l 142 -12 " }, f: { x_min: 0, x_max: 378, ha: 472, o: "m 378 638 l 246 638 l 246 0 l 121 0 l 121 638 l 0 638 l 0 738 l 121 738 q 137 935 121 887 q 290 1028 171 1028 q 320 1027 305 1028 q 378 1021 334 1026 l 378 908 q 323 918 346 918 q 257 870 273 918 q 246 780 246 840 l 246 738 l 378 738 l 378 638 " }, "“": { x_min: 1, x_max: 348.21875, ha: 454, o: "m 140 670 l 1 670 l 1 830 q 37 943 1 897 q 140 1011 74 990 l 140 947 q 82 900 97 940 q 68 810 68 861 l 140 810 l 140 670 m 348 670 l 209 670 l 209 830 q 245 943 209 897 q 348 1011 282 990 l 348 947 q 290 900 305 940 q 276 810 276 861 l 348 810 l 348 670 " }, A: { x_min: 0.03125, x_max: 906.953125, ha: 1008, o: "m 906 0 l 756 0 l 648 303 l 251 303 l 142 0 l 0 0 l 376 1013 l 529 1013 l 906 0 m 610 421 l 452 867 l 293 421 l 610 421 " }, 6: { x_min: 53, x_max: 739, ha: 792, o: "m 739 312 q 633 62 739 162 q 400 -31 534 -31 q 162 78 257 -31 q 53 439 53 206 q 178 859 53 712 q 441 986 284 986 q 643 912 559 986 q 732 713 732 833 l 601 713 q 544 830 594 786 q 426 875 494 875 q 268 793 331 875 q 193 517 193 697 q 301 597 240 570 q 427 624 362 624 q 643 540 552 624 q 739 312 739 451 m 603 298 q 540 461 603 400 q 404 516 484 516 q 268 461 323 516 q 207 300 207 401 q 269 137 207 198 q 405 83 325 83 q 541 137 486 83 q 603 298 603 197 " }, "‘": { x_min: 1, x_max: 139.890625, ha: 236, o: "m 139 670 l 1 670 l 1 830 q 37 943 1 897 q 139 1011 74 990 l 139 947 q 82 900 97 940 q 68 810 68 861 l 139 810 l 139 670 " }, ϊ: { x_min: -70, x_max: 283, ha: 361, o: "m 283 800 l 173 800 l 173 925 l 283 925 l 283 800 m 40 800 l -70 800 l -70 925 l 40 925 l 40 800 m 283 3 q 232 -10 257 -5 q 181 -15 206 -15 q 84 26 118 -15 q 41 200 41 79 l 41 737 l 166 737 l 167 215 q 171 141 167 157 q 225 101 182 101 q 247 103 238 101 q 283 112 256 104 l 283 3 " }, π: { x_min: -0.21875, x_max: 773.21875, ha: 857, o: "m 773 -7 l 707 -11 q 575 40 607 -11 q 552 174 552 77 l 552 226 l 552 626 l 222 626 l 222 0 l 97 0 l 97 626 l 0 626 l 0 737 l 773 737 l 773 626 l 676 626 l 676 171 q 695 103 676 117 q 773 90 714 90 l 773 -7 " }, ά: { x_min: 0, x_max: 765.5625, ha: 809, o: "m 765 -4 q 698 -14 726 -14 q 564 97 586 -14 q 466 7 525 40 q 337 -26 407 -26 q 88 98 186 -26 q 0 369 0 212 q 88 637 0 525 q 337 760 184 760 q 465 727 407 760 q 563 637 524 695 l 563 738 l 685 738 l 685 222 q 693 141 685 168 q 748 94 708 94 q 765 95 760 94 l 765 -4 m 584 371 q 531 562 584 485 q 360 653 470 653 q 192 566 254 653 q 135 379 135 489 q 186 181 135 261 q 358 84 247 84 q 528 176 465 84 q 584 371 584 260 m 604 1040 l 415 819 l 332 819 l 466 1040 l 604 1040 " }, O: { x_min: 0, x_max: 958, ha: 1057, o: "m 485 1041 q 834 882 702 1041 q 958 512 958 734 q 834 136 958 287 q 481 -26 702 -26 q 126 130 261 -26 q 0 504 0 279 q 127 880 0 728 q 485 1041 263 1041 m 480 98 q 731 225 638 98 q 815 504 815 340 q 733 783 815 669 q 480 912 640 912 q 226 784 321 912 q 142 504 142 670 q 226 224 142 339 q 480 98 319 98 " }, n: { x_min: 0, x_max: 615, ha: 724, o: "m 615 463 l 615 0 l 490 0 l 490 454 q 453 592 490 537 q 331 656 410 656 q 178 585 240 656 q 117 421 117 514 l 117 0 l 0 0 l 0 738 l 117 738 l 117 630 q 218 728 150 693 q 359 764 286 764 q 552 675 484 764 q 615 463 615 593 " }, 3: { x_min: 54, x_max: 737, ha: 792, o: "m 737 284 q 635 55 737 141 q 399 -25 541 -25 q 156 52 248 -25 q 54 308 54 140 l 185 308 q 245 147 185 202 q 395 96 302 96 q 539 140 484 96 q 602 280 602 190 q 510 429 602 390 q 324 454 451 454 l 324 565 q 487 584 441 565 q 565 719 565 617 q 515 835 565 791 q 395 879 466 879 q 255 824 307 879 q 203 661 203 769 l 78 661 q 166 909 78 822 q 387 992 250 992 q 603 921 513 992 q 701 723 701 844 q 669 607 701 656 q 578 524 637 558 q 696 434 655 499 q 737 284 737 369 " }, 9: { x_min: 53, x_max: 739, ha: 792, o: "m 739 524 q 619 94 739 241 q 362 -32 516 -32 q 150 47 242 -32 q 59 244 59 126 l 191 244 q 246 129 191 176 q 373 82 301 82 q 526 161 466 82 q 597 440 597 255 q 363 334 501 334 q 130 432 216 334 q 53 650 53 521 q 134 880 53 786 q 383 986 226 986 q 659 841 566 986 q 739 524 739 719 m 388 449 q 535 514 480 449 q 585 658 585 573 q 535 805 585 744 q 388 873 480 873 q 242 809 294 873 q 191 658 191 745 q 239 514 191 572 q 388 449 292 449 " }, l: { x_min: 41, x_max: 166, ha: 279, o: "m 166 0 l 41 0 l 41 1013 l 166 1013 l 166 0 " }, "¤": { x_min: 40.09375, x_max: 728.796875, ha: 825, o: "m 728 304 l 649 224 l 512 363 q 383 331 458 331 q 256 363 310 331 l 119 224 l 40 304 l 177 441 q 150 553 150 493 q 184 673 150 621 l 40 818 l 119 898 l 267 749 q 321 766 291 759 q 384 773 351 773 q 447 766 417 773 q 501 749 477 759 l 649 898 l 728 818 l 585 675 q 612 618 604 648 q 621 553 621 587 q 591 441 621 491 l 728 304 m 384 682 q 280 643 318 682 q 243 551 243 604 q 279 461 243 499 q 383 423 316 423 q 487 461 449 423 q 525 553 525 500 q 490 641 525 605 q 384 682 451 682 " }, κ: { x_min: 0, x_max: 632.328125, ha: 679, o: "m 632 0 l 482 0 l 225 384 l 124 288 l 124 0 l 0 0 l 0 738 l 124 738 l 124 446 l 433 738 l 596 738 l 312 466 l 632 0 " }, 4: { x_min: 48, x_max: 742.453125, ha: 792, o: "m 742 243 l 602 243 l 602 0 l 476 0 l 476 243 l 48 243 l 48 368 l 476 958 l 602 958 l 602 354 l 742 354 l 742 243 m 476 354 l 476 792 l 162 354 l 476 354 " }, p: { x_min: 0, x_max: 685, ha: 786, o: "m 685 364 q 598 96 685 205 q 350 -23 504 -23 q 121 89 205 -23 l 121 -278 l 0 -278 l 0 738 l 121 738 l 121 633 q 220 726 159 691 q 351 761 280 761 q 598 636 504 761 q 685 364 685 522 m 557 371 q 501 560 557 481 q 330 651 437 651 q 162 559 223 651 q 108 366 108 479 q 162 177 108 254 q 333 87 224 87 q 502 178 441 87 q 557 371 557 258 " }, "‡": { x_min: 0, x_max: 777, ha: 835, o: "m 458 238 l 458 0 l 319 0 l 319 238 l 0 238 l 0 360 l 319 360 l 319 681 l 0 683 l 0 804 l 319 804 l 319 1015 l 458 1013 l 458 804 l 777 804 l 777 683 l 458 683 l 458 360 l 777 360 l 777 238 l 458 238 " }, ψ: { x_min: 0, x_max: 808, ha: 907, o: "m 465 -278 l 341 -278 l 341 -15 q 87 102 180 -15 q 0 378 0 210 l 0 739 l 133 739 l 133 379 q 182 195 133 275 q 341 98 242 98 l 341 922 l 465 922 l 465 98 q 623 195 563 98 q 675 382 675 278 l 675 742 l 808 742 l 808 381 q 720 104 808 213 q 466 -13 627 -13 l 465 -278 " }, η: { x_min: 0.78125, x_max: 697, ha: 810, o: "m 697 -278 l 572 -278 l 572 454 q 540 587 572 536 q 425 650 501 650 q 271 579 337 650 q 206 420 206 509 l 206 0 l 81 0 l 81 489 q 73 588 81 562 q 0 644 56 644 l 0 741 q 68 755 38 755 q 158 720 124 755 q 200 630 193 686 q 297 726 234 692 q 434 761 359 761 q 620 692 544 761 q 697 516 697 624 l 697 -278 " } }, cssFontWeight: "normal", ascender: 1189, underlinePosition: -100, cssFontStyle: "normal", boundingBox: { yMin: -334, xMin: -111, yMax: 1189, xMax: 1672 }, resolution: 1e3, original_font_information: { postscript_name: "Helvetiker-Regular", version_string: "Version 1.00 2004 initial release", vendor_url: "http://www.magenta.gr/", full_font_name: "Helvetiker", font_family_name: "Helvetiker", copyright: "Copyright (c) Μagenta ltd, 2004", description: "", trademark: "", designer: "", designer_url: "", unique_font_identifier: "Μagenta ltd:Helvetiker:22-10-104", license_url: "http://www.ellak.gr/fonts/MgOpen/license.html", license_description: `Copyright (c) 2004 by MAGENTA Ltd. All Rights Reserved.\r
 \r
 Permission is hereby granted, free of charge, to any person obtaining a copy of the fonts accompanying this license ("Fonts") and associated documentation files (the "Font Software"), to reproduce and distribute the Font Software, including without limitation the rights to use, copy, merge, publish, distribute, and/or sell copies of the Font Software, and to permit persons to whom the Font Software is furnished to do so, subject to the following conditions: \r
 \r
@@ -14878,7 +14878,7 @@ This License becomes null and void to the extent applicable to Fonts or Font Sof
 The Font Software may be sold as part of a larger software package but no copy of one or more of the Font Software typefaces may be sold by itself. \r
 \r
 THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL MAGENTA OR PERSONS OR BODIES IN CHARGE OF ADMINISTRATION AND MAINTENANCE OF THE FONT SOFTWARE BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM OTHER DEALINGS IN THE FONT SOFTWARE.`, manufacturer_name: "Μagenta ltd", font_sub_family_name: "Regular" }, descender: -334, familyName: "Helvetiker", lineHeight: 1522, underlineThickness: 50 }, to = { type: "change" }, jr = { type: "start" }, no = { type: "end" };
-class Zp extends Pn {
+class Kp extends Pn {
   constructor(e, t) {
     super(), this.object = e, this.domElement = t, this.domElement.style.touchAction = "none", this.enabled = !0, this.target = new R(), this.minDistance = 0, this.maxDistance = 1 / 0, this.minZoom = 0, this.maxZoom = 1 / 0, this.minPolarAngle = 0, this.maxPolarAngle = Math.PI, this.minAzimuthAngle = -1 / 0, this.maxAzimuthAngle = 1 / 0, this.enableDamping = !1, this.dampingFactor = 0.05, this.enableZoom = !0, this.zoomSpeed = 1, this.enableRotate = !0, this.rotateSpeed = 1, this.enablePan = !0, this.panSpeed = 1, this.screenSpacePanning = !0, this.keyPanSpeed = 7, this.autoRotate = !1, this.autoRotateSpeed = 2, this.keys = { LEFT: "ArrowLeft", UP: "ArrowUp", RIGHT: "ArrowRight", BOTTOM: "ArrowDown" }, this.mouseButtons = { LEFT: Rn.ROTATE, MIDDLE: Rn.DOLLY, RIGHT: Rn.PAN }, this.touches = { ONE: Cn.ROTATE, TWO: Cn.DOLLY_PAN }, this.target0 = this.target.clone(), this.position0 = this.object.position.clone(), this.zoom0 = this.object.zoom, this._domElementKeyEvents = null, this.getPolarAngle = function() {
       return a.phi;
@@ -15231,13 +15231,13 @@ class Zp extends Pn {
     n.domElement.addEventListener("contextmenu", M), n.domElement.addEventListener("pointerdown", Q), n.domElement.addEventListener("pointercancel", oe), n.domElement.addEventListener("wheel", Ee, { passive: !1 }), this.update();
   }
 }
-const Xo = 6e5;
-let Ot, Bt, os, $i = 0, Qi = 0, Yo = [];
-function Kp() {
-  return Yo.join(`
+const Yo = 6e5;
+let Ot, Bt, os, $i = 0, Qi = 0, jo = [];
+function Jp() {
+  return jo.join(`
 `);
 }
-function Jp() {
+function $p() {
   Bt = new St(), Bt.name = "travel_geom", $i = 0;
   const i = new sr({
     vertexColors: !1,
@@ -15252,10 +15252,10 @@ function Jp() {
   });
   return Bt.setAttribute(
     "position",
-    new st(Xo, 3)
-  ), Bt.attributes.position.usage = xo, Bt.setDrawRange(0, 0), new ms(Bt, i);
+    new st(Yo, 3)
+  ), Bt.attributes.position.usage = vo, Bt.setDrawRange(0, 0), new ms(Bt, i);
 }
-function $p() {
+function Qp() {
   Ot = new St(), Qi = 0, Ot.name = "extrude_geom";
   const i = new sr({
     vertexColors: !1,
@@ -15275,16 +15275,18 @@ function $p() {
   });
   return Ot.setAttribute(
     "position",
-    new st(Xo, 3)
-  ), Ot.attributes.position.usage = xo, Ot.setDrawRange(0, 0), new ms(Ot, i);
+    new st(Yo, 3)
+  ), Ot.attributes.position.usage = vo, Ot.setDrawRange(0, 0), new ms(Ot, i);
 }
-function Qp({ radius: i } = { radius: 2 }) {
+function em({ radius: i } = { radius: 2 }) {
   const e = new Ms(i, 16, 12), t = new us({ color: 16777045 });
   return os = new At(e, t), os;
 }
-async function em(i) {
+async function io(i) {
   if (Number.isNaN(i))
-    throw new Error(`Bad non-numeric argument to delay for visualiser: ${JSON.stringify(i)}`);
+    throw new Error(
+      `Bad non-numeric argument to delay for visualiser: ${JSON.stringify(i)}`
+    );
   return i > 0 && await new Promise((e) => setTimeout(e, Math.round(i))), 0;
 }
 function tm({ x: i, y: e, z: t, delay: n, debug: r } = { delay: !1, debug: !1 }) {
@@ -15370,17 +15372,17 @@ function tm({ x: i, y: e, z: t, delay: n, debug: r } = { delay: !1, debug: !1 })
           o && console.log("UNRETRACT!");
           break;
       }
-      s && await em(d || f);
+      s && (Number.isFinite(s) ? await io(s) : await io(d || f));
     },
     errorEvent: (a) => console.error(`LivePrinter Error Event: ${a}`),
     gcodeEvent: async (a) => {
-      Yo.push(a);
+      jo.push(a);
     }
     // wait 20 ms
   };
 }
-var nm = Object.defineProperty, im = (i, e, t) => e in i ? nm(i, e, { enumerable: !0, configurable: !0, writable: !0, value: t }) : i[e] = t, io = (i, e, t) => im(i, typeof e != "symbol" ? e + "" : e, t);
-class ro {
+var nm = Object.defineProperty, im = (i, e, t) => e in i ? nm(i, e, { enumerable: !0, configurable: !0, writable: !0, value: t }) : i[e] = t, ro = (i, e, t) => im(i, typeof e != "symbol" ? e + "" : e, t);
+class so {
   // default
   static debug(e) {
   }
@@ -15392,12 +15394,12 @@ class ro {
     console.error(e);
   }
 }
-io(ro, "LOG_LEVEL", {
+ro(so, "LOG_LEVEL", {
   error: 0,
   warning: 1,
   info: 2,
   debug: 3
-}), io(ro, "level", 0);
+}), ro(so, "level", 0);
 String.prototype.reverse = function() {
   const i = /([\0-\u02FF\u0370-\u1AAF\u1B00-\u1DBF\u1E00-\u20CF\u2100-\uD7FF\uE000-\uFE1F\uFE30-\uFFFF]|[\uD800-\uDBFF][\uDC00-\uDFFF]|[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF])([\u0300-\u036F\u1AB0-\u1AFF\u1DC0-\u1DFF\u20D0-\u20FF\uFE20-\uFE2F]+)/g, e = /([\uD800-\uDBFF])([\uDC00-\uDFFF])/g;
   let t = this.replace(i, function(s, o, a) {
@@ -15407,14 +15409,14 @@ String.prototype.reverse = function() {
     n += t.charAt(r);
   return n;
 };
-var so = "C C# Db D D# Eb E F F# Gb G G# Ab A A# Bb B".split(" "), jo = function(i) {
-  return typeof i != "string" ? so.slice() : so.filter(function(e) {
+var ao = "C C# Db D D# Eb E F F# Gb G G# Ab A A# Bb B".split(" "), Zo = function(i) {
+  return typeof i != "string" ? ao.slice() : ao.filter(function(e) {
     var t = e[1] || " ";
     return i.indexOf(t) !== -1;
   });
 };
-jo(" #");
-jo(" b");
+Zo(" #");
+Zo(" b");
 var rm = /^([a-gA-G]?)(#{1,}|b{1,}|x{1,}|)(-?\d*)\s*(.*)$/;
 function sm(i) {
   typeof i != "string" && (i = "");
@@ -15431,7 +15433,7 @@ var am = Object.freeze({
   chroma: null,
   midi: null,
   freq: null
-}), ao = [0, 2, 4, 5, 7, 9, 11], om = function(i) {
+}), oo = [0, 2, 4, 5, 7, 9, 11], om = function(i) {
   var e = sm(i);
   if (e[0] === "" || e[3] !== "")
     return am;
@@ -15448,7 +15450,7 @@ var am = Object.freeze({
     midi: null,
     freq: null
   };
-  return s.chroma = (ao[s.step] + s.alt + 120) % 12, s.midi = s.oct !== null ? ao[s.step] + s.alt + 12 * (s.oct + 1) : null, s.freq = hm(s.midi), Object.freeze(s);
+  return s.chroma = (oo[s.step] + s.alt + 120) % 12, s.midi = s.oct !== null ? oo[s.step] + s.alt + 12 * (s.oct + 1) : null, s.freq = hm(s.midi), Object.freeze(s);
 }, lm = function(i, e) {
   return e === void 0 && (e = {}), function(t) {
     return e[t] || (e[t] = i(t));
@@ -15457,7 +15459,7 @@ var am = Object.freeze({
   return e === void 0 && (e = 440), typeof i == "number" ? Math.pow(2, (i - 69) / 12) * e : null;
 }, um = function(i) {
   return cm(i).chroma;
-}, dm = "([-+]?\\d+)(d{1,4}|m|M|P|A{1,4})", fm = "(AA|A|P|M|m|d|dd)([-+]?\\d+)", pm = new RegExp("^" + dm + "|" + fm + "$"), oo = [0, 2, 4, 5, 7, 9, 11], mm = "PMMPPMM", _m = function(i) {
+}, dm = "([-+]?\\d+)(d{1,4}|m|M|P|A{1,4})", fm = "(AA|A|P|M|m|d|dd)([-+]?\\d+)", pm = new RegExp("^" + dm + "|" + fm + "$"), lo = [0, 2, 4, 5, 7, 9, 11], mm = "PMMPPMM", _m = function(i) {
   var e = pm.exec("" + i);
   return e === null ? null : e[1] ? [e[1], e[2]] : [e[4], e[3]];
 }, ls = Object.freeze({
@@ -15494,10 +15496,10 @@ var am = Object.freeze({
     chroma: 0,
     ic: 0
   };
-  return t.num = +e[0], t.q = e[1], t.step = xm(t.num), t.type = mm[t.step], t.type === "M" && t.q === "P" ? ls : (t.name = "" + t.num + t.q, t.dir = t.num < 0 ? -1 : 1, t.simple = t.num === 8 || t.num === -8 ? t.num : t.dir * (t.step + 1), t.alt = gm(t.type, t.q), t.oct = Math.floor((Math.abs(t.num) - 1) / 7), t.semitones = t.dir * (oo[t.step] + t.alt + 12 * t.oct), t.chroma = (t.dir * (oo[t.step] + t.alt) % 12 + 12) % 12, Object.freeze(t));
-}, lo = {};
+  return t.num = +e[0], t.q = e[1], t.step = xm(t.num), t.type = mm[t.step], t.type === "M" && t.q === "P" ? ls : (t.name = "" + t.num + t.q, t.dir = t.num < 0 ? -1 : 1, t.simple = t.num === 8 || t.num === -8 ? t.num : t.dir * (t.step + 1), t.alt = gm(t.type, t.q), t.oct = Math.floor((Math.abs(t.num) - 1) / 7), t.semitones = t.dir * (lo[t.step] + t.alt + 12 * t.oct), t.chroma = (t.dir * (lo[t.step] + t.alt) % 12 + 12) % 12, Object.freeze(t));
+}, co = {};
 function Mm(i) {
-  return typeof i != "string" ? ls : lo[i] || (lo[i] = vm(i));
+  return typeof i != "string" ? ls : co[i] || (co[i] = vm(i));
 }
 var Sm = function(i) {
   return Mm(i).chroma;
@@ -15722,7 +15724,7 @@ var V0 = /^[01]{12}$/;
 function k0(i) {
   return V0.test(i);
 }
-var Zo = function(i) {
+var Ko = function(i) {
   var e = Object.keys(i).sort(), t = [], n = [], r = function(a, c, l) {
     t[a] = c, n[l] = n[l] || [], n[l].push(a);
   };
@@ -15738,7 +15740,7 @@ var Zo = function(i) {
   return o.names = function(a) {
     return typeof a == "string" ? (n[a] || []).slice() : (a === !0 ? s : e).slice();
   }, o;
-}, W0 = Zo(Km), X0 = Zo(z0);
+}, W0 = Ko(Km), X0 = Ko(z0);
 W0.names;
 X0.names;
 const Y0 = {
@@ -15781,7 +15783,7 @@ function j0(i, e, t = { title: "LivePrinter", debug: !1, delay: !0 }) {
   function r(ve = "lines.gcode") {
     const y = Y0[i.model].join(`
 `) + `
-` + Kp(), M = URL.createObjectURL(new Blob([y], { type: "text" })), F = document.createElement("a");
+` + Jp(), M = URL.createObjectURL(new Blob([y], { type: "text" })), F = document.createElement("a");
     F.href = M, F.download = ve, F.click();
   }
   n.downloadGCode = r;
@@ -15806,13 +15808,13 @@ function j0(i, e, t = { title: "LivePrinter", debug: !1, delay: !0 }) {
     return o() * ve / i.maxx;
   }
   n.bedZtoScene = h;
-  const d = new No({
+  const d = new Fo({
     antialias: !0,
     preserveDrawingBuffer: !0,
     alpha: !0
   });
   d.setPixelRatio(window.devicePixelRatio), d.setSize(o(), a()), s.appendChild(d.domElement);
-  const f = Jp(), p = $p(), _ = Qp(), g = new ep(), m = new ot();
+  const f = $p(), p = Qp(), _ = em(), g = new tp(), m = new ot();
   m.translateX(-o()), m.translateY(-a() / 2), m.rotateX(fi / 2), m.translateY(2 * a() / 3);
   const u = new sn(), T = new sn(), x = new sn();
   g.add(m), T.add(f), T.add(p), T.add(_);
@@ -15826,7 +15828,7 @@ function j0(i, e, t = { title: "LivePrinter", debug: !1, delay: !0 }) {
   g.add(u), T.translateX(o() / 2), T.translateY(a() / 2), x.translateX(o() / 2), x.translateY(a() / 2), E.position.x = c(i.maxx) - b.x / 2, E.position.y = l(i.maxy) - b.y / 2, E.position.z = b.y / 2, w.position.x = c(0) - b.x / 2, w.position.y = l(0) - b.y / 2, w.position.z = b.y / 2, console.log(
     `Test cube position: ${JSON.stringify(w.position, null, 2)}`
   ), T.add(w), T.add(E), u.add(T), u.add(x), g.background = new Ve(986895);
-  const q = new Gp(
+  const q = new Hp(
     o(),
     Math.round(i.maxx / 5),
     4473924,
@@ -15894,7 +15896,7 @@ function j0(i, e, t = { title: "LivePrinter", debug: !1, delay: !0 }) {
     $ = ve, ce.left = -o() / $, ce.right = o() / $, ce.top = a() / $, ce.bottom = -a() / $, ce.updateProjectionMatrix();
   }
   n.closeFactor = fe, N.add(H, ce), u.add(N);
-  const z = new Zp(H, d.domElement);
+  const z = new Kp(H, d.domElement);
   H.up.set(0, 0, 1), H.position.set(
     c(-3 * i.maxx),
     l(-3 * i.maxy),
@@ -15923,7 +15925,7 @@ function j0(i, e, t = { title: "LivePrinter", debug: !1, delay: !0 }) {
       c(i.maxx / 2),
       l(i.maxy / 2),
       h(i.maxx / 4)
-    ), x.add(F), x.add(new zp(16777215, 0.2));
+    ), x.add(F), x.add(new Gp(16777215, 0.2));
   })();
   const K = tm({
     x: c,
@@ -15964,7 +15966,7 @@ function j0(i, e, t = { title: "LivePrinter", debug: !1, delay: !0 }) {
   function pe() {
     H.aspect, H.aspect = o() / a(), H.updateProjectionMatrix(), ce.aspect = H.aspect, fe($), Ae.size = o() / 20, Ae.height = o() / 24, Ae.computeBoundingBox(), d.setSize(o(), a());
   }
-  const Ce = new Vp().parse(jp), Ae = new Yp(t.title ? t.title : "LivePrinter", {
+  const Ce = new kp().parse(Zp), Ae = new jp(t.title ? t.title : "LivePrinter", {
     font: Ce,
     size: o() / 20,
     height: o() / 24,
