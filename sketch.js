@@ -27,7 +27,12 @@ async function main() {
   const lp = new LivePrinter();
 
   // do the main thing we came here for
-  const visualiser = makeVisualiser(lp, "c", { title: "LivePrinter", delay:true, debug:false });
+  const visualiser = makeVisualiser(lp, "c", 
+    { title: "LivePrinter", debug: false, delay: true, 
+    travelColor: 0xea44aa, travelOpacity: 0.8,
+    extrudeColor: 0x44aafe, extrudeOpacity: 0.8,
+    printHeadColor: 0xffff55, printHeadRadius: 6,
+   });
   
   globalThis.visualiser = visualiser;
 
@@ -35,6 +40,11 @@ async function main() {
   document.getElementById('download').addEventListener('click', (e)=>{
     console.log('click');
     visualiser.downloadGCode();
+  });
+
+  document.getElementById('reset').addEventListener('click', (e)=>{
+    console.log('reset scene');
+    visualiser.resetScene();
   });
 
   // position on paper
