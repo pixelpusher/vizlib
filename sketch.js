@@ -1,10 +1,10 @@
 /**
- * Visualising 3D printing algos with LivePrinter https://github.com/pixelpusher/liveprinter
- *
- * by Evan Raskob <evan@flkr.com>
- * 
- * Might be buggy, but hey!
- */
+* Visualising 3D printing algos with LivePrinter https://github.com/pixelpusher/liveprinter
+*
+* by Evan Raskob <evan@flkr.com>
+* 
+* Might be buggy, but hey!
+*/
 
 import { LivePrinter } from "liveprinter-core"
 
@@ -12,151 +12,159 @@ import { LivePrinter } from "liveprinter-core"
 import { makeVisualiser } from "./lib/main.js";
 
 /**
- * Dumb, I know, but easier I guess
- * @param {String} text Text to log
- */
+* Dumb, I know, but easier I guess
+* @param {String} text Text to log
+*/
 function loginfo(text) {
   console.log(text);
 }
 
 /**
- * Run it!
- * @returns 
- */
+* Run it!
+* @returns 
+*/
 async function main() {
   const lp = new LivePrinter();
-
+  
   // do the main thing we came here for
   const visualiser = makeVisualiser(lp, "c", 
     { title: "LivePrinter", debug: false, delay: true, 
-    travelColor: 0xea44aa, travelOpacity: 0.8,
-    extrudeColor: 0x44aafe, extrudeOpacity: 0.8,
-    printHeadColor: 0xffff55, printHeadRadius: 6,
-   });
-  
-  globalThis.visualiser = visualiser;
-
-  // download
-  document.getElementById('download').addEventListener('click', (e)=>{
-    console.log('click');
-    visualiser.downloadGCode();
-  });
-
-  document.getElementById('reset').addEventListener('click', (e)=>{
-    console.log('reset scene');
-    visualiser.resetScene();
-  });
-
-  // position on paper
-  const offsetx = lp.maxx / 2;
-  const offsety = lp.maxy / 2;
-  // const offsetx = 0;
-  // const offsety = 0;
-  const layerHeight = 0.5;
-  const minz = 0.25; // start z
-  //const minthick = lp.t2mm("1/32b");
-
-  //--------------------------------------------------
-  //---- LivePrinter setup
-  //--------------------------------------------------
-
-  // was beat 1/2, beatHeight = 1/2, interval 1b
-
-  lp.bpm(125); // set bpm for piece
-  lp.psp('C7');
-  lp.tsp('E8'); // travel speed 
-  lp.interval("1/4b");
-  const beatLengthMM = lp.t2mm("1/2b");
-  lp.thick(layerHeight);
-  
-  loginfo(`beat lenth mm: ${beatLengthMM}`);
-  loginfo(`travel speed: ${lp.travelspeed()}`);
-  loginfo(`print speed: ${lp.printspeed()}`);
-  loginfo(`1/2 width in window: ${visualiser.bedXtoScene(lp.maxx / 2)}`);
-
-  //----------------------------------------------
-  // MOVE INTO POSITION
-  //----------------------------------------------
-
-  window.bail = false; // bail out (stop) if true
-
-  visualiser.closeFactor(50);
-
-  let _time = performance.now();
-  console.info(`start of move time: ${_time}`);
-  await lp.mov2({ x: offsetx, y: offsety, z: minz });
-  console.info(`move took: ${performance.now()-_time}`);
-  _time = performance.now();
-
-  console.info(`start of extrude time: ${_time}`);
-
-  await lp.extrude({ x: 5, y: 5, z: 0 });
-  console.info(`extrude took: ${performance.now()-_time}`);
-  _time = performance.now();
-
-
-  const totalLayers = 6;
-  let layers = totalLayers;
-  const radiusX = lp.maxx / 12;
-  const radiusY = lp.maxy / 16;
-  const pointsPerLayer = 12;
-
-  await lp.moveto({x:lp.cx, y:lp.cy, z:minz});
-  while(layers--)
-  {
-    const _ppl = 5;
-    let ppl = _ppl;
-    while(ppl--)
-    {
-      lp.turn(360/_ppl);
-      lp.t2d('1/4b');
-      await lp.draw();
+      travelColor: 0xea44aa, travelOpacity: 0.8,
+      extrudeColor: 0xfaa044, extrudeOpacity: 0.9,
+      printHeadColor: 0xffbb55, printHeadRadius: 3,
+      fogEnabled: true, fogColor: 0x0f0f0f, fogNear: 5000, fogFar: 7800,
+      glowEnabled: true,
+      glowStrength: 2.0,
+      glowRadius: 0.4,
+      glowThreshold: 0.1,
+      travelLineGlow: 1.5,
+      extrudeLineGlow: 3.0,
+    });
+    
+    globalThis.visualiser = visualiser;
+    
+    // download
+    document.getElementById('download').addEventListener('click', (e)=>{
+      console.log('click');
+      visualiser.downloadGCode();
+    });
+    
+    document.getElementById('reset').addEventListener('click', (e)=>{
+      console.log('reset scene');
+      visualiser.resetScene();
+    });
+    
+    // position on paper
+    const offsetx = lp.maxx / 2;
+    const offsety = lp.maxy / 2;
+    // const offsetx = 0;
+    // const offsety = 0;
+    const layerHeight = 0.5;
+    const minz = 0.25; // start z
+    //const minthick = lp.t2mm("1/32b");
+    
+    //--------------------------------------------------
+    //---- LivePrinter setup
+    //--------------------------------------------------
+    
+    // was beat 1/2, beatHeight = 1/2, interval 1b
+    
+    lp.bpm(125); // set bpm for piece
+    lp.psp('C7');
+    lp.tsp('E8'); // travel speed 
+    lp.interval("1/4b");
+    const beatLengthMM = lp.t2mm("1/2b");
+    lp.thick(layerHeight);
+    
+    loginfo(`beat lenth mm: ${beatLengthMM}`);
+    loginfo(`travel speed: ${lp.travelspeed()}`);
+    loginfo(`print speed: ${lp.printspeed()}`);
+    loginfo(`1/2 width in window: ${visualiser.bedXtoScene(lp.maxx / 2)}`);
+    
+    //----------------------------------------------
+    // MOVE INTO POSITION
+    //----------------------------------------------
+    
+    window.bail = false; // bail out (stop) if true
+    
+    visualiser.closeFactor(50);
+    
+    let _time = performance.now();
+    console.info(`start of move time: ${_time}`);
+    await lp.mov2({ x: offsetx, y: offsety, z: minz });
+    console.info(`move took: ${performance.now()-_time}`);
+    _time = performance.now();
+    
+    console.info(`start of extrude time: ${_time}`);
+    
+    await lp.extrude({ x: 5, y: 5, z: 0 });
+    console.info(`extrude took: ${performance.now()-_time}`);
+    _time = performance.now();
+    
+    
+    const totalLayers = 6;
+    let layers = totalLayers;
+    const radiusX = lp.maxx / 12;
+    const radiusY = lp.maxy / 16;
+    const pointsPerLayer = 12;
+    
+    await lp.moveto({x:lp.cx, y:lp.cy, z:minz});
+    while(layers--)
+      {
+      const _ppl = 5;
+      let ppl = _ppl;
+      while(ppl--)
+        {
+        lp.turn(360/_ppl);
+        lp.t2d('1/4b');
+        await lp.draw();
+      }
+      await lp.up(layerHeight);
+      
     }
-    await lp.up(layerHeight);
-
-  }
-
-
-  visualiser.closeFactor(30);
-
-  await lp.moveto({x:lp.cx, y:lp.cy, z:minz});
-
-  layers = totalLayers;
-  
-  while(layers--)
-  {
-    let ppl = pointsPerLayer;
-    while(ppl--)
-    {
-      const angle  = 2*Math.PI * ppl/pointsPerLayer;
-      await lp.extrudeto({ x: offsetx + radiusX*Math.cos(angle), y: offsety + radiusY*Math.sin(angle)});
-    }
-    await lp.up(layerHeight);
-  }
-
-  layers = totalLayers;
-
-  while(layers--)
-    {
+    
+    
+    visualiser.closeFactor(30);
+    
+    await lp.moveto({x:lp.cx, y:lp.cy, z:minz});
+    
+    layers = totalLayers;
+    
+    while(layers--)
+      {
       let ppl = pointsPerLayer;
       while(ppl--)
-      {
+        {
         const angle  = 2*Math.PI * ppl/pointsPerLayer;
         await lp.extrudeto({ x: offsetx + radiusX*Math.cos(angle), y: offsety + radiusY*Math.sin(angle)});
       }
       await lp.up(layerHeight);
     }
+    
+    layers = totalLayers;
+    
+    while(layers--)
+      {
+      let ppl = pointsPerLayer;
+      while(ppl--)
+        {
+        const angle  = 2*Math.PI * ppl/pointsPerLayer;
+        await lp.extrudeto({ x: offsetx + radiusX*Math.cos(angle), y: offsety + radiusY*Math.sin(angle)});
+      }
+      await lp.up(layerHeight);
+    }
+    
+    
+    //----------------------------------------------
+    //--END SETUP------------------------------------
+    //----------------------------------------------
+    console.log("LOOP FINISHED!");
+    window.bail = true;
+    lp.tsp(50);
+    await lp.up(30); // | fan fansp | thick newthick
+  }
   
-
-  //----------------------------------------------
-  //--END SETUP------------------------------------
-  //----------------------------------------------
-  console.log("LOOP FINISHED!");
-  window.bail = true;
-  lp.tsp(50);
-  await lp.up(30); // | fan fansp | thick newthick
-}
-
-
-// no need to await, just fire and forget
-main();
+  
+  // no need to await, just fire and forget
+  main();
+  
