@@ -20198,7 +20198,7 @@ var isNamed = deprecate("isNamed", "isNamedPitch", isNamedPitch), GCODE_HEADER =
 	async delay(e) {
 		return await new Promise((t) => setTimeout(t, e));
 	}
-}, PI = Math.PI;
+}, PI = Math.PI, closeAnimationFrameId = null;
 function makeVisualiser(e, t, n = {
 	title: "LivePrinter",
 	debug: !1,
@@ -20382,10 +20382,15 @@ function makeVisualiser(e, t, n = {
 	let te = { printEvent: async ({ type: t, newPosition: n, oldPosition: r, speed: i, moveTime: a, totalMoveTime: d, layerHeight: f, length: p }) => {
 		switch (t) {
 			case "extrude-start":
-			case "extrude-end":
 			case "travel-start":
-			case "travel-end":
-				V.position.set(c(e.maxx) - o() / 2, l(e.maxy) - s() / 2, u(n.z + e.maxz / 8)), V.lookAt(c(n.x) + o() / 2, l(n.y) + s() / 2, u(n.z));
+				{
+					closeAnimationFrameId && cancelAnimationFrame(closeAnimationFrameId);
+					let t = performance.now(), i = a, d = new Vector3(c(e.maxx) - o() / 2, l(e.maxy) - s() / 2, u(r.z + e.maxz / 8)), f = new Vector3(c(e.maxx) - o() / 2, l(e.maxy) - s() / 2, u(n.z + e.maxz / 8)), p = new Vector3(c(r.x) + o() / 2, l(r.y) + s() / 2, u(r.z)), m = new Vector3(c(n.x) + o() / 2, l(n.y) + s() / 2, u(n.z)), h = () => {
+						let e = performance.now() - t, n = Math.min(1, e / i), r = new Vector3().lerpVectors(d, f, n), a = new Vector3().lerpVectors(p, m, n);
+						V.position.copy(r), V.lookAt(a), closeAnimationFrameId = n < 1 ? requestAnimationFrame(h) : null;
+					};
+					h();
+				}
 				break;
 		}
 	} };
