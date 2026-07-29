@@ -45,11 +45,11 @@ async function main() {
       printHeadColor: 0xffbb55, printHeadRadius: 3,
       fogEnabled: true, fogColor: 0x0f0f0f, fogNear: 5000, fogFar: 7800,
       glowEnabled: true,
-      glowStrength: 0.6,
+      glowStrength: 1.8,
       glowRadius: 0.2,
       glowThreshold: 0.1,
       travelLineGlow: 0.5,
-      extrudeLineGlow: 2.0,
+      extrudeLineGlow: 1.0,
     });
     
     globalThis.visualiser = visualiser;
@@ -118,17 +118,20 @@ async function main() {
     const radiusX = lp.maxx / 12;
     const radiusY = lp.maxy / 16;
     const pointsPerLayer = 12;
-    
+
+    console.info("SHAPE 1");
+
     await lp.moveto({x:lp.cx, y:lp.cy, z:minz});
     while(layers--)
       {
         
-        console.info("SHAPE 1");
       const _ppl = 5;
       let ppl = _ppl;
       while(ppl--)
         {
           const speed = randomLogUniform(2,60);
+          console.info(`speed: ${speed}`);
+          
 
       
         lp.speed(speed);
