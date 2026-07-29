@@ -20,6 +20,19 @@ function loginfo(text) {
 }
 
 /**
+ * Generates a log-uniform random number between min and max.
+ * @param {number} min - Lower bound (must be > 0)
+ * @param {number} max - Upper bound
+ * @returns {number}
+ */
+function randomLogUniform(min, max) {
+  const logMin = Math.log(min);
+  const logMax = Math.log(max);
+  const sample = logMin + Math.random() * (logMax - logMin);
+  return Math.exp(sample);
+}
+
+/**
 * Run it!
 * @returns 
 */
@@ -29,16 +42,14 @@ async function main() {
   // do the main thing we came here for
   const visualiser = makeVisualiser(lp, "c", 
     { title: "LivePrinter", debug: false, delay: true, 
-      travelColor: 0xea44aa, travelOpacity: 0.8,
-      extrudeColor: 0xfaa044, extrudeOpacity: 0.9,
       printHeadColor: 0xffbb55, printHeadRadius: 3,
       fogEnabled: true, fogColor: 0x0f0f0f, fogNear: 5000, fogFar: 7800,
       glowEnabled: true,
-      glowStrength: 2.0,
-      glowRadius: 0.4,
+      glowStrength: 0.6,
+      glowRadius: 0.2,
       glowThreshold: 0.1,
-      travelLineGlow: 1.5,
-      extrudeLineGlow: 3.0,
+      travelLineGlow: 0.5,
+      extrudeLineGlow: 2.0,
     });
     
     globalThis.visualiser = visualiser;
@@ -111,10 +122,16 @@ async function main() {
     await lp.moveto({x:lp.cx, y:lp.cy, z:minz});
     while(layers--)
       {
+        
+        console.info("SHAPE 1");
       const _ppl = 5;
       let ppl = _ppl;
       while(ppl--)
         {
+          const speed = randomLogUniform(2,60);
+
+      
+        lp.speed(speed);
         lp.turn(360/_ppl);
         lp.t2d('1/4b');
         await lp.draw();
@@ -129,27 +146,34 @@ async function main() {
     await lp.moveto({x:lp.cx, y:lp.cy, z:minz});
     
     layers = totalLayers;
-    
+            console.info("SHAPE 2");
+
     while(layers--)
       {
       let ppl = pointsPerLayer;
       while(ppl--)
         {
+        const speed = randomLogUniform(10,120);
+        lp.speed(speed);
         const angle  = 2*Math.PI * ppl/pointsPerLayer;
-        await lp.extrudeto({ x: offsetx + radiusX*Math.cos(angle), y: offsety + radiusY*Math.sin(angle)});
+        await lp.extrudeto({ x: offsetx + radiusX*Math.cos(angle), y: offsety + radiusY*Math.sin(angle), speed});
       }
       await lp.up(layerHeight);
     }
     
     layers = totalLayers;
-    
+            console.info("SHAPE 3");
+
     while(layers--)
       {
       let ppl = pointsPerLayer;
       while(ppl--)
         {
+        const speed = randomLogUniform(2,60);
+          lp.speed(speed);
         const angle  = 2*Math.PI * ppl/pointsPerLayer;
-        await lp.extrudeto({ x: offsetx + radiusX*Math.cos(angle), y: offsety + radiusY*Math.sin(angle)});
+        await lp.extrudeto({ x: offsetx + radiusX*Math.cos(angle), y: offsety + radiusY*Math.sin(angle), speed});
+        console.info(`speed: ${speed}`);
       }
       await lp.up(layerHeight);
     }
