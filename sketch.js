@@ -45,7 +45,7 @@ async function main() {
       printHeadColor: 0xffbb55, printHeadRadius: 3,
       fogEnabled: true, fogColor: 0x0f0f0f, fogNear: 5000, fogFar: 7800,
       glowEnabled: true,
-      glowStrength: 1.8,
+      glowStrength: 1.0,
       glowRadius: 0.2,
       glowThreshold: 0.1,
       travelLineGlow: 0.5,
