@@ -34,11 +34,13 @@
   },
   "homepage": "https://github.com/pixelpusher/vizlib#readme",
   "devDependencies": {
-    "@thi.ng/grid-iterators": "^4.0.125",
     "@thi.ng/iterators": "^6.1.119",
-    "@types/three": "^0.162.0",
+    "@types/three": "^0.185.1",
     "liveprinter-core": "github:pixelpusher/liveprinter-core",
-    "three": "^0.152.2",
-    "vite": "^4.5.14"
+    "three": "^0.185.1",
+    "vite": "^8.1.5"
+  },
+  "dependencies": {
+    "chroma": "^0.0.1"
   }
 }
