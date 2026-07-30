@@ -17069,7 +17069,7 @@ function makePrinterEventHandler({ x: e, y: t, z: n, delay: r, debug: i } = {
           layerHeight: ${p},
           length: ${m}`), r) {
 				case "extrude-start":
-				case "travel-start":
+				case "move-start":
 					{
 						s && cancelAnimationFrame(s);
 						let r = new Vector3(e(c.x), t(c.y), n(c.z)), a = new Vector3(e(i.x), t(i.y), n(i.z)), o = animationLineGeometry.attributes.position;
@@ -17100,7 +17100,7 @@ function makePrinterEventHandler({ x: e, y: t, z: n, delay: r, debug: i } = {
 						speedEnd: l
 					}), extrudePoints += 2;
 					break;
-				case "travel-end":
+				case "move-end":
 					if (!travelGeometry) return;
 					updateGeometryWithMoveData(travelGeometry, travelPoints, {
 						p1: [
