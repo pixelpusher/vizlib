@@ -16884,11 +16884,22 @@ Object.assign(chroma$1, { oklch }), input_default.format.oklch = oklch2rgb, inpu
 	scales: scales_default,
 	valid: valid_default
 });
-var chroma_js_default = chroma$1, MAX_VERTICES = 3e5 * 2, extrudeGeometry, travelGeometry, animationLineGeometry, travelLine, extrudeLine, printHeadMarker, travelPoints = 0, extrudePoints = 0, currentWidth = 1, currentHeight = 1, gcodeLines = [], travelColours = [
+var chroma_js_default = chroma$1, MAX_VERTICES = 3e5 * 2, extrudeGeometry, travelGeometry, animationLineGeometry, travelLine, extrudeLine, printHeadMarker, travelPoints = 0, extrudePoints = 0, currentWidth = 1, currentHeight = 1, maxSpeed$1 = 150, minSpeed$1 = 1;
+function setMaxSpeed(e) {
+	maxSpeed$1 = e;
+}
+function setMinSpeed(e) {
+	minSpeed$1 = e;
+}
+var gcodeLines = [], travelColours = [
 	"#ff43ba",
 	"#ffb949",
 	"#00d2ff"
-], extrudeColours = [
+];
+function setTravelColours(e) {
+	travelColours.length = 0, travelColours.push(...e);
+}
+var extrudeColours = [
 	"#3243e0",
 	"#ec0505",
 	"#d034c5",
@@ -16896,9 +16907,12 @@ var chroma_js_default = chroma$1, MAX_VERTICES = 3e5 * 2, extrudeGeometry, trave
 	"#d87306",
 	"#f5e323"
 ];
+function setExtrudeColours(e) {
+	extrudeColours.length = 0, extrudeColours.push(...e);
+}
 function normaliseSpeedLog(e) {
-	let t = 150, n = 1, r = Math.log10(1), i = Math.log10(150);
-	return (Math.log10(Math.max(1, Math.min(150, e))) - r) / (i - r);
+	let t = Math.log10(minSpeed$1), n = Math.log10(maxSpeed$1);
+	return (Math.log10(Math.max(minSpeed$1, Math.min(maxSpeed$1, e))) - t) / (n - t);
 }
 function createPaletteDataTexture(e, t = 256) {
 	let n = new Uint8Array(t * 4);
@@ -20216,35 +20230,41 @@ function makeVisualiser(e, t, n = {
 	glowEnabled: !1,
 	glowStrength: .5,
 	glowRadius: .15,
-	glowThreshold: .1
+	glowThreshold: .1,
+	minSpeed,
+	maxSpeed
 }) {
-	let r = {};
-	function i(t = "lines.gcode") {
+	function r(t = "lines.gcode") {
 		let n = GCODE_HEADER[e.model].join("\n") + "\n" + getGcode(), r = URL.createObjectURL(new Blob([n], { type: "text" })), i = document.createElement("a");
 		i.href = r, i.download = t, i.click();
 	}
-	r.downloadGCode = i;
-	let a = document.getElementById(t);
+	let i = {
+		setMinSpeed,
+		setMaxSpeed,
+		setTravelColours,
+		setExtrudeColours,
+		downloadGCode: r
+	}, a = document.getElementById(t);
 	function o() {
 		return a.clientWidth;
 	}
-	r.sceneWidth = o;
+	i.sceneWidth = o;
 	function s() {
 		return o() * e.maxy / e.maxx;
 	}
-	r.sceneHeight = s;
+	i.sceneHeight = s;
 	function c(t) {
 		return o() * (t / e.maxx - 1);
 	}
-	r.bedXtoScene = c;
+	i.bedXtoScene = c;
 	function l(t) {
 		return s() * (t / e.maxy - 1);
 	}
-	r.bedYtoScene = l;
+	i.bedYtoScene = l;
 	function u(t) {
 		return o() * t / e.maxx;
 	}
-	r.bedZtoScene = u;
+	i.bedZtoScene = u;
 	let d = new WebGLRenderer({
 		antialias: !0,
 		preserveDrawingBuffer: !0,
@@ -20299,59 +20319,59 @@ function makeVisualiser(e, t, n = {
 	function z() {
 		R.left = -A * (L() / 2 + F()), R.right = A * (L() / 2 - F()), R.top = A * (ee() / 2 - I()), R.bottom = -A * (ee() / 2 + I()), R.updateProjectionMatrix();
 	}
-	z(), h(), r.setZoom = (e) => {
+	z(), h(), i.setZoom = (e) => {
 		A = 1 - Math.max(0, Math.min(e, 1)), z();
-	}, r.setViewX = (e) => {
+	}, i.setViewX = (e) => {
 		j = e, z();
-	}, r.getViewX = () => j, r.setViewXmm = (t) => {
+	}, i.getViewX = () => j, i.setViewXmm = (t) => {
 		j = 2 * (t / e.maxx) - 1, z();
-	}, r.viewXmm = () => e.maxx * (j + 1) / 2, r.setViewY = (e) => {
+	}, i.viewXmm = () => e.maxx * (j + 1) / 2, i.setViewY = (e) => {
 		M = e, z();
-	}, r.getViewY = () => M, r.setViewYmm = (t) => {
+	}, i.getViewY = () => M, i.setViewYmm = (t) => {
 		M = 2 * (t / e.maxy) - 1, z();
-	}, r.viewYmm = () => e.maxy * (M + 1) / 2, r.setViewWidth = (e) => {
+	}, i.viewYmm = () => e.maxy * (M + 1) / 2, i.setViewWidth = (e) => {
 		N = e, z();
-	}, r.getViewwidth = () => N, r.setViewHeight = (e) => {
+	}, i.getViewwidth = () => N, i.setViewHeight = (e) => {
 		P = e, z();
-	}, r.getViewHeight = () => P;
+	}, i.getViewHeight = () => P;
 	let B = 30, V = new OrthographicCamera(-o() / B, o() / B, s() / B, -s() / B, .01, 2e3);
 	function H(e) {
 		B = e, V.left = -o() / B, V.right = o() / B, V.top = s() / B, V.bottom = -s() / B, V.updateProjectionMatrix();
 	}
-	r.closeFactor = H, r.setFogEnabled = (e) => {
+	i.closeFactor = H, i.setFogEnabled = (e) => {
 		e && !b.fog ? b.fog = new Fog(n.fogColor, n.fogNear, n.fogFar) : e || (b.fog = null);
-	}, r.setFogColor = (e) => {
+	}, i.setFogColor = (e) => {
 		n.fogColor = e, b.fog && b.fog.color.setHex(e);
-	}, r.setFogNear = (e) => {
+	}, i.setFogNear = (e) => {
 		n.fogNear = e, b.fog && (b.fog.near = e);
-	}, r.setFogFar = (e) => {
+	}, i.setFogFar = (e) => {
 		n.fogFar = e, b.fog && (b.fog.far = e);
-	}, r.getFogState = () => ({
+	}, i.getFogState = () => ({
 		enabled: b.fog !== null,
 		color: n.fogColor,
 		near: n.fogNear,
 		far: n.fogFar
-	}), r.setGlowEnabled = (e) => {
+	}), i.setGlowEnabled = (e) => {
 		n.glowEnabled = e, e && !m ? (m = new UnrealBloomPass({
 			x: o(),
 			y: s()
 		}, n.glowStrength, n.glowRadius, n.glowThreshold), f.addPass(m)) : !e && m && f && (f.removePass(m), m = null);
-	}, r.setGlowStrength = (e) => {
+	}, i.setGlowStrength = (e) => {
 		n.glowStrength = e, m && (m.strength = e);
-	}, r.setGlowRadius = (e) => {
+	}, i.setGlowRadius = (e) => {
 		n.glowRadius = e, m && (m.radius = e);
-	}, r.setGlowThreshold = (e) => {
+	}, i.setGlowThreshold = (e) => {
 		n.glowThreshold = e, m && (m.threshold = e);
-	}, r.getGlowState = () => ({
+	}, i.getGlowState = () => ({
 		enabled: n.glowEnabled,
 		strength: n.glowStrength,
 		radius: n.glowRadius,
 		threshold: n.glowThreshold
-	}), r.setTravelLineGlow = (e) => {
+	}), i.setTravelLineGlow = (e) => {
 		n.travelLineGlow = e, setTravelLineGlow(e);
-	}, r.setExtrudeLineGlow = (e) => {
+	}, i.setExtrudeLineGlow = (e) => {
 		n.extrudeLineGlow = e, setExtrudeLineGlow(e);
-	}, r.getLineGlowState = () => ({
+	}, i.getLineGlowState = () => ({
 		travel: n.travelLineGlow,
 		extrude: n.extrudeLineGlow
 	}), k.add(R, V), S.add(k);
@@ -20369,7 +20389,7 @@ function makeVisualiser(e, t, n = {
 		delay: n.delay,
 		debug: n.debug
 	});
-	r.vizevents = W, r.reset = function() {
+	i.vizevents = W, i.reset = function() {
 		g && C.remove(g), _ && C.remove(_), g = makeTravelLineSegments({
 			color: n.travelColor,
 			opacity: n.travelOpacity,
@@ -20436,15 +20456,15 @@ function makeVisualiser(e, t, n = {
 	}
 	window.addEventListener("resize", ce);
 	let le = o() * 4 / 5, ue = s() * 4 / 5, q = o() * 1 / 5, de = s() * 1 / 5;
-	r.setCloseViewX = (e) => le = o() * e, r.setCloseViewY = (e) => ue = s() * e, r.setCloseViewWidth = (e) => q = o() * e, r.setCloseViewHeight = (e) => de = s() * e;
+	i.setCloseViewX = (e) => le = o() * e, i.setCloseViewY = (e) => ue = s() * e, i.setCloseViewWidth = (e) => q = o() * e, i.setCloseViewHeight = (e) => de = s() * e;
 	function J(e) {
 		d.setViewport(0, 0, o(), s()), d.setScissor(0, 0, o(), s()), d.setScissorTest(!0), n.glowEnabled && f ? f.render() : d.render(b, R), d.setViewport(le, ue, q, de), d.setScissor(le, ue, q, de), d.setScissorTest(!0), d.clearDepth(), d.render(b, V);
 	}
-	return d.setAnimationLoop(J), r.resetAll = function() {
+	return d.setAnimationLoop(J), i.resetAll = function() {
 		d.setAnimationLoop(null), window.removeEventListener("resize", ce), e.removePrintListener(W), e.removeErrorListener(W), e.removeGCodeListener(W), e.removePrintListener(te), g && (g.geometry.dispose(), g.material.dispose()), _ && (_.geometry.dispose(), _.material.dispose()), y && (y.geometry.dispose(), y.material.dispose()), b.traverse((e) => {
 			e.geometry && e.geometry.dispose(), e.material && (Array.isArray(e.material) ? e.material.forEach((e) => e.dispose()) : e.material.dispose());
 		}), b.clear(), d.dispose(), a.removeChild(d.domElement);
-	}, r;
+	}, i;
 }
 //#endregion
 export { makeVisualiser };
