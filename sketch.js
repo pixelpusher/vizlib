@@ -102,7 +102,7 @@ async function main() {
     
     let _time = performance.now();
     console.info(`start of move time: ${_time}`);
-    await lp.mov2({ x: offsetx, y: offsety, z: minz });
+    await lp.mov2({ x: offsetx, y: offsety, z: minz, speed:12 });
     console.info(`move took: ${performance.now()-_time}`);
     _time = performance.now();
     
@@ -121,7 +121,7 @@ async function main() {
 
     console.info("SHAPE 1");
 
-    await lp.moveto({x:lp.cx, y:lp.cy, z:minz});
+    await lp.moveto({x:lp.cx, y:lp.cy, z:minz, speed:12});
     while(layers--)
       {
         
