@@ -20380,7 +20380,7 @@ function makeVisualiser(e, t, n = {
 	let te = { printEvent: async ({ type: t, newPosition: n, oldPosition: r, speed: i, moveTime: a, totalMoveTime: d, layerHeight: f, length: p }) => {
 		switch (t) {
 			case "extrude-start":
-			case "travel-start": {
+			case "move-start": {
 				closeAnimationFrameId && cancelAnimationFrame(closeAnimationFrameId);
 				let t = performance.now(), i = a, d = new Vector3(c(e.maxx) - o() / 2, l(e.maxy) - s() / 2, u(r.z + e.maxz / 8)), f = new Vector3(c(e.maxx) - o() / 2, l(e.maxy) - s() / 2, u(n.z + e.maxz / 8)), p = new Vector3(c(r.x) + o() / 2, l(r.y) + s() / 2, u(r.z)), m = new Vector3(c(n.x) + o() / 2, l(n.y) + s() / 2, u(n.z)), h = () => {
 					let e = performance.now() - t, n = Math.min(1, e / i), r = new Vector3().lerpVectors(d, f, n), a = new Vector3().lerpVectors(p, m, n);
